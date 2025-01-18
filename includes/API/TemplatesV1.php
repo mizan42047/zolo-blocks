@@ -57,7 +57,7 @@ class TemplatesV1 {
         $body     = wp_remote_retrieve_body($response);
         $data     = json_decode($body, true);
         return [
-            'success' => 'success ki ma ki akakhi',
+            'success' => 'success gese gollay',
             'data'    => $data,
             'response' => $response
         ];
