@@ -59,6 +59,7 @@ class TemplatesV1 {
         return [
             'success' => 'success ki ma ki akakhi',
             'data'    => $data,
+            'response' => $response
         ];
     }
 
