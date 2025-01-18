@@ -164,16 +164,17 @@ if (! class_exists('Templates')) {
             $templates = [];
 
             // Set transient if data is available
-            if (!empty($data)) {
-                $templates = $data ?? [];
-                set_transient($transient_key, $templates, 7 * DAY_IN_SECONDS);
-            }
+            // if (!empty($data)) {
+            //     $templates = $data ?? [];
+            //     set_transient($transient_key, $templates, 7 * DAY_IN_SECONDS);
+            // }
 
             // Immediately update data in REST API endpoint
             wp_send_json_success([
                 'status'  => 'success',
                 'message' => __('Templates pulled and REST API updated successfully!', 'zoloblocks'),
                 'data'    => $templates,
+                'dummy'   => $data
             ]);
         }
         /**
