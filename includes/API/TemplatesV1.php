@@ -8,14 +8,16 @@ use Zolo\Helpers\ZoloHelpers;
 /**
  * Zolo Templates API
  */
-class TemplatesV1 {
+class TemplatesV1
+{
 
     use SingletonTrait;
 
     /**
      * Construct method
      */
-    public function __construct() {
+    public function __construct()
+    {
         add_action('rest_api_init', [$this, 'register_templates_route']);
     }
 
@@ -24,7 +26,8 @@ class TemplatesV1 {
      *
      * @return void
      */
-    public function register_templates_route() {
+    public function register_templates_route()
+    {
         register_rest_route('zolo/v1', '/templates', [
             'methods'             => 'GET',
             'callback'            => [$this, 'get_templates'],
@@ -53,13 +56,28 @@ class TemplatesV1 {
     {
         $response = wp_remote_get('https://templates.zoloblocks.com/wp-json/template-manager/v1/zolo', [
             'timeout' => 30,
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'Accept' => 'application/json',
+                'X-WP-Nonce' => wp_create_nonce('wp_rest')
+            ]
         ]);
-        $body     = wp_remote_retrieve_body($response);
-        $data     = json_decode($body, true);
+
+        if (is_wp_error($response)) {
+            return [
+                'success' => false,
+                'message' => $response->get_error_message(),
+                'response' => $response,
+            ];
+        }
+
+        $body = wp_remote_retrieve_body($response);
+        $data = json_decode($body, true);
+
         return [
-            'success' => 'success gese gollay',
-            'data'    => $data,
-            'response' => $response
+            'success' => true,
+            'data' => $data,
+            'response' => $response,
         ];
     }
 
@@ -68,7 +86,8 @@ class TemplatesV1 {
      *
      * @return array An array of demos.
      */
-    public function get_demos() {
+    public function get_demos()
+    {
         $transient_key = 'zolo_demos';
         $demos         = get_transient($transient_key);
 
@@ -93,7 +112,8 @@ class TemplatesV1 {
      *
      * @return array An array of page templates.
      */
-    public function get_page_templates() {
+    public function get_page_templates()
+    {
         $data     = get_transient('zolo_templates');
 
         // check if the transient is empty
