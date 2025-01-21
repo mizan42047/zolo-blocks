@@ -52,17 +52,22 @@ class TemplatesV1
      *
      * @return array An array of templates.
      */
-    public function get_templates()
-    {
-        $response = wp_remote_get('https://templates.zoloblocks.com/wp-json/template-manager/v1/zolo', [
-            'timeout' => 30,
-            'headers' => [
+    function get_templates() {
+        $url = 'https://templates.zoloblocks.com/wp-json/template-manager/v1/zolo';
+        
+        $args = array(
+            'method'      => 'GET',
+            'timeout'     => 30,
+            'sslverify'   => false, // Disable SSL verification (use cautiously)
+            'headers'     => array(
                 'Content-Type' => 'application/json',
-                'Accept' => 'application/json',
-                'X-WP-Nonce' => wp_create_nonce('wp_rest')
-            ]
-        ]);
-
+                'Accept'       => 'application/json',
+                'X-WP-Nonce'   => wp_create_nonce('wp_rest')
+            )
+        );
+    
+        $response = wp_remote_get($url, $args);
+    
         if (is_wp_error($response)) {
             return [
                 'success' => false,
@@ -70,16 +75,26 @@ class TemplatesV1
                 'response' => $response,
             ];
         }
-
+    
         $body = wp_remote_retrieve_body($response);
+        
+        if (empty($body)) {
+            return [
+                'success' => false,
+                'message' => 'Empty response body',
+                'response' => $response,
+            ];
+        }
+    
         $data = json_decode($body, true);
-
+    
         return [
             'success' => true,
             'data' => $data,
             'response' => $response,
         ];
     }
+    
 
     /**
      * Retrieves the demos from the specified file path.
