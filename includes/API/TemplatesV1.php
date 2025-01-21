@@ -50,21 +50,17 @@ class TemplatesV1 {
      * @return array An array of templates.
      */
     public function get_templates() {
-        $transient_key = 'zolo_templates';
-        $templates     = get_transient($transient_key);
-
-        if (empty($templates)) {
-            $response = wp_remote_get('https://templates.zoloblocks.com/wp-json/template-manager/v1/zolo', [
-                'timeout' => 30,
-            ]);
-            $body     = wp_remote_retrieve_body($response);
-            $data     = json_decode($body, true);
-            if (!empty($data)) {
-                $templates = $data ?? [];
-                set_transient($transient_key, $templates, 7 * DAY_IN_SECONDS);
-            }
-        }
-        wp_send_json_success($templates);
+        $response = wp_remote_get('https://templates.zoloblocks.com/wp-json/template-manager/v1/zolo', [
+            'timeout' => 30,
+        ]);
+        $body     = wp_remote_retrieve_body($response);
+        $data     = json_decode($body, true);
+        return [
+            'status'  => 'success',
+            'message' => __('Templates pulled and REST API updated successfully!', 'zoloblocks'),
+            'data'    => $data,
+            'response' => $response,
+        ];
     }
 
     /**
