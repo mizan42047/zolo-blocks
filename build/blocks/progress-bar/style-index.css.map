@@ -1,1 +1,0 @@
-{"version":3,"file":"blocks/progress-bar/style-index.css","mappings":";;;AAAA;EACI;EACA;EACA;AACJ,C","sources":["webpack://zoloblocks/./src/blocks/progress-bar/style.scss"],"sourcesContent":[".zolo-progress-bars-wrap {\n    display: grid;\n    grid-template-columns: repeat(1, 1fr);\n    grid-gap: 35px;\n}\n"],"names":[],"sourceRoot":""}
