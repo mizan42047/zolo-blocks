@@ -1,1 +1,42 @@
-.wp-block-zolo-post-meta{align-items:center;display:flex;flex-wrap:wrap;gap:14px}.wp-block-zolo-post-meta .zolo-meta-info,.wp-block-zolo-post-meta .zolo-meta-info a{align-items:center;color:#3b3a41;display:flex;font-size:16px;font-weight:400;gap:6px;text-decoration:none}.wp-block-zolo-post-meta .zolo-meta-info.terms .zolo-text{display:inline}.wp-block-zolo-post-meta .zolo-icon svg{color:currentColor;display:block;height:1em;width:1em}.wp-block-zolo-post-meta .zolo-separator{color:#005cff}.wp-block-zolo-post-meta.separator-dot .zolo-separator{background-color:#005cff;border-radius:50%;height:5px;width:5px}.wp-block-zolo-post-meta.separator-line .zolo-separator{background-color:#005cff;height:2px;width:14px}
+/*!********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/post-meta/style.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-zolo-post-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.wp-block-zolo-post-meta .zolo-meta-info,
+.wp-block-zolo-post-meta .zolo-meta-info a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  color: #3b3a41;
+  font-weight: 400;
+  text-decoration: none;
+}
+.wp-block-zolo-post-meta .zolo-meta-info.terms .zolo-text {
+  display: inline;
+}
+.wp-block-zolo-post-meta .zolo-icon svg {
+  width: 1em;
+  height: 1em;
+  display: block;
+  color: currentColor;
+}
+.wp-block-zolo-post-meta .zolo-separator {
+  color: #005cff;
+}
+.wp-block-zolo-post-meta.separator-dot .zolo-separator {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #005cff;
+}
+.wp-block-zolo-post-meta.separator-line .zolo-separator {
+  width: 14px;
+  height: 2px;
+  background-color: #005cff;
+}

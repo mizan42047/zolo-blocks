@@ -1,1 +1,853 @@
-(()=>{var e,t={864:(e,t,o)=>{"use strict";const r=window.wp.blocks,l=JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"Lottie Image","name":"zolo/lottie-image","category":"zoloblocks","keywords":["zolo","lottie","image","animation","video"],"description":"Lightweight Lottie animations for web, apps, and UI.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":410},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./frontend.js"}'),n={globalConfig:{type:"object",default:{margin:{prefix:"mainMargin"},padding:{prefix:"mainPadding"},background:{prefix:"mainBg"},border:{prefix:"mainBorder"},borderRadius:{prefix:"mainBorderRadius"},boxShadow:{prefix:"mainBoxShadow"},responsiveControls:!0}},fileId:{type:"string",default:""},fileURL:{type:"string",default:""},fileWidth:{type:"number"},fileHeight:{type:"number"},direction:{type:"number",default:1},trigger:{type:"string",default:""},loop:{type:"boolean",default:!0},speed:{type:"number",default:1},autoplay:{type:"boolean",default:!0}},i=window.React,a=window.wp.blockEditor,s=window.wp.i18n;var c=o(6942),p=o.n(c);const d=window.wp.element,u=window.wp.compose,b=window.wp.components,{SimpleRangeControl:f,HeaderTabs:m,AdvancedOptions:g,ZoloPanelBody:v}=window.zoloModule,k=function(e){const{attributes:t,setAttributes:o}=e,{fileURL:r,trigger:l,loop:c,direction:p,speed:d,resMode:u}=t,k={attributes:t,setAttributes:o,resMode:u,objAttributes:n};return(0,i.createElement)(a.InspectorControls,{key:"controls"},(0,i.createElement)(m,{block:"zolo/textarea",attributes:t,setAttributes:o,generalTab:(0,i.createElement)(i.Fragment,null,(0,i.createElement)(v,{title:(0,s.__)("General","zoloblocks"),firstOpen:!0,panelProps:e},r&&(0,i.createElement)(i.Fragment,null,(0,i.createElement)(b.SelectControl,{label:(0,s.__)("Animation On","zoloblocks"),help:"scroll"===l?(0,s.__)("This feature is only available on the front end","zoloblocks"):(0,s.__)("Choose the event that triggers the animation to start","zoloblocks"),value:l,options:[{label:(0,s.__)("Page Load","zoloblocks"),value:""},{label:(0,s.__)("Viewport","zoloblocks"),value:"viewport"},{label:(0,s.__)("Hover","zoloblocks"),value:"hover"},{label:(0,s.__)("Click","zoloblocks"),value:"click"},{label:(0,s.__)("Scroll","zoloblocks"),value:"scroll"}],onChange:e=>o({trigger:e})}),"scroll"!==l&&(0,i.createElement)(i.Fragment,null,(0,i.createElement)(f,{label:(0,s.__)("Speed","zoloblocks"),value:d,onChange:e=>o({speed:e}),onReset:()=>o({speed:void 0}),step:.1,min:0,max:10,noUnits:!0}),(0,i.createElement)(b.ToggleControl,{label:(0,s.__)("Loop","zoloblocks"),checked:!!c,onChange:()=>o({loop:!c})})),(0,i.createElement)(b.ToggleControl,{label:(0,s.__)("Reverse","zoloblocks"),checked:-1===p,onChange:()=>{o({direction:1===p?-1:1})}})))),advancedTab:(0,i.createElement)(i.Fragment,null,(0,i.createElement)(g,{attributes:t,setAttributes:o,requiredProps:k,block:"zolo/lottie-image"}))}))},{classArrayToStr:w,LottiePreview:y}=window.zoloModule,{classArrayToStr:_,LottiePreview:h}=window.zoloModule,{BlockIcons:z}=window.zoloIcons;(0,r.registerBlockType)(l,{icon:{src:z["advanced-paragraph"]},attributes:n,edit:function(e){const{attributes:t,setAttributes:o,isSelected:r,clientId:l}=e,{uniqueId:n,parentClasses:c,fileURL:f,trigger:m,loop:g,direction:v,speed:_}=t,h=(0,d.useRef)(null),z=(0,d.useRef)(!0),E=(0,a.useBlockProps)({ref:(0,u.useMergeRefs)([h]),className:p()(n,w(c))}),S=e=>{o({fileId:e.id,fileURL:e.url})},O=e=>{o({fileId:void 0,fileURL:e})},x=()=>{o({fileId:void 0,fileURL:void 0})};return(0,d.useEffect)((()=>{const e=h.current?.querySelector("lottie-player"),t="viewport"===m&&new IntersectionObserver((t=>{t.forEach((t=>{t.isIntersecting?e.play():e.pause()}))}));e&&("click"===m&&(e.addEventListener("complete",(()=>{z.current=!0})),h.current.addEventListener("click",(()=>{e.stop(),e.play(),z.current=!1}))),"viewport"===m&&t&&t.observe(h.current))}),[m,g,v,_]),(0,i.createElement)(i.Fragment,null,r&&(0,i.createElement)(k,{attributes:t,setAttributes:o}),f&&(0,i.createElement)(a.BlockControls,null,(0,i.createElement)(b.ToolbarGroup,null,(0,i.createElement)(a.MediaUpload,{icon:"format-image",labels:{title:(0,s.__)("Lottie JSON","zoloblocks"),name:(0,s.__)("lottie","zoloblocks"),instructions:(0,s.__)("Upload a JSON file or pick one from your media library.","zoloblocks")},onSelect:S,onSelectURL:O,accept:["application/json"],allowedTypes:["application/json"],onError:x,render:({open:e})=>(0,i.createElement)(b.ToolbarButton,{className:"components-toolbar__control",label:(0,s.__)("Replace Lottie Files","zoloblocks"),icon:"edit",onClick:e})}))),(0,i.createElement)("div",{...E},f?(0,i.createElement)(y,{key:JSON.stringify(`${f}-${g}-${v}-${_}-${m}`),url:f,trigger:m,speed:_,loop:g,direction:v,isSelected:r}):(0,i.createElement)(a.MediaPlaceholder,{icon:"format-image",labels:{title:(0,s.__)("Lottie JSON","zoloblocks"),name:(0,s.__)("lottie","zoloblocks"),instructions:(0,s.__)("Upload a JSON file or pick one from your media library.","zoloblocks")},onSelect:S,onSelectURL:O,accept:["application/json"],allowedTypes:["application/json"],onError:x})))},save:e=>{const{attributes:t}=e,{uniqueId:o,parentClasses:r,fileURL:l,trigger:n,loop:s,direction:c,speed:d,isSelected:u}=t,b={trigger:n},f=a.useBlockProps.save({className:p()(o,_(r)),"data-settings":JSON.stringify(b)});return(0,i.createElement)("div",{...f},l&&(0,i.createElement)(h,{url:l,trigger:n,speed:d,loop:s,direction:c,isSelected:!0}))}})},6942:(e,t)=>{var o;!function(){"use strict";var r={}.hasOwnProperty;function l(){for(var e="",t=0;t<arguments.length;t++){var o=arguments[t];o&&(e=i(e,n(o)))}return e}function n(e){if("string"==typeof e||"number"==typeof e)return e;if("object"!=typeof e)return"";if(Array.isArray(e))return l.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes("[native code]"))return e.toString();var t="";for(var o in e)r.call(e,o)&&e[o]&&(t=i(t,o));return t}function i(e,t){return t?e?e+" "+t:e+t:e}e.exports?(l.default=l,e.exports=l):void 0===(o=function(){return l}.apply(t,[]))||(e.exports=o)}()}},o={};function r(e){var l=o[e];if(void 0!==l)return l.exports;var n=o[e]={exports:{}};return t[e](n,n.exports,r),n.exports}r.m=t,e=[],r.O=(t,o,l,n)=>{if(!o){var i=1/0;for(p=0;p<e.length;p++){o=e[p][0],l=e[p][1],n=e[p][2];for(var a=!0,s=0;s<o.length;s++)(!1&n||i>=n)&&Object.keys(r.O).every((e=>r.O[e](o[s])))?o.splice(s--,1):(a=!1,n<i&&(i=n));if(a){e.splice(p--,1);var c=l();void 0!==c&&(t=c)}}return t}n=n||0;for(var p=e.length;p>0&&e[p-1][2]>n;p--)e[p]=e[p-1];e[p]=[o,l,n]},r.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return r.d(t,{a:t}),t},r.d=(e,t)=>{for(var o in t)r.o(t,o)&&!r.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{var e={900:0,2012:0};r.O.j=t=>0===e[t];var t=(t,o)=>{var l,n,i=o[0],a=o[1],s=o[2],c=0;if(i.some((t=>0!==e[t]))){for(l in a)r.o(a,l)&&(r.m[l]=a[l]);if(s)var p=s(r)}for(t&&t(o);c<i.length;c++)n=i[c],r.o(e,n)&&e[n]&&e[n][0](),e[n]=0;return r.O(p)},o=self.webpackChunkzoloblocks=self.webpackChunkzoloblocks||[];o.forEach(t.bind(null,0)),o.push=t.bind(null,o.push.bind(o))})();var l=r.O(void 0,[2012],(()=>r(864)));l=r.O(l)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/lottie-image/attributes.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/lottie-image/attributes.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Internal dependencies
+ */
+
+const attributes = {
+  // global Attributes
+  globalConfig: {
+    type: 'object',
+    default: {
+      margin: {
+        prefix: 'mainMargin'
+      },
+      padding: {
+        prefix: 'mainPadding'
+      },
+      background: {
+        prefix: 'mainBg'
+      },
+      border: {
+        prefix: 'mainBorder'
+      },
+      borderRadius: {
+        prefix: 'mainBorderRadius'
+      },
+      boxShadow: {
+        prefix: 'mainBoxShadow'
+      },
+      responsiveControls: true
+    }
+  },
+  fileId: {
+    type: 'string',
+    default: ''
+  },
+  fileURL: {
+    type: 'string',
+    default: ''
+  },
+  fileWidth: {
+    type: 'number'
+  },
+  fileHeight: {
+    type: 'number'
+  },
+  direction: {
+    type: 'number',
+    default: 1
+  },
+  trigger: {
+    type: 'string',
+    default: ''
+  },
+  loop: {
+    type: 'boolean',
+    default: true
+  },
+  speed: {
+    type: 'number',
+    default: 1
+  },
+  autoplay: {
+    type: 'boolean',
+    default: true
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (attributes);
+
+/***/ }),
+
+/***/ "./src/blocks/lottie-image/edit.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/lottie-image/edit.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/compose */ "@wordpress/compose");
+/* harmony import */ var _wordpress_compose__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_compose__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _inspector__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./inspector */ "./src/blocks/lottie-image/inspector.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__);
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * External dependencies
+ */
+
+
+
+
+/**
+ * Internal depencencies
+ */
+const {
+  classArrayToStr,
+  LottiePreview
+} = window.zoloModule;
+
+
+
+/**
+ * Edit Function
+ */
+
+function Edit(props) {
+  const {
+    attributes,
+    setAttributes,
+    isSelected,
+    clientId
+  } = props;
+  const {
+    uniqueId,
+    parentClasses,
+    fileURL,
+    trigger,
+    loop,
+    direction,
+    speed
+  } = attributes;
+  const lottieRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
+  const isAnimationCompleteRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useRef)(true);
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
+    ref: (0,_wordpress_compose__WEBPACK_IMPORTED_MODULE_4__.useMergeRefs)([lottieRef]),
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(uniqueId, classArrayToStr(parentClasses))
+  });
+  const handleFileSelect = file => {
+    setAttributes({
+      fileId: file.id,
+      fileURL: file.url
+    });
+  };
+  const handleURLSelect = url => {
+    setAttributes({
+      fileId: undefined,
+      fileURL: url
+    });
+  };
+  const handleError = () => {
+    setAttributes({
+      fileId: undefined,
+      fileURL: undefined
+    });
+  };
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
+    const lottiePlayer = lottieRef.current?.querySelector('lottie-player');
+    const handleComplete = () => {
+      isAnimationCompleteRef.current = true;
+    };
+    const handleClick = () => {
+      lottiePlayer.stop();
+      lottiePlayer.play();
+      isAnimationCompleteRef.current = false;
+    };
+    const observer = trigger === 'viewport' && new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          lottiePlayer.play();
+        } else {
+          lottiePlayer.pause();
+        }
+      });
+    });
+    if (lottiePlayer) {
+      if (trigger === 'click') {
+        lottiePlayer.addEventListener('complete', handleComplete);
+        lottieRef.current.addEventListener('click', handleClick);
+      }
+      if (trigger === 'viewport' && observer) {
+        observer.observe(lottieRef.current);
+      }
+    }
+  }, [trigger, loop, direction, speed]);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: [isSelected && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_inspector__WEBPACK_IMPORTED_MODULE_6__["default"], {
+      attributes: attributes,
+      setAttributes: setAttributes
+    }), fileURL && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.BlockControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToolbarGroup, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.MediaUpload, {
+          icon: "format-image",
+          labels: {
+            title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Lottie JSON', 'zoloblocks'),
+            name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('lottie', 'zoloblocks'),
+            instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Upload a JSON file or pick one from your media library.', 'zoloblocks')
+          },
+          onSelect: handleFileSelect,
+          onSelectURL: handleURLSelect,
+          accept: ['application/json'],
+          allowedTypes: ['application/json'],
+          onError: handleError,
+          render: ({
+            open
+          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_5__.ToolbarButton, {
+            className: "components-toolbar__control",
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Replace Lottie Files', 'zoloblocks'),
+            icon: "edit",
+            onClick: open
+          })
+        })
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+      ...blockProps,
+      children: fileURL ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(LottiePreview, {
+        url: fileURL,
+        trigger: trigger,
+        speed: speed,
+        loop: loop,
+        direction: direction,
+        isSelected: isSelected
+      }, JSON.stringify(`${fileURL}-${loop}-${direction}-${speed}-${trigger}`)) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.MediaPlaceholder, {
+        icon: "format-image",
+        labels: {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Lottie JSON', 'zoloblocks'),
+          name: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('lottie', 'zoloblocks'),
+          instructions: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Upload a JSON file or pick one from your media library.', 'zoloblocks')
+        },
+        onSelect: handleFileSelect,
+        onSelectURL: handleURLSelect,
+        accept: ['application/json'],
+        allowedTypes: ['application/json'],
+        onError: handleError
+      })
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/lottie-image/index.js":
+/*!******************************************!*\
+  !*** ./src/blocks/lottie-image/index.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./src/blocks/lottie-image/block.json");
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./attributes */ "./src/blocks/lottie-image/attributes.js");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/lottie-image/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/lottie-image/save.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/lottie-image/style.scss");
+
+
+
+
+
+
+const {
+  BlockIcons
+} = window.zoloIcons;
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_1__, {
+  icon: {
+    src: BlockIcons['advanced-paragraph']
+  },
+  attributes: _attributes__WEBPACK_IMPORTED_MODULE_2__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
+});
+
+/***/ }),
+
+/***/ "./src/blocks/lottie-image/inspector.js":
+/*!**********************************************!*\
+  !*** ./src/blocks/lottie-image/inspector.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./attributes */ "./src/blocks/lottie-image/attributes.js");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * Internal depencencies
+ */
+const {
+  SimpleRangeControl,
+  HeaderTabs,
+  AdvancedOptions,
+  ZoloPanelBody
+} = window.zoloModule;
+
+
+
+function Inspector(props) {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    fileURL,
+    trigger,
+    loop,
+    direction,
+    speed,
+    resMode
+  } = attributes;
+  const requiredProps = {
+    attributes,
+    setAttributes,
+    resMode,
+    objAttributes: _attributes__WEBPACK_IMPORTED_MODULE_2__["default"]
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(HeaderTabs, {
+      block: "zolo/textarea",
+      attributes: attributes,
+      setAttributes: setAttributes,
+      generalTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('General', 'zoloblocks'),
+          firstOpen: true,
+          panelProps: props,
+          children: fileURL && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.SelectControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Animation On', 'zoloblocks'),
+              help: trigger === 'scroll' ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('This feature is only available on the front end', 'zoloblocks') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Choose the event that triggers the animation to start', 'zoloblocks'),
+              value: trigger,
+              options: [{
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Page Load', 'zoloblocks'),
+                value: ''
+              }, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Viewport', 'zoloblocks'),
+                value: 'viewport'
+              }, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Hover', 'zoloblocks'),
+                value: 'hover'
+              }, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Click', 'zoloblocks'),
+                value: 'click'
+              }, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Scroll', 'zoloblocks'),
+                value: 'scroll'
+              }],
+              onChange: value => setAttributes({
+                trigger: value
+              })
+            }), trigger !== 'scroll' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(SimpleRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Speed', 'zoloblocks'),
+                value: speed,
+                onChange: speed => setAttributes({
+                  speed
+                }),
+                onReset: () => setAttributes({
+                  speed: undefined
+                }),
+                step: 0.1,
+                min: 0,
+                max: 10,
+                noUnits: true
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Loop', 'zoloblocks'),
+                checked: !!loop,
+                onChange: () => setAttributes({
+                  loop: !loop
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__.ToggleControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Reverse', 'zoloblocks'),
+              checked: direction === -1,
+              onChange: () => {
+                setAttributes({
+                  direction: direction === 1 ? -1 : 1
+                });
+              }
+            })]
+          })
+        })
+      }),
+      advancedTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(AdvancedOptions, {
+          attributes: attributes,
+          setAttributes: setAttributes,
+          requiredProps: requiredProps,
+          block: "zolo/lottie-image"
+        })
+      })
+    })
+  }, "controls");
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Inspector);
+
+/***/ }),
+
+/***/ "./src/blocks/lottie-image/save.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/lottie-image/save.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+const {
+  classArrayToStr,
+  LottiePreview
+} = window.zoloModule;
+const Save = props => {
+  const {
+    attributes
+  } = props;
+  const {
+    uniqueId,
+    parentClasses,
+    fileURL,
+    trigger,
+    loop,
+    direction,
+    speed,
+    isSelected
+  } = attributes;
+  const settings = {
+    trigger
+  };
+  const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
+    className: classnames__WEBPACK_IMPORTED_MODULE_1___default()(uniqueId, classArrayToStr(parentClasses)),
+    'data-settings': JSON.stringify(settings)
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    ...blockProps,
+    children: fileURL && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(LottiePreview, {
+      url: fileURL,
+      trigger: trigger,
+      speed: speed,
+      loop: loop,
+      direction: direction,
+      isSelected: true
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Save);
+
+/***/ }),
+
+/***/ "./src/blocks/lottie-image/style.scss":
+/*!********************************************!*\
+  !*** ./src/blocks/lottie-image/style.scss ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["ReactJSXRuntime"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/compose":
+/*!*********************************!*\
+  !*** external ["wp","compose"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["compose"];
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!*********************************!*\
+  !*** external ["wp","element"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["element"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = '';
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (arg) {
+				classes = appendClass(classes, parseValue(arg));
+			}
+		}
+
+		return classes;
+	}
+
+	function parseValue (arg) {
+		if (typeof arg === 'string' || typeof arg === 'number') {
+			return arg;
+		}
+
+		if (typeof arg !== 'object') {
+			return '';
+		}
+
+		if (Array.isArray(arg)) {
+			return classNames.apply(null, arg);
+		}
+
+		if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+			return arg.toString();
+		}
+
+		var classes = '';
+
+		for (var key in arg) {
+			if (hasOwn.call(arg, key) && arg[key]) {
+				classes = appendClass(classes, key);
+			}
+		}
+
+		return classes;
+	}
+
+	function appendClass (value, newClass) {
+		if (!newClass) {
+			return value;
+		}
+	
+		if (value) {
+			return value + ' ' + newClass;
+		}
+	
+		return value + newClass;
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
+/***/ "./src/blocks/lottie-image/block.json":
+/*!********************************************!*\
+  !*** ./src/blocks/lottie-image/block.json ***!
+  \********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"Lottie Image","name":"zolo/lottie-image","category":"zoloblocks","keywords":["zolo","lottie","image","animation","video"],"description":"Lightweight Lottie animations for web, apps, and UI.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":410},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./frontend.js"}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"blocks/lottie-image/index": 0,
+/******/ 			"blocks/lottie-image/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkzoloblocks"] = globalThis["webpackChunkzoloblocks"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/lottie-image/style-index"], () => (__webpack_require__("./src/blocks/lottie-image/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

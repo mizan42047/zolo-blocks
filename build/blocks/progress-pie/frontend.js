@@ -1,1 +1,754 @@
-(()=>{"use strict";var t={6991:(t,e,n)=>{n.r(e),n.d(e,{CountUp:()=>i});var r=function(){return r=Object.assign||function(t){for(var e,n=1,r=arguments.length;n<r;n++)for(var i in e=arguments[n])Object.prototype.hasOwnProperty.call(e,i)&&(t[i]=e[i]);return t},r.apply(this,arguments)},i=function(){function t(t,e,n){var i=this;this.endVal=e,this.options=n,this.version="2.8.0",this.defaults={startVal:0,decimalPlaces:0,duration:2,useEasing:!0,useGrouping:!0,useIndianSeparators:!1,smartEasingThreshold:999,smartEasingAmount:333,separator:",",decimal:".",prefix:"",suffix:"",enableScrollSpy:!1,scrollSpyDelay:200,scrollSpyOnce:!1},this.finalEndVal=null,this.useEasing=!0,this.countDown=!1,this.error="",this.startVal=0,this.paused=!0,this.once=!1,this.count=function(t){i.startTime||(i.startTime=t);var e=t-i.startTime;i.remaining=i.duration-e,i.useEasing?i.countDown?i.frameVal=i.startVal-i.easingFn(e,0,i.startVal-i.endVal,i.duration):i.frameVal=i.easingFn(e,i.startVal,i.endVal-i.startVal,i.duration):i.frameVal=i.startVal+(i.endVal-i.startVal)*(e/i.duration);var n=i.countDown?i.frameVal<i.endVal:i.frameVal>i.endVal;i.frameVal=n?i.endVal:i.frameVal,i.frameVal=Number(i.frameVal.toFixed(i.options.decimalPlaces)),i.printValue(i.frameVal),e<i.duration?i.rAF=requestAnimationFrame(i.count):null!==i.finalEndVal?i.update(i.finalEndVal):i.options.onCompleteCallback&&i.options.onCompleteCallback()},this.formatNumber=function(t){var e,n,r,a,s=t<0?"-":"";e=Math.abs(t).toFixed(i.options.decimalPlaces);var o=(e+="").split(".");if(n=o[0],r=o.length>1?i.options.decimal+o[1]:"",i.options.useGrouping){a="";for(var l=3,u=0,c=0,p=n.length;c<p;++c)i.options.useIndianSeparators&&4===c&&(l=2,u=1),0!==c&&u%l==0&&(a=i.options.separator+a),u++,a=n[p-c-1]+a;n=a}return i.options.numerals&&i.options.numerals.length&&(n=n.replace(/[0-9]/g,(function(t){return i.options.numerals[+t]})),r=r.replace(/[0-9]/g,(function(t){return i.options.numerals[+t]}))),s+i.options.prefix+n+r+i.options.suffix},this.easeOutExpo=function(t,e,n,r){return n*(1-Math.pow(2,-10*t/r))*1024/1023+e},this.options=r(r({},this.defaults),n),this.formattingFn=this.options.formattingFn?this.options.formattingFn:this.formatNumber,this.easingFn=this.options.easingFn?this.options.easingFn:this.easeOutExpo,this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.endVal=this.validateValue(e),this.options.decimalPlaces=Math.max(this.options.decimalPlaces),this.resetDuration(),this.options.separator=String(this.options.separator),this.useEasing=this.options.useEasing,""===this.options.separator&&(this.options.useGrouping=!1),this.el="string"==typeof t?document.getElementById(t):t,this.el?this.printValue(this.startVal):this.error="[CountUp] target is null or undefined","undefined"!=typeof window&&this.options.enableScrollSpy&&(this.error?console.error(this.error,t):(window.onScrollFns=window.onScrollFns||[],window.onScrollFns.push((function(){return i.handleScroll(i)})),window.onscroll=function(){window.onScrollFns.forEach((function(t){return t()}))},this.handleScroll(this)))}return t.prototype.handleScroll=function(t){if(t&&window&&!t.once){var e=window.innerHeight+window.scrollY,n=t.el.getBoundingClientRect(),r=n.top+window.pageYOffset,i=n.top+n.height+window.pageYOffset;i<e&&i>window.scrollY&&t.paused?(t.paused=!1,setTimeout((function(){return t.start()}),t.options.scrollSpyDelay),t.options.scrollSpyOnce&&(t.once=!0)):(window.scrollY>i||r>e)&&!t.paused&&t.reset()}},t.prototype.determineDirectionAndSmartEasing=function(){var t=this.finalEndVal?this.finalEndVal:this.endVal;this.countDown=this.startVal>t;var e=t-this.startVal;if(Math.abs(e)>this.options.smartEasingThreshold&&this.options.useEasing){this.finalEndVal=t;var n=this.countDown?1:-1;this.endVal=t+n*this.options.smartEasingAmount,this.duration=this.duration/2}else this.endVal=t,this.finalEndVal=null;null!==this.finalEndVal?this.useEasing=!1:this.useEasing=this.options.useEasing},t.prototype.start=function(t){this.error||(this.options.onStartCallback&&this.options.onStartCallback(),t&&(this.options.onCompleteCallback=t),this.duration>0?(this.determineDirectionAndSmartEasing(),this.paused=!1,this.rAF=requestAnimationFrame(this.count)):this.printValue(this.endVal))},t.prototype.pauseResume=function(){this.paused?(this.startTime=null,this.duration=this.remaining,this.startVal=this.frameVal,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count)):cancelAnimationFrame(this.rAF),this.paused=!this.paused},t.prototype.reset=function(){cancelAnimationFrame(this.rAF),this.paused=!0,this.resetDuration(),this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.printValue(this.startVal)},t.prototype.update=function(t){cancelAnimationFrame(this.rAF),this.startTime=null,this.endVal=this.validateValue(t),this.endVal!==this.frameVal&&(this.startVal=this.frameVal,null==this.finalEndVal&&this.resetDuration(),this.finalEndVal=null,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count))},t.prototype.printValue=function(t){var e;if(this.el){var n=this.formattingFn(t);(null===(e=this.options.plugin)||void 0===e?void 0:e.render)?this.options.plugin.render(this.el,n):"INPUT"===this.el.tagName?this.el.value=n:"text"===this.el.tagName||"tspan"===this.el.tagName?this.el.textContent=n:this.el.innerHTML=n}},t.prototype.ensureNumber=function(t){return"number"==typeof t&&!isNaN(t)},t.prototype.validateValue=function(t){var e=Number(t);return this.ensureNumber(e)?e:(this.error="[CountUp] invalid start or end value: ".concat(t),null)},t.prototype.resetDuration=function(){this.startTime=null,this.duration=1e3*Number(this.options.duration),this.remaining=this.duration},t}()},4856:(t,e,n)=>{var r=n(1609),i=n(6991);function a(t,e){var n=Object.keys(t);if(Object.getOwnPropertySymbols){var r=Object.getOwnPropertySymbols(t);e&&(r=r.filter((function(e){return Object.getOwnPropertyDescriptor(t,e).enumerable}))),n.push.apply(n,r)}return n}function s(t){for(var e=1;e<arguments.length;e++){var n=null!=arguments[e]?arguments[e]:{};e%2?a(Object(n),!0).forEach((function(e){var r,i,a;r=t,i=e,a=n[e],(i=function(t){var e=function(t,e){if("object"!=typeof t||!t)return t;var n=t[Symbol.toPrimitive];if(void 0!==n){var r=n.call(t,e||"default");if("object"!=typeof r)return r;throw new TypeError("@@toPrimitive must return a primitive value.")}return("string"===e?String:Number)(t)}(t,"string");return"symbol"==typeof e?e:String(e)}(i))in r?Object.defineProperty(r,i,{value:a,enumerable:!0,configurable:!0,writable:!0}):r[i]=a})):Object.getOwnPropertyDescriptors?Object.defineProperties(t,Object.getOwnPropertyDescriptors(n)):a(Object(n)).forEach((function(e){Object.defineProperty(t,e,Object.getOwnPropertyDescriptor(n,e))}))}return t}function o(){return o=Object.assign?Object.assign.bind():function(t){for(var e=1;e<arguments.length;e++){var n=arguments[e];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(t[r]=n[r])}return t},o.apply(this,arguments)}function l(t,e){if(null==t)return{};var n,r,i=function(t,e){if(null==t)return{};var n,r,i={},a=Object.keys(t);for(r=0;r<a.length;r++)n=a[r],e.indexOf(n)>=0||(i[n]=t[n]);return i}(t,e);if(Object.getOwnPropertySymbols){var a=Object.getOwnPropertySymbols(t);for(r=0;r<a.length;r++)n=a[r],e.indexOf(n)>=0||Object.prototype.propertyIsEnumerable.call(t,n)&&(i[n]=t[n])}return i}function u(t,e){(null==e||e>t.length)&&(e=t.length);for(var n=0,r=new Array(e);n<e;n++)r[n]=t[n];return r}var c="undefined"!=typeof window&&void 0!==window.document&&void 0!==window.document.createElement?r.useLayoutEffect:r.useEffect;function p(t){var e=r.useRef(t);return c((function(){e.current=t})),r.useCallback((function(){for(var t=arguments.length,n=new Array(t),r=0;r<t;r++)n[r]=arguments[r];return e.current.apply(void 0,n)}),[])}var f=["ref","startOnMount","enableReinitialize","delay","onEnd","onStart","onPauseResume","onReset","onUpdate"],d={decimal:".",separator:",",delay:null,prefix:"",suffix:"",duration:2,start:0,decimals:0,startOnMount:!0,enableReinitialize:!0,useEasing:!0,useGrouping:!0,useIndianSeparators:!1},h=function(t){var e=Object.fromEntries(Object.entries(t).filter((function(t){return void 0!==(e=t,n=2,function(t){if(Array.isArray(t))return t}(e)||function(t,e){var n=null==t?null:"undefined"!=typeof Symbol&&t[Symbol.iterator]||t["@@iterator"];if(null!=n){var r,i,a,s,o=[],l=!0,u=!1;try{if(a=(n=n.call(t)).next,0===e){if(Object(n)!==n)return;l=!1}else for(;!(l=(r=a.call(n)).done)&&(o.push(r.value),o.length!==e);l=!0);}catch(t){u=!0,i=t}finally{try{if(!l&&null!=n.return&&(s=n.return(),Object(s)!==s))return}finally{if(u)throw i}}return o}}(e,n)||function(t,e){if(t){if("string"==typeof t)return u(t,e);var n=Object.prototype.toString.call(t).slice(8,-1);return"Object"===n&&t.constructor&&(n=t.constructor.name),"Map"===n||"Set"===n?Array.from(t):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?u(t,e):void 0}}(e,n)||function(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}())[1];var e,n}))),n=r.useMemo((function(){return s(s({},d),e)}),[t]),a=n.ref,o=n.startOnMount,c=n.enableReinitialize,h=n.delay,m=n.onEnd,g=n.onStart,y=n.onPauseResume,v=n.onReset,b=n.onUpdate,w=l(n,f),E=r.useRef(),V=r.useRef(),O=r.useRef(!1),S=p((function(){return function(t,e){var n=e.decimal,r=e.decimals,a=e.duration,s=e.easingFn,o=e.end,l=e.formattingFn,u=e.numerals,c=e.prefix,p=e.separator,f=e.start,d=e.suffix,h=e.useEasing,m=e.useGrouping,g=e.useIndianSeparators,y=e.enableScrollSpy,v=e.scrollSpyDelay,b=e.scrollSpyOnce,w=e.plugin;return new i.CountUp(t,o,{startVal:f,duration:a,decimal:n,decimalPlaces:r,easingFn:s,formattingFn:l,numerals:u,separator:p,prefix:c,suffix:d,plugin:w,useEasing:h,useIndianSeparators:g,useGrouping:m,enableScrollSpy:y,scrollSpyDelay:v,scrollSpyOnce:b})}("string"==typeof a?a:a.current,w)})),x=p((function(t){var e=E.current;if(e&&!t)return e;var n=S();return E.current=n,n})),F=p((function(){var t=function(){return x(!0).start((function(){null==m||m({pauseResume:j,reset:P,start:C,update:A})}))};h&&h>0?V.current=setTimeout(t,1e3*h):t(),null==g||g({pauseResume:j,reset:P,update:A})})),j=p((function(){x().pauseResume(),null==y||y({reset:P,start:C,update:A})})),P=p((function(){x().el&&(V.current&&clearTimeout(V.current),x().reset(),null==v||v({pauseResume:j,start:C,update:A}))})),A=p((function(t){x().update(t),null==b||b({pauseResume:j,reset:P,start:C})})),C=p((function(){P(),F()})),R=p((function(t){o&&(t&&P(),F())}));return r.useEffect((function(){O.current?c&&R(!0):(O.current=!0,R())}),[c,O,R,h,t.start,t.suffix,t.prefix,t.duration,t.separator,t.decimals,t.decimal,t.formattingFn]),r.useEffect((function(){return function(){P()}}),[P]),{start:C,pauseResume:j,reset:P,update:A,getCountUp:x}},m=["className","redraw","containerProps","children","style"];e.Ay=function(t){var e=t.className,n=t.redraw,i=t.containerProps,a=t.children,u=t.style,c=l(t,m),f=r.useRef(null),d=r.useRef(!1),g=h(s(s({},c),{},{ref:f,startOnMount:"function"!=typeof a||0===t.delay,enableReinitialize:!1})),y=g.start,v=g.reset,b=g.update,w=g.pauseResume,E=g.getCountUp,V=p((function(){y()})),O=p((function(e){t.preserveValue||v(),b(e)})),S=p((function(){"function"!=typeof t.children||f.current instanceof Element?E():console.error('Couldn\'t find attached element to hook the CountUp instance into! Try to attach "containerRef" from the render prop to a an Element, eg. <span ref={containerRef} />.')}));r.useEffect((function(){S()}),[S]),r.useEffect((function(){d.current&&O(t.end)}),[t.end,O]);var x=n&&t;return r.useEffect((function(){n&&d.current&&V()}),[V,n,x]),r.useEffect((function(){!n&&d.current&&V()}),[V,n,t.start,t.suffix,t.prefix,t.duration,t.separator,t.decimals,t.decimal,t.className,t.formattingFn]),r.useEffect((function(){d.current=!0}),[]),"function"==typeof a?a({countUpRef:f,start:y,reset:v,update:b,pauseResume:w,getCountUp:E}):r.createElement("span",o({className:e,ref:f,style:u},i),void 0!==t.start?E().formattingFn(t.start):"")}},1609:t=>{t.exports=window.React}},e={};function n(r){var i=e[r];if(void 0!==i)return i.exports;var a=e[r]={exports:{}};return t[r](a,a.exports,n),a.exports}n.d=(t,e)=>{for(var r in e)n.o(e,r)&&!n.o(t,r)&&Object.defineProperty(t,r,{enumerable:!0,get:e[r]})},n.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),n.r=t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})};var r=n(1609);const i=window.wp.element;var a=n(4856);window.wp.i18n,document.addEventListener("DOMContentLoaded",(()=>{const t=document.querySelectorAll(".wp-block-zolo-progress-pie");t.length>0&&t.forEach((t=>{const e=JSON.parse(t.dataset?.settings),{progPieMultiColor:n,progressPie:s}=e,{value:o,duration:l,title:u,toggleLabel:c,size:p,round:f,prefix:d,suffix:h,toggleSuffixPrefix:m,fillColor:g,fillSize:y,numberColor:v,titleColor:b,circleColor:w}=s;(0,i.render)((0,r.createElement)((({value:e,duration:s,fillColor:o,toggleLabel:l,title:u})=>{const c=(0,i.useRef)(null),p=Array.from(t.classList).find((t=>t.startsWith("progress-")));return(0,i.useEffect)((()=>{const t=c.current,n=e||50;return setTimeout((function(){t.style.strokeDasharray=n+" "+(100-n)}),20),()=>clearTimeout()}),[e]),(0,r.createElement)(a.Ay,{start:0,end:e||50,delay:0,duration:s||3,prefix:m&&""!==d?`<span class="progress-prefix">${d}</span>`:"",suffix:m&&""!==h?`<span class="progress-suffix">${h}</span>`:""},(({countUpRef:t})=>(0,r.createElement)(r.Fragment,null,(0,r.createElement)("svg",{className:"progress-pie",width:"100%",height:"100%",viewBox:"0 0 42 42"},(0,r.createElement)("circle",{className:"donut-hole progress-donut-hole",cx:"21",cy:"21",r:"15.91549430918954","stroke-width":"3"}),(0,r.createElement)("circle",{className:"progress-pie-fill",cx:"21",cy:"21",r:"15.91549430918954",fill:"transparent",stroke:o||"#e5e5e5","stroke-dasharray":"100 0","stroke-dashoffset":"25"}),(0,r.createElement)("circle",{id:"progress1",className:"progress-pie-progress",ref:c,cx:"21",cy:"21",r:"15.91549430918954",fill:"transparent",stroke:`url(#gradient-${p})`,"stroke-width":"3","stroke-dasharray":"0 100","stroke-dashoffset":"25"}),(0,r.createElement)("defs",null,(0,r.createElement)("linearGradient",{id:`gradient-${p}`,x1:"0%",y1:"0%",x2:"0%",y2:"100%"},n&&n.map(((t,e)=>{const i=100/(n.length-1);let a;return a=0===e?"0%":e===n.length-1?"100%":i*e+"%",(0,r.createElement)("stop",{offset:a,stopColor:t?.color||"#00bc9b",key:e})}))))),(0,r.createElement)("div",{className:"progress-content"},(0,r.createElement)("div",{className:"progress-pie-number",ref:t},(0,r.createElement)("span",{className:"progress-number"})),(void 0===l||l)&&(0,r.createElement)("div",{className:"progress-pie-label"},u)))))}),{value:o,duration:l,fillColor:g,toggleLabel:c,title:u}),t)}))}))})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/countup.js/dist/countUp.min.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/countup.js/dist/countUp.min.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CountUp: () => (/* binding */ i)
+/* harmony export */ });
+var t=function(){return t=Object.assign||function(t){for(var i,n=1,s=arguments.length;n<s;n++)for(var a in i=arguments[n])Object.prototype.hasOwnProperty.call(i,a)&&(t[a]=i[a]);return t},t.apply(this,arguments)},i=function(){function i(i,n,s){var a=this;this.endVal=n,this.options=s,this.version="2.8.0",this.defaults={startVal:0,decimalPlaces:0,duration:2,useEasing:!0,useGrouping:!0,useIndianSeparators:!1,smartEasingThreshold:999,smartEasingAmount:333,separator:",",decimal:".",prefix:"",suffix:"",enableScrollSpy:!1,scrollSpyDelay:200,scrollSpyOnce:!1},this.finalEndVal=null,this.useEasing=!0,this.countDown=!1,this.error="",this.startVal=0,this.paused=!0,this.once=!1,this.count=function(t){a.startTime||(a.startTime=t);var i=t-a.startTime;a.remaining=a.duration-i,a.useEasing?a.countDown?a.frameVal=a.startVal-a.easingFn(i,0,a.startVal-a.endVal,a.duration):a.frameVal=a.easingFn(i,a.startVal,a.endVal-a.startVal,a.duration):a.frameVal=a.startVal+(a.endVal-a.startVal)*(i/a.duration);var n=a.countDown?a.frameVal<a.endVal:a.frameVal>a.endVal;a.frameVal=n?a.endVal:a.frameVal,a.frameVal=Number(a.frameVal.toFixed(a.options.decimalPlaces)),a.printValue(a.frameVal),i<a.duration?a.rAF=requestAnimationFrame(a.count):null!==a.finalEndVal?a.update(a.finalEndVal):a.options.onCompleteCallback&&a.options.onCompleteCallback()},this.formatNumber=function(t){var i,n,s,e,o=t<0?"-":"";i=Math.abs(t).toFixed(a.options.decimalPlaces);var r=(i+="").split(".");if(n=r[0],s=r.length>1?a.options.decimal+r[1]:"",a.options.useGrouping){e="";for(var l=3,h=0,u=0,p=n.length;u<p;++u)a.options.useIndianSeparators&&4===u&&(l=2,h=1),0!==u&&h%l==0&&(e=a.options.separator+e),h++,e=n[p-u-1]+e;n=e}return a.options.numerals&&a.options.numerals.length&&(n=n.replace(/[0-9]/g,(function(t){return a.options.numerals[+t]})),s=s.replace(/[0-9]/g,(function(t){return a.options.numerals[+t]}))),o+a.options.prefix+n+s+a.options.suffix},this.easeOutExpo=function(t,i,n,s){return n*(1-Math.pow(2,-10*t/s))*1024/1023+i},this.options=t(t({},this.defaults),s),this.formattingFn=this.options.formattingFn?this.options.formattingFn:this.formatNumber,this.easingFn=this.options.easingFn?this.options.easingFn:this.easeOutExpo,this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.endVal=this.validateValue(n),this.options.decimalPlaces=Math.max(this.options.decimalPlaces),this.resetDuration(),this.options.separator=String(this.options.separator),this.useEasing=this.options.useEasing,""===this.options.separator&&(this.options.useGrouping=!1),this.el="string"==typeof i?document.getElementById(i):i,this.el?this.printValue(this.startVal):this.error="[CountUp] target is null or undefined","undefined"!=typeof window&&this.options.enableScrollSpy&&(this.error?console.error(this.error,i):(window.onScrollFns=window.onScrollFns||[],window.onScrollFns.push((function(){return a.handleScroll(a)})),window.onscroll=function(){window.onScrollFns.forEach((function(t){return t()}))},this.handleScroll(this)))}return i.prototype.handleScroll=function(t){if(t&&window&&!t.once){var i=window.innerHeight+window.scrollY,n=t.el.getBoundingClientRect(),s=n.top+window.pageYOffset,a=n.top+n.height+window.pageYOffset;a<i&&a>window.scrollY&&t.paused?(t.paused=!1,setTimeout((function(){return t.start()}),t.options.scrollSpyDelay),t.options.scrollSpyOnce&&(t.once=!0)):(window.scrollY>a||s>i)&&!t.paused&&t.reset()}},i.prototype.determineDirectionAndSmartEasing=function(){var t=this.finalEndVal?this.finalEndVal:this.endVal;this.countDown=this.startVal>t;var i=t-this.startVal;if(Math.abs(i)>this.options.smartEasingThreshold&&this.options.useEasing){this.finalEndVal=t;var n=this.countDown?1:-1;this.endVal=t+n*this.options.smartEasingAmount,this.duration=this.duration/2}else this.endVal=t,this.finalEndVal=null;null!==this.finalEndVal?this.useEasing=!1:this.useEasing=this.options.useEasing},i.prototype.start=function(t){this.error||(this.options.onStartCallback&&this.options.onStartCallback(),t&&(this.options.onCompleteCallback=t),this.duration>0?(this.determineDirectionAndSmartEasing(),this.paused=!1,this.rAF=requestAnimationFrame(this.count)):this.printValue(this.endVal))},i.prototype.pauseResume=function(){this.paused?(this.startTime=null,this.duration=this.remaining,this.startVal=this.frameVal,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count)):cancelAnimationFrame(this.rAF),this.paused=!this.paused},i.prototype.reset=function(){cancelAnimationFrame(this.rAF),this.paused=!0,this.resetDuration(),this.startVal=this.validateValue(this.options.startVal),this.frameVal=this.startVal,this.printValue(this.startVal)},i.prototype.update=function(t){cancelAnimationFrame(this.rAF),this.startTime=null,this.endVal=this.validateValue(t),this.endVal!==this.frameVal&&(this.startVal=this.frameVal,null==this.finalEndVal&&this.resetDuration(),this.finalEndVal=null,this.determineDirectionAndSmartEasing(),this.rAF=requestAnimationFrame(this.count))},i.prototype.printValue=function(t){var i;if(this.el){var n=this.formattingFn(t);if(null===(i=this.options.plugin)||void 0===i?void 0:i.render)this.options.plugin.render(this.el,n);else if("INPUT"===this.el.tagName)this.el.value=n;else"text"===this.el.tagName||"tspan"===this.el.tagName?this.el.textContent=n:this.el.innerHTML=n}},i.prototype.ensureNumber=function(t){return"number"==typeof t&&!isNaN(t)},i.prototype.validateValue=function(t){var i=Number(t);return this.ensureNumber(i)?i:(this.error="[CountUp] invalid start or end value: ".concat(t),null)},i.prototype.resetDuration=function(){this.startTime=null,this.duration=1e3*Number(this.options.duration),this.remaining=this.duration},i}();
+
+
+/***/ }),
+
+/***/ "./node_modules/react-countup/build/index.js":
+/*!***************************************************!*\
+  !*** ./node_modules/react-countup/build/index.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+
+var React = __webpack_require__(/*! react */ "react");
+var countup_js = __webpack_require__(/*! countup.js */ "./node_modules/countup.js/dist/countUp.min.js");
+
+function _iterableToArrayLimit(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = !0,
+      o = !1;
+    try {
+      if (i = (t = t.call(r)).next, 0 === l) {
+        if (Object(t) !== t) return;
+        f = !1;
+      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = !0, n = r;
+    } finally {
+      try {
+        if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
+    }
+    return a;
+  }
+}
+function ownKeys(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread2(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys(Object(t), !0).forEach(function (r) {
+      _defineProperty(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+    });
+  }
+  return e;
+}
+function _toPrimitive(t, r) {
+  if ("object" != typeof t || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != typeof i) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+function _toPropertyKey(t) {
+  var i = _toPrimitive(t, "string");
+  return "symbol" == typeof i ? i : String(i);
+}
+function _defineProperty(obj, key, value) {
+  key = _toPropertyKey(key);
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+  return obj;
+}
+function _extends() {
+  _extends = Object.assign ? Object.assign.bind() : function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+    return target;
+  };
+  return _extends.apply(this, arguments);
+}
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
+  return arr2;
+}
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+/**
+ * Silence SSR Warnings.
+ * Borrowed from Formik v2.1.1, Licensed MIT.
+ *
+ * https://github.com/formium/formik/blob/9316a864478f8fcd4fa99a0735b1d37afdf507dc/LICENSE
+ */
+var useIsomorphicLayoutEffect = typeof window !== 'undefined' && typeof window.document !== 'undefined' && typeof window.document.createElement !== 'undefined' ? React.useLayoutEffect : React.useEffect;
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+/**
+ * Create a stable reference to a callback which is updated after each render is committed.
+ * Typed version borrowed from Formik v2.2.1. Licensed MIT.
+ *
+ * https://github.com/formium/formik/blob/9316a864478f8fcd4fa99a0735b1d37afdf507dc/LICENSE
+ */
+function useEventCallback(fn) {
+  var ref = React.useRef(fn);
+
+  // we copy a ref to the callback scoped to the current state/props on each render
+  useIsomorphicLayoutEffect(function () {
+    ref.current = fn;
+  });
+  return React.useCallback(function () {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+    return ref.current.apply(void 0, args);
+  }, []);
+}
+
+var createCountUpInstance = function createCountUpInstance(el, props) {
+  var decimal = props.decimal,
+    decimals = props.decimals,
+    duration = props.duration,
+    easingFn = props.easingFn,
+    end = props.end,
+    formattingFn = props.formattingFn,
+    numerals = props.numerals,
+    prefix = props.prefix,
+    separator = props.separator,
+    start = props.start,
+    suffix = props.suffix,
+    useEasing = props.useEasing,
+    useGrouping = props.useGrouping,
+    useIndianSeparators = props.useIndianSeparators,
+    enableScrollSpy = props.enableScrollSpy,
+    scrollSpyDelay = props.scrollSpyDelay,
+    scrollSpyOnce = props.scrollSpyOnce,
+    plugin = props.plugin;
+  return new countup_js.CountUp(el, end, {
+    startVal: start,
+    duration: duration,
+    decimal: decimal,
+    decimalPlaces: decimals,
+    easingFn: easingFn,
+    formattingFn: formattingFn,
+    numerals: numerals,
+    separator: separator,
+    prefix: prefix,
+    suffix: suffix,
+    plugin: plugin,
+    useEasing: useEasing,
+    useIndianSeparators: useIndianSeparators,
+    useGrouping: useGrouping,
+    enableScrollSpy: enableScrollSpy,
+    scrollSpyDelay: scrollSpyDelay,
+    scrollSpyOnce: scrollSpyOnce
+  });
+};
+
+var _excluded$1 = ["ref", "startOnMount", "enableReinitialize", "delay", "onEnd", "onStart", "onPauseResume", "onReset", "onUpdate"];
+var DEFAULTS = {
+  decimal: '.',
+  separator: ',',
+  delay: null,
+  prefix: '',
+  suffix: '',
+  duration: 2,
+  start: 0,
+  decimals: 0,
+  startOnMount: true,
+  enableReinitialize: true,
+  useEasing: true,
+  useGrouping: true,
+  useIndianSeparators: false
+};
+var useCountUp = function useCountUp(props) {
+  var filteredProps = Object.fromEntries(Object.entries(props).filter(function (_ref) {
+    var _ref2 = _slicedToArray(_ref, 2),
+      value = _ref2[1];
+    return value !== undefined;
+  }));
+  var _useMemo = React.useMemo(function () {
+      return _objectSpread2(_objectSpread2({}, DEFAULTS), filteredProps);
+    }, [props]),
+    ref = _useMemo.ref,
+    startOnMount = _useMemo.startOnMount,
+    enableReinitialize = _useMemo.enableReinitialize,
+    delay = _useMemo.delay,
+    onEnd = _useMemo.onEnd,
+    onStart = _useMemo.onStart,
+    onPauseResume = _useMemo.onPauseResume,
+    onReset = _useMemo.onReset,
+    onUpdate = _useMemo.onUpdate,
+    instanceProps = _objectWithoutProperties(_useMemo, _excluded$1);
+  var countUpRef = React.useRef();
+  var timerRef = React.useRef();
+  var isInitializedRef = React.useRef(false);
+  var createInstance = useEventCallback(function () {
+    return createCountUpInstance(typeof ref === 'string' ? ref : ref.current, instanceProps);
+  });
+  var getCountUp = useEventCallback(function (recreate) {
+    var countUp = countUpRef.current;
+    if (countUp && !recreate) {
+      return countUp;
+    }
+    var newCountUp = createInstance();
+    countUpRef.current = newCountUp;
+    return newCountUp;
+  });
+  var start = useEventCallback(function () {
+    var run = function run() {
+      return getCountUp(true).start(function () {
+        onEnd === null || onEnd === void 0 || onEnd({
+          pauseResume: pauseResume,
+          reset: reset,
+          start: restart,
+          update: update
+        });
+      });
+    };
+    if (delay && delay > 0) {
+      timerRef.current = setTimeout(run, delay * 1000);
+    } else {
+      run();
+    }
+    onStart === null || onStart === void 0 || onStart({
+      pauseResume: pauseResume,
+      reset: reset,
+      update: update
+    });
+  });
+  var pauseResume = useEventCallback(function () {
+    getCountUp().pauseResume();
+    onPauseResume === null || onPauseResume === void 0 || onPauseResume({
+      reset: reset,
+      start: restart,
+      update: update
+    });
+  });
+  var reset = useEventCallback(function () {
+    // Quick fix for https://github.com/glennreyes/react-countup/issues/736 - should be investigated
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    if (getCountUp().el) {
+      timerRef.current && clearTimeout(timerRef.current);
+      getCountUp().reset();
+      onReset === null || onReset === void 0 || onReset({
+        pauseResume: pauseResume,
+        start: restart,
+        update: update
+      });
+    }
+  });
+  var update = useEventCallback(function (newEnd) {
+    getCountUp().update(newEnd);
+    onUpdate === null || onUpdate === void 0 || onUpdate({
+      pauseResume: pauseResume,
+      reset: reset,
+      start: restart
+    });
+  });
+  var restart = useEventCallback(function () {
+    reset();
+    start();
+  });
+  var maybeInitialize = useEventCallback(function (shouldReset) {
+    if (startOnMount) {
+      if (shouldReset) {
+        reset();
+      }
+      start();
+    }
+  });
+  React.useEffect(function () {
+    if (!isInitializedRef.current) {
+      isInitializedRef.current = true;
+      maybeInitialize();
+    } else if (enableReinitialize) {
+      maybeInitialize(true);
+    }
+  }, [enableReinitialize, isInitializedRef, maybeInitialize, delay, props.start, props.suffix, props.prefix, props.duration, props.separator, props.decimals, props.decimal, props.formattingFn]);
+  React.useEffect(function () {
+    return function () {
+      reset();
+    };
+  }, [reset]);
+  return {
+    start: restart,
+    pauseResume: pauseResume,
+    reset: reset,
+    update: update,
+    getCountUp: getCountUp
+  };
+};
+
+var _excluded = ["className", "redraw", "containerProps", "children", "style"];
+var CountUp = function CountUp(props) {
+  var className = props.className,
+    redraw = props.redraw,
+    containerProps = props.containerProps,
+    children = props.children,
+    style = props.style,
+    useCountUpProps = _objectWithoutProperties(props, _excluded);
+  var containerRef = React.useRef(null);
+  var isInitializedRef = React.useRef(false);
+  var _useCountUp = useCountUp(_objectSpread2(_objectSpread2({}, useCountUpProps), {}, {
+      ref: containerRef,
+      startOnMount: typeof children !== 'function' || props.delay === 0,
+      // component manually restarts
+      enableReinitialize: false
+    })),
+    start = _useCountUp.start,
+    reset = _useCountUp.reset,
+    updateCountUp = _useCountUp.update,
+    pauseResume = _useCountUp.pauseResume,
+    getCountUp = _useCountUp.getCountUp;
+  var restart = useEventCallback(function () {
+    start();
+  });
+  var update = useEventCallback(function (end) {
+    if (!props.preserveValue) {
+      reset();
+    }
+    updateCountUp(end);
+  });
+  var initializeOnMount = useEventCallback(function () {
+    if (typeof props.children === 'function') {
+      // Warn when user didn't use containerRef at all
+      if (!(containerRef.current instanceof Element)) {
+        console.error("Couldn't find attached element to hook the CountUp instance into! Try to attach \"containerRef\" from the render prop to a an Element, eg. <span ref={containerRef} />.");
+        return;
+      }
+    }
+
+    // unlike the hook, the CountUp component initializes on mount
+    getCountUp();
+  });
+  React.useEffect(function () {
+    initializeOnMount();
+  }, [initializeOnMount]);
+  React.useEffect(function () {
+    if (isInitializedRef.current) {
+      update(props.end);
+    }
+  }, [props.end, update]);
+  var redrawDependencies = redraw && props;
+
+  // if props.redraw, call this effect on every props change
+  React.useEffect(function () {
+    if (redraw && isInitializedRef.current) {
+      restart();
+    }
+  }, [restart, redraw, redrawDependencies]);
+
+  // if not props.redraw, call this effect only when certain props are changed
+  React.useEffect(function () {
+    if (!redraw && isInitializedRef.current) {
+      restart();
+    }
+  }, [restart, redraw, props.start, props.suffix, props.prefix, props.duration, props.separator, props.decimals, props.decimal, props.className, props.formattingFn]);
+  React.useEffect(function () {
+    isInitializedRef.current = true;
+  }, []);
+  if (typeof children === 'function') {
+    // TypeScript forces functional components to return JSX.Element | null.
+    return children({
+      countUpRef: containerRef,
+      start: start,
+      reset: reset,
+      update: updateCountUp,
+      pauseResume: pauseResume,
+      getCountUp: getCountUp
+    });
+  }
+  return /*#__PURE__*/React.createElement("span", _extends({
+    className: className,
+    ref: containerRef,
+    style: style
+  }, containerProps), typeof props.start !== 'undefined' ? getCountUp().formattingFn(props.start) : '');
+};
+
+exports["default"] = CountUp;
+exports.useCountUp = useCountUp;
+
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+module.exports = window["React"];
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+/***/ ((module) => {
+
+module.exports = window["ReactJSXRuntime"];
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!*********************************!*\
+  !*** external ["wp","element"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["element"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["i18n"];
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
+(() => {
+/*!*********************************************!*\
+  !*** ./src/blocks/progress-pie/frontend.js ***!
+  \*********************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_countup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-countup */ "./node_modules/react-countup/build/index.js");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+// render on page load
+
+document.addEventListener('DOMContentLoaded', () => {
+  const progress = document.querySelectorAll('.wp-block-zolo-progress-pie');
+  if (progress.length > 0) {
+    progress.forEach(item => {
+      const settings = JSON.parse(item.dataset?.settings);
+      const {
+        progPieMultiColor,
+        progressPie
+      } = settings;
+      const {
+        value,
+        duration,
+        title,
+        toggleLabel,
+        size,
+        round,
+        prefix,
+        suffix,
+        toggleSuffixPrefix,
+        fillColor,
+        fillSize,
+        numberColor,
+        titleColor,
+        circleColor
+      } = progressPie;
+      const CountupComponent = ({
+        value,
+        duration,
+        fillColor,
+        toggleLabel,
+        title
+      }) => {
+        const progress = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useRef)(null);
+        const uniqueId = Array.from(item.classList).find(className => className.startsWith('progress-'));
+        (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+          const progressPie = progress.current;
+          const progressVal = value || 50;
+          startAnim();
+          function startAnim() {
+            setTimeout(function () {
+              progressPie.style.strokeDasharray = progressVal + ' ' + (100 - progressVal);
+            }, 20);
+          }
+          return () => clearTimeout();
+        }, [value]);
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_countup__WEBPACK_IMPORTED_MODULE_1__["default"], {
+          start: 0,
+          end: value || 50,
+          delay: 0,
+          duration: duration || 3,
+          prefix: toggleSuffixPrefix && prefix !== '' ? `<span class="progress-prefix">${prefix}</span>` : '',
+          suffix: toggleSuffixPrefix && suffix !== '' ? `<span class="progress-suffix">${suffix}</span>` : '',
+          children: ({
+            countUpRef
+          }) => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("svg", {
+              className: "progress-pie",
+              width: "100%",
+              height: "100%",
+              viewBox: "0 0 42 42",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
+                className: "donut-hole progress-donut-hole",
+                cx: "21",
+                cy: "21",
+                r: "15.91549430918954",
+                "stroke-width": "3"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
+                className: "progress-pie-fill",
+                cx: "21",
+                cy: "21",
+                r: "15.91549430918954",
+                fill: "transparent",
+                stroke: fillColor ? fillColor : '#e5e5e5',
+                "stroke-dasharray": "100 0",
+                "stroke-dashoffset": "25"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("circle", {
+                id: "progress1",
+                className: "progress-pie-progress",
+                ref: progress,
+                cx: "21",
+                cy: "21",
+                r: "15.91549430918954",
+                fill: "transparent",
+                stroke: `url(#gradient-${uniqueId})`,
+                "stroke-width": "3",
+                "stroke-dasharray": "0 100",
+                "stroke-dashoffset": "25"
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("defs", {
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("linearGradient", {
+                  id: `gradient-${uniqueId}`,
+                  x1: "0%",
+                  y1: "0%",
+                  x2: "0%",
+                  y2: "100%",
+                  children: progPieMultiColor && progPieMultiColor.map((color, index) => {
+                    const averageOffset = 100 / (progPieMultiColor.length - 1);
+                    let offset;
+                    if (index === 0) {
+                      // First child, offset is 0%
+                      offset = '0%';
+                    } else if (index === progPieMultiColor.length - 1) {
+                      // Last child, offset is 100%
+                      offset = '100%';
+                    } else {
+                      // Intermediate children, calculate offset
+                      offset = `${averageOffset * index}%`;
+                    }
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("stop", {
+                      offset: offset,
+                      stopColor: color?.color || '#00bc9b'
+                    }, index);
+                  })
+                })
+              })]
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+              className: "progress-content",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "progress-pie-number",
+                ref: countUpRef,
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+                  className: "progress-number"
+                })
+              }), (toggleLabel === undefined || toggleLabel) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+                className: "progress-pie-label",
+                children: title
+              })]
+            })]
+          })
+        });
+      };
+      // const root = createRoot(item);
+      // root.render(
+      //     <CountupComponent
+      //         progressValue={value}
+      //         circleColor={circleColor}
+      //         fillColor={fillColor}
+      //         toggleLabel={toggleLabel}
+      //         progressTitle={title}
+      //         progressDuration={duration}
+      //     />
+      // );
+      (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.render)(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(CountupComponent, {
+        value: value,
+        duration: duration,
+        fillColor: fillColor,
+        toggleLabel: toggleLabel,
+        title: title
+      }), item);
+    });
+  }
+});
+})();
+
+/******/ })()
+;
+//# sourceMappingURL=frontend.js.map

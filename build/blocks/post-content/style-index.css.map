@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/post-content/style-index.css","mappings":";;;AACI;EACI;AAAR,C","sources":["webpack://zoloblocks/./src/blocks/post-content/style.scss"],"sourcesContent":[".wp-block-zolo-post-content {\n    a {\n        display: inline-block;\n    }\n}\n"],"names":[],"sourceRoot":""}

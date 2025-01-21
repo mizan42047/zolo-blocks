@@ -1,1 +1,52 @@
-.zolo-post-comments-wrap{display:grid;grid-template-columns:repeat(1,1fr);grid-gap:50px}.zolo-post-comments-wrap .zolo-meta{align-items:center;display:flex;margin-bottom:15px}.zolo-post-comments-wrap .zolo-meta .zolo-avatar{margin-right:15px}.zolo-post-comments-wrap .zolo-meta .zolo-avatar img{--zolo-avatar-size:80px;border-radius:50%;height:var(--zolo-avatar-size);max-width:unset;vertical-align:middle;width:var(--zolo-avatar-size)}.zolo-post-comments-wrap .zolo-meta .zolo-author-name{color:#2b2d42;display:-webkit-box;font-size:18px;font-weight:500;overflow:hidden;text-overflow:ellipsis;text-transform:capitalize;transition:color .3s ease;-webkit-line-clamp:1;-webkit-box-orient:vertical;margin:0 0 7px;text-decoration:none}.zolo-post-comments-wrap .zolo-meta .zolo-author-name:hover{color:#ef233c}.zolo-post-comments-wrap .zolo-meta .zolo-date,.zolo-post-comments-wrap .zolo-text{color:#798184;font-size:14px}.zolo-post-comments-wrap .zolo-text{line-height:1.6;margin:0}
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/post-comments/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+.zolo-post-comments-wrap {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px;
+}
+.zolo-post-comments-wrap .zolo-meta {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.zolo-post-comments-wrap .zolo-meta .zolo-avatar {
+  margin-right: 15px;
+}
+.zolo-post-comments-wrap .zolo-meta .zolo-avatar img {
+  --zolo-avatar-size: 80px;
+  border-radius: 50%;
+  width: var(--zolo-avatar-size);
+  height: var(--zolo-avatar-size);
+  max-width: unset;
+  vertical-align: middle;
+}
+.zolo-post-comments-wrap .zolo-meta .zolo-author-name {
+  color: #2b2d42;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  transition: color 0.3s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-decoration: none;
+  margin: 0 0 7px;
+}
+.zolo-post-comments-wrap .zolo-meta .zolo-author-name:hover {
+  color: #ef233c;
+}
+.zolo-post-comments-wrap .zolo-meta .zolo-date,
+.zolo-post-comments-wrap .zolo-text {
+  color: #798184;
+  font-size: 14px;
+}
+.zolo-post-comments-wrap .zolo-text {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/*# sourceMappingURL=style-index.css.map*/

@@ -1,1 +1,6511 @@
-(()=>{var e,o={9099:(e,o,t)=>{"use strict";var r={};t.r(r),t.d(r,{CAT_TYPOGRAPHY:()=>me,EXCERPT_TYPOGRAPHY:()=>ke,META_TYPOGRAPHY:()=>ue,NAME_TYPOGRAPHY:()=>be,PAG_TYPOGRAPHY:()=>ge,READMORE_TYPOGRAPHY:()=>he,TITLE_TYPOGRAPHY:()=>de});const l=window.wp.blocks,n=window.wp.i18n,s=[{label:(0,n.__)("Style 1","zoloblocks"),value:"style-1"},{label:(0,n.__)("Style 2","zoloblocks"),value:"style-2"},{label:(0,n.__)("Style 3","zoloblocks"),value:"style-3"},{label:(0,n.__)("Style 4 Pro","zoloblocks"),value:"style-4",disabled:!0}],a=[{label:(0,n.__)("Slide","zoloblocks"),value:"slide"},{label:(0,n.__)("Coverflow","zoloblocks"),value:"coverflow"}],i=[{label:(0,n.__)("Default","zoloblocks"),value:""},{label:(0,n.__)("Background (Pro)","zoloblocks"),value:"zolo-post-title-type-1",disabled:!0},{label:(0,n.__)("Underline (Pro)","zoloblocks"),value:"zolo-post-title-type-2",disabled:!0},{label:(0,n.__)("Middle Underline (Pro)","zoloblocks"),value:"zolo-post-title-type-3",disabled:!0},{label:(0,n.__)("Overline (Pro)","zoloblocks"),value:"zolo-post-title-type-4",disabled:!0},{label:(0,n.__)("Middle Overline (Pro)","zoloblocks"),value:"zolo-post-title-type-5",disabled:!0}],c="sliderColumns",p="columnsGap",d="thumbHeight",k="columnPadding",u="contentPadding",m="columnBg",h="columnBorder",b="columnBRadius",g="columnShadow",w="thumbBorder",D="thumbBRadius",z="thumbBg",_="thumbShadow",E="thumbMargin",y="titleMargin",v="excerptMargin",L="metaMargin",$="catGap",C="catBorder",x="catBRadius",M="catMargin",f="catPading",S="readMoreGap",B="readMoreBorder",W="readMoreBRadius",N="readMoreMargin",j="readMorePadding",P="avatarSize",R="avatarBorder",T="avatarBRadius",H="avatarGap",F="metaSpace",A="navWidth",I="navHeight",V="navOffsetHorizontal",q="navBorder",O="navBorderRadius",G="navBg",Y="navHoverBg",Z="navIconSize",Q="pagWidth",U="pagHeight",X="pagBorder",J="pagBorderRadius",K="pagBg",ee="pagSpacing",oe="pagBottomSpacing",te="apagWidth",re="apagHeight",le="apagBorder",ne="apagBorderRadius",se="apagBg",ae="metaArrowSpace",ie="metaBoxWrapPadding",ce="carouselContainerPadding",pe="shadowRange",de="titleTypo",ke="excerptTypo",ue="metaTypo",me="catTypo",he="readMoreTypo",be="nameTypo",ge="pagTypo",{generateResRangeAttributies:we,generateBorderAttributies:De,generateDimensionAttributes:ze,generateBoxShadowAttributies:_e,generateNormalBGAttributes:Ee,generateTypographyAttributes:ye,generateResCounterAttributies:ve}=window.zoloModule,Le={globalConfig:{type:"object",default:{margin:{prefix:"mainMargin"},padding:{prefix:"mainPadding"},background:{prefix:"mainBg"},border:{prefix:"mainBorder"},borderRadius:{prefix:"mainBorderRadius"},boxShadow:{prefix:"mainBoxShadow"},responsiveControls:!0}},preset:{type:"string",default:"style-1"},postTitleAnimation:{type:"string",default:""},titleAnimationTypeBgColor:{type:"string"},showExcerpt:{type:"boolean",default:!1},postTaxonomies:{type:"object",default:{}},metaSeparator:{type:"string",default:"//"},postQuery:{type:"object"},authorPrefix:{type:"string"},...we(p),showThumbnail:{type:"boolean",default:!0},...we(d),showTitle:{type:"boolean",default:!0},titleColor:{type:"string"},titleHoverColor:{type:"string"},titleTag:{type:"string",default:"h2"},titleWords:{type:"number"},excerptWords:{type:"number",default:15},excerptindicator:{type:"string",default:"..."},excerptColor:{type:"string"},catColor:{type:"string"},catBgColor:{type:"string"},catHoverColor:{type:"string"},catBgHoverColor:{type:"string"},showReadMore:{type:"boolean",default:!1},readMoreBtnText:{type:"string",default:"Read More"},showCategory:{type:"boolean",default:!0},showAuthor:{type:"boolean",default:!0},namePrefixColor:{type:"string"},nameColor:{type:"string"},nameHoverColor:{type:"string"},showMeta:{type:"boolean",default:!0},metaColor:{type:"string"},metaHColor:{type:"string"},metaArrowColor:{type:"string"},showReadingTime:{type:"boolean",default:!1},showReadmoreText:{type:"boolean",default:!0},showReadmoreIcon:{type:"boolean",default:!1},readMoreIcon:{type:"string",default:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"></path></svg>'},readMoreColor:{type:"string"},readMoreIconColor:{type:"string"},readMoreBgColor:{type:"string"},readMoreHoverColor:{type:"string"},readMoreIconHoverColor:{type:"string"},readMoreBgHoverColor:{type:"string"},...ze(k),...ze(u),...Ee(m),...De(h),...ze(b),..._e(g),...ze(E),...De(w),...ze(D),...Ee(z),..._e(_),...ze(y),...ze(v),...ze(L),...we($),...De(C),...ze(x),...ze(M),...ze(f),...we(S),...De(B),...ze(W),...ze(N),...ze(j),...we(P),...De(R),...ze(T),...we(H),...ye(Object.values(r)),...we(F),...ve(c),...we(p),...we(A),...we(I),...we(V),...we("navOffsetVertical"),...De(q),...ze(O),...Ee(G),...Ee(Y),...we(Z),...we(Q),...we(U),...De(X),...ze(J),...Ee(K),...we(ee),...we(oe),...we(te),...we(re),...De(le),...ze(ne),...Ee(se),...we(ae),...ze(ie),...ze(ce),...we(pe),slideItems:{type:"number",default:3},sliderType:{type:"string",default:"slider"},sliderOptions:{type:"object"},autoplay:{type:"boolean",default:!1},autoplayDelay:{type:"number",default:30},pauseOnMouseEnter:{type:"boolean",default:!1},infiniteLoop:{type:"boolean",default:!0},showNavigation:{type:"boolean",default:!1},navColor:{type:"string"},navHoverColor:{type:"string"},showPagination:{type:"boolean",default:!0},paginationType:{type:"string",default:"bullets"},dynamicBullets:{type:"boolean",default:!1},speed:{type:"number",default:8},carouselEffect:{type:"string",default:"slide"},coverFlowEffect:{type:"object",default:{rotate:50,stretch:0,depth:100,modifier:1,slideShadows:!1}},addNewSlideBlock:{type:"boolean",default:!1},customNavIcon:{type:"boolean",default:!0},prevNavIcon:{type:"string",default:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M9.375 233.4l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H480c17.69 0 32 14.31 32 32s-14.31 32-32 32H109.3l73.38 73.38c12.5 12.5 12.5 32.75 0 45.25c-12.49 12.49-32.74 12.51-45.25 0l-128-128C-3.125 266.1-3.125 245.9 9.375 233.4z"></path></svg>'},nextNavIcon:{type:"string",default:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"></path></svg>'}},$e=JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"Post Carousel","name":"zolo/post-carousel","category":"zoloblocks","keywords":["post","carousel","slider","feature","highlight","news"],"description":"Feature posts in an interactive, customizable carousel.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":410},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":["file:./index.js","zolo-swiper-editor-script"],"editorStyle":["file:./index.css","zolo-swiper-editor-style"],"style":["zolo-swiper-frontend-style","file:./style-index.css"],"viewScript":["file:./frontend.js","zolo-swiper-frontend-script"]}'),Ce=window.React,xe=window.wp.apiFetch;var Me=t.n(xe);const fe=window.wp.blockEditor,Se=window.wp.components,Be=window.wp.element;var We=t(6942),Ne=t.n(We);(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M4 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:8,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M2 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:6,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M4 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:8,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 12L16 12",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M8 12L2 12",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:16,y:4,width:16,height:8,rx:1,transform:"rotate(90 16 4)",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M4 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:8,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M6.64246 7.53723H17.2781",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M17.2781 7.53729L15.3485 5.28601",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M17.2781 7.53723L15.3485 9.78851",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M6.64246 16.4172H17.2781",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M17.2781 16.4173L15.3485 14.1774",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M17.2781 16.4172L15.3485 18.6685",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M2.85132 21.1473V2.85278",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21.1487 21.1473V2.85278",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.391 6.72949L16.391 17.1923",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.3909 17.1923L18.606 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.391 17.1923L14.176 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.65393 6.72949L7.65393 17.1923",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.65381 17.1923L9.85767 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.65393 17.1923L5.43889 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M17.2705 16.391L6.80771 16.391",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M6.80767 16.3909L8.70593 18.606",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M6.80767 16.391L8.70593 14.176",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M17.2705 7.65393L6.80771 7.65393",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M6.80767 7.65381L8.70593 9.85767",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M6.80767 7.65393L8.70593 5.43889",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M7.60901 17.2705L7.60901 6.80771",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.60908 6.80767L5.39404 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.60901 6.80767L9.82405 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.3461 17.2705L16.3461 6.80771",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.3462 6.80767L14.1423 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.3461 6.80767L18.5611 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M12.142 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.15051 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M9.46875 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M14.4974 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M11.858 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.8495 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none"},(0,Ce.createElement)("path",{d:"M8.00001 15.27L16.39 15.27",stroke:"#4D4D4D",strokeWidth:3,strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M8.00001 9.27002L16.39 9.27002",stroke:"#4D4D4D",strokeWidth:3,strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M20.51 4.03003L3.97001 4.03003",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M20.51 20.51L3.97001 20.51",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M7.39385 12.142L16.5189 12.142",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.39385 7.15051L16.5189 7.15051",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.5599 9.46875L7.42934 9.46875",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.5599 14.4974L7.42934 14.4974",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.606 11.858L7.48088 11.858",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.606 16.8495L7.48088 16.8495",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M15.72 16.64H8.91003",stroke:"#4D4D4D",strokeWidth:"7",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M4 20.48H20.54",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M4 4H20.54",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15.72 7.83997H8.91003",stroke:"#4D4D4D",strokeWidth:"7",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M7.39385 12.142L16.5189 12.142",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.39385 7.15051L16.5189 7.15051",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.5599 9.46875L7.42934 9.46875",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.5599 14.4974L7.42934 14.4974",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.606 11.858L7.48088 11.858",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.606 16.8495L7.48088 16.8495",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.606 7.1615L7.48088 7.1615",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.606 16.8386L7.48088 16.8386",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.6713 8.21777L7.54619 8.21777",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.606 15.8041L7.48088 15.8041",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M16.606 8.73425L7.48088 8.73425",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.606 15.2767L7.48088 15.2767",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M12.142 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.15051 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M9.46875 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M14.4974 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M11.858 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.8495 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M7.1615 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.8386 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M8.21777 7.32874V16.4538",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15.8041 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M8.73425 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15.2767 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.37 15.2757H15.27C16.35 15.2757 17.23 14.318 17.23 13.1427V7.451C17.23 6.27567 16.35 5.31799 15.27 5.31799H7.53",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M10.07 11.8368L6.77002 15.2757L10.07 18.7255",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M17.51 12.0109H6.18005",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M14.8101 8.5719L18.1101 12.0108L14.8101 15.4607",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M7.35999 8.76794H15.26C16.34 8.76794 17.22 9.72562 17.22 10.901V16.5926C17.22 17.7679 16.34 18.7256 15.26 18.7256H7.51999",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M10.0699 12.2068L6.7699 8.76783L10.0699 5.30713",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}));const je=[{label:(0,n.__)("H1","zoloblocks"),value:"h1"},{label:(0,n.__)("H2","zoloblocks"),value:"h2"},{label:(0,n.__)("H3","zoloblocks"),value:"h3"},{label:(0,n.__)("H4","zoloblocks"),value:"h4"},{label:(0,n.__)("H5","zoloblocks"),value:"h5"},{label:(0,n.__)("H6","zoloblocks"),value:"h6"},{label:(0,n.__)("P","zoloblocks"),value:"p"},{label:(0,n.__)("Span","zoloblocks"),value:"span"}],Pe=((0,n.__)("P","zoloblocks"),(0,n.__)("Span","zoloblocks"),(0,n.__)("None","zoloblocks"),(0,n.__)("Solid","zoloblocks"),(0,n.__)("Custom","zoloblocks"),(0,n.__)("Dashed","zoloblocks"),(0,n.__)("Dotted","zoloblocks"),(0,n.__)("Double","zoloblocks"),(0,n.__)("Groove","zoloblocks"),(0,n.__)("Outset","zoloblocks"),(0,n.__)("Ridge","zoloblocks"),(0,n.__)("Classic","zoloblocks"),(0,n.__)("Gradient","zoloblocks"),(0,n.__)("Color","zoloblocks"),(0,n.__)("Gradient","zoloblocks"),(0,n.__)("Image","zoloblocks"),(0,n.__)("Outer","zoloblocks"),(0,n.__)("Inner","zoloblocks"),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M2 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:"7",y:"8",width:"12",height:"8",rx:"1",fill:"none",stroke:"#4D4D4D",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"1"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("rect",{x:11,y:12,width:11,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,Ce.createElement)("rect",{x:3,y:10,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("rect",{x:3,y:12,width:11,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,Ce.createElement)("rect",{x:18,y:10,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("rect",{x:6,y:16,width:12,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,Ce.createElement)("rect",{x:10,y:8,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("rect",{x:6,y:8,width:12,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,Ce.createElement)("rect",{x:10,y:12,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,Ce.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M2 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:"7",y:"8",width:"12",height:"8",rx:"1",fill:"none",stroke:"#4D4D4D",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"1"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,n.__)("Top","zoloblocks"),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,n.__)("Bottom","zoloblocks"),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,n.__)("No Icon","zoloblocks"),(0,Ce.createElement)("svg",{width:18,height:18,viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("circle",{cx:9,cy:9,r:8,stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,Ce.createElement)("path",{d:"M3.13904 4.3877L14.3609 14.1124",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"})),(0,n.__)("Icon & Text","zoloblocks"),(0,Ce.createElement)("svg",{width:35,height:24,viewBox:"0 0 35 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M12 12V16",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,Ce.createElement)("path",{d:"M12 9.5V9",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,Ce.createElement)("path",{d:"M23 12H31M23 15H27.7059",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,Ce.createElement)("circle",{cx:12,cy:12,r:8,stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,Ce.createElement)("path",{d:"M23 9H33.5",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"})),(0,n.__)("Only Icon","zoloblocks"),(0,Ce.createElement)("svg",{width:18,height:18,viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("circle",{cx:9,cy:9,r:8,stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,Ce.createElement)("path",{d:"M9 9V13",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,Ce.createElement)("path",{d:"M9 6.5V6",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"})),(0,n.__)("Date","zoloblocks"),(0,n.__)("Author","zoloblocks"),(0,n.__)("Title","zoloblocks"),(0,n.__)("Last modified date","zoloblocks"),(0,n.__)("Post parent ID","zoloblocks"),(0,n.__)("ASC","zoloblocks"),(0,n.__)("DESC","zoloblocks"),[{label:(0,n.__)("Default","zoloblocks"),value:""},{label:(0,n.__)("Thumbnail","zoloblocks"),value:"thumbnail"},{label:(0,n.__)("Medium","zoloblocks"),value:"medium"},{label:(0,n.__)("Large","zoloblocks"),value:"large"},{label:(0,n.__)("Full","zoloblocks"),value:"full"}]),Re=((0,n.__)("Image","zoloblocks"),(0,n.__)("Icon","zoloblocks"),(0,n.__)("Full","zoloblocks"),(0,n.__)("Boxed","zoloblocks"),(0,n.__)("Custom","zoloblocks"),(0,n.__)("Boxed","zoloblocks"),(0,n.__)("Full Width","zoloblocks"),(0,n.__)("Default","zoloblocks"),(0,n.__)("Auto","zoloblocks"),(0,n.__)("Hidden","zoloblocks"),(0,n.__)("Scroll","zoloblocks"),(0,n.__)("Clip","zoloblocks"),(0,n.__)("Default","zoloblocks"),(0,n.__)("Relative","zoloblocks"),(0,n.__)("Absolute","zoloblocks"),(0,n.__)("Fixed","zoloblocks"),(0,n.__)("Default","zoloblocks"),(0,n.__)("Full Width","zoloblocks"),(0,n.__)("Inline (auto)","zoloblocks"),(0,n.__)("Custom","azoloblocks"),(0,n.__)("None","zoloblocks"),(0,n.__)("Fill","zoloblocks"),(0,n.__)("Contain","zoloblocks"),(0,n.__)("Cover","zoloblocks"),(0,n.__)("Scale Down","zoloblocks"),(0,n.__)("None","zoloblocks"),(0,n.__)("Abstract","zoloblocks"),(0,n.__)("Abstract Brush 1","zoloblocks"),(0,n.__)("Abstract Brush 2","zoloblocks"),(0,n.__)("Aesthetic Blob","zoloblocks"),(0,n.__)("Amorphous Blob","zoloblocks"),(0,n.__)("Brush","zoloblocks"),(0,n.__)("Comment","zoloblocks"),(0,n.__)("Container","zoloblocks"),(0,n.__)("Hand Drawn Blob","zoloblocks"),(0,n.__)("Hexagon","zoloblocks"),(0,n.__)("Hexagon Blob","zoloblocks"),(0,n.__)("Irregular Blob","zoloblocks"),(0,n.__)("Minimal Round","zoloblocks"),(0,n.__)("Octagon","zoloblocks"),(0,n.__)("Organic Blob","zoloblocks"),(0,n.__)("Oval Blob","zoloblocks"),(0,n.__)("Pattern","zoloblocks"),(0,n.__)("Popup 1","zoloblocks"),(0,n.__)("Popup 2","zoloblocks"),(0,n.__)("Popup 3","zoloblocks"),(0,n.__)("Round Brush","zoloblocks"),(0,n.__)("Round Design","zoloblocks"),(0,n.__)("Square Pattern","zoloblocks"),(0,n.__)("Testimonial","zoloblocks"),(0,n.__)("Triangle Blob","zoloblocks"),(0,n.__)("Center Top","zoloblocks"),(0,n.__)("Center Center","zoloblocks"),(0,n.__)("Center Bottom","zoloblocks"),(0,n.__)("Left Top","zoloblocks"),(0,n.__)("Left Center","zoloblocks"),(0,n.__)("Left Bottom","zoloblocks"),(0,n.__)("Right Top","zoloblocks"),(0,n.__)("Right Center","zoloblocks"),(0,n.__)("Right Bottom","zoloblocks"),(0,n.__)("No Repeat","zoloblocks"),(0,n.__)("Repeat","zoloblocks"),(0,n.__)("Repeat X","zoloblocks"),(0,n.__)("Repeat Y","zoloblocks"),(0,n.__)("Auto","zoloblocks"),(0,n.__)("Cover","zoloblocks"),(0,n.__)("Contain","zoloblocks"),(0,n.__)("Top"),(0,n.__)("Right"),(0,n.__)("Bottom"),(0,n.__)("Left"),(0,n.__)("Center"),(0,n.__)("Initial"),(0,n.__)("Inherit"),(0,n.__)("Revert"),(0,n.__)("Unset"),(0,n.__)("Revert Layer"),(0,n.__)("Ease Out","zoloblocks"),(0,n.__)("Ease In Out","zoloblocks"),(0,n.__)("Linear","zoloblocks"),(0,n.__)("Custom","zoloblocks"),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M18.5818 15.3211L22 11.9184L18.5818 8.58813",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M5.41818 15.3211L2 11.9184L5.41818 8.58813",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M2.35461 11.9548H21.6455",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M15.3818 5.4027L11.9636 2L8.61816 5.4027",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M8.61816 18.5974L12.0363 22.0001L15.3818 18.5974",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M12 2.35278V21.2396",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M21.4401 8.67C19.7801 4.22 15.9301 2 12.0001 2C6.85006 2 2.61006 5.89 2.06006 10.89",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M21.9401 13.1201C21.3901 18.1201 17.1501 22.0001 12.0001 22.0001C8.08006 22.0001 4.22006 19.7801 2.56006 15.3301",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M22.0001 2.21997V8.66997H15.5601",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M2 21.7801V15.3301H8.44",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M21.9999 8.16V2L15.8799 2.07",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M16.2598 13.8798H10.0798L10.1398 7.78979",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M10.4299 13.5898L21.7299 2.30981",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M20.62 13.88V19.97C20.62 21.09 19.71 22 18.58 22H4.04C2.91 22 2 21.09 2 19.97V5.47995C2 4.35995 2.91 3.44995 4.04 3.44995H9.64",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M22 4H7.74545L2 20H16.2545L22 4Z",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M22 2L2 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M2 2L22 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,Ce.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,Ce.createElement)("path",{d:"M2 12H22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,Ce.createElement)("path",{d:"M12 2L22 12L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,n.__)("Authors","zoloblocks"),(0,n.__)("Terms","zoloblocks"),(0,n.__)("Authors","zoloblocks"),(0,n.__)("Current Post","zoloblocks"),(0,n.__)("Manual Selection","zoloblocks"),(0,n.__)("Terms","zoloblocks"),(0,n.__)("Default Pagination","zoloblocks"),(0,n.__)("Ajax Pagination","zoloblocks"),(0,n.__)("Load More-Click","zoloblocks"),(0,n.__)("Load More-Scroll","zoloblocks"),window.wp.hooks),{ResDimensionsControl:Te,QueryControl:He,ResRangeControl:Fe,RangeResetControl:Ae,NormalBGControl:Ie,BorderControl:Ve,BoxShadowControl:qe,HeaderTabs:Oe,TabPanelControl:Ge,ColorControl:Ye,TypographyDropdown:Ze,ResCounterControl:Qe,AdvancedOptions:Ue,ZoloIconPicker:Xe,ZoloPanelBody:Je}=window.zoloModule,Ke=function(e){const{attributes:o,setAttributes:t,block:r}=e,{preset:l,postTitleAnimation:z,titleAnimationTypeBgColor:ge,resMode:we,postQuery:De,showThumbnail:ze,showTitle:_e,titleTag:Ee,showExcerpt:ye,excerptindicator:ve,showReadMore:$e,readMoreBtnText:xe,showCategory:Me,showAuthor:Be,showMeta:We,titleColor:Ne,titleHoverColor:Ke,excerptColor:eo,metaColor:oo,metaHColor:to,metaArrowColor:ro,catBgColor:lo,catColor:no,catBgHoverColor:so,catHoverColor:ao,showReadmoreText:io,showReadmoreIcon:co,readMoreIcon:po,readMoreBgColor:ko,readMoreColor:uo,readMoreIconColor:mo,readMoreBgHoverColor:ho,readMoreHoverColor:bo,readMoreIconHoverColor:go,namePrefixColor:wo,nameColor:Do,nameHoverColor:zo,metaSeparator:_o,showReadingTime:Eo,autoplay:yo,autoplayDelay:vo,pauseOnMouseEnter:Lo,infiniteLoop:$o,showNavigation:Co,navColor:xo,navHoverColor:Mo,navHoverBorderColor:fo,showPagination:So,speed:Bo,carouselEffect:Wo,customNavIcon:No,prevNavIcon:jo,nextNavIcon:Po,coverFlowEffect:Ro,authorPrefix:To}=o,Ho={resMode:we,setAttributes:t,attributes:o,objAttributes:Le},Fo=(0,Re.applyFilters)("zolo.blocks.controls.postCarousel.shadow",[],e,"zolo/post-carousel"),Ao=(0,Re.applyFilters)("zolo.extensions.controls.cssFilters",[],r,e),Io=(0,Re.applyFilters)("zolo.extensions.controls.cssFiltersHover",[],r,e);return(0,Ce.createElement)(fe.InspectorControls,{key:"controls"},(0,Ce.createElement)(Oe,{block:"zolo/post-carousel",attributes:o,setAttributes:t,generalTab:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Je,{title:(0,n.__)("General","zoloblocks"),panelProps:e,firstOpen:!0},(0,Ce.createElement)(Se.SelectControl,{label:(0,n.__)("Styles","zoloblocks"),value:l,options:(0,Re.applyFilters)("zolo.postCarousel.presets",s),onChange:e=>(e=>{switch(t({preset:e}),e){case"style-1":case"style-2":case"style-3":t({showExcerpt:!1,showReadMore:!1,showThumbnail:!0,zolo_gridColumnsRange:3});break;case"style-4":t({showExcerpt:!0,showReadMore:!1,showThumbnail:!0,zolo_gridColumnsRange:3})}})(e)}),(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("show hide elements","zoloblocks")),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Title","zoloblocks"),checked:_e,onChange:()=>t({showTitle:!_e})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Excerpt","zoloblocks"),checked:ye,onChange:()=>t({showExcerpt:!ye})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Read More Button","zoloblocks"),checked:$e,onChange:()=>t({showReadMore:!$e})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Category","zoloblocks"),checked:Me,onChange:()=>t({showCategory:!Me})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Author","zoloblocks"),checked:Be,onChange:()=>t({showAuthor:!Be})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Meta","zoloblocks"),checked:We,onChange:()=>t({showMeta:!We})}),We&&(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Reading Time","zoloblocks"),checked:Eo,onChange:()=>t({showReadingTime:!Eo})}),Fo&&Fo.length>0&&Fo,o?.enableShadow&&(0,Ce.createElement)(Fe,{label:(0,n.__)("Shadow Range","zoloblocks"),controlName:pe,requiredProps:Ho,min:0,max:1e3,step:1,noUnits:!0})),(_e||ye)&&(0,Ce.createElement)(Je,{title:(0,n.__)("Content","zoloblocks"),panelProps:e},_e&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"zolo-custom-heading",style:{border:0,paddingTop:0}},(0,n.__)("Title","zoloblocks")),(0,Ce.createElement)(Se.SelectControl,{label:(0,n.__)("Tag","zoloblocks"),value:Ee,options:je,onChange:e=>t({titleTag:e})}),(0,Ce.createElement)(Ae,{label:(0,n.__)("Words","zoloblocks"),controlName:"titleWords",requiredProps:Ho,min:1,max:100,step:1})),ye&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Excerpt","zoloblocks")),(0,Ce.createElement)(Ae,{label:(0,n.__)(" Words","zoloblocks"),controlName:"excerptWords",requiredProps:Ho,min:1,max:100,step:1}),(0,Ce.createElement)(Se.TextControl,{label:(0,n.__)("Indicator","zoloblocks"),value:ve,onChange:e=>t({excerptindicator:e})})),We&&Eo&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Meta","zoloblocks")),(0,Ce.createElement)(Se.TextControl,{label:(0,n.__)("Separator","zoloblocks"),value:_o,onChange:e=>t({metaSeparator:e})})),Be&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Author","zoloblocks")),(0,Ce.createElement)(Se.TextControl,{label:(0,n.__)("Prefix","zoloblocks"),value:To,onChange:e=>t({authorPrefix:e})}))),$e&&(0,Ce.createElement)(Je,{title:(0,n.__)("Read More Button","zoloblocks"),panelProps:e},(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Text","zoloblocks"),checked:io,onChange:()=>t({showReadmoreText:!io})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Icon","zoloblocks"),checked:co,onChange:e=>t({showReadmoreIcon:e})}),io&&(0,Ce.createElement)(Se.TextControl,{label:(0,n.__)("Text","zoloblocks"),value:xe,onChange:e=>t({readMoreBtnText:e})}),co&&(0,Ce.createElement)(Xe,{label:(0,n.__)("Icon","zoloblocks"),value:po,onChange:e=>t({readMoreIcon:e})})),(0,Ce.createElement)(Je,{title:(0,n.__)("Query","zoloblocks"),panelProps:e},(0,Ce.createElement)(He,{attributes:o,setAttributes:t})),(0,Ce.createElement)(Je,{title:(0,n.__)("Carousel Options","zoloblocks"),panelProps:e},(0,Ce.createElement)(Qe,{label:(0,n.__)("Column Number","zoloblocks"),controlName:c,requiredProps:Ho,min:2,max:5}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Column Gap","zoloblocks"),controlName:p,requiredProps:Ho,min:1,max:100,step:1,noUnits:!0}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Se.SelectControl,{label:(0,n.__)("Effect","zoloblocks"),options:a,onChange:e=>t({carouselEffect:e}),value:Wo}),(0,Ce.createElement)(Se.RangeControl,{className:"zolo-flex-col-control",label:(0,n.__)("Speed","zoloblocks"),value:Bo,onChange:e=>t({speed:e}),min:1,max:100,help:(0,n.__)("Speed:","zoloblocks")+100*Bo+"ms"}),"coverflow"===Wo&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"zolo-flex-col-control"},(0,Ce.createElement)(Se.RangeControl,{label:(0,n.__)("Rotate","zoloblocks"),value:Ro.rotate,onChange:e=>{t({coverFlowEffect:{...Ro,rotate:e}})},min:0,max:360})),(0,Ce.createElement)("div",{className:"zolo-flex-col-control"},(0,Ce.createElement)(Se.RangeControl,{label:(0,n.__)("Stretch","zoloblocks"),value:Ro.stretch,onChange:e=>{t({coverFlowEffect:{...Ro,stretch:e}})}})),(0,Ce.createElement)("div",{className:"zolo-flex-col-control"},(0,Ce.createElement)(Se.RangeControl,{label:(0,n.__)("Depth","zoloblocks"),value:Ro.depth,onChange:e=>{t({coverFlowEffect:{...Ro,depth:e}})},min:0,max:1e3})),(0,Ce.createElement)("div",{className:"zolo-flex-col-control"},(0,Ce.createElement)(Se.RangeControl,{label:(0,n.__)("Modifier","zoloblocks"),value:Ro.modifier,onChange:e=>{t({coverFlowEffect:{...Ro,modifier:e}})},min:0,max:10})),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Shadow","zoloblocks"),checked:Ro.slideShadows,onChange:e=>{t({coverFlowEffect:{...Ro,slideShadows:e}})}})),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Infinite Loop","zoloblocks"),checked:$o,onChange:()=>t({infiniteLoop:!$o})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Autoplay","zoloblocks"),checked:yo,onChange:()=>t({autoplay:!yo})}),yo&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Se.RangeControl,{className:"zolo-flex-col-control",label:(0,n.__)("Autoplay Delay","zoloblocks"),value:vo,onChange:e=>t({autoplayDelay:e}),min:1,max:100,help:(0,n.__)("Autoplay Dealy:","zoloblocks")+100*vo+"ms"}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Pause on Mouse Enter","zoloblocks"),checked:Lo,onChange:()=>t({pauseOnMouseEnter:!Lo})})),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Navigation","zoloblocks"),checked:Co,onChange:()=>t({showNavigation:!Co})}),(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Pagination","zoloblocks"),checked:So,onChange:()=>t({showPagination:!So})})),Co&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Je,{title:(0,n.__)("Navigation","zoloblocks"),panelProps:e},(0,Ce.createElement)(Se.ToggleControl,{label:(0,n.__)("Custom Icons","zoloblocks"),checked:No,onChange:()=>t({customNavIcon:!No})}),No&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Xe,{label:(0,n.__)("Prev Icon","zoloblocks"),value:jo,onChange:e=>{t({prevNavIcon:e})}}),(0,Ce.createElement)(Xe,{label:(0,n.__)("Next Icon","zoloblocks"),value:Po,onChange:e=>{t({nextNavIcon:e})}}))))),styleTab:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Je,{title:(0,n.__)("Item Container","zoloblocks"),firstOpen:!0,stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ie,{requiredProps:Ho,controlName:m,noMainBGImg:!0}),(0,Ce.createElement)(Te,{label:(0,n.__)("Padding","zoloblocks"),controlName:k,requiredProps:Ho}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:h,requiredProps:Ho}),(0,Ce.createElement)(qe,{controlName:g,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:b,requiredProps:Ho,forBorderRadius:!0}),(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Carousel Container","zoloblocks")),(0,Ce.createElement)(Te,{label:(0,n.__)("Padding","zoloblocks"),controlName:ce,requiredProps:Ho,forBorderRadius:!1})),(0,Ce.createElement)(Je,{title:(0,n.__)("Content","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Te,{label:(0,n.__)("Padding","zoloblocks"),controlName:u,requiredProps:Ho})),ze&&(0,Ce.createElement)(Je,{title:(0,n.__)("Thumbnail","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Fe,{label:(0,n.__)("Height","zoloblocks"),controlName:d,requiredProps:Ho,min:0,max:600,step:1}),ze&&(0,Ce.createElement)(Se.SelectControl,{label:(0,n.__)("Resolution","zoloblocks"),value:De?.postThumbnail,options:Pe,onChange:e=>t({postQuery:{...De,postThumbnail:e}})}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Te,{label:(0,n.__)("Margin","zoloblocks"),controlName:E,requiredProps:Ho,forBorderRadius:!1}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:w,requiredProps:Ho}),(0,Ce.createElement)(qe,{controlName:_,requiredProps:Ho,enableTransition:!1}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:D,requiredProps:Ho,forBorderRadius:!0}),Ao&&Ao.length>0&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ge,{options:[{value:"normal",label:(0,n.__)("Normal","zoloblocks")},{value:"hover",label:(0,n.__)("Hover","zoloblocks")}],normalComponents:(0,Ce.createElement)(Ce.Fragment,null,Ao),hoverComponents:(0,Ce.createElement)(Ce.Fragment,null,Io)}))),_e&&(0,Ce.createElement)(Je,{title:(0,n.__)("Title","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ge,{normalComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:Ne,onChange:e=>t({titleColor:e})}),(0,Ce.createElement)(Ze,{label:(0,n.__)("Typography","zoloblocks"),typoPrefixConstant:de,requiredProps:Ho}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Te,{label:(0,n.__)("Margin","zoloblocks"),controlName:y,requiredProps:Ho})),hoverComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Se.SelectControl,{label:(0,n.__)("Animations","zoloblocks"),value:z,options:(0,Re.applyFilters)("zolo.postCarousel.titleAnimation",i),onChange:e=>t({postTitleAnimation:e})}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:Ke,onChange:e=>t({titleHoverColor:e})}),"zolo-post-title-type-1"===z&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Animation Type","zoloblocks")),(0,Ce.createElement)(Ye,{label:(0,n.__)("Background","zoloblocks"),color:ge,onChange:e=>t({titleAnimationTypeBgColor:e})})))})),ye&&(0,Ce.createElement)(Je,{title:(0,n.__)("Excerpt","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:eo,onChange:e=>t({excerptColor:e})}),(0,Ce.createElement)(Ze,{label:(0,n.__)("Typography","zoloblocks"),typoPrefixConstant:ke,requiredProps:Ho,max:36}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Te,{label:(0,n.__)("Margin","zoloblocks"),controlName:v,requiredProps:Ho})),We&&(0,Ce.createElement)(Je,{title:(0,n.__)("Meta","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:oo,onChange:e=>t({metaColor:e})}),"style-3"===l&&(0,Ce.createElement)(Ye,{label:(0,n.__)("Hover Color","zoloblocks"),color:to,onChange:e=>t({metaHColor:e})}),(0,Ce.createElement)(Ze,{label:(0,n.__)("Typography","zoloblocks"),typoPrefixConstant:ue,requiredProps:Ho,max:36}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Fe,{label:(0,n.__)("Space","zoloblocks"),controlName:F,requiredProps:Ho,min:0,max:100,step:1}),(0,Ce.createElement)(Te,{label:(0,n.__)("Margin","zoloblocks"),controlName:L,requiredProps:Ho}),"style-4"===l&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Meta Box","zoloblocks")),(0,Ce.createElement)(Te,{label:(0,n.__)("Padding","zoloblocks"),controlName:ie,requiredProps:Ho}),(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Arrow","zoloblocks")),(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:ro,onChange:e=>t({metaArrowColor:e})}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Spacing","zoloblocks"),controlName:ae,requiredProps:Ho,min:0,max:100,step:1}))),Me&&(0,Ce.createElement)(Je,{title:(0,n.__)("Category","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ge,{normalComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:no,onChange:e=>t({catColor:e})}),(0,Ce.createElement)(Ze,{label:(0,n.__)("Typography","zoloblocks"),typoPrefixConstant:me,requiredProps:Ho,max:36}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ye,{label:(0,n.__)("Background","zoloblocks"),color:lo,onChange:e=>t({catBgColor:e})}),(0,Ce.createElement)(Te,{label:(0,n.__)("Padding","zoloblocks"),controlName:f,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Margin","zoloblocks"),controlName:M,requiredProps:Ho}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:C,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:x,requiredProps:Ho,forBorderRadius:!0}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Fe,{label:(0,n.__)("Gap","zoloblocks"),controlName:$,requiredProps:Ho,min:0,max:100,step:1})),hoverComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:ao,onChange:e=>t({catHoverColor:e})}),(0,Ce.createElement)(Ye,{label:(0,n.__)("Background","zoloblocks"),color:so,onChange:e=>t({catBgHoverColor:e})}))})),$e&&(0,Ce.createElement)(Je,{title:(0,n.__)("Read More Button","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ge,{normalComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:uo,onChange:e=>t({readMoreColor:e})}),co&&(0,Ce.createElement)(Ye,{label:(0,n.__)("Icon Color","zoloblocks"),color:mo,onChange:e=>t({readMoreIconColor:e})}),(0,Ce.createElement)(Ze,{label:(0,n.__)("Typography","zoloblocks"),typoPrefixConstant:he,requiredProps:Ho,max:36}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ye,{label:(0,n.__)("Background","zoloblocks"),color:ko,onChange:e=>t({readMoreBgColor:e})}),(0,Ce.createElement)(Te,{label:(0,n.__)("Padding","zoloblocks"),controlName:j,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Margin","zoloblocks"),controlName:N,requiredProps:Ho}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:B,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:W,requiredProps:Ho,forBorderRadius:!0}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Fe,{label:(0,n.__)("Gap","zoloblocks"),controlName:S,requiredProps:Ho,min:0,max:100,step:1})),hoverComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:bo,onChange:e=>t({readMoreHoverColor:e})}),co&&(0,Ce.createElement)(Ye,{label:(0,n.__)("Icon Color","zoloblocks"),color:go,onChange:e=>t({readMoreIconHoverColor:e})}),(0,Ce.createElement)(Ye,{label:(0,n.__)("Background","zoloblocks"),color:ho,onChange:e=>t({readMoreBgHoverColor:e})}))})),Be&&(0,Ce.createElement)(Je,{title:(0,n.__)("Author","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Avatar","zoloblocks")),(0,Ce.createElement)(Fe,{label:(0,n.__)("Size","zoloblocks"),controlName:P,requiredProps:Ho}),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:R,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:T,requiredProps:Ho,forBorderRadius:!0}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Gap","zoloblocks"),controlName:H,requiredProps:Ho,min:0,max:100,step:1}),(0,Ce.createElement)("div",{className:"zolo-custom-heading"},(0,n.__)("Name","zoloblocks")),(0,Ce.createElement)(Ge,{normalComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:Do,onChange:e=>t({nameColor:e})}),(0,Ce.createElement)(Ye,{label:(0,n.__)("Prefix Color","zoloblocks"),color:wo,onChange:e=>t({namePrefixColor:e})}),(0,Ce.createElement)(Ze,{label:(0,n.__)("Typography","zoloblocks"),typoPrefixConstant:be,requiredProps:Ho})),hoverComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Name Hover Color","zoloblocks"),color:zo,onChange:e=>t({nameHoverColor:e})}))})),Co&&(0,Ce.createElement)(Je,{title:(0,n.__)("Navigation","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ge,{normalComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:xo,onChange:e=>t({navColor:e})}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Size","zoloblocks"),controlName:Z,requiredProps:Ho,min:1,max:100}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ie,{label:(0,n.__)("Background","zoloblocks"),controlName:G,requiredProps:Ho,noMainBGImg:!0}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Width","zoloblocks"),controlName:A,requiredProps:Ho,min:1,max:100}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Height","zoloblocks"),controlName:I,requiredProps:Ho,min:1,max:100,units:[{label:"px",value:"px"},{label:"%",value:"%"},{label:"em",value:"em"},{label:"vh",value:"vh"}]}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:q,requiredProps:Ho,hoverControl:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Border Color","zoloblocks"),color:fo,onChange:e=>t({navHoverBorderColor:e})}))}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:O,requiredProps:Ho,forBorderRadius:!0}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Fe,{label:(0,n.__)("Offset Horizontal","zoloblocks"),controlName:V,requiredProps:Ho,min:-100,max:500})),hoverComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ye,{label:(0,n.__)("Color","zoloblocks"),color:Mo,onChange:e=>t({navHoverColor:e})}),(0,Ce.createElement)(Ie,{label:(0,n.__)("Background","zoloblocks"),controlName:Y,requiredProps:Ho,noMainBGImg:!0}))})),So&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Je,{title:(0,n.__)("Pagination","zoloblocks"),stylePanel:!0,panelProps:e},(0,Ce.createElement)(Ge,{options:[{value:"normal",label:(0,n.__)("Normal","zoloblocks")},{value:"hover",label:(0,n.__)("Active","zoloblocks")}],normalComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Fe,{label:(0,n.__)("Width","zoloblocks"),controlName:Q,requiredProps:Ho,min:1,max:100}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Height","zoloblocks"),controlName:U,requiredProps:Ho,min:1,max:100}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ie,{label:(0,n.__)("Background","zoloblocks"),controlName:K,requiredProps:Ho,noMainBGImg:!0}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:X,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:J,requiredProps:Ho,forBorderRadius:!0}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Fe,{label:(0,n.__)("Space Between","zoloblocks"),controlName:ee,requiredProps:Ho,min:0,max:100}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Vertical Offset","zoloblocks"),controlName:oe,requiredProps:Ho,min:-200,max:200})),hoverComponents:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Fe,{label:(0,n.__)("Width","zoloblocks"),controlName:te,requiredProps:Ho,min:1,max:100}),(0,Ce.createElement)(Fe,{label:(0,n.__)("Height","zoloblocks"),controlName:re,requiredProps:Ho,min:1,max:100}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ie,{label:(0,n.__)("Background","zoloblocks"),controlName:se,requiredProps:Ho,noMainBGImg:!0}),(0,Ce.createElement)(Se.CardDivider,null),(0,Ce.createElement)(Ve,{label:(0,n.__)("Border","zoloblocks"),controlName:le,requiredProps:Ho}),(0,Ce.createElement)(Te,{label:(0,n.__)("Border Radius","zoloblocks"),controlName:ne,requiredProps:Ho,forBorderRadius:!0}))})))),advancedTab:(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(Ue,{attributes:o,setAttributes:t,requiredProps:Ho,block:"zolo/post-carousel"}))}))},{DynamicTag:eo,DisplayZoloIcon:oo}=window.zoloModule,to=function({attributes:e,postResults:o}){const{preset:t,showThumbnail:r,showTitle:l,titleWords:s,titleTag:a,showExcerpt:i,excerptWords:c,excerptindicator:p,showReadMore:d,showReadmoreText:k,showReadmoreIcon:u,readMoreBtnText:m,readMoreIcon:h,showCategory:b,showAuthor:g,showMeta:w,showReadingTime:D,metaSeparator:z,authorPrefix:_}=e,E="style-4"===t?(0,n.__)("By","zoloblocks"):(0,n.__)("Posted By","zoloblocks");return[o.length>0&&o.map((e=>{const o=s>0?e.title.trim().split(" ",s).join(" "):e.title,y=c>0?e.excerpt.trim().split(" ",c).join(" "):e.excerpt,v=e.categories.length>0?(0,Ce.createElement)("ul",{className:"zolo-post-category"},e.categories.map((e=>(0,Ce.createElement)("li",{dangerouslySetInnerHTML:{__html:e}})))):"",L=(0,Ce.createElement)("a",{dangerouslySetInnerHTML:{__html:e.avatar}}),$=(0,Ce.createElement)("div",{className:"zolo-post-author-name"},(0,Ce.createElement)("span",null,_||E),(0,Ce.createElement)("a",{href:"#",className:"zolo-post-author-link",dangerouslySetInnerHTML:{__html:e.author}})),C=(0,Ce.createElement)("div",{className:"zolo-post-date"},e.date),x=(0,Ce.createElement)("div",{className:"zolo-post-estimate"},e.reading_time," ",(0,n.__)("Min Read","zoloblocks")),M=(0,Ce.createElement)("div",{className:"zolo-post-meta-box"},L,$),f=(0,Ce.createElement)("div",{className:"zolo-post-dateTime"},C,D&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("span",{className:"meta-separator"},z),x));return(0,Ce.createElement)("div",{className:"zolo-post-item swiper-slide"},(0,Ce.createElement)("div",{className:"zolo-post-image"},r&&"style-4"!==t&&(0,Ce.createElement)(Ce.Fragment,null,e.thumbnail&&(0,Ce.createElement)("a",{href:e.permalink,dangerouslySetInnerHTML:{__html:e.thumbnail}}),!e.thumbnail&&(0,Ce.createElement)("a",{href:e.permalink},(0,Ce.createElement)("img",{src:zoloPlaceholders.placeholder,alt:(0,n.__)("Thumbnail Placeholder","zoloblocks")}))),"style-4"===t&&(0,Ce.createElement)("div",{className:"zolo-post-img-category"},r&&(0,Ce.createElement)(Ce.Fragment,null,e.thumbnail&&(0,Ce.createElement)("a",{href:e.permalink,dangerouslySetInnerHTML:{__html:e.thumbnail}}),!e.thumbnail&&(0,Ce.createElement)("a",{href:e.permalink},(0,Ce.createElement)("img",{src:zoloPlaceholders.placeholder,alt:(0,n.__)("Thumbnail Placeholder","zoloblocks")}))),b&&v),w&&"style-4"!==t&&f,g&&"style-4"!==t&&M,"style-4"===t&&(0,Ce.createElement)("div",{className:"zolo-post-meta-wrap"},w&&"style-4"==t&&f,g&&M)),(0,Ce.createElement)("div",{className:"zolo-post-content"},(0,Ce.createElement)("div",{className:"zolo-post-inner-content"},b&&"style-4"!==t&&v,l&&(0,Ce.createElement)(eo,{tagName:a,className:"zolo-post-title"},(0,Ce.createElement)("a",{href:e.permalink},(0,Ce.createElement)(Be.RawHTML,null,o))),i&&(0,Ce.createElement)("div",{className:"zolo-post-desc"},(0,Ce.createElement)("p",null,(0,Ce.createElement)(Be.RawHTML,null,y),p)),w&&"style-4"!=t&&f),d&&(0,Ce.createElement)("div",{className:"zolo-post-link-btn"},(0,Ce.createElement)("a",{href:e.permalink},k&&m&&(0,Ce.createElement)(Ce.Fragment,null,(0,n.__)(m,"zoloblocks")),u&&h&&(0,Ce.createElement)(oo,{icon:h})))))}))]},{generateDimensionStyle:ro,generateResRangeStyle:lo,generateNormalBGControlStyles:no,generateBorderStyle:so,generateBoxShadowStyles:ao,generateTypographyStyles:io,GlobalStyleHanlder:co}=window.zoloModule,po=function({props:e}){const{attributes:o,setAttributes:t}=e,{preset:r,uniqueId:l,titleColor:n,titleHoverColor:s,excerptColor:a,metaColor:i,metaHColor:c,catBgColor:ge,catColor:we,catBgHoverColor:De,catHoverColor:ze,readMoreBgColor:_e,readMoreColor:Ee,readMoreIconColor:ye,readMoreBgHoverColor:ve,readMoreHoverColor:Le,readMoreIconHoverColor:$e,namePrefixColor:xe,nameColor:Me,nameHoverColor:fe,navColor:Se,navHoverColor:Be,navHoverBorderColor:We,metaArrowColor:Ne,enableShadow:je,titleAnimationTypeBgColor:Pe}=o,{active:Te=!1,blur:He=0,brightness:Fe=100,contrast:Ae=100,saturate:Ie=100,hueRotate:Ve=0}=o?.cssFilters||{},{active:qe=!1,blur:Oe=0,brightness:Ge=100,contrast:Ye=100,saturate:Ze=100,hueRotate:Qe=0}=o?.cssFiltersHover||{},{desktopRangeStyle:Ue,tabRangeStyle:Xe,mobRangeStyle:Je}=lo({controlName:p,property:"grid-gap",attributes:o}),{desktopRangeStyle:Ke,tabRangeStyle:eo,mobRangeStyle:oo}=lo({controlName:d,property:"height",attributes:o}),{dimensionStylesDesktop:to,dimensionStylesTab:po,dimensionStylesMobile:ko}=ro({controlName:k,styleFor:"padding",attributes:o}),{backgroundStylesDesktop:uo,backgroundStylesTab:mo,backgroundStylesMobile:ho}=no({controlName:m,attributes:o,noMainBGImg:!0}),{desktopBorderStyle:bo,tabBorderStyle:go,mobBorderStyle:wo}=so({controlName:h,attributes:o}),{dimensionStylesDesktop:Do,dimensionStylesTab:zo,dimensionStylesMobile:_o}=ro({controlName:b,styleFor:"border-radius",attributes:o}),{boxShadowStyle:Eo}=ao({attributes:o,controlName:g}),{dimensionStylesDesktop:yo,dimensionStylesTab:vo,dimensionStylesMobile:Lo}=ro({controlName:E,styleFor:"margin",attributes:o}),{backgroundStylesDesktop:$o,backgroundStylesTab:Co,backgroundStylesMobile:xo}=no({controlName:z,attributes:o,noMainBGImg:!0}),{desktopBorderStyle:Mo,tabBorderStyle:fo,mobBorderStyle:So}=so({controlName:w,attributes:o}),{dimensionStylesDesktop:Bo,dimensionStylesTab:Wo,dimensionStylesMobile:No}=ro({controlName:D,styleFor:"border-radius",attributes:o}),{boxShadowStyle:jo}=ao({attributes:o,controlName:_}),{typoStylesDesktop:Po,typoStylesTab:Ro,typoStylesMobile:To}=io({prefixConstant:de,attributes:o}),{dimensionStylesDesktop:Ho,dimensionStylesTab:Fo,dimensionStylesMobile:Ao}=ro({controlName:y,styleFor:"margin",attributes:o}),{typoStylesDesktop:Io,typoStylesTab:Vo,typoStylesMobile:qo}=io({prefixConstant:ke,attributes:o}),{dimensionStylesDesktop:Oo,dimensionStylesTab:Go,dimensionStylesMobile:Yo}=ro({controlName:v,styleFor:"margin",attributes:o}),{typoStylesDesktop:Zo,typoStylesTab:Qo,typoStylesMobile:Uo}=io({prefixConstant:ue,attributes:o}),{dimensionStylesDesktop:Xo,dimensionStylesTab:Jo,dimensionStylesMobile:Ko}=ro({controlName:L,styleFor:"margin",attributes:o}),{typoStylesDesktop:et,typoStylesTab:ot,typoStylesMobile:tt}=io({prefixConstant:me,attributes:o}),{desktopRangeStyle:rt,tabRangeStyle:lt,mobRangeStyle:nt}=lo({controlName:$,property:"gap",attributes:o}),{desktopBorderStyle:st,tabBorderStyle:at,mobBorderStyle:it}=so({controlName:C,attributes:o}),{dimensionStylesDesktop:ct,dimensionStylesTab:pt,dimensionStylesMobile:dt}=ro({controlName:x,styleFor:"border-radius",attributes:o}),{dimensionStylesDesktop:kt,dimensionStylesTab:ut,dimensionStylesMobile:mt}=ro({controlName:M,styleFor:"margin",attributes:o}),{dimensionStylesDesktop:ht,dimensionStylesTab:bt,dimensionStylesMobile:gt}=ro({controlName:f,styleFor:"padding",attributes:o}),{typoStylesDesktop:wt,typoStylesTab:Dt,typoStylesMobile:zt}=io({prefixConstant:he,attributes:o}),{desktopRangeStyle:_t,tabRangeStyle:Et,mobRangeStyle:yt}=lo({controlName:S,property:"gap",attributes:o}),{desktopBorderStyle:vt,tabBorderStyle:Lt,mobBorderStyle:$t}=so({controlName:B,attributes:o}),{dimensionStylesDesktop:Ct,dimensionStylesTab:xt,dimensionStylesMobile:Mt}=ro({controlName:W,styleFor:"border-radius",attributes:o}),{dimensionStylesDesktop:ft,dimensionStylesTab:St,dimensionStylesMobile:Bt}=ro({controlName:N,styleFor:"margin",attributes:o}),{dimensionStylesDesktop:Wt,dimensionStylesTab:Nt,dimensionStylesMobile:jt}=ro({controlName:j,styleFor:"padding",attributes:o}),{desktopRangeStyle:Pt,tabRangeStyle:Rt,mobRangeStyle:Tt}=lo({controlName:P,property:"width",attributes:o}),{desktopRangeStyle:Ht,tabRangeStyle:Ft,mobRangeStyle:At}=lo({controlName:P,property:"height",attributes:o}),{desktopBorderStyle:It,tabBorderStyle:Vt,mobBorderStyle:qt}=so({controlName:R,attributes:o}),{dimensionStylesDesktop:Ot,dimensionStylesTab:Gt,dimensionStylesMobile:Yt}=ro({controlName:T,styleFor:"border-radius",attributes:o}),{desktopRangeStyle:Zt,tabRangeStyle:Qt,mobRangeStyle:Ut}=lo({controlName:H,property:"gap",attributes:o}),{typoStylesDesktop:Xt,typoStylesTab:Jt,typoStylesMobile:Kt}=io({prefixConstant:be,attributes:o}),{desktopRangeStyle:er,tabRangeStyle:or,mobRangeStyle:tr}=lo({controlName:F,property:"gap",attributes:o}),{desktopRangeStyle:rr,tabRangeStyle:lr,mobRangeStyle:nr}=lo({controlName:A,property:"width",attributes:o}),{desktopRangeStyle:sr,tabRangeStyle:ar,mobRangeStyle:ir}=lo({controlName:I,property:"height",attributes:o}),{desktopRangeStyle:cr,tabRangeStyle:pr,mobRangeStyle:dr}=lo({controlName:V,property:"left",attributes:o}),{desktopRangeStyle:kr,tabRangeStyle:ur,mobRangeStyle:mr}=lo({controlName:V,property:"right",attributes:o}),{desktopBorderStyle:hr,tabBorderStyle:br,mobBorderStyle:gr}=so({controlName:q,attributes:o}),{dimensionStylesDesktop:wr,dimensionStylesTab:Dr,dimensionStylesMobile:zr}=ro({controlName:O,styleFor:"border-radius",attributes:o}),{backgroundStylesDesktop:_r,backgroundStylesTab:Er,backgroundStylesMobile:yr}=no({controlName:G,attributes:o,noMainBGImg:!0}),{backgroundStylesDesktop:vr,backgroundStylesTab:Lr,backgroundStylesMobile:$r}=no({controlName:Y,attributes:o,noMainBGImg:!0}),{desktopRangeStyle:Cr,tabRangeStyle:xr,mobRangeStyle:Mr}=lo({controlName:Z,property:"font-size",attributes:o}),{desktopRangeStyle:fr,tabRangeStyle:Sr,mobRangeStyle:Br}=lo({controlName:Z,property:"width",attributes:o}),{desktopRangeStyle:Wr,tabRangeStyle:Nr,mobRangeStyle:jr}=lo({controlName:Z,property:"height",attributes:o}),{desktopRangeStyle:Pr,tabRangeStyle:Rr,mobRangeStyle:Tr}=lo({controlName:Q,property:"width",attributes:o}),{desktopRangeStyle:Hr,tabRangeStyle:Fr,mobRangeStyle:Ar}=lo({controlName:U,property:"height",attributes:o}),{desktopBorderStyle:Ir,tabBorderStyle:Vr,mobBorderStyle:qr}=so({controlName:X,attributes:o}),{dimensionStylesDesktop:Or,dimensionStylesTab:Gr,dimensionStylesMobile:Yr}=ro({controlName:J,styleFor:"border-radius",attributes:o}),{backgroundStylesDesktop:Zr,backgroundStylesTab:Qr,backgroundStylesMobile:Ur}=no({controlName:K,attributes:o,noMainBGImg:!0}),{desktopRangeStyle:Xr,tabRangeStyle:Jr,mobRangeStyle:Kr}=lo({controlName:ee,property:"gap",attributes:o}),{desktopRangeStyle:el,tabRangeStyle:ol,mobRangeStyle:tl}=lo({controlName:oe,property:"--zolo-pagination-offset",attributes:o}),{desktopRangeStyle:rl,tabRangeStyle:ll,mobRangeStyle:nl}=lo({controlName:te,property:"width",attributes:o}),{desktopRangeStyle:sl,tabRangeStyle:al,mobRangeStyle:il}=lo({controlName:re,property:"height",attributes:o}),{desktopBorderStyle:cl,tabBorderStyle:pl,mobBorderStyle:dl}=so({controlName:le,attributes:o}),{dimensionStylesDesktop:kl,dimensionStylesTab:ul,dimensionStylesMobile:ml}=ro({controlName:ne,styleFor:"border-radius",attributes:o}),{backgroundStylesDesktop:hl,backgroundStylesTab:bl,backgroundStylesMobile:gl}=no({controlName:se,attributes:o,noMainBGImg:!0}),{dimensionStylesDesktop:wl,dimensionStylesTab:Dl,dimensionStylesMobile:zl}=ro({controlName:u,styleFor:"padding",attributes:o}),{desktopRangeStyle:_l,tabRangeStyle:El,mobRangeStyle:yl}=lo({controlName:ae,property:"left",attributes:o}),{dimensionStylesDesktop:vl,dimensionStylesTab:Ll,dimensionStylesMobile:$l}=ro({controlName:ie,styleFor:"padding",attributes:o}),{dimensionStylesDesktop:Cl,dimensionStylesTab:xl,dimensionStylesMobile:Ml}=ro({controlName:ce,styleFor:"padding",attributes:o}),{desktopRangeStyle:fl,tabRangeStyle:Sl,mobRangeStyle:Bl}=lo({controlName:pe,property:"--review-carousel-mask-offset",attributes:o}),Wl=`\n\n     ${je?`\n                .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{\n                         mask-image: linear-gradient(\n                            to right,\n                            transparent,\n                            black var(--review-carousel-mask-offset),\n                            black calc(100% - var(--review-carousel-mask-offset)),\n                            transparent);\n                          ${fl}\n                    }\n                    `:""}\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item{\n        ${to}\n        ${uo}\n        ${bo}\n        ${Do}\n        ${Eo}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{\n        ${Cl}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item .zolo-post-content{\n        ${wl}\n      }\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime, .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-secount-dateTime {\n        ${er}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item{\n        background: none !important;\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item .zolo-post-image::after{\n        ${uo}\n      }\n\n      ${"style-4"===r?`\n         .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image{\n          ${Ke}\n          ${Bo}\n        }\n\n      `:""}\n\n    ${"style-4"!==r?`\n         .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image {\n          ${Ke}\n          ${Bo}\n        }\n\n      `:""}\n\n    ${"style-4"===r?`\n        .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-wrap::before{\n          ${Ne?`border-top-color:${Ne};`:""}\n          ${_l}\n        }\n      `:""}\n\n    ${"style-4"===r?`\n        .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-4 .zolo-post-meta-wrap {\n          ${vl}\n        }\n\n      `:""}\n\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title{\n        ${Ho}\n        ${Po}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title a{\n        ${n?`color:${n};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title a:hover,\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-title a{\n        ${s?`color:${s};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-desc p{\n        ${Oo}\n        ${Io}\n        ${a?`color:${a};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image{\n        ${yo}\n\n        ${$o}\n        ${Mo}\n        ${jo}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime{\n        ${Zo}\n        ${Xo}\n        ${i?`color:${i};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-dateTime{\n        ${c?`color:${c};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category{\n        ${rt}\n        ${kt}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a{\n        ${et}\n        ${ht}\n        ${st}\n        ${ct}\n        ${we?`color:${we};`:""}\n        ${ge?`background-color:${ge};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a:hover,\n       .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-category a\n      {\n        ${ze?`color:${ze};`:""}\n        ${De?`background-color:${De};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel  .zolo-post-link-btn{\n        ${ft}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a{\n        ${_t}\n        ${wt}\n        ${Wt}\n        ${vt}\n        ${Ct}\n        ${Ee?`color:${Ee};`:""}\n        ${_e?`background-color:${_e};`:""}\n      }\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a svg{\n        ${ye?`color:${ye};`:""}\n        ${ye?`fill:${ye};`:""}\n      }\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a:hover svg{\n        ${$e?`color:${$e};`:""}\n        ${$e?`fill:${$e};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a:hover{\n        ${Le?`color:${Le};`:""}\n        ${ve?`background-color:${ve};`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box{\n        ${Zt}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box img{\n        ${Pt}\n        ${Ht}\n        ${It}\n        ${Ot}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name{\n        ${Xt}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name span{\n        ${xe?`color:${xe} !important;`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name a{\n        ${Me?`color:${Me} !important;`:""}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name a:hover,\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-author-name a{\n        ${fe?`color:${fe} !important;`:""}\n      }\n    .${l}.wp-block-zolo-post-carousel .swiper-button-prev:hover, .${l}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${l}.wp-block-zolo-post-carousel .swiper-zolo-next:hover, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover {\n            border-color: ${We} !important;\n        }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next, .${l}.wp-block-zolo-post-carousel .swiper-button-prev,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev {\n            ${hr}\n            ${wr}\n            ${_r}\n            ${rr}\n            ${sr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-prev,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev{\n            ${cr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next{\n            ${kr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${l}.wp-block-zolo-post-carousel .swiper-button-prev:hover,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next:hover, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover {\n            ${vr}\n        }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next:after, .${l}.wp-block-zolo-post-carousel .swiper-button-prev:after {\n            color: ${Se};\n            ${Cr}\n        }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next svg, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev svg {\n            fill: ${Se};\n            ${fr}\n            ${Wr}\n        }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next:hover:after, .${l}.wp-block-zolo-post-carousel .swiper-button-prev:hover:after, .${l}.wp-block-zolo-post-carousel .swiper-zolo-next:hover i, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover i {\n            color: ${Be};\n        }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next:hover svg, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover svg {\n            fill: ${Be};\n        }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination-bullets {\n            ${Xr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination {\n            ${el}\n        }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet {\n            ${Pr}\n            ${Hr}\n            ${Ir}\n            ${Or}\n            ${Zr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active {\n            ${rl}\n            ${sl}\n            ${cl}\n            ${kl}\n            ${hl}\n        }\n\n        .${l}.zolo-block.zolo-post-title-type-1{\n            ${Pe?`--zolo-post-title-type-primary-color:${Pe};`:""}\n        }\n\n        ${Te?`\n                    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image {\n                        filter:\n                            blur(${He}px)\n                            brightness(${Fe}%)\n                            contrast(${Ae}%)\n                            saturate(${Ie}%)\n                            hue-rotate(${Ve}deg)\n                    }\n             `:""}\n\n        ${qe?`\n                    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image:hover {\n                        filter:\n                            blur(${Oe}px)\n                            brightness(${Ge}%)\n                            contrast(${Ye}%)\n                            saturate(${Ze}%)\n                            hue-rotate(${Qe}deg)\n                    }\n               `:""}\n\n\n    `,Nl=`\n\n    ${je?`\n                .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{\n                    ${Sl}\n                }\n            `:""}\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item{\n      ${po}\n      ${mo}\n      ${go}\n      ${zo}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{\n        ${xl}\n    }\n\n     .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item .zolo-post-content{\n        ${Dl}\n      }\n\n    ${"style-4"===r?`\n          .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image{\n            ${eo}\n            ${Wo}\n          }\n\n        `:""}\n\n      ${"style-4"!==r?`\n          .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image {\n            ${eo}\n            ${Wo}\n          }\n\n        `:""}\n\n      ${"style-4"===r?`\n        .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-wrap::before{\n          ${El}\n        }\n      `:""}\n\n    ${"style-4"===r?`\n        .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-4 .zolo-post-meta-wrap {\n          ${Ll}\n        }\n\n      `:""}\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title{\n      ${Fo}\n      ${Ro}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-desc p{\n      ${Go}\n      ${Vo}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image{\n      ${vo}\n      ${Co}\n      ${fo}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime{\n      ${Qo}\n      ${Jo}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category{\n      ${lt}\n      ${ut}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a{\n      ${ot}\n      ${bt}\n      ${at}\n      ${pt}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel  .zolo-post-link-btn{\n      ${St}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a{\n      ${Et}\n      ${Dt}\n      ${Nt}\n      ${Lt}\n      ${xt}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box{\n      ${Qt}\n    }\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box img{\n      ${Rt}\n      ${Ft}\n      ${Vt}\n      ${Gt}\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name{\n      ${Jt}\n    }\n\n    .${l}.wp-block-zolo-post-carousel .swiper-button-prev,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev{\n            ${pr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next{\n            ${ur}\n        }\n\n    .${l}.wp-block-zolo-post-carousel .swiper-button-next, .${l}.wp-block-zolo-post-carousel .swiper-button-prev {\n            ${lr}\n            ${ar}\n            ${br}\n            ${Dr}\n            ${Er}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${l}.wp-block-zolo-post-carousel .swiper-button-prev:hover {\n            ${Lr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next:after, .${l}.wp-block-zolo-post-carousel .swiper-button-prev:after {\n            ${xr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next svg, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev svg {\n            ${Sr}\n            ${Nr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination-bullet {\n            ${Rr}\n            ${Fr}\n            ${Vr}\n            ${Gr}\n            ${Qr}\n            ${Jr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination {\n            ${ol}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active {\n            ${ll}\n            ${al}\n            ${pl}\n            ${ul}\n            ${bl}\n        }\n  `,jl=`\n\n        ${je?`\n                .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{\n                    ${Bl}\n                }\n            `:""}\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item{\n        ${ko}\n        ${ho}\n        ${wo}\n        ${_o}\n      }\n\n\n    .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{\n        ${Ml}\n    }\n\n\n       .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item .zolo-post-content{\n        ${zl}\n      }\n\n      ${"style-4"===r?`\n          .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image{\n            ${oo}\n            ${No}\n          }\n\n        `:""}\n\n      ${"style-4"!==r?`\n          .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image {\n            ${oo}\n            ${No}\n          }\n\n        `:""}\n\n      ${"style-4"===r?`\n        .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-wrap::before{\n          ${yl}\n        }\n      `:""}\n\n    ${"style-4"===r?`\n        .${l}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-4 .zolo-post-meta-wrap {\n          ${$l}\n        }\n\n      `:""}\n\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title{\n        ${Ao}\n        ${To}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-desc p{\n        ${Yo}\n        ${qo}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image{\n        ${Lo}\n        ${xo}\n        ${So}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime{\n        ${Uo}\n        ${Ko}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category{\n        ${nt}\n        ${mt}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a{\n        ${tt}\n        ${gt}\n        ${it}\n        ${dt}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel  .zolo-post-link-btn{\n        ${Bt}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a{\n        ${yt}\n        ${zt}\n        ${jt}\n        ${$t}\n        ${Mt}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box{\n        ${Ut}\n      }\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box img{\n        ${Tt}\n        ${At}\n        ${qt}\n        ${Yt}\n\n      .${l}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name{\n        ${Kt}\n      }\n\n        .${l}.wp-block-zolo-post-carousel .swiper-button-prev,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev{\n            ${dr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next,\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next{\n            ${mr}\n        }\n      .${l}.wp-block-zolo-post-carousel .swiper-button-next, .${l}.wp-block-zolo-post-carousel .swiper-button-prev {\n            ${nr}\n            ${ir}\n            ${gr}\n            ${zr}\n            ${yr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${l}.wp-block-zolo-post-carousel .swiper-button-prev:hover {\n            ${$r}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-button-next:after, .${l}.wp-block-zolo-post-carousel .swiper-button-prev:after {\n            ${Mr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-zolo-next svg, .${l}.wp-block-zolo-post-carousel .swiper-zolo-prev svg {\n            ${Br}\n            ${jr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination-bullet {\n            ${Tr}\n            ${Ar}\n            ${qr}\n            ${Yr}\n            ${Ur}\n            ${Kr}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination {\n            ${tl}\n        }\n        .${l}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active {\n            ${nl}\n            ${il}\n            ${dl}\n            ${ml}\n            ${gl}\n        }\n    `;return(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)(co,{attributes:o,setAttributes:t,desktopAllStyle:(0,Re.applyFilters)("zoloBlock.postCarousel.desktopAllStyle",Wl,e),tabAllStyle:(0,Re.applyFilters)("zoloBlock.postCarousel.tabAllStyle",Nl,e),mobileAllStyle:(0,Re.applyFilters)("zoloBlock.postCarousel.mobileAllStyle",jl,e)}))},{generateResRangeStyle:ko,generateResCounterStyle:uo,classArrayToStr:mo,DisplayZoloIcon:ho,SidebarOpener:bo}=window.zoloModule,{BlockIcons:go}=window.zoloIcons;(0,l.registerBlockType)($e,{icon:{src:go["post-carousel"]},attributes:Le,edit:function(e){const{attributes:o,setAttributes:t,className:r,isSelected:l,clientId:s}=e,a=(0,Be.useRef)(null),{uniqueId:i,parentClasses:d,postQuery:k,preset:u,postTitleAnimation:m,preview:h,resMode:b,slideItems:g,sliderType:w,autoplay:D,autoplayDelay:z,pauseOnMouseEnter:_,infiniteLoop:E,showNavigation:y,showPagination:v,paginationType:L,dynamicBullets:$,speed:C,carouselEffect:x,addNewSlideBlock:M,customNavIcon:f,prevNavIcon:S,nextNavIcon:B,coverFlowEffect:W}=o,N=(0,fe.useBlockProps)({className:Ne()(r,`${i} zolo-post-carousel zolo-post-${u}`,mo(d),m,`${"Desktop"!==b?b:""}`)}),{desktopRangeStyle:j,tabRangeStyle:P,mobRangeStyle:R}=uo({controlName:c,attributes:o,noProperty:!0}),{desktopRangeStyle:T,tabRangeStyle:H,mobRangeStyle:F}=ko({controlName:p,attributes:o,noProperty:!0,noUnits:!0});(0,Be.useEffect)((()=>{void 0===k&&t({postQuery:{postType:"post",postInclude:"",postExclude:"",postAuthors:[],postTaxonomies:{},postPerPage:7,postOffset:0,postOrderby:"date",postOrder:"desc",postThumbnail:""}})}),[]),(0,Be.useEffect)((()=>{let e={};e={1024:{slidesPerView:j||2,spaceBetween:parseInt(T.slice(0,-1))||30},768:{slidesPerView:P||2,spaceBetween:parseInt(H.slice(0,-1))||30},640:{slidesPerView:R||1,spaceBetween:parseInt(F.slice(0,-1))||0}};let o={loop:E,speed:100*C,effect:x,..."coverflow"===x&&{coverflowEffect:W},autoplay:!!D&&{delay:100*z,pauseOnMouseEnter:_},navigation:!!y&&{nextEl:f?`.${i} .swiper-zolo-next`:`.${i} .swiper-button-next`,prevEl:f?`.${i} .swiper-zolo-prev`:`.${i} .swiper-button-prev`},pagination:!!v&&{el:`.${i} .swiper-pagination`,clickable:!0,type:L,dynamicBullets:$},breakpoints:e};t({sliderOptions:o}),a.current&&function(e,o){e.swiper&&e.swiper.destroy(),new Swiper(e,o)}(a.current,o)}),[a.current,w,j,P,R,T,H,F,D,z,_,E,y,v,L,$,C,x,g,f,S,B,M,b,W]);const[A,I]=(0,Be.useState)([]),[V,q]=(0,Be.useState)(!0);return(0,Be.useEffect)((()=>{const e={zolo_nonce:zoloParams.zolo_nonce,attributes:o,postQuery:k};Me()({path:"/zolo/v1/posts",method:"POST",data:e}).then((e=>{e.success?(I([...e.data.posts]),q(e.success)):(I([]),q(e.success))})).catch((e=>console.log(e)))}),[k]),Array.isArray(A)&&0===A.length?[l&&(0,Ce.createElement)(Ke,{attributes:o,setAttributes:t}),V?(0,Ce.createElement)("div",{className:"zolo-spinner"},(0,Ce.createElement)(Se.Spinner,null)):(0,Ce.createElement)("p",null,(0,n.__)("No posts found.","zoloblocks"))]:h?(0,Ce.createElement)("img",{src:zoloParams.blocksPreview.postCarousel,alt:(0,n.__)("Post Carousel Preview","zoloblocks")}):(0,Ce.createElement)(Ce.Fragment,null,l&&(0,Ce.createElement)(Ke,{attributes:o,setAttributes:t}),(0,Ce.createElement)(po,{props:e}),(0,Ce.createElement)("div",{...N},(0,Ce.createElement)(bo,{clientId:s}),(0,Ce.createElement)("div",{className:"swiper",ref:a},(0,Ce.createElement)("div",{className:"swiper-wrapper"},(0,Ce.createElement)(to,{attributes:o,setAttributes:t,postResults:A}))),v&&(0,Ce.createElement)("div",{class:"swiper-pagination swiper-pagination-position-bottom"}),y&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"swiper-navigation-wrap swiper-navigation-position-center "+(f?"zolo-custom-nav":"")},f&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"swiper-nav-button swiper-zolo-prev"},(0,Ce.createElement)(ho,{icon:S})),(0,Ce.createElement)("div",{className:"swiper-nav-button swiper-zolo-next"},(0,Ce.createElement)(ho,{icon:B}))),!f&&(0,Ce.createElement)(Ce.Fragment,null,(0,Ce.createElement)("div",{className:"swiper-nav-button swiper-button-prev"}),(0,Ce.createElement)("div",{className:"swiper-nav-button swiper-button-next"}))))))},save:()=>null})},6942:(e,o)=>{var t;!function(){"use strict";var r={}.hasOwnProperty;function l(){for(var e="",o=0;o<arguments.length;o++){var t=arguments[o];t&&(e=s(e,n(t)))}return e}function n(e){if("string"==typeof e||"number"==typeof e)return e;if("object"!=typeof e)return"";if(Array.isArray(e))return l.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes("[native code]"))return e.toString();var o="";for(var t in e)r.call(e,t)&&e[t]&&(o=s(o,t));return o}function s(e,o){return o?e?e+" "+o:e+o:e}e.exports?(l.default=l,e.exports=l):void 0===(t=function(){return l}.apply(o,[]))||(e.exports=t)}()}},t={};function r(e){var l=t[e];if(void 0!==l)return l.exports;var n=t[e]={exports:{}};return o[e](n,n.exports,r),n.exports}r.m=o,e=[],r.O=(o,t,l,n)=>{if(!t){var s=1/0;for(p=0;p<e.length;p++){t=e[p][0],l=e[p][1],n=e[p][2];for(var a=!0,i=0;i<t.length;i++)(!1&n||s>=n)&&Object.keys(r.O).every((e=>r.O[e](t[i])))?t.splice(i--,1):(a=!1,n<s&&(s=n));if(a){e.splice(p--,1);var c=l();void 0!==c&&(o=c)}}return o}n=n||0;for(var p=e.length;p>0&&e[p-1][2]>n;p--)e[p]=e[p-1];e[p]=[t,l,n]},r.n=e=>{var o=e&&e.__esModule?()=>e.default:()=>e;return r.d(o,{a:o}),o},r.d=(e,o)=>{for(var t in o)r.o(o,t)&&!r.o(e,t)&&Object.defineProperty(e,t,{enumerable:!0,get:o[t]})},r.o=(e,o)=>Object.prototype.hasOwnProperty.call(e,o),r.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},(()=>{var e={6796:0,7956:0};r.O.j=o=>0===e[o];var o=(o,t)=>{var l,n,s=t[0],a=t[1],i=t[2],c=0;if(s.some((o=>0!==e[o]))){for(l in a)r.o(a,l)&&(r.m[l]=a[l]);if(i)var p=i(r)}for(o&&o(t);c<s.length;c++)n=s[c],r.o(e,n)&&e[n]&&e[n][0](),e[n]=0;return r.O(p)},t=self.webpackChunkzoloblocks=self.webpackChunkzoloblocks||[];t.forEach(o.bind(null,0)),t.push=o.bind(null,t.push.bind(t))})();var l=r.O(void 0,[7956],(()=>r(9099)));l=r.O(l)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/post-carousel/attributes.js":
+/*!************************************************!*\
+  !*** ./src/blocks/post-carousel/attributes.js ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./src/blocks/post-carousel/constants/index.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/post-carousel/constants/typoPrefixConstant.js");
+/**
+ * Internal dependencies
+ */
+const {
+  generateResRangeAttributies,
+  generateBorderAttributies,
+  generateDimensionAttributes,
+  generateBoxShadowAttributies,
+  generateNormalBGAttributes,
+  generateTypographyAttributes,
+  generateResCounterAttributies
+} = window.zoloModule;
+
+
+const attributes = {
+  //Global Attributes
+  globalConfig: {
+    type: 'object',
+    default: {
+      margin: {
+        prefix: 'mainMargin'
+      },
+      padding: {
+        prefix: 'mainPadding'
+      },
+      background: {
+        prefix: 'mainBg'
+      },
+      border: {
+        prefix: 'mainBorder'
+      },
+      borderRadius: {
+        prefix: 'mainBorderRadius'
+      },
+      boxShadow: {
+        prefix: 'mainBoxShadow'
+      },
+      responsiveControls: true
+    }
+  },
+  // block attributes
+  preset: {
+    type: 'string',
+    default: 'style-1'
+  },
+  postTitleAnimation: {
+    type: 'string',
+    default: ''
+  },
+  titleAnimationTypeBgColor: {
+    type: 'string'
+  },
+  showExcerpt: {
+    type: 'boolean',
+    default: false
+  },
+  postTaxonomies: {
+    type: 'object',
+    default: {}
+  },
+  metaSeparator: {
+    type: 'string',
+    default: '//'
+  },
+  postQuery: {
+    type: 'object'
+  },
+  authorPrefix: {
+    type: 'string'
+  },
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMNS_GAP),
+  showThumbnail: {
+    type: 'boolean',
+    default: true
+  },
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.THUMBNAIL_HEIGHT),
+  showTitle: {
+    type: 'boolean',
+    default: true
+  },
+  titleColor: {
+    type: 'string'
+  },
+  titleHoverColor: {
+    type: 'string'
+  },
+  titleTag: {
+    type: 'string',
+    default: 'h2'
+  },
+  titleWords: {
+    type: 'number'
+  },
+  excerptWords: {
+    type: 'number',
+    default: 15
+  },
+  excerptindicator: {
+    type: 'string',
+    default: '...'
+  },
+  excerptColor: {
+    type: 'string'
+  },
+  catColor: {
+    type: 'string'
+  },
+  catBgColor: {
+    type: 'string'
+  },
+  catHoverColor: {
+    type: 'string'
+  },
+  catBgHoverColor: {
+    type: 'string'
+  },
+  showReadMore: {
+    type: 'boolean',
+    default: false
+  },
+  readMoreBtnText: {
+    type: 'string',
+    default: 'Read More'
+  },
+  showCategory: {
+    type: 'boolean',
+    default: true
+  },
+  showAuthor: {
+    type: 'boolean',
+    default: true
+  },
+  namePrefixColor: {
+    type: 'string'
+  },
+  nameColor: {
+    type: 'string'
+  },
+  nameHoverColor: {
+    type: 'string'
+  },
+  showMeta: {
+    type: 'boolean',
+    default: true
+  },
+  metaColor: {
+    type: 'string'
+  },
+  metaHColor: {
+    type: 'string'
+  },
+  metaArrowColor: {
+    type: 'string'
+  },
+  // post meta
+  showReadingTime: {
+    type: 'boolean',
+    default: false
+  },
+  // readmore button
+  showReadmoreText: {
+    type: 'boolean',
+    default: true
+  },
+  showReadmoreIcon: {
+    type: 'boolean',
+    default: false
+  },
+  readMoreIcon: {
+    type: 'string',
+    default: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M438.6 278.6l-160 160C272.4 444.9 264.2 448 256 448s-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L338.8 288H32C14.33 288 .0016 273.7 .0016 256S14.33 224 32 224h306.8l-105.4-105.4c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160C451.1 245.9 451.1 266.1 438.6 278.6z"></path></svg>'
+  },
+  readMoreColor: {
+    type: 'string'
+  },
+  readMoreIconColor: {
+    type: 'string'
+  },
+  readMoreBgColor: {
+    type: 'string'
+  },
+  readMoreHoverColor: {
+    type: 'string'
+  },
+  readMoreIconHoverColor: {
+    type: 'string'
+  },
+  readMoreBgHoverColor: {
+    type: 'string'
+  },
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMN_PADDING),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.CONTENT_PADDING),
+  ...generateNormalBGAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMN_BG),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMN_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMN_BORDER_RADIUS),
+  ...generateBoxShadowAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMN_SHADOW),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.THUMBNAIL_MARGIN),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.THUMBNAIL_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.THUMBNAIL_BORDER_RADIUS),
+  ...generateNormalBGAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.THUMBNAIL_BG),
+  ...generateBoxShadowAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.THUMBNAIL_BOX_SHADOW),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.TITLE_MARGIN),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.EXCERPT_MARGIN),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.META_MARGIN),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.CAT_GAP),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.CAT_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.CAT_BORDER_RADIUS),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.CAT_MARGIN),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.CAT_PADDING),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.READMORE_GAP),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.READMORE_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.READMORE_BORDER_RADIUS),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.READMORE_MARGIN),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.READMORE_PADDING),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.AVATAR_SIZE),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.AVATAR_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.AVATAR_BORDER_RADIUS),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.AVATAR_GAP),
+  ...generateTypographyAttributes(Object.values(_constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_1__)),
+  // post meta
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.META_SPACE),
+  // Generator
+  ...generateResCounterAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMNS),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMNS_GAP),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_WIDTH),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_HEIGHT),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_OFFSET_HORIZONTAL),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_OFFSET_VERTICAL),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_BORDER_RADIUS),
+  ...generateNormalBGAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_BG),
+  ...generateNormalBGAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_HOVER_BG),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.NAV_ICON_SIZE),
+  // pagination
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.PAG_WIDTH),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.PAG_HEIGHT),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.PAG_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.PAG_BORDER_RADIUS),
+  ...generateNormalBGAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.PAG_BG),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.PAG_SPACING),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.PAG_BOTTOM_SPACING),
+  // active pagination
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.APAG_WIDTH),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.APAG_HEIGHT),
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.APAG_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.APAG_BORDER_RADIUS),
+  ...generateNormalBGAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.APAG_BG),
+  // post meta arrow space
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.META_ARROW_SPACE),
+  // meta box wrap
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.META_BOX_WRAP_PADDING),
+  // carousel container
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.CAROUSEL_CONTAINER_PADDING),
+  // shdow range
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.SHADOW_RANGE),
+  // swiper options
+
+  slideItems: {
+    type: 'number',
+    default: 3
+  },
+  sliderType: {
+    type: 'string',
+    default: 'slider'
+  },
+  sliderOptions: {
+    type: 'object'
+  },
+  autoplay: {
+    type: 'boolean',
+    default: false
+  },
+  autoplayDelay: {
+    type: 'number',
+    default: 30
+  },
+  pauseOnMouseEnter: {
+    type: 'boolean',
+    default: false
+  },
+  infiniteLoop: {
+    type: 'boolean',
+    default: true
+  },
+  showNavigation: {
+    type: 'boolean',
+    default: false
+  },
+  navColor: {
+    type: 'string'
+  },
+  navHoverColor: {
+    type: 'string'
+  },
+  showPagination: {
+    type: 'boolean',
+    default: true
+  },
+  paginationType: {
+    type: 'string',
+    default: 'bullets'
+  },
+  dynamicBullets: {
+    type: 'boolean',
+    default: false
+  },
+  speed: {
+    type: 'number',
+    default: 8
+  },
+  carouselEffect: {
+    type: 'string',
+    default: 'slide'
+  },
+  coverFlowEffect: {
+    type: 'object',
+    default: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false
+    }
+  },
+  addNewSlideBlock: {
+    type: 'boolean',
+    default: false
+  },
+  customNavIcon: {
+    type: 'boolean',
+    default: true
+  },
+  prevNavIcon: {
+    type: 'string',
+    default: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M9.375 233.4l128-128c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L109.3 224H480c17.69 0 32 14.31 32 32s-14.31 32-32 32H109.3l73.38 73.38c12.5 12.5 12.5 32.75 0 45.25c-12.49 12.49-32.74 12.51-45.25 0l-128-128C-3.125 266.1-3.125 245.9 9.375 233.4z"></path></svg>'
+  },
+  nextNavIcon: {
+    type: 'string',
+    default: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"></path></svg>'
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (attributes);
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/constants/index.js":
+/*!*****************************************************!*\
+  !*** ./src/blocks/post-carousel/constants/index.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   APAG_BG: () => (/* binding */ APAG_BG),
+/* harmony export */   APAG_BORDER: () => (/* binding */ APAG_BORDER),
+/* harmony export */   APAG_BORDER_RADIUS: () => (/* binding */ APAG_BORDER_RADIUS),
+/* harmony export */   APAG_HEIGHT: () => (/* binding */ APAG_HEIGHT),
+/* harmony export */   APAG_WIDTH: () => (/* binding */ APAG_WIDTH),
+/* harmony export */   AVATAR_BORDER: () => (/* binding */ AVATAR_BORDER),
+/* harmony export */   AVATAR_BORDER_RADIUS: () => (/* binding */ AVATAR_BORDER_RADIUS),
+/* harmony export */   AVATAR_GAP: () => (/* binding */ AVATAR_GAP),
+/* harmony export */   AVATAR_SIZE: () => (/* binding */ AVATAR_SIZE),
+/* harmony export */   BLOCK_PREFIX: () => (/* binding */ BLOCK_PREFIX),
+/* harmony export */   CAROUSEL_CONTAINER_PADDING: () => (/* binding */ CAROUSEL_CONTAINER_PADDING),
+/* harmony export */   CAROUSEL_EFFECTS: () => (/* binding */ CAROUSEL_EFFECTS),
+/* harmony export */   CAT_BORDER: () => (/* binding */ CAT_BORDER),
+/* harmony export */   CAT_BORDER_RADIUS: () => (/* binding */ CAT_BORDER_RADIUS),
+/* harmony export */   CAT_GAP: () => (/* binding */ CAT_GAP),
+/* harmony export */   CAT_MARGIN: () => (/* binding */ CAT_MARGIN),
+/* harmony export */   CAT_PADDING: () => (/* binding */ CAT_PADDING),
+/* harmony export */   COLUMNS: () => (/* binding */ COLUMNS),
+/* harmony export */   COLUMNS_GAP: () => (/* binding */ COLUMNS_GAP),
+/* harmony export */   COLUMN_BG: () => (/* binding */ COLUMN_BG),
+/* harmony export */   COLUMN_BORDER: () => (/* binding */ COLUMN_BORDER),
+/* harmony export */   COLUMN_BORDER_RADIUS: () => (/* binding */ COLUMN_BORDER_RADIUS),
+/* harmony export */   COLUMN_PADDING: () => (/* binding */ COLUMN_PADDING),
+/* harmony export */   COLUMN_SHADOW: () => (/* binding */ COLUMN_SHADOW),
+/* harmony export */   CONTENT_PADDING: () => (/* binding */ CONTENT_PADDING),
+/* harmony export */   EXCERPT_MARGIN: () => (/* binding */ EXCERPT_MARGIN),
+/* harmony export */   META_ARROW_SPACE: () => (/* binding */ META_ARROW_SPACE),
+/* harmony export */   META_BOX_WRAP_PADDING: () => (/* binding */ META_BOX_WRAP_PADDING),
+/* harmony export */   META_MARGIN: () => (/* binding */ META_MARGIN),
+/* harmony export */   META_SPACE: () => (/* binding */ META_SPACE),
+/* harmony export */   NAV_BG: () => (/* binding */ NAV_BG),
+/* harmony export */   NAV_BORDER: () => (/* binding */ NAV_BORDER),
+/* harmony export */   NAV_BORDER_RADIUS: () => (/* binding */ NAV_BORDER_RADIUS),
+/* harmony export */   NAV_HEIGHT: () => (/* binding */ NAV_HEIGHT),
+/* harmony export */   NAV_HOVER_BG: () => (/* binding */ NAV_HOVER_BG),
+/* harmony export */   NAV_ICON_SIZE: () => (/* binding */ NAV_ICON_SIZE),
+/* harmony export */   NAV_OFFSET_HORIZONTAL: () => (/* binding */ NAV_OFFSET_HORIZONTAL),
+/* harmony export */   NAV_OFFSET_VERTICAL: () => (/* binding */ NAV_OFFSET_VERTICAL),
+/* harmony export */   NAV_WIDTH: () => (/* binding */ NAV_WIDTH),
+/* harmony export */   PAG_BG: () => (/* binding */ PAG_BG),
+/* harmony export */   PAG_BORDER: () => (/* binding */ PAG_BORDER),
+/* harmony export */   PAG_BORDER_RADIUS: () => (/* binding */ PAG_BORDER_RADIUS),
+/* harmony export */   PAG_BOTTOM_SPACING: () => (/* binding */ PAG_BOTTOM_SPACING),
+/* harmony export */   PAG_HEIGHT: () => (/* binding */ PAG_HEIGHT),
+/* harmony export */   PAG_SPACING: () => (/* binding */ PAG_SPACING),
+/* harmony export */   PAG_WIDTH: () => (/* binding */ PAG_WIDTH),
+/* harmony export */   POST_TITLE_ANIMATION: () => (/* binding */ POST_TITLE_ANIMATION),
+/* harmony export */   PRESETS: () => (/* binding */ PRESETS),
+/* harmony export */   READMORE_BORDER: () => (/* binding */ READMORE_BORDER),
+/* harmony export */   READMORE_BORDER_RADIUS: () => (/* binding */ READMORE_BORDER_RADIUS),
+/* harmony export */   READMORE_GAP: () => (/* binding */ READMORE_GAP),
+/* harmony export */   READMORE_MARGIN: () => (/* binding */ READMORE_MARGIN),
+/* harmony export */   READMORE_PADDING: () => (/* binding */ READMORE_PADDING),
+/* harmony export */   SHADOW_RANGE: () => (/* binding */ SHADOW_RANGE),
+/* harmony export */   THUMBNAIL_BG: () => (/* binding */ THUMBNAIL_BG),
+/* harmony export */   THUMBNAIL_BORDER: () => (/* binding */ THUMBNAIL_BORDER),
+/* harmony export */   THUMBNAIL_BORDER_RADIUS: () => (/* binding */ THUMBNAIL_BORDER_RADIUS),
+/* harmony export */   THUMBNAIL_BOX_SHADOW: () => (/* binding */ THUMBNAIL_BOX_SHADOW),
+/* harmony export */   THUMBNAIL_HEIGHT: () => (/* binding */ THUMBNAIL_HEIGHT),
+/* harmony export */   THUMBNAIL_MARGIN: () => (/* binding */ THUMBNAIL_MARGIN),
+/* harmony export */   TITLE_MARGIN: () => (/* binding */ TITLE_MARGIN)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+const BLOCK_PREFIX = 'zolo-post-carousel';
+const PRESETS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Style 1', 'zoloblocks'),
+  value: 'style-1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Style 2', 'zoloblocks'),
+  value: 'style-2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Style 3', 'zoloblocks'),
+  value: 'style-3'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Style 4 Pro', 'zoloblocks'),
+  value: 'style-4',
+  disabled: true
+}];
+const CAROUSEL_EFFECTS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Slide', 'zoloblocks'),
+  value: 'slide'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Coverflow', 'zoloblocks'),
+  value: 'coverflow'
+}];
+const POST_TITLE_ANIMATION = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: ''
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Background (Pro)', 'zoloblocks'),
+  value: 'zolo-post-title-type-1',
+  disabled: true
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Underline (Pro)', 'zoloblocks'),
+  value: 'zolo-post-title-type-2',
+  disabled: true
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Middle Underline (Pro)', 'zoloblocks'),
+  value: 'zolo-post-title-type-3',
+  disabled: true
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Overline (Pro)', 'zoloblocks'),
+  value: 'zolo-post-title-type-4',
+  disabled: true
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Middle Overline (Pro)', 'zoloblocks'),
+  value: 'zolo-post-title-type-5',
+  disabled: true
+}];
+const COLUMNS = 'sliderColumns';
+const COLUMNS_GAP = 'columnsGap';
+const THUMBNAIL_HEIGHT = 'thumbHeight';
+
+//desing
+const COLUMN_PADDING = 'columnPadding';
+const CONTENT_PADDING = 'contentPadding';
+const COLUMN_BG = 'columnBg';
+const COLUMN_BORDER = 'columnBorder';
+const COLUMN_BORDER_RADIUS = 'columnBRadius';
+const COLUMN_SHADOW = 'columnShadow';
+const THUMBNAIL_BORDER = 'thumbBorder';
+const THUMBNAIL_BORDER_RADIUS = 'thumbBRadius';
+const THUMBNAIL_BG = 'thumbBg';
+const THUMBNAIL_BOX_SHADOW = 'thumbShadow';
+const THUMBNAIL_MARGIN = 'thumbMargin';
+const TITLE_MARGIN = 'titleMargin';
+const EXCERPT_MARGIN = 'excerptMargin';
+const META_MARGIN = 'metaMargin';
+const CAT_GAP = 'catGap';
+const CAT_BORDER = 'catBorder';
+const CAT_BORDER_RADIUS = 'catBRadius';
+const CAT_MARGIN = 'catMargin';
+const CAT_PADDING = 'catPading';
+const READMORE_GAP = 'readMoreGap';
+const READMORE_BORDER = 'readMoreBorder';
+const READMORE_BORDER_RADIUS = 'readMoreBRadius';
+const READMORE_MARGIN = 'readMoreMargin';
+const READMORE_PADDING = 'readMorePadding';
+const AVATAR_SIZE = 'avatarSize';
+const AVATAR_BORDER = 'avatarBorder';
+const AVATAR_BORDER_RADIUS = 'avatarBRadius';
+const AVATAR_GAP = 'avatarGap';
+// post meta
+const META_SPACE = 'metaSpace';
+
+// Navigation settings
+const NAV_WIDTH = 'navWidth';
+const NAV_HEIGHT = 'navHeight';
+const NAV_OFFSET_HORIZONTAL = 'navOffsetHorizontal';
+const NAV_OFFSET_VERTICAL = 'navOffsetVertical';
+const NAV_BORDER = 'navBorder';
+const NAV_BORDER_RADIUS = 'navBorderRadius';
+const NAV_BG = 'navBg';
+const NAV_HOVER_BG = 'navHoverBg';
+const NAV_ICON_SIZE = 'navIconSize';
+
+// Pagination settings
+const PAG_WIDTH = 'pagWidth';
+const PAG_HEIGHT = 'pagHeight';
+const PAG_BORDER = 'pagBorder';
+const PAG_BORDER_RADIUS = 'pagBorderRadius';
+const PAG_BG = 'pagBg';
+const PAG_SPACING = 'pagSpacing';
+const PAG_BOTTOM_SPACING = 'pagBottomSpacing';
+
+// Active Pagination
+const APAG_WIDTH = 'apagWidth';
+const APAG_HEIGHT = 'apagHeight';
+const APAG_BORDER = 'apagBorder';
+const APAG_BORDER_RADIUS = 'apagBorderRadius';
+const APAG_BG = 'apagBg';
+
+// post meta arrow space
+const META_ARROW_SPACE = 'metaArrowSpace';
+const META_BOX_WRAP_PADDING = 'metaBoxWrapPadding';
+
+// carousel container padding
+const CAROUSEL_CONTAINER_PADDING = 'carouselContainerPadding';
+
+// shadow range
+const SHADOW_RANGE = 'shadowRange';
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/constants/typoPrefixConstant.js":
+/*!******************************************************************!*\
+  !*** ./src/blocks/post-carousel/constants/typoPrefixConstant.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CAT_TYPOGRAPHY: () => (/* binding */ CAT_TYPOGRAPHY),
+/* harmony export */   EXCERPT_TYPOGRAPHY: () => (/* binding */ EXCERPT_TYPOGRAPHY),
+/* harmony export */   META_TYPOGRAPHY: () => (/* binding */ META_TYPOGRAPHY),
+/* harmony export */   NAME_TYPOGRAPHY: () => (/* binding */ NAME_TYPOGRAPHY),
+/* harmony export */   PAG_TYPOGRAPHY: () => (/* binding */ PAG_TYPOGRAPHY),
+/* harmony export */   READMORE_TYPOGRAPHY: () => (/* binding */ READMORE_TYPOGRAPHY),
+/* harmony export */   TITLE_TYPOGRAPHY: () => (/* binding */ TITLE_TYPOGRAPHY)
+/* harmony export */ });
+const TITLE_TYPOGRAPHY = 'titleTypo';
+const EXCERPT_TYPOGRAPHY = 'excerptTypo';
+const META_TYPOGRAPHY = 'metaTypo';
+const CAT_TYPOGRAPHY = 'catTypo';
+const READMORE_TYPOGRAPHY = 'readMoreTypo';
+const NAME_TYPOGRAPHY = 'nameTypo';
+const PAG_TYPOGRAPHY = 'pagTypo';
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/edit.js":
+/*!******************************************!*\
+  !*** ./src/blocks/post-carousel/edit.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/api-fetch */ "@wordpress/api-fetch");
+/* harmony import */ var _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./editor.scss */ "./src/blocks/post-carousel/editor.scss");
+/* harmony import */ var _inspector__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./inspector */ "./src/blocks/post-carousel/inspector.js");
+/* harmony import */ var _render_view__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./render-view */ "./src/blocks/post-carousel/render-view.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./constants */ "./src/blocks/post-carousel/constants/index.js");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./styles */ "./src/blocks/post-carousel/styles.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__);
+
+
+
+
+
+
+
+
+
+const {
+  generateResRangeStyle,
+  generateResCounterStyle,
+  classArrayToStr,
+  DisplayZoloIcon,
+  SidebarOpener
+} = window.zoloModule;
+
+// Constants
+
+
+
+function Edit(props) {
+  const {
+    attributes,
+    setAttributes,
+    className,
+    isSelected,
+    clientId
+  } = props;
+  // Slider Ref
+  const postCarouselRef = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
+  const {
+    uniqueId,
+    parentClasses,
+    postQuery,
+    preset,
+    postTitleAnimation,
+    preview,
+    resMode,
+    slideItems,
+    sliderType,
+    autoplay,
+    autoplayDelay,
+    pauseOnMouseEnter,
+    infiniteLoop,
+    showNavigation,
+    showPagination,
+    paginationType,
+    dynamicBullets,
+    speed,
+    carouselEffect,
+    addNewSlideBlock,
+    customNavIcon,
+    prevNavIcon,
+    nextNavIcon,
+    coverFlowEffect
+  } = attributes;
+  // this useEffect is for creating a unique id for each block's unique className by a random unique number
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.useBlockProps)({
+    className: classnames__WEBPACK_IMPORTED_MODULE_5___default()(className, `${uniqueId} zolo-post-carousel zolo-post-${preset}`, classArrayToStr(parentClasses), postTitleAnimation, `${resMode !== 'Desktop' ? resMode : ''}`)
+  });
+
+  // columns count
+  const {
+    desktopRangeStyle: deskCol,
+    tabRangeStyle: tabCol,
+    mobRangeStyle: mobCol
+  } = generateResCounterStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_9__.COLUMNS,
+    attributes,
+    noProperty: true
+  });
+  const {
+    desktopRangeStyle: deskColGap,
+    tabRangeStyle: tabColGap,
+    mobRangeStyle: mobColGap
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_9__.COLUMNS_GAP,
+    attributes,
+    noProperty: true,
+    noUnits: true
+  });
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
+    if (typeof postQuery === 'undefined') {
+      setAttributes({
+        postQuery: {
+          postType: 'post',
+          postInclude: '',
+          postExclude: '',
+          postAuthors: [],
+          postTaxonomies: {},
+          postPerPage: 7,
+          postOffset: 0,
+          postOrderby: 'date',
+          postOrder: 'desc',
+          postThumbnail: ''
+          // showPagination: false,
+        }
+      });
+    }
+  }, []);
+
+  // slider options init
+  const zoloSliderInit = function (sliderE, options) {
+    if (sliderE.swiper) {
+      sliderE.swiper.destroy();
+    }
+    new Swiper(sliderE, options);
+  };
+
+  //slider initialize
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
+    let breakpoints = {};
+    breakpoints = {
+      1024: {
+        slidesPerView: deskCol || 2,
+        spaceBetween: parseInt(deskColGap.slice(0, -1)) || 30
+      },
+      768: {
+        slidesPerView: tabCol || 2,
+        spaceBetween: parseInt(tabColGap.slice(0, -1)) || 30
+      },
+      640: {
+        slidesPerView: mobCol || 1,
+        spaceBetween: parseInt(mobColGap.slice(0, -1)) || 0
+      }
+    };
+    let options = {
+      loop: infiniteLoop,
+      speed: speed * 100,
+      effect: carouselEffect,
+      ...(carouselEffect === 'coverflow' && {
+        coverflowEffect: coverFlowEffect
+      }),
+      autoplay: autoplay ? {
+        delay: autoplayDelay * 100,
+        pauseOnMouseEnter: pauseOnMouseEnter
+      } : false,
+      navigation: showNavigation ? {
+        nextEl: customNavIcon ? `.${uniqueId} .swiper-zolo-next` : `.${uniqueId} .swiper-button-next`,
+        prevEl: customNavIcon ? `.${uniqueId} .swiper-zolo-prev` : `.${uniqueId} .swiper-button-prev`
+      } : false,
+      pagination: showPagination ? {
+        el: `.${uniqueId} .swiper-pagination`,
+        clickable: true,
+        type: paginationType,
+        dynamicBullets: dynamicBullets
+      } : false,
+      breakpoints: breakpoints
+    };
+    setAttributes({
+      sliderOptions: options
+    });
+    if (postCarouselRef.current) {
+      zoloSliderInit(postCarouselRef.current, options);
+    }
+  }, [postCarouselRef.current, sliderType, deskCol, tabCol, mobCol, deskColGap, tabColGap, mobColGap, autoplay, autoplayDelay, pauseOnMouseEnter, infiniteLoop, showNavigation, showPagination, paginationType, dynamicBullets, speed, carouselEffect, slideItems, customNavIcon, prevNavIcon, nextNavIcon, addNewSlideBlock, resMode, coverFlowEffect]);
+  const [postResults, setPostResults] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)([]);
+  const [dataSuccess, setDataSuccess] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useState)(true);
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_3__.useEffect)(() => {
+    const apiData = {
+      zolo_nonce: zoloParams.zolo_nonce,
+      attributes: attributes,
+      postQuery: postQuery
+    };
+    _wordpress_api_fetch__WEBPACK_IMPORTED_MODULE_0___default()({
+      path: '/zolo/v1/posts',
+      method: 'POST',
+      data: apiData
+    }).then(response => {
+      if (response.success) {
+        setPostResults([...response.data.posts]);
+        setDataSuccess(response.success);
+      } else {
+        setPostResults([]);
+        setDataSuccess(response.success);
+      }
+    }).catch(error => console.log(error));
+  }, [postQuery]);
+  if (Array.isArray(postResults) && postResults.length === 0) {
+    return [isSelected && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_inspector__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      attributes: attributes,
+      setAttributes: setAttributes
+    }), dataSuccess ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+      className: "zolo-spinner",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.Spinner, {})
+    }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("p", {
+      children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('No posts found.', 'zoloblocks')
+    })];
+  }
+
+  // preview image
+  if (preview) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("img", {
+      src: zoloParams.blocksPreview.postCarousel,
+      alt: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_4__.__)('Post Carousel Preview', 'zoloblocks')
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+    children: [isSelected && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_inspector__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      attributes: attributes,
+      setAttributes: setAttributes
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_styles__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      props: props
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+      ...blockProps,
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(SidebarOpener, {
+        clientId: clientId
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+        className: "swiper",
+        ref: postCarouselRef,
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+          className: "swiper-wrapper",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_render_view__WEBPACK_IMPORTED_MODULE_8__["default"], {
+            attributes: attributes,
+            setAttributes: setAttributes,
+            postResults: postResults
+          })
+        })
+      }), showPagination && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+        class: "swiper-pagination swiper-pagination-position-bottom"
+      }), showNavigation && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)("div", {
+          className: `swiper-navigation-wrap swiper-navigation-position-center ${customNavIcon ? 'zolo-custom-nav' : ''}`,
+          children: [customNavIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+              className: "swiper-nav-button swiper-zolo-prev",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(DisplayZoloIcon, {
+                icon: prevNavIcon
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+              className: "swiper-nav-button swiper-zolo-next",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(DisplayZoloIcon, {
+                icon: nextNavIcon
+              })
+            })]
+          }), !customNavIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+              className: "swiper-nav-button swiper-button-prev"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
+              className: "swiper-nav-button swiper-button-next"
+            })]
+          })]
+        })
+      })]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/index.js":
+/*!*******************************************!*\
+  !*** ./src/blocks/post-carousel/index.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./attributes */ "./src/blocks/post-carousel/attributes.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./block.json */ "./src/blocks/post-carousel/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/post-carousel/edit.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/post-carousel/style.scss");
+
+
+
+
+
+const {
+  BlockIcons
+} = window.zoloIcons;
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_2__, {
+  icon: {
+    src: BlockIcons['post-carousel']
+  },
+  attributes: _attributes__WEBPACK_IMPORTED_MODULE_1__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  save: () => null
+});
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/inspector.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/post-carousel/inspector.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./attributes */ "./src/blocks/post-carousel/attributes.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./constants */ "./src/blocks/post-carousel/constants/index.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/post-carousel/constants/typoPrefixConstant.js");
+/* harmony import */ var _src_global_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../src/global/constants */ "./src/global/constants.js");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+
+
+
+
+const {
+  ResDimensionsControl,
+  QueryControl,
+  ResRangeControl,
+  RangeResetControl,
+  NormalBGControl,
+  BorderControl,
+  BoxShadowControl,
+  HeaderTabs,
+  TabPanelControl,
+  ColorControl,
+  TypographyDropdown,
+  ResCounterControl,
+  AdvancedOptions,
+  ZoloIconPicker,
+  ZoloPanelBody
+} = window.zoloModule;
+function Inspector(props) {
+  const {
+    attributes,
+    setAttributes,
+    block
+  } = props;
+  const {
+    preset,
+    postTitleAnimation,
+    titleAnimationTypeBgColor,
+    resMode,
+    postQuery,
+    showThumbnail,
+    showTitle,
+    titleTag,
+    showExcerpt,
+    excerptindicator,
+    showReadMore,
+    readMoreBtnText,
+    showCategory,
+    showAuthor,
+    showMeta,
+    titleColor,
+    titleHoverColor,
+    excerptColor,
+    metaColor,
+    metaHColor,
+    metaArrowColor,
+    catBgColor,
+    catColor,
+    catBgHoverColor,
+    catHoverColor,
+    showReadmoreText,
+    showReadmoreIcon,
+    readMoreIcon,
+    readMoreBgColor,
+    readMoreColor,
+    readMoreIconColor,
+    readMoreBgHoverColor,
+    readMoreHoverColor,
+    readMoreIconHoverColor,
+    namePrefixColor,
+    nameColor,
+    nameHoverColor,
+    metaSeparator,
+    showReadingTime,
+    autoplay,
+    autoplayDelay,
+    pauseOnMouseEnter,
+    infiniteLoop,
+    showNavigation,
+    navColor,
+    navHoverColor,
+    navHoverBorderColor,
+    showPagination,
+    speed,
+    carouselEffect,
+    customNavIcon,
+    prevNavIcon,
+    nextNavIcon,
+    coverFlowEffect,
+    authorPrefix
+  } = attributes;
+  const requiredProps = {
+    resMode,
+    setAttributes,
+    attributes,
+    objAttributes: _attributes__WEBPACK_IMPORTED_MODULE_3__["default"]
+  };
+  const shadowFeature = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_7__.applyFilters)('zolo.blocks.controls.postCarousel.shadow', [], props, 'zolo/post-carousel');
+
+  // const { rotate, stretch, depth, modifier, slideShadows } = coverFlowEffect;
+
+  // coverflow effect options
+  const onChangeRotate = rotate => {
+    setAttributes({
+      coverFlowEffect: {
+        ...coverFlowEffect,
+        rotate
+      }
+    });
+  };
+  const onChangeStretch = stretch => {
+    setAttributes({
+      coverFlowEffect: {
+        ...coverFlowEffect,
+        stretch
+      }
+    });
+  };
+  const onChangeDepth = depth => {
+    setAttributes({
+      coverFlowEffect: {
+        ...coverFlowEffect,
+        depth
+      }
+    });
+  };
+  const onChangeModifier = modifier => {
+    setAttributes({
+      coverFlowEffect: {
+        ...coverFlowEffect,
+        modifier
+      }
+    });
+  };
+  const onChangeSlideShadows = slideShadows => {
+    //return true or false
+    setAttributes({
+      coverFlowEffect: {
+        ...coverFlowEffect,
+        slideShadows
+      }
+    });
+  };
+  const changePremade = selected => {
+    setAttributes({
+      preset: selected
+    });
+    switch (selected) {
+      case 'style-1':
+        setAttributes({
+          showExcerpt: false,
+          showReadMore: false,
+          showThumbnail: true,
+          zolo_gridColumnsRange: 3
+        });
+        break;
+      case 'style-2':
+        setAttributes({
+          showExcerpt: false,
+          showReadMore: false,
+          showThumbnail: true,
+          zolo_gridColumnsRange: 3
+        });
+        break;
+      case 'style-3':
+        setAttributes({
+          showExcerpt: false,
+          showReadMore: false,
+          showThumbnail: true,
+          zolo_gridColumnsRange: 3
+        });
+        break;
+      case 'style-4':
+        setAttributes({
+          showExcerpt: true,
+          showReadMore: false,
+          showThumbnail: true,
+          zolo_gridColumnsRange: 3
+        });
+        break;
+      default:
+        break;
+    }
+  };
+
+  // css filter
+  const cssFilters = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_7__.applyFilters)('zolo.extensions.controls.cssFilters', [], block, props);
+  const cssFiltersHover = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_7__.applyFilters)('zolo.extensions.controls.cssFiltersHover', [], block, props);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(HeaderTabs, {
+      block: "zolo/post-carousel",
+      attributes: attributes,
+      setAttributes: setAttributes,
+      generalTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('General', 'zoloblocks'),
+          panelProps: props,
+          firstOpen: true,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Styles', 'zoloblocks'),
+            value: preset,
+            options: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_7__.applyFilters)('zolo.postCarousel.presets', _constants__WEBPACK_IMPORTED_MODULE_4__.PRESETS),
+            onChange: selected => changePremade(selected)
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "zolo-custom-heading",
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('show hide elements', 'zoloblocks')
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Title', 'zoloblocks'),
+            checked: showTitle,
+            onChange: () => setAttributes({
+              showTitle: !showTitle
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Excerpt', 'zoloblocks'),
+            checked: showExcerpt,
+            onChange: () => setAttributes({
+              showExcerpt: !showExcerpt
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Read More Button', 'zoloblocks'),
+            checked: showReadMore,
+            onChange: () => setAttributes({
+              showReadMore: !showReadMore
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Category', 'zoloblocks'),
+            checked: showCategory,
+            onChange: () => setAttributes({
+              showCategory: !showCategory
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Author', 'zoloblocks'),
+            checked: showAuthor,
+            onChange: () => setAttributes({
+              showAuthor: !showAuthor
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Meta', 'zoloblocks'),
+            checked: showMeta,
+            onChange: () => setAttributes({
+              showMeta: !showMeta
+            })
+          }), showMeta && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Reading Time', 'zoloblocks'),
+            checked: showReadingTime,
+            onChange: () => setAttributes({
+              showReadingTime: !showReadingTime
+            })
+          }), shadowFeature && shadowFeature.length > 0 && shadowFeature, attributes?.enableShadow && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Shadow Range', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.SHADOW_RANGE,
+            requiredProps: requiredProps,
+            min: 0,
+            max: 1000,
+            step: 1,
+            noUnits: true
+          })]
+        }), (showTitle || showExcerpt) && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Content', 'zoloblocks'),
+          panelProps: props,
+          children: [showTitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-custom-heading",
+              style: {
+                border: 0,
+                paddingTop: 0
+              },
+              children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Title', 'zoloblocks')
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Tag', 'zoloblocks'),
+              value: titleTag,
+              options: _src_global_constants__WEBPACK_IMPORTED_MODULE_6__.HEADING,
+              onChange: titleTag => setAttributes({
+                titleTag
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(RangeResetControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Words', 'zoloblocks'),
+              controlName: 'titleWords',
+              requiredProps: requiredProps,
+              min: 1,
+              max: 100,
+              step: 1
+            })]
+          }), showExcerpt && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-custom-heading",
+              children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Excerpt', 'zoloblocks')
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(RangeResetControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)(' Words', 'zoloblocks'),
+              controlName: 'excerptWords',
+              requiredProps: requiredProps,
+              min: 1,
+              max: 100,
+              step: 1
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Indicator', 'zoloblocks'),
+              value: excerptindicator,
+              onChange: excerptindicator => setAttributes({
+                excerptindicator
+              })
+            })]
+          }), showMeta && showReadingTime && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-custom-heading",
+              children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Meta', 'zoloblocks')
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Separator', 'zoloblocks'),
+              value: metaSeparator,
+              onChange: value => setAttributes({
+                metaSeparator: value
+              })
+            })]
+          }), showAuthor && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-custom-heading",
+              children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Author', 'zoloblocks')
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Prefix', 'zoloblocks'),
+              value: authorPrefix,
+              onChange: authorPrefix => setAttributes({
+                authorPrefix
+              })
+            })]
+          })]
+        }), showReadMore && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Read More Button', 'zoloblocks'),
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Text', 'zoloblocks'),
+            checked: showReadmoreText,
+            onChange: () => setAttributes({
+              showReadmoreText: !showReadmoreText
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Icon', 'zoloblocks'),
+            checked: showReadmoreIcon,
+            onChange: showReadmoreIcon => setAttributes({
+              showReadmoreIcon
+            })
+          }), showReadmoreText && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Text', 'zoloblocks'),
+            value: readMoreBtnText,
+            onChange: readMoreBtnText => setAttributes({
+              readMoreBtnText
+            })
+          }), showReadmoreIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloIconPicker, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Icon', 'zoloblocks'),
+            value: readMoreIcon,
+            onChange: readMoreIcon => setAttributes({
+              readMoreIcon
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Query', 'zoloblocks'),
+          panelProps: props,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(QueryControl, {
+            attributes: attributes,
+            setAttributes: setAttributes
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Carousel Options', 'zoloblocks'),
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResCounterControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Column Number', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.COLUMNS,
+            requiredProps: requiredProps,
+            min: 2,
+            max: 5
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Column Gap', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.COLUMNS_GAP,
+            requiredProps: requiredProps,
+            min: 1,
+            max: 100,
+            step: 1,
+            noUnits: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Effect', 'zoloblocks'),
+            options: _constants__WEBPACK_IMPORTED_MODULE_4__.CAROUSEL_EFFECTS,
+            onChange: effect => setAttributes({
+              carouselEffect: effect
+            }),
+            value: carouselEffect
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+            className: "zolo-flex-col-control",
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Speed', 'zoloblocks'),
+            value: speed,
+            onChange: v => setAttributes({
+              speed: v
+            }),
+            min: 1,
+            max: 100,
+            help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Speed:', 'zoloblocks') + speed * 100 + 'ms'
+          }), carouselEffect === 'coverflow' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-flex-col-control",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Rotate', 'zoloblocks'),
+                value: coverFlowEffect.rotate,
+                onChange: onChangeRotate,
+                min: 0,
+                max: 360
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-flex-col-control",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Stretch', 'zoloblocks'),
+                value: coverFlowEffect.stretch,
+                onChange: onChangeStretch
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-flex-col-control",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Depth', 'zoloblocks'),
+                value: coverFlowEffect.depth,
+                onChange: onChangeDepth,
+                min: 0,
+                max: 1000
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-flex-col-control",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Modifier', 'zoloblocks'),
+                value: coverFlowEffect.modifier,
+                onChange: onChangeModifier,
+                min: 0,
+                max: 10
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Shadow', 'zoloblocks'),
+              checked: coverFlowEffect.slideShadows,
+              onChange: onChangeSlideShadows
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Infinite Loop', 'zoloblocks'),
+            checked: infiniteLoop,
+            onChange: () => setAttributes({
+              infiniteLoop: !infiniteLoop
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Autoplay', 'zoloblocks'),
+            checked: autoplay,
+            onChange: () => setAttributes({
+              autoplay: !autoplay
+            })
+          }), autoplay && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.RangeControl, {
+              className: "zolo-flex-col-control",
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Autoplay Delay', 'zoloblocks'),
+              value: autoplayDelay,
+              onChange: v => setAttributes({
+                autoplayDelay: v
+              }),
+              min: 1,
+              max: 100,
+              help: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Autoplay Dealy:', 'zoloblocks') + autoplayDelay * 100 + 'ms'
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Pause on Mouse Enter', 'zoloblocks'),
+              checked: pauseOnMouseEnter,
+              onChange: () => setAttributes({
+                pauseOnMouseEnter: !pauseOnMouseEnter
+              })
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Navigation', 'zoloblocks'),
+            checked: showNavigation,
+            onChange: () => setAttributes({
+              showNavigation: !showNavigation
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Pagination', 'zoloblocks'),
+            checked: showPagination,
+            onChange: () => setAttributes({
+              showPagination: !showPagination
+            })
+          })]
+        }), showNavigation && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+            title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Navigation', 'zoloblocks'),
+            panelProps: props,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.ToggleControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Custom Icons', 'zoloblocks'),
+              checked: customNavIcon,
+              onChange: () => setAttributes({
+                customNavIcon: !customNavIcon
+              })
+            }), customNavIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloIconPicker, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Prev Icon', 'zoloblocks'),
+                value: prevNavIcon,
+                onChange: value => {
+                  setAttributes({
+                    prevNavIcon: value
+                  });
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloIconPicker, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Next Icon', 'zoloblocks'),
+                value: nextNavIcon,
+                onChange: value => {
+                  setAttributes({
+                    nextNavIcon: value
+                  });
+                }
+              })]
+            })]
+          })
+        })]
+      }),
+      styleTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Item Container', 'zoloblocks'),
+          firstOpen: true,
+          stylePanel: true,
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(NormalBGControl, {
+            requiredProps: requiredProps,
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.COLUMN_BG,
+            noMainBGImg: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.COLUMN_PADDING,
+            requiredProps: requiredProps
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.COLUMN_BORDER,
+            requiredProps: requiredProps
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BoxShadowControl, {
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.COLUMN_SHADOW,
+            requiredProps: requiredProps
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.COLUMN_BORDER_RADIUS,
+            requiredProps: requiredProps,
+            forBorderRadius: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "zolo-custom-heading",
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Carousel Container', 'zoloblocks')
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.CAROUSEL_CONTAINER_PADDING,
+            requiredProps: requiredProps,
+            forBorderRadius: false
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Content', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.CONTENT_PADDING,
+            requiredProps: requiredProps
+          })
+        }), showThumbnail && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Thumbnail', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Height', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.THUMBNAIL_HEIGHT,
+            requiredProps: requiredProps,
+            min: 0,
+            max: 600,
+            step: 1
+          }), showThumbnail && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Resolution', 'zoloblocks'),
+            value: postQuery?.postThumbnail,
+            options: _src_global_constants__WEBPACK_IMPORTED_MODULE_6__.THUMBNAIL_SIZE,
+            onChange: postThumbnail => setAttributes({
+              postQuery: {
+                ...postQuery,
+                postThumbnail
+              }
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Margin', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.THUMBNAIL_MARGIN,
+            requiredProps: requiredProps,
+            forBorderRadius: false
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.THUMBNAIL_BORDER,
+            requiredProps: requiredProps
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BoxShadowControl, {
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.THUMBNAIL_BOX_SHADOW,
+            requiredProps: requiredProps,
+            enableTransition: false
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.THUMBNAIL_BORDER_RADIUS,
+            requiredProps: requiredProps,
+            forBorderRadius: true
+          }), cssFilters && cssFilters.length > 0 && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TabPanelControl, {
+              options: [{
+                value: 'normal',
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Normal', 'zoloblocks')
+              }, {
+                value: 'hover',
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Hover', 'zoloblocks')
+              }],
+              normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+                children: cssFilters
+              }),
+              hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+                children: cssFiltersHover
+              })
+            })
+          })]
+        }), showTitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Title', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TabPanelControl, {
+            normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: titleColor,
+                onChange: color => setAttributes({
+                  titleColor: color
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TypographyDropdown, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Typography', 'zoloblocks'),
+                typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_5__.TITLE_TYPOGRAPHY,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Margin', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.TITLE_MARGIN,
+                requiredProps: requiredProps
+              })]
+            }),
+            hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Animations', 'zoloblocks'),
+                value: postTitleAnimation,
+                options: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_7__.applyFilters)('zolo.postCarousel.titleAnimation', _constants__WEBPACK_IMPORTED_MODULE_4__.POST_TITLE_ANIMATION),
+                onChange: postTitleAnimation => setAttributes({
+                  postTitleAnimation
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: titleHoverColor,
+                onChange: color => setAttributes({
+                  titleHoverColor: color
+                })
+              }), postTitleAnimation === 'zolo-post-title-type-1' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+                  className: "zolo-custom-heading",
+                  children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Animation Type', 'zoloblocks')
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                  color: titleAnimationTypeBgColor,
+                  onChange: color => setAttributes({
+                    titleAnimationTypeBgColor: color
+                  })
+                })]
+              })]
+            })
+          })
+        }), showExcerpt && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Excerpt', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+            color: excerptColor,
+            onChange: color => setAttributes({
+              excerptColor: color
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TypographyDropdown, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Typography', 'zoloblocks'),
+            typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_5__.EXCERPT_TYPOGRAPHY,
+            requiredProps: requiredProps,
+            max: 36
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Margin', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.EXCERPT_MARGIN,
+            requiredProps: requiredProps
+          })]
+        }), showMeta && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Meta', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+            color: metaColor,
+            onChange: metaColor => setAttributes({
+              metaColor
+            })
+          }), preset === 'style-3' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Hover Color', 'zoloblocks'),
+            color: metaHColor,
+            onChange: metaHColor => setAttributes({
+              metaHColor
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TypographyDropdown, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Typography', 'zoloblocks'),
+            typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_5__.META_TYPOGRAPHY,
+            requiredProps: requiredProps,
+            max: 36
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Space', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.META_SPACE,
+            requiredProps: requiredProps,
+            min: 0,
+            max: 100,
+            step: 1
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Margin', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.META_MARGIN,
+            requiredProps: requiredProps
+          }), preset === 'style-4' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-custom-heading",
+              children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Meta Box', 'zoloblocks')
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+              controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.META_BOX_WRAP_PADDING,
+              requiredProps: requiredProps
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+              className: "zolo-custom-heading",
+              children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Arrow', 'zoloblocks')
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+              color: metaArrowColor,
+              onChange: metaArrowColor => setAttributes({
+                metaArrowColor
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Spacing', 'zoloblocks'),
+              controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.META_ARROW_SPACE,
+              requiredProps: requiredProps,
+              min: 0,
+              max: 100,
+              step: 1
+            })]
+          })]
+        }), showCategory && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Category', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TabPanelControl, {
+            normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: catColor,
+                onChange: value => setAttributes({
+                  catColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TypographyDropdown, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Typography', 'zoloblocks'),
+                typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_5__.CAT_TYPOGRAPHY,
+                requiredProps: requiredProps,
+                max: 36
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                color: catBgColor,
+                onChange: value => setAttributes({
+                  catBgColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.CAT_PADDING,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Margin', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.CAT_MARGIN,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.CAT_BORDER,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.CAT_BORDER_RADIUS,
+                requiredProps: requiredProps,
+                forBorderRadius: true
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Gap', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.CAT_GAP,
+                requiredProps: requiredProps,
+                min: 0,
+                max: 100,
+                step: 1
+              })]
+            }),
+            hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: catHoverColor,
+                onChange: value => setAttributes({
+                  catHoverColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                color: catBgHoverColor,
+                onChange: value => setAttributes({
+                  catBgHoverColor: value
+                })
+              })]
+            })
+          })
+        }), showReadMore && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Read More Button', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TabPanelControl, {
+            normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: readMoreColor,
+                onChange: value => setAttributes({
+                  readMoreColor: value
+                })
+              }), showReadmoreIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Icon Color', 'zoloblocks'),
+                color: readMoreIconColor,
+                onChange: value => setAttributes({
+                  readMoreIconColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TypographyDropdown, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Typography', 'zoloblocks'),
+                typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_5__.READMORE_TYPOGRAPHY,
+                requiredProps: requiredProps,
+                max: 36
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                color: readMoreBgColor,
+                onChange: value => setAttributes({
+                  readMoreBgColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.READMORE_PADDING,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Margin', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.READMORE_MARGIN,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.READMORE_BORDER,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.READMORE_BORDER_RADIUS,
+                requiredProps: requiredProps,
+                forBorderRadius: true
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Gap', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.READMORE_GAP,
+                requiredProps: requiredProps,
+                min: 0,
+                max: 100,
+                step: 1
+              })]
+            }),
+            hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: readMoreHoverColor,
+                onChange: value => setAttributes({
+                  readMoreHoverColor: value
+                })
+              }), showReadmoreIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Icon Color', 'zoloblocks'),
+                color: readMoreIconHoverColor,
+                onChange: value => setAttributes({
+                  readMoreIconHoverColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                color: readMoreBgHoverColor,
+                onChange: value => setAttributes({
+                  readMoreBgHoverColor: value
+                })
+              })]
+            })
+          })
+        }), showAuthor && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Author', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "zolo-custom-heading",
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Avatar', 'zoloblocks')
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Size', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.AVATAR_SIZE,
+            requiredProps: requiredProps
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.AVATAR_BORDER,
+            requiredProps: requiredProps
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.AVATAR_BORDER_RADIUS,
+            requiredProps: requiredProps,
+            forBorderRadius: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Gap', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.AVATAR_GAP,
+            requiredProps: requiredProps,
+            min: 0,
+            max: 100,
+            step: 1
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+            className: "zolo-custom-heading",
+            children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Name', 'zoloblocks')
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TabPanelControl, {
+            normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: nameColor,
+                onChange: color => setAttributes({
+                  nameColor: color
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Prefix Color', 'zoloblocks'),
+                color: namePrefixColor,
+                onChange: color => setAttributes({
+                  namePrefixColor: color
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TypographyDropdown, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Typography', 'zoloblocks'),
+                typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_5__.NAME_TYPOGRAPHY,
+                requiredProps: requiredProps
+              })]
+            }),
+            hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Name Hover Color', 'zoloblocks'),
+                color: nameHoverColor,
+                onChange: color => setAttributes({
+                  nameHoverColor: color
+                })
+              })
+            })
+          })]
+        }), showNavigation && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Navigation', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TabPanelControl, {
+            normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: navColor,
+                onChange: value => setAttributes({
+                  navColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Size', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_ICON_SIZE,
+                requiredProps: requiredProps,
+                min: 1,
+                max: 100
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(NormalBGControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_BG,
+                requiredProps: requiredProps,
+                noMainBGImg: true
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Width', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_WIDTH,
+                requiredProps: requiredProps,
+                min: 1,
+                max: 100
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Height', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_HEIGHT,
+                requiredProps: requiredProps,
+                min: 1,
+                max: 100,
+                units: [{
+                  label: 'px',
+                  value: 'px'
+                }, {
+                  label: '%',
+                  value: '%'
+                }, {
+                  label: 'em',
+                  value: 'em'
+                }, {
+                  label: 'vh',
+                  value: 'vh'
+                }]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_BORDER,
+                requiredProps: requiredProps,
+                hoverControl: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(Fragment, {
+                  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                    label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Color', 'zoloblocks'),
+                    color: navHoverBorderColor,
+                    onChange: color => setAttributes({
+                      navHoverBorderColor: color
+                    })
+                  })
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_BORDER_RADIUS,
+                requiredProps: requiredProps,
+                forBorderRadius: true
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Offset Horizontal', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_OFFSET_HORIZONTAL,
+                requiredProps: requiredProps,
+                min: -100,
+                max: 500
+              })]
+            }),
+            hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+                color: navHoverColor,
+                onChange: color => setAttributes({
+                  navHoverColor: color
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(NormalBGControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.NAV_HOVER_BG,
+                requiredProps: requiredProps,
+                noMainBGImg: true
+              })]
+            })
+          })
+        }), showPagination && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(Fragment, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ZoloPanelBody, {
+            title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Pagination', 'zoloblocks'),
+            stylePanel: true,
+            panelProps: props,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(TabPanelControl, {
+              options: [{
+                value: 'normal',
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Normal', 'zoloblocks')
+              }, {
+                value: 'hover',
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Active', 'zoloblocks')
+              }],
+              normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Width', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.PAG_WIDTH,
+                  requiredProps: requiredProps,
+                  min: 1,
+                  max: 100
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Height', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.PAG_HEIGHT,
+                  requiredProps: requiredProps,
+                  min: 1,
+                  max: 100
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(NormalBGControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.PAG_BG,
+                  requiredProps: requiredProps,
+                  noMainBGImg: true
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.PAG_BORDER,
+                  requiredProps: requiredProps
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.PAG_BORDER_RADIUS,
+                  requiredProps: requiredProps,
+                  forBorderRadius: true
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Space Between', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.PAG_SPACING,
+                  requiredProps: requiredProps,
+                  min: 0,
+                  max: 100
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Vertical Offset', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.PAG_BOTTOM_SPACING,
+                  requiredProps: requiredProps,
+                  min: -200,
+                  max: 200
+                })]
+              }),
+              hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Width', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.APAG_WIDTH,
+                  requiredProps: requiredProps,
+                  min: 1,
+                  max: 100
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResRangeControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Height', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.APAG_HEIGHT,
+                  requiredProps: requiredProps,
+                  min: 1,
+                  max: 100
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(NormalBGControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.APAG_BG,
+                  requiredProps: requiredProps,
+                  noMainBGImg: true
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.CardDivider, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(BorderControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.APAG_BORDER,
+                  requiredProps: requiredProps
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(ResDimensionsControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+                  controlName: _constants__WEBPACK_IMPORTED_MODULE_4__.APAG_BORDER_RADIUS,
+                  requiredProps: requiredProps,
+                  forBorderRadius: true
+                })]
+              })
+            })
+          })
+        })]
+      }),
+      advancedTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(AdvancedOptions, {
+          attributes: attributes,
+          setAttributes: setAttributes,
+          requiredProps: requiredProps,
+          block: "zolo/post-carousel"
+        })
+      })
+    })
+  }, "controls");
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Inspector);
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/render-view.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/post-carousel/render-view.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+const {
+  DynamicTag,
+  DisplayZoloIcon
+} = window.zoloModule;
+function RenderView({
+  attributes,
+  postResults
+}) {
+  const {
+    preset,
+    showThumbnail,
+    showTitle,
+    titleWords,
+    titleTag,
+    showExcerpt,
+    excerptWords,
+    excerptindicator,
+    showReadMore,
+    showReadmoreText,
+    showReadmoreIcon,
+    readMoreBtnText,
+    readMoreIcon,
+    showCategory,
+    showAuthor,
+    showMeta,
+    showReadingTime,
+    metaSeparator,
+    authorPrefix
+  } = attributes;
+  const defaultAuthorPrefix = preset === 'style-4' ? (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('By', 'zoloblocks') : (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Posted By', 'zoloblocks');
+  return [postResults.length > 0 && postResults.map(post => {
+    const titleLimitWords = titleWords > 0 ? post.title.trim().split(' ', titleWords).join(' ') : post.title;
+    const excerptLimitWords = excerptWords > 0 ? post.excerpt.trim().split(' ', excerptWords).join(' ') : post.excerpt;
+    const categoriesHtml = post.categories.length > 0 ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("ul", {
+      className: "zolo-post-category",
+      children: post.categories.map(item => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("li", {
+        dangerouslySetInnerHTML: {
+          __html: item
+        }
+      }))
+    }) : '';
+    const avatar = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+      dangerouslySetInnerHTML: {
+        __html: post.avatar
+      }
+    });
+    const author = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "zolo-post-author-name",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+        children: authorPrefix || defaultAuthorPrefix
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+        href: "#",
+        className: "zolo-post-author-link",
+        dangerouslySetInnerHTML: {
+          __html: post.author
+        }
+      })]
+    });
+    const date = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "zolo-post-date",
+      children: post.date
+    });
+    const readingTime = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "zolo-post-estimate",
+      children: [post.reading_time, " ", (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Min Read', 'zoloblocks')]
+    });
+    const authorInfoHtml = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "zolo-post-meta-box",
+      children: [avatar, author]
+    });
+    const dateRTimeHtml = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "zolo-post-dateTime",
+      children: [date, showReadingTime && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+          className: "meta-separator",
+          children: metaSeparator
+        }), readingTime]
+      })]
+    });
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "zolo-post-item swiper-slide",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "zolo-post-image",
+        children: [showThumbnail && preset !== 'style-4' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+          children: [post.thumbnail && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+            href: post.permalink,
+            dangerouslySetInnerHTML: {
+              __html: post.thumbnail
+            }
+          }), !post.thumbnail && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+            href: post.permalink,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+              src: zoloPlaceholders.placeholder,
+              alt: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Thumbnail Placeholder', 'zoloblocks')
+            })
+          })]
+        }), preset === 'style-4' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "zolo-post-img-category",
+          children: [showThumbnail && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+            children: [post.thumbnail && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+              href: post.permalink,
+              dangerouslySetInnerHTML: {
+                __html: post.thumbnail
+              }
+            }), !post.thumbnail && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+              href: post.permalink,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("img", {
+                src: zoloPlaceholders.placeholder,
+                alt: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Thumbnail Placeholder', 'zoloblocks')
+              })
+            })]
+          }), showCategory && categoriesHtml]
+        }), showMeta && preset !== 'style-4' && dateRTimeHtml, showAuthor && preset !== 'style-4' && authorInfoHtml, preset === 'style-4' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "zolo-post-meta-wrap",
+          children: [showMeta && preset == 'style-4' && dateRTimeHtml, showAuthor && authorInfoHtml]
+        })]
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "zolo-post-content",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "zolo-post-inner-content",
+          children: [showCategory && preset !== 'style-4' && categoriesHtml, showTitle && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(DynamicTag, {
+            tagName: titleTag,
+            className: "zolo-post-title",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("a", {
+              href: post.permalink,
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.RawHTML, {
+                children: titleLimitWords
+              })
+            })
+          }), showExcerpt && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+            className: "zolo-post-desc",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.RawHTML, {
+                children: excerptLimitWords
+              }), excerptindicator]
+            })
+          }), showMeta && preset != 'style-4' && dateRTimeHtml]
+        }), showReadMore && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "zolo-post-link-btn",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("a", {
+            href: post.permalink,
+            children: [showReadmoreText && readMoreBtnText && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+              children: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)(readMoreBtnText, 'zoloblocks')
+            }), showReadmoreIcon && readMoreIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(DisplayZoloIcon, {
+              icon: readMoreIcon
+            })]
+          })
+        })]
+      })]
+    });
+  })];
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (RenderView);
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/styles.js":
+/*!********************************************!*\
+  !*** ./src/blocks/post-carousel/styles.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./src/blocks/post-carousel/constants/index.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/post-carousel/constants/typoPrefixConstant.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+const {
+  generateDimensionStyle,
+  generateResRangeStyle,
+  generateNormalBGControlStyles,
+  generateBorderStyle,
+  generateBoxShadowStyles,
+  generateTypographyStyles,
+  GlobalStyleHanlder
+} = window.zoloModule;
+function Style({
+  props
+}) {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    preset,
+    uniqueId,
+    titleColor,
+    titleHoverColor,
+    excerptColor,
+    metaColor,
+    metaHColor,
+    catBgColor,
+    catColor,
+    catBgHoverColor,
+    catHoverColor,
+    readMoreBgColor,
+    readMoreColor,
+    readMoreIconColor,
+    readMoreBgHoverColor,
+    readMoreHoverColor,
+    readMoreIconHoverColor,
+    namePrefixColor,
+    nameColor,
+    nameHoverColor,
+    navColor,
+    navHoverColor,
+    navHoverBorderColor,
+    metaArrowColor,
+    enableShadow,
+    titleAnimationTypeBgColor
+  } = attributes;
+  const {
+    active = false,
+    blur = 0,
+    brightness = 100,
+    contrast = 100,
+    saturate = 100,
+    hueRotate = 0
+  } = attributes?.cssFilters || {};
+  const {
+    active: activeHover = false,
+    blur: blurHover = 0,
+    brightness: brightnessHover = 100,
+    contrast: contrastHover = 100,
+    saturate: saturateHover = 100,
+    hueRotate: hueRotateHover = 0
+  } = attributes?.cssFiltersHover || {};
+  const {
+    desktopRangeStyle: colGapDesk,
+    tabRangeStyle: colGapTab,
+    mobRangeStyle: colGapMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.COLUMNS_GAP,
+    property: 'grid-gap',
+    attributes
+  });
+  const {
+    desktopRangeStyle: thumbnailHeightDesk,
+    tabRangeStyle: thumbnailHeightTab,
+    mobRangeStyle: thumbnailHeightMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.THUMBNAIL_HEIGHT,
+    property: 'height',
+    attributes
+  });
+
+  //column
+  const {
+    dimensionStylesDesktop: columnDeskPadding,
+    dimensionStylesTab: columnTabPadding,
+    dimensionStylesMobile: columnMobPadding
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.COLUMN_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+  const {
+    backgroundStylesDesktop: columnDeskBGStyle,
+    backgroundStylesTab: columnTabBGStyle,
+    backgroundStylesMobile: columnMobBGStyle
+  } = generateNormalBGControlStyles({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.COLUMN_BG,
+    attributes,
+    noMainBGImg: true
+  });
+  const {
+    desktopBorderStyle: columnDeskBorderStyle,
+    tabBorderStyle: columnTabBorderStyle,
+    mobBorderStyle: columnMobBorderStyle
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.COLUMN_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: columnDeskBorderRadius,
+    dimensionStylesTab: columnTabBorderRadius,
+    dimensionStylesMobile: columnMobBorderRadius
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.COLUMN_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    boxShadowStyle: columnBoxShadow
+  } = generateBoxShadowStyles({
+    attributes,
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.COLUMN_SHADOW
+  });
+  const {
+    dimensionStylesDesktop: thumbMarginDesk,
+    dimensionStylesTab: thumbMarginTab,
+    dimensionStylesMobile: thumbMarginMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.THUMBNAIL_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+  const {
+    backgroundStylesDesktop: thumbBgDesk,
+    backgroundStylesTab: thumbBgTab,
+    backgroundStylesMobile: thumbBgMob
+  } = generateNormalBGControlStyles({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.THUMBNAIL_BG,
+    attributes,
+    noMainBGImg: true
+  });
+  const {
+    desktopBorderStyle: thumbBorderDesk,
+    tabBorderStyle: thumbBorderTab,
+    mobBorderStyle: thumbBorderMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.THUMBNAIL_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: thumbBorderRadiusDesk,
+    dimensionStylesTab: thumbBorderRadiusTab,
+    dimensionStylesMobile: thumbBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.THUMBNAIL_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    boxShadowStyle: thumbBoxShadow
+  } = generateBoxShadowStyles({
+    attributes,
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.THUMBNAIL_BOX_SHADOW
+  });
+  const {
+    typoStylesDesktop: titleTypoDesk,
+    typoStylesTab: titleTypoTab,
+    typoStylesMobile: titleTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__.TITLE_TYPOGRAPHY,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: titleMarginDesk,
+    dimensionStylesTab: titleMarginTab,
+    dimensionStylesMobile: titleMarginMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.TITLE_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+  const {
+    typoStylesDesktop: excerptTypoDesk,
+    typoStylesTab: excerptTypoTab,
+    typoStylesMobile: excerptTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__.EXCERPT_TYPOGRAPHY,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: excerptMarginDesk,
+    dimensionStylesTab: excerptMarginTab,
+    dimensionStylesMobile: excerptMarginMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.EXCERPT_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+  const {
+    typoStylesDesktop: metaTypoDesk,
+    typoStylesTab: metaTypoTab,
+    typoStylesMobile: metaTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__.META_TYPOGRAPHY,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: metaMarginDesk,
+    dimensionStylesTab: metaMarginTab,
+    dimensionStylesMobile: metaMarginMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.META_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+  const {
+    typoStylesDesktop: catTypoDesk,
+    typoStylesTab: catTypoTab,
+    typoStylesMobile: catTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__.CAT_TYPOGRAPHY,
+    attributes
+  });
+  const {
+    desktopRangeStyle: catGapDesk,
+    tabRangeStyle: catGapTab,
+    mobRangeStyle: catGapMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.CAT_GAP,
+    property: 'gap',
+    attributes
+  });
+  const {
+    desktopBorderStyle: catBorderDesk,
+    tabBorderStyle: catBorderTab,
+    mobBorderStyle: catBorderMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.CAT_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: catBorderRadiusDesk,
+    dimensionStylesTab: catBorderRadiusTab,
+    dimensionStylesMobile: catBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.CAT_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: catMarginDesk,
+    dimensionStylesTab: catMarginTab,
+    dimensionStylesMobile: catMarginMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.CAT_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: catPaddingDesk,
+    dimensionStylesTab: catPaddingTab,
+    dimensionStylesMobile: catPaddingMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.CAT_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+  const {
+    typoStylesDesktop: readMoreTypoDesk,
+    typoStylesTab: readMoreTypoTab,
+    typoStylesMobile: readMoreTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__.READMORE_TYPOGRAPHY,
+    attributes
+  });
+  const {
+    desktopRangeStyle: readMoreGapDesk,
+    tabRangeStyle: readMoreGapTab,
+    mobRangeStyle: readMoreGapMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.READMORE_GAP,
+    property: 'gap',
+    attributes
+  });
+  const {
+    desktopBorderStyle: readMoreBorderDesk,
+    tabBorderStyle: readMoreBorderTab,
+    mobBorderStyle: readMoreBorderMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.READMORE_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: readMoreBorderRadiusDesk,
+    dimensionStylesTab: readMoreBorderRadiusTab,
+    dimensionStylesMobile: readMoreBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.READMORE_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: readMoreMarginDesk,
+    dimensionStylesTab: readMoreMarginTab,
+    dimensionStylesMobile: readMoreMarginMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.READMORE_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: readMorePaddingDesk,
+    dimensionStylesTab: readMorePaddingTab,
+    dimensionStylesMobile: readMorePaddingMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.READMORE_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+  const {
+    desktopRangeStyle: avatarWidthDesk,
+    tabRangeStyle: avatarWidthTab,
+    mobRangeStyle: avatarWidthMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.AVATAR_SIZE,
+    property: 'width',
+    attributes
+  });
+  const {
+    desktopRangeStyle: avatarHeightDesk,
+    tabRangeStyle: avatarHeightTab,
+    mobRangeStyle: avatarHeightMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.AVATAR_SIZE,
+    property: 'height',
+    attributes
+  });
+  const {
+    desktopBorderStyle: avatarBorderDesk,
+    tabBorderStyle: avatarBorderTab,
+    mobBorderStyle: avatarBorderMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.AVATAR_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: avatarBorderRadiusDesk,
+    dimensionStylesTab: avatarBorderRadiusTab,
+    dimensionStylesMobile: avatarBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.AVATAR_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    desktopRangeStyle: authorGapDesk,
+    tabRangeStyle: authorGapTab,
+    mobRangeStyle: authorGapMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.AVATAR_GAP,
+    property: 'gap',
+    attributes
+  });
+  const {
+    typoStylesDesktop: nameTypoDesk,
+    typoStylesTab: nameTypoTab,
+    typoStylesMobile: nameTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__.NAME_TYPOGRAPHY,
+    attributes
+  });
+  // post meta space
+  const {
+    desktopRangeStyle: metaSpaceDesk,
+    tabRangeStyle: metaSpaceTab,
+    mobRangeStyle: metaSpaceMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.META_SPACE,
+    property: 'gap',
+    attributes
+  });
+
+  // carousel start
+  // Navigation
+  const {
+    desktopRangeStyle: navDeskWidth,
+    tabRangeStyle: navTabWidth,
+    mobRangeStyle: navMobWidth
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_WIDTH,
+    property: 'width',
+    attributes
+  });
+  const {
+    desktopRangeStyle: navDeskHeight,
+    tabRangeStyle: navTabHeight,
+    mobRangeStyle: navMobHeight
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_HEIGHT,
+    property: 'height',
+    attributes
+  });
+  const {
+    desktopRangeStyle: navDeskOffsetLeft,
+    tabRangeStyle: navTabOffsetLeft,
+    mobRangeStyle: navMobOffsetLeft
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_OFFSET_HORIZONTAL,
+    property: 'left',
+    attributes
+  });
+  const {
+    desktopRangeStyle: navDeskOffsetRight,
+    tabRangeStyle: navTabOffsetRight,
+    mobRangeStyle: navMobOffsetRight
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_OFFSET_HORIZONTAL,
+    property: 'right',
+    attributes
+  });
+  const {
+    desktopBorderStyle: navBorderStyles,
+    tabBorderStyle: navBorderStylesTab,
+    mobBorderStyle: navBorderStylesMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: navBorderRadiusDesktop,
+    dimensionStylesTab: navBorderRadiusTab,
+    dimensionStylesMobile: navBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    backgroundStylesDesktop: navNormalBGStyle,
+    backgroundStylesTab: navNormalBGStyleTab,
+    backgroundStylesMobile: navNormalBGStyleMob
+  } = generateNormalBGControlStyles({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_BG,
+    attributes,
+    noMainBGImg: true
+  });
+  const {
+    backgroundStylesDesktop: navHoverBGStyle,
+    backgroundStylesTab: navHoverBGStyleTab,
+    backgroundStylesMobile: navHoverBGStyleMob
+  } = generateNormalBGControlStyles({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_HOVER_BG,
+    attributes,
+    noMainBGImg: true
+  });
+
+  // navigation icon
+  const {
+    desktopRangeStyle: navDeskSize,
+    tabRangeStyle: navTabSize,
+    mobRangeStyle: navMobSize
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_ICON_SIZE,
+    property: 'font-size',
+    attributes
+  });
+  const {
+    desktopRangeStyle: cnavDeskSize,
+    tabRangeStyle: cnavTabSize,
+    mobRangeStyle: cnavMobSize
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_ICON_SIZE,
+    property: 'width',
+    attributes
+  });
+  const {
+    desktopRangeStyle: cnavDeskHSize,
+    tabRangeStyle: cnavTabHSize,
+    mobRangeStyle: cnavMobHSize
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.NAV_ICON_SIZE,
+    property: 'height',
+    attributes
+  });
+
+  // Pagination
+  const {
+    desktopRangeStyle: pagDeskWidth,
+    tabRangeStyle: pagTabWidth,
+    mobRangeStyle: pagMobWidth
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.PAG_WIDTH,
+    property: 'width',
+    attributes
+  });
+  const {
+    desktopRangeStyle: pagDeskHeight,
+    tabRangeStyle: pagTabHeight,
+    mobRangeStyle: pagMobHeight
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.PAG_HEIGHT,
+    property: 'height',
+    attributes
+  });
+  const {
+    desktopBorderStyle: pagBorderStyles,
+    tabBorderStyle: pagBorderStylesTab,
+    mobBorderStyle: pagBorderStylesMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.PAG_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: pagBorderRadiusDesktop,
+    dimensionStylesTab: pagBorderRadiusTab,
+    dimensionStylesMobile: pagBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.PAG_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    backgroundStylesDesktop: pagNormalBGStyle,
+    backgroundStylesTab: pagNormalBGStyleTab,
+    backgroundStylesMobile: pagNormalBGStyleMob
+  } = generateNormalBGControlStyles({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.PAG_BG,
+    attributes,
+    noMainBGImg: true
+  });
+  const {
+    desktopRangeStyle: pagSpacingDesktop,
+    tabRangeStyle: pagSpacingTab,
+    mobRangeStyle: pagSpacingMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.PAG_SPACING,
+    property: 'gap',
+    attributes
+  });
+  const {
+    desktopRangeStyle: pagBottomSpacingDesktop,
+    tabRangeStyle: pagBottomSpacingTab,
+    mobRangeStyle: pagBottomSpacingMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.PAG_BOTTOM_SPACING,
+    property: '--zolo-pagination-offset',
+    attributes
+  });
+
+  // Active Pagination
+  const {
+    desktopRangeStyle: apagDeskWidth,
+    tabRangeStyle: apagTabWidth,
+    mobRangeStyle: apagMobWidth
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.APAG_WIDTH,
+    property: 'width',
+    attributes
+  });
+  const {
+    desktopRangeStyle: apagDeskHeight,
+    tabRangeStyle: apagTabHeight,
+    mobRangeStyle: apagMobHeight
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.APAG_HEIGHT,
+    property: 'height',
+    attributes
+  });
+  const {
+    desktopBorderStyle: apagBorderStyles,
+    tabBorderStyle: apagBorderStylesTab,
+    mobBorderStyle: apagBorderStylesMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.APAG_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: apagBorderRadiusDesktop,
+    dimensionStylesTab: apagBorderRadiusTab,
+    dimensionStylesMobile: apagBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.APAG_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    backgroundStylesDesktop: apagNormalBGStyle,
+    backgroundStylesTab: apagNormalBGStyleTab,
+    backgroundStylesMobile: apagNormalBGStyleMob
+  } = generateNormalBGControlStyles({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.APAG_BG,
+    attributes,
+    noMainBGImg: true
+  });
+  const {
+    dimensionStylesDesktop: contentPaddingDesk,
+    dimensionStylesTab: contentPaddingTab,
+    dimensionStylesMobile: contentPaddingMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.CONTENT_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+
+  // post meta arrow space
+  const {
+    desktopRangeStyle: metaArrowSpaceDesk,
+    tabRangeStyle: metaArrowSpaceTab,
+    mobRangeStyle: metaArrowSpaceMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.META_ARROW_SPACE,
+    property: 'left',
+    attributes
+  });
+
+  // post meta content wrapper
+
+  const {
+    dimensionStylesDesktop: metaBoxWrapPaddingDesk,
+    dimensionStylesTab: metaBoxWrapPaddingTab,
+    dimensionStylesMobile: metaBoxWrapPaddingMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.META_BOX_WRAP_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+
+  //carousel Container Padding
+  const {
+    dimensionStylesDesktop: carouselContainerPaddingDesk,
+    dimensionStylesTab: carouselContainerPaddingTab,
+    dimensionStylesMobile: carouselContainerPaddingMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.CAROUSEL_CONTAINER_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+  const {
+    desktopRangeStyle: shadowRangeDesk,
+    tabRangeStyle: shadowRangeTab,
+    mobRangeStyle: shadowRangeMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_1__.SHADOW_RANGE,
+    property: '--review-carousel-mask-offset',
+    attributes
+  });
+
+  //carousel end
+  /**
+   * All Style Combination
+   */
+  const desktopAllStyle = `
+
+     ${enableShadow ? `
+                .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{
+                         mask-image: linear-gradient(
+                            to right,
+                            transparent,
+                            black var(--review-carousel-mask-offset),
+                            black calc(100% - var(--review-carousel-mask-offset)),
+                            transparent);
+                          ${shadowRangeDesk}
+                    }
+                    ` : ''}
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item{
+        ${columnDeskPadding}
+        ${columnDeskBGStyle}
+        ${columnDeskBorderStyle}
+        ${columnDeskBorderRadius}
+        ${columnBoxShadow}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{
+        ${carouselContainerPaddingDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item .zolo-post-content{
+        ${contentPaddingDesk}
+      }
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime, .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-secount-dateTime {
+        ${metaSpaceDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item{
+        background: none !important;
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item .zolo-post-image::after{
+        ${columnDeskBGStyle}
+      }
+
+      ${preset === 'style-4' ? `
+         .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image{
+          ${thumbnailHeightDesk}
+          ${thumbBorderRadiusDesk}
+        }
+
+      ` : ''}
+
+    ${preset !== 'style-4' ? `
+         .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image {
+          ${thumbnailHeightDesk}
+          ${thumbBorderRadiusDesk}
+        }
+
+      ` : ''}
+
+    ${preset === 'style-4' ? `
+        .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-wrap::before{
+          ${metaArrowColor ? `border-top-color:${metaArrowColor};` : ''}
+          ${metaArrowSpaceDesk}
+        }
+      ` : ''}
+
+    ${preset === 'style-4' ? `
+        .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-4 .zolo-post-meta-wrap {
+          ${metaBoxWrapPaddingDesk}
+        }
+
+      ` : ''}
+
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title{
+        ${titleMarginDesk}
+        ${titleTypoDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title a{
+        ${titleColor ? `color:${titleColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title a:hover,
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-title a{
+        ${titleHoverColor ? `color:${titleHoverColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-desc p{
+        ${excerptMarginDesk}
+        ${excerptTypoDesk}
+        ${excerptColor ? `color:${excerptColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image{
+        ${thumbMarginDesk}
+
+        ${thumbBgDesk}
+        ${thumbBorderDesk}
+        ${thumbBoxShadow}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime{
+        ${metaTypoDesk}
+        ${metaMarginDesk}
+        ${metaColor ? `color:${metaColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-dateTime{
+        ${metaHColor ? `color:${metaHColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category{
+        ${catGapDesk}
+        ${catMarginDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a{
+        ${catTypoDesk}
+        ${catPaddingDesk}
+        ${catBorderDesk}
+        ${catBorderRadiusDesk}
+        ${catColor ? `color:${catColor};` : ''}
+        ${catBgColor ? `background-color:${catBgColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a:hover,
+       .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-category a
+      {
+        ${catHoverColor ? `color:${catHoverColor};` : ''}
+        ${catBgHoverColor ? `background-color:${catBgHoverColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel  .zolo-post-link-btn{
+        ${readMoreMarginDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a{
+        ${readMoreGapDesk}
+        ${readMoreTypoDesk}
+        ${readMorePaddingDesk}
+        ${readMoreBorderDesk}
+        ${readMoreBorderRadiusDesk}
+        ${readMoreColor ? `color:${readMoreColor};` : ''}
+        ${readMoreBgColor ? `background-color:${readMoreBgColor};` : ''}
+      }
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a svg{
+        ${readMoreIconColor ? `color:${readMoreIconColor};` : ''}
+        ${readMoreIconColor ? `fill:${readMoreIconColor};` : ''}
+      }
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a:hover svg{
+        ${readMoreIconHoverColor ? `color:${readMoreIconHoverColor};` : ''}
+        ${readMoreIconHoverColor ? `fill:${readMoreIconHoverColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a:hover{
+        ${readMoreHoverColor ? `color:${readMoreHoverColor};` : ''}
+        ${readMoreBgHoverColor ? `background-color:${readMoreBgHoverColor};` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box{
+        ${authorGapDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box img{
+        ${avatarWidthDesk}
+        ${avatarHeightDesk}
+        ${avatarBorderDesk}
+        ${avatarBorderRadiusDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name{
+        ${nameTypoDesk}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name span{
+        ${namePrefixColor ? `color:${namePrefixColor} !important;` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name a{
+        ${nameColor ? `color:${nameColor} !important;` : ''}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name a:hover,
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-3 .zolo-post-item:hover .zolo-post-author-name a{
+        ${nameHoverColor ? `color:${nameHoverColor} !important;` : ''}
+      }
+    .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:hover, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next:hover, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover {
+            border-color: ${navHoverBorderColor} !important;
+        }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev {
+            ${navBorderStyles}
+            ${navBorderRadiusDesktop}
+            ${navNormalBGStyle}
+            ${navDeskWidth}
+            ${navDeskHeight}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev{
+            ${navDeskOffsetLeft}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next{
+            ${navDeskOffsetRight}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:hover,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next:hover, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover {
+            ${navHoverBGStyle}
+        }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:after, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:after {
+            color: ${navColor};
+            ${navDeskSize}
+        }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next svg, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev svg {
+            fill: ${navColor};
+            ${cnavDeskSize}
+            ${cnavDeskHSize}
+        }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:hover:after, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:hover:after, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next:hover i, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover i {
+            color: ${navHoverColor};
+        }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next:hover svg, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev:hover svg {
+            fill: ${navHoverColor};
+        }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination-bullets {
+            ${pagSpacingDesktop}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination {
+            ${pagBottomSpacingDesktop}
+        }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet {
+            ${pagDeskWidth}
+            ${pagDeskHeight}
+            ${pagBorderStyles}
+            ${pagBorderRadiusDesktop}
+            ${pagNormalBGStyle}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active {
+            ${apagDeskWidth}
+            ${apagDeskHeight}
+            ${apagBorderStyles}
+            ${apagBorderRadiusDesktop}
+            ${apagNormalBGStyle}
+        }
+
+        .${uniqueId}.zolo-block.zolo-post-title-type-1{
+            ${titleAnimationTypeBgColor ? `--zolo-post-title-type-primary-color:${titleAnimationTypeBgColor};` : ''}
+        }
+
+        ${active ? `
+                    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image {
+                        filter:
+                            blur(${blur}px)
+                            brightness(${brightness}%)
+                            contrast(${contrast}%)
+                            saturate(${saturate}%)
+                            hue-rotate(${hueRotate}deg)
+                    }
+             ` : ''}
+
+        ${activeHover ? `
+                    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image:hover {
+                        filter:
+                            blur(${blurHover}px)
+                            brightness(${brightnessHover}%)
+                            contrast(${contrastHover}%)
+                            saturate(${saturateHover}%)
+                            hue-rotate(${hueRotateHover}deg)
+                    }
+               ` : ''}
+
+
+    `;
+  const tabletAllStyle = `
+
+    ${enableShadow ? `
+                .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{
+                    ${shadowRangeTab}
+                }
+            ` : ''}
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item{
+      ${columnTabPadding}
+      ${columnTabBGStyle}
+      ${columnTabBorderStyle}
+      ${columnTabBorderRadius}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{
+        ${carouselContainerPaddingTab}
+    }
+
+     .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item .zolo-post-content{
+        ${contentPaddingTab}
+      }
+
+    ${preset === 'style-4' ? `
+          .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image{
+            ${thumbnailHeightTab}
+            ${thumbBorderRadiusTab}
+          }
+
+        ` : ''}
+
+      ${preset !== 'style-4' ? `
+          .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image {
+            ${thumbnailHeightTab}
+            ${thumbBorderRadiusTab}
+          }
+
+        ` : ''}
+
+      ${preset === 'style-4' ? `
+        .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-wrap::before{
+          ${metaArrowSpaceTab}
+        }
+      ` : ''}
+
+    ${preset === 'style-4' ? `
+        .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-4 .zolo-post-meta-wrap {
+          ${metaBoxWrapPaddingTab}
+        }
+
+      ` : ''}
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title{
+      ${titleMarginTab}
+      ${titleTypoTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-desc p{
+      ${excerptMarginTab}
+      ${excerptTypoTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image{
+      ${thumbMarginTab}
+      ${thumbBgTab}
+      ${thumbBorderTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime{
+      ${metaTypoTab}
+      ${metaMarginTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category{
+      ${catGapTab}
+      ${catMarginTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a{
+      ${catTypoTab}
+      ${catPaddingTab}
+      ${catBorderTab}
+      ${catBorderRadiusTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel  .zolo-post-link-btn{
+      ${readMoreMarginTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a{
+      ${readMoreGapTab}
+      ${readMoreTypoTab}
+      ${readMorePaddingTab}
+      ${readMoreBorderTab}
+      ${readMoreBorderRadiusTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box{
+      ${authorGapTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box img{
+      ${avatarWidthTab}
+      ${avatarHeightTab}
+      ${avatarBorderTab}
+      ${avatarBorderRadiusTab}
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name{
+      ${nameTypoTab}
+    }
+
+    .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev{
+            ${navTabOffsetLeft}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next{
+            ${navTabOffsetRight}
+        }
+
+    .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev {
+            ${navTabWidth}
+            ${navTabHeight}
+            ${navBorderStylesTab}
+            ${navBorderRadiusTab}
+            ${navNormalBGStyleTab}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:hover {
+            ${navHoverBGStyleTab}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:after, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:after {
+            ${navTabSize}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next svg, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev svg {
+            ${cnavTabSize}
+            ${cnavTabHSize}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination-bullet {
+            ${pagTabWidth}
+            ${pagTabHeight}
+            ${pagBorderStylesTab}
+            ${pagBorderRadiusTab}
+            ${pagNormalBGStyleTab}
+            ${pagSpacingTab}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination {
+            ${pagBottomSpacingTab}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active {
+            ${apagTabWidth}
+            ${apagTabHeight}
+            ${apagBorderStylesTab}
+            ${apagBorderRadiusTab}
+            ${apagNormalBGStyleTab}
+        }
+  `;
+  const mobileAllStyle = `
+
+        ${enableShadow ? `
+                .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{
+                    ${shadowRangeMob}
+                }
+            ` : ''}
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item{
+        ${columnMobPadding}
+        ${columnMobBGStyle}
+        ${columnMobBorderStyle}
+        ${columnMobBorderRadius}
+      }
+
+
+    .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .swiper{
+        ${carouselContainerPaddingMob}
+    }
+
+
+       .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-item .zolo-post-content{
+        ${contentPaddingMob}
+      }
+
+      ${preset === 'style-4' ? `
+          .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image .wp-post-image{
+            ${thumbnailHeightMob}
+            ${thumbBorderRadiusMob}
+          }
+
+        ` : ''}
+
+      ${preset !== 'style-4' ? `
+          .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image {
+            ${thumbnailHeightMob}
+            ${thumbBorderRadiusMob}
+          }
+
+        ` : ''}
+
+      ${preset === 'style-4' ? `
+        .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-wrap::before{
+          ${metaArrowSpaceMob}
+        }
+      ` : ''}
+
+    ${preset === 'style-4' ? `
+        .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel.zolo-post-style-4 .zolo-post-meta-wrap {
+          ${metaBoxWrapPaddingMob}
+        }
+
+      ` : ''}
+
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-title{
+        ${titleMarginMob}
+        ${titleTypoMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-desc p{
+        ${excerptMarginMob}
+        ${excerptTypoMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-image{
+        ${thumbMarginMob}
+        ${thumbBgMob}
+        ${thumbBorderMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-dateTime{
+        ${metaTypoMob}
+        ${metaMarginMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category{
+        ${catGapMob}
+        ${catMarginMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-category a{
+        ${catTypoMob}
+        ${catPaddingMob}
+        ${catBorderMob}
+        ${catBorderRadiusMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel  .zolo-post-link-btn{
+        ${readMoreMarginMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-link-btn a{
+        ${readMoreGapMob}
+        ${readMoreTypoMob}
+        ${readMorePaddingMob}
+        ${readMoreBorderMob}
+        ${readMoreBorderRadiusMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box{
+        ${authorGapMob}
+      }
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-meta-box img{
+        ${avatarWidthMob}
+        ${avatarHeightMob}
+        ${avatarBorderMob}
+        ${avatarBorderRadiusMob}
+
+      .${uniqueId}.wp-block-zolo-post-carousel.zolo-post-carousel .zolo-post-author-name{
+        ${nameTypoMob}
+      }
+
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev{
+            ${navMobOffsetLeft}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next,
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next{
+            ${navMobOffsetRight}
+        }
+      .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev {
+            ${navMobWidth}
+            ${navMobHeight}
+            ${navBorderStylesMob}
+            ${navBorderRadiusMob}
+            ${navNormalBGStyleMob}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:hover, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:hover {
+            ${navHoverBGStyleMob}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-next:after, .${uniqueId}.wp-block-zolo-post-carousel .swiper-button-prev:after {
+            ${navMobSize}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-next svg, .${uniqueId}.wp-block-zolo-post-carousel .swiper-zolo-prev svg {
+            ${cnavMobSize}
+            ${cnavMobHSize}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination-bullet {
+            ${pagMobWidth}
+            ${pagMobHeight}
+            ${pagBorderStylesMob}
+            ${pagBorderRadiusMob}
+            ${pagNormalBGStyleMob}
+            ${pagSpacingMob}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination {
+            ${pagBottomSpacingMob}
+        }
+        .${uniqueId}.wp-block-zolo-post-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active {
+            ${apagMobWidth}
+            ${apagMobHeight}
+            ${apagBorderStylesMob}
+            ${apagBorderRadiusMob}
+            ${apagNormalBGStyleMob}
+        }
+    `;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(GlobalStyleHanlder, {
+      attributes: attributes,
+      setAttributes: setAttributes,
+      desktopAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.applyFilters)('zoloBlock.postCarousel.desktopAllStyle', desktopAllStyle, props),
+      tabAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.applyFilters)('zoloBlock.postCarousel.tabAllStyle', tabletAllStyle, props),
+      mobileAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_0__.applyFilters)('zoloBlock.postCarousel.mobileAllStyle', mobileAllStyle, props)
+    })
+  });
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Style);
+
+/***/ }),
+
+/***/ "./src/global/constants.js":
+/*!*********************************!*\
+  !*** ./src/global/constants.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ANIMATION_TYPES: () => (/* binding */ ANIMATION_TYPES),
+/* harmony export */   BACKGROUND_TYPES: () => (/* binding */ BACKGROUND_TYPES),
+/* harmony export */   BORDER_TYPES: () => (/* binding */ BORDER_TYPES),
+/* harmony export */   BOX_SHADOW_TYPES: () => (/* binding */ BOX_SHADOW_TYPES),
+/* harmony export */   CONTENT_POSITIONS: () => (/* binding */ CONTENT_POSITIONS),
+/* harmony export */   CONTENT_WIDTH: () => (/* binding */ CONTENT_WIDTH),
+/* harmony export */   CONTENT_WIDTH_TYPES: () => (/* binding */ CONTENT_WIDTH_TYPES),
+/* harmony export */   DEFAULT_ALIGNS: () => (/* binding */ DEFAULT_ALIGNS),
+/* harmony export */   DEFAULT_ALIGNS_VERTICAL: () => (/* binding */ DEFAULT_ALIGNS_VERTICAL),
+/* harmony export */   EASING_TYPES: () => (/* binding */ EASING_TYPES),
+/* harmony export */   EXCLUDE_BY: () => (/* binding */ EXCLUDE_BY),
+/* harmony export */   FLEX_ALIGNS: () => (/* binding */ FLEX_ALIGNS),
+/* harmony export */   FLEX_ALIGNS_ROW: () => (/* binding */ FLEX_ALIGNS_ROW),
+/* harmony export */   FLEX_ALIGN_OPTIONS: () => (/* binding */ FLEX_ALIGN_OPTIONS),
+/* harmony export */   FLEX_DIRECTIONS: () => (/* binding */ FLEX_DIRECTIONS),
+/* harmony export */   FLEX_HORIZONTAL_OPTIONS: () => (/* binding */ FLEX_HORIZONTAL_OPTIONS),
+/* harmony export */   FLEX_JUSTIFIES: () => (/* binding */ FLEX_JUSTIFIES),
+/* harmony export */   FLEX_JUSTIFIES_ROW: () => (/* binding */ FLEX_JUSTIFIES_ROW),
+/* harmony export */   FLEX_WRAPS: () => (/* binding */ FLEX_WRAPS),
+/* harmony export */   FLIP_ICON: () => (/* binding */ FLIP_ICON),
+/* harmony export */   HEADING: () => (/* binding */ HEADING),
+/* harmony export */   ICON_BOX_OPTIONS: () => (/* binding */ ICON_BOX_OPTIONS),
+/* harmony export */   ICON_HPOSITIONS: () => (/* binding */ ICON_HPOSITIONS),
+/* harmony export */   ICON_POSITIONS: () => (/* binding */ ICON_POSITIONS),
+/* harmony export */   ICON_STATUS: () => (/* binding */ ICON_STATUS),
+/* harmony export */   INCLUDE_BY: () => (/* binding */ INCLUDE_BY),
+/* harmony export */   MASK_POSITIONS: () => (/* binding */ MASK_POSITIONS),
+/* harmony export */   MASK_REPEATS: () => (/* binding */ MASK_REPEATS),
+/* harmony export */   MASK_SHAPES: () => (/* binding */ MASK_SHAPES),
+/* harmony export */   MASK_SIZES: () => (/* binding */ MASK_SIZES),
+/* harmony export */   NORMAL_HOVER: () => (/* binding */ NORMAL_HOVER),
+/* harmony export */   NORMAL_HTML_TAG: () => (/* binding */ NORMAL_HTML_TAG),
+/* harmony export */   OBJECT_FITS: () => (/* binding */ OBJECT_FITS),
+/* harmony export */   OPACITY_ICON: () => (/* binding */ OPACITY_ICON),
+/* harmony export */   ORDER_BY: () => (/* binding */ ORDER_BY),
+/* harmony export */   OVERFLOWS: () => (/* binding */ OVERFLOWS),
+/* harmony export */   PAGINARION_TYPE: () => (/* binding */ PAGINARION_TYPE),
+/* harmony export */   POSITIONS: () => (/* binding */ POSITIONS),
+/* harmony export */   PRINT_TAXONOMY: () => (/* binding */ PRINT_TAXONOMY),
+/* harmony export */   ROTATE_ICON: () => (/* binding */ ROTATE_ICON),
+/* harmony export */   SCALE_ICON: () => (/* binding */ SCALE_ICON),
+/* harmony export */   SEPERATOR_STYLES: () => (/* binding */ SEPERATOR_STYLES),
+/* harmony export */   SKEW_ICON: () => (/* binding */ SKEW_ICON),
+/* harmony export */   SORT_ORDER: () => (/* binding */ SORT_ORDER),
+/* harmony export */   TEXT_ALIGN_OPTIONS: () => (/* binding */ TEXT_ALIGN_OPTIONS),
+/* harmony export */   TEXT_GRADIENT_TYPES: () => (/* binding */ TEXT_GRADIENT_TYPES),
+/* harmony export */   THUMBNAIL_SIZE: () => (/* binding */ THUMBNAIL_SIZE),
+/* harmony export */   TRANSFORM_ORIGINS: () => (/* binding */ TRANSFORM_ORIGINS),
+/* harmony export */   TRANSLATE_ICON: () => (/* binding */ TRANSLATE_ICON),
+/* harmony export */   UNIT_TYPES: () => (/* binding */ UNIT_TYPES),
+/* harmony export */   VPOSITIONS: () => (/* binding */ VPOSITIONS),
+/* harmony export */   WIDTH_TYPES: () => (/* binding */ WIDTH_TYPES),
+/* harmony export */   prefix: () => (/* binding */ prefix)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+//Attribute Prefix
+
+const prefix = 'zolo_';
+const UNIT_TYPES = [{
+  label: 'px',
+  value: 'px'
+}, {
+  label: '%',
+  value: '%'
+}, {
+  label: 'em',
+  value: 'em'
+}];
+const NORMAL_HOVER = [{
+  label: 'Normal',
+  value: 'normal'
+}, {
+  label: 'Hover',
+  value: 'hover'
+}];
+const TEXT_ALIGN_OPTIONS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 8,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Justify',
+  value: 'justify',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 6,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const DEFAULT_ALIGNS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 8,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const DEFAULT_ALIGNS_VERTICAL = [{
+  label: 'Top',
+  value: 'top',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'bottom',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const FLEX_ALIGN_OPTIONS = [{
+  label: 'Top',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 12L16 12",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8 12L2 12",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 16,
+      y: 4,
+      width: 16,
+      height: 8,
+      rx: 1,
+      transform: "rotate(90 16 4)",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const FLEX_HORIZONTAL_OPTIONS = [{
+  label: 'Left',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 8,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// Flex Properties
+const FLEX_DIRECTIONS = [{
+  label: 'Row',
+  value: 'row',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.64246 7.53723H17.2781",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 7.53729L15.3485 5.28601",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 7.53723L15.3485 9.78851",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.64246 16.4172H17.2781",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 16.4173L15.3485 14.1774",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 16.4172L15.3485 18.6685",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2.85132 21.1473V2.85278",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21.1487 21.1473V2.85278",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Column',
+  value: 'column',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.391 6.72949L16.391 17.1923",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3909 17.1923L18.606 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.391 17.1923L14.176 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.65393 6.72949L7.65393 17.1923",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.65381 17.1923L9.85767 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.65393 17.1923L5.43889 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Row Reverse',
+  value: 'row-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2705 16.391L6.80771 16.391",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 16.3909L8.70593 18.606",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 16.391L8.70593 14.176",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2705 7.65393L6.80771 7.65393",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 7.65381L8.70593 9.85767",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 7.65393L8.70593 5.43889",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Column Reverse',
+  value: 'column-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.60901 17.2705L7.60901 6.80771",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.60908 6.80767L5.39404 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.60901 6.80767L9.82405 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3461 17.2705L16.3461 6.80771",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3462 6.80767L14.1423 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3461 6.80767L18.5611 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_ALIGNS = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12.142 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.15051 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9.46875 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M14.4974 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M11.858 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.8495 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Stretch',
+  value: 'stretch',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.00001 15.27L16.39 15.27",
+      stroke: "#4D4D4D",
+      strokeWidth: 3,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.00001 9.27002L16.39 9.27002",
+      stroke: "#4D4D4D",
+      strokeWidth: 3,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20.51 4.03003L3.97001 4.03003",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20.51 20.51L3.97001 20.51",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_ALIGNS_ROW = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 12.142L16.5189 12.142",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 7.15051L16.5189 7.15051",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 9.46875L7.42934 9.46875",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 14.4974L7.42934 14.4974",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 11.858L7.48088 11.858",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 16.8495L7.48088 16.8495",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Stretch',
+  value: 'stretch',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.72 16.64H8.91003",
+      stroke: "#4D4D4D",
+      strokeWidth: "7",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 20.48H20.54",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 4H20.54",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.72 7.83997H8.91003",
+      stroke: "#4D4D4D",
+      strokeWidth: "7",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_JUSTIFIES = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 12.142L16.5189 12.142",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 7.15051L16.5189 7.15051",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 9.46875L7.42934 9.46875",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 14.4974L7.42934 14.4974",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 11.858L7.48088 11.858",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 16.8495L7.48088 16.8495",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Between',
+  value: 'space-between',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 7.1615L7.48088 7.1615",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 16.8386L7.48088 16.8386",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Around',
+  value: 'space-around',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.6713 8.21777L7.54619 8.21777",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 15.8041L7.48088 15.8041",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Evenly',
+  value: 'space-evenly',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 8.73425L7.48088 8.73425",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 15.2767L7.48088 15.2767",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_JUSTIFIES_ROW = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12.142 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.15051 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9.46875 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M14.4974 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M11.858 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.8495 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Between',
+  value: 'space-between',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.1615 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.8386 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Around',
+  value: 'space-around',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.21777 7.32874V16.4538",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.8041 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Evenly',
+  value: 'space-evenly',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.73425 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.2767 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_WRAPS = [{
+  label: 'Wrap',
+  value: 'wrap',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.37 15.2757H15.27C16.35 15.2757 17.23 14.318 17.23 13.1427V7.451C17.23 6.27567 16.35 5.31799 15.27 5.31799H7.53",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M10.07 11.8368L6.77002 15.2757L10.07 18.7255",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'No Wrap',
+  value: 'nowrap',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.51 12.0109H6.18005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M14.8101 8.5719L18.1101 12.0108L14.8101 15.4607",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Wrap Reverse',
+  value: 'wrap-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.35999 8.76794H15.26C16.34 8.76794 17.22 9.72562 17.22 10.901V16.5926C17.22 17.7679 16.34 18.7256 15.26 18.7256H7.51999",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M10.0699 12.2068L6.7699 8.76783L10.0699 5.30713",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const HEADING = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H1', 'zoloblocks'),
+  value: 'h1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H2', 'zoloblocks'),
+  value: 'h2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H3', 'zoloblocks'),
+  value: 'h3'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H4', 'zoloblocks'),
+  value: 'h4'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H5', 'zoloblocks'),
+  value: 'h5'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H6', 'zoloblocks'),
+  value: 'h6'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('P', 'zoloblocks'),
+  value: 'p'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Span', 'zoloblocks'),
+  value: 'span'
+}];
+const NORMAL_HTML_TAG = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('P', 'zoloblocks'),
+  value: 'p'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Span', 'zoloblocks'),
+  value: 'span'
+}];
+const BORDER_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('None', 'zoloblocks'),
+  value: 'none'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Solid', 'zoloblocks'),
+  value: 'solid'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'zoloblocks'),
+  value: 'custom'
+}];
+const SEPERATOR_STYLES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Dashed', 'zoloblocks'),
+  value: 'dashed'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Dotted', 'zoloblocks'),
+  value: 'dotted'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Double', 'zoloblocks'),
+  value: 'double'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Groove', 'zoloblocks'),
+  value: 'groove'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Outset', 'zoloblocks'),
+  value: 'outset'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ridge', 'zoloblocks'),
+  value: 'ridge'
+}];
+const BACKGROUND_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Classic', 'zoloblocks'),
+  value: 'classic',
+  icon: 'color-picker'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Gradient', 'zoloblocks'),
+  value: 'gradient',
+  icon: 'art'
+}];
+const TEXT_GRADIENT_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Color', 'zoloblocks'),
+  value: 'classic',
+  icon: 'Color'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Gradient', 'zoloblocks'),
+  value: 'gradient',
+  icon: 'Gradient'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Image', 'zoloblocks'),
+  value: 'image',
+  icon: 'Image'
+}];
+const BOX_SHADOW_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Outer', 'zoloblocks'),
+  value: 'outset'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Inner', 'zoloblocks'),
+  value: 'inset'
+}];
+
+// position
+const POSITIONS = [{
+  label: 'Left',
+  value: 'row-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: "7",
+      y: "8",
+      width: "12",
+      height: "8",
+      rx: "1",
+      fill: "none",
+      stroke: "#4D4D4D",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'row',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Top',
+  value: 'column-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'column',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// position
+const ICON_POSITIONS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 11,
+      y: 12,
+      width: 11,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 3,
+      y: 10,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 3,
+      y: 12,
+      width: 11,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 18,
+      y: 10,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Top',
+  value: 'top',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 6,
+      y: 16,
+      width: 12,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 10,
+      y: 8,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'bottom',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 6,
+      y: 8,
+      width: 12,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 10,
+      y: 12,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// horizontal position
+const ICON_HPOSITIONS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: "7",
+      y: "8",
+      width: "12",
+      height: "8",
+      rx: "1",
+      fill: "none",
+      stroke: "#4D4D4D",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+// horizontal position
+const VPOSITIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Top', 'zoloblocks'),
+  value: 'top',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Bottom', 'zoloblocks'),
+  value: 'bottom',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// social icon text
+const ICON_STATUS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('No Icon', 'zoloblocks'),
+  value: 'none',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 18 18",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+      cx: 9,
+      cy: 9,
+      r: 8,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3.13904 4.3877L14.3609 14.1124",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    })]
+  })
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Icon & Text', 'zoloblocks'),
+  value: 'iconText',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 35,
+    height: 24,
+    viewBox: "0 0 35 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 12V16",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 9.5V9",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M23 12H31M23 15H27.7059",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+      cx: 12,
+      cy: 12,
+      r: 8,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M23 9H33.5",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    })]
+  })
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Only Icon', 'zoloblocks'),
+  value: 'iconOnly',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 18 18",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+      cx: 9,
+      cy: 9,
+      r: 8,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9 9V13",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9 6.5V6",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    })]
+  })
+}];
+const ORDER_BY = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Date', 'zoloblocks'),
+  value: 'date'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Author', 'zoloblocks'),
+  value: 'author'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Title', 'zoloblocks'),
+  value: 'title'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Last modified date', 'zoloblocks'),
+  value: 'modified'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Post parent ID', 'zoloblocks'),
+  value: 'parent'
+}];
+const SORT_ORDER = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('ASC', 'zoloblocks'),
+  value: 'asc'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('DESC', 'zoloblocks'),
+  value: 'desc'
+}];
+const PRINT_TAXONOMY = taxonomy => {
+  let allTax = [];
+  for (let tax in taxonomy) {
+    allTax.push({
+      value: tax,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)(taxonomy[tax], 'zoloblocks')
+    });
+  }
+  return allTax;
+};
+const THUMBNAIL_SIZE = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: ''
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Thumbnail', 'zoloblocks'),
+  value: 'thumbnail'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Medium', 'zoloblocks'),
+  value: 'medium'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Large', 'zoloblocks'),
+  value: 'large'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full', 'zoloblocks'),
+  value: 'full'
+}];
+
+// social icon text
+const ICON_BOX_OPTIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Image', 'zoloblocks'),
+  value: 'image'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Icon', 'zoloblocks'),
+  value: 'icon'
+}];
+
+// Width Types
+const WIDTH_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full', 'zoloblocks'),
+  value: 'alignfull'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Boxed', 'zoloblocks'),
+  value: 'alignwide'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'zoloblocks'),
+  value: 'custom_width'
+}];
+const CONTENT_WIDTH_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Boxed', 'zoloblocks'),
+  value: 'alignwide'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full Width', 'zoloblocks'),
+  value: 'alignfull'
+}];
+const OVERFLOWS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: 'visible'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Auto', 'zoloblocks'),
+  value: 'auto'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hidden', 'zoloblocks'),
+  value: 'hidden'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Scroll', 'zoloblocks'),
+  value: 'scroll'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Clip', 'zoloblocks'),
+  value: 'clip'
+}];
+const CONTENT_POSITIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: ''
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Relative', 'zoloblocks'),
+  value: 'relative'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Absolute', 'zoloblocks'),
+  value: 'absolute'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fixed', 'zoloblocks'),
+  value: 'fixed'
+}];
+const CONTENT_WIDTH = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: 'default'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full Width', 'zoloblocks'),
+  value: 'full'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Inline (auto)', 'zoloblocks'),
+  value: 'inline'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'azoloblocks'),
+  value: 'custom'
+}];
+const OBJECT_FITS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('None', 'zoloblocks'),
+  value: 'none'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fill', 'zoloblocks'),
+  value: 'fill'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Contain', 'zoloblocks'),
+  value: 'contain'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Cover', 'zoloblocks'),
+  value: 'cover'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Scale Down', 'zoloblocks'),
+  value: 'scale-down'
+}];
+
+// mask shapes
+const MASK_SHAPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('None', 'zoloblocks'),
+  value: ''
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Abstract', 'zoloblocks'),
+  value: 'abstract'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Abstract Brush 1', 'zoloblocks'),
+  value: 'abstract-brush-1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Abstract Brush 2', 'zoloblocks'),
+  value: 'abstract-brush-2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Aesthetic Blob', 'zoloblocks'),
+  value: 'aesthetic-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Amorphous Blob', 'zoloblocks'),
+  value: 'amorphous-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Brush', 'zoloblocks'),
+  value: 'brush'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Comment', 'zoloblocks'),
+  value: 'comment'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Container', 'zoloblocks'),
+  value: 'container'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hand Drawn Blob', 'zoloblocks'),
+  value: 'hand-drawn-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hexagon', 'zoloblocks'),
+  value: 'hexagon'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hexagon Blob', 'zoloblocks'),
+  value: 'hexagon-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Irregular Blob', 'zoloblocks'),
+  value: 'irregular-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Minimal Round', 'zoloblocks'),
+  value: 'minimal-round'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Octagon', 'zoloblocks'),
+  value: 'octagon'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Organic Blob', 'zoloblocks'),
+  value: 'organic-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Oval Blob', 'zoloblocks'),
+  value: 'oval-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pattern', 'zoloblocks'),
+  value: 'pattern'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Popup 1', 'zoloblocks'),
+  value: 'popup-1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Popup 2', 'zoloblocks'),
+  value: 'popup-2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Popup 3', 'zoloblocks'),
+  value: 'popup-3'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Round Brush', 'zoloblocks'),
+  value: 'round-brush'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Round Design', 'zoloblocks'),
+  value: 'round-design'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Square Pattern', 'zoloblocks'),
+  value: 'squar-pattern'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Testimonial', 'zoloblocks'),
+  value: 'testimonial'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Triangle Blob', 'zoloblocks'),
+  value: 'triangle-blob'
+}];
+
+// mask position
+const MASK_POSITIONS = [{
+  value: 'center top',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center Top', 'zoloblocks')
+}, {
+  value: 'center center',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center Center', 'zoloblocks')
+}, {
+  value: 'center bottom',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center Bottom', 'zoloblocks')
+}, {
+  value: 'left top',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left Top', 'zoloblocks')
+}, {
+  value: 'left center',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left Center', 'zoloblocks')
+}, {
+  value: 'left bottom',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left Bottom', 'zoloblocks')
+}, {
+  value: 'right top',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right Top', 'zoloblocks')
+}, {
+  value: 'right center',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right Center', 'zoloblocks')
+}, {
+  value: 'right bottom',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right Bottom', 'zoloblocks')
+}];
+
+// mask repeat
+const MASK_REPEATS = [{
+  value: 'no-repeat',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('No Repeat', 'zoloblocks')
+}, {
+  value: 'repeat',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Repeat', 'zoloblocks')
+}, {
+  value: 'repeat-x',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Repeat X', 'zoloblocks')
+}, {
+  value: 'repeat-y',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Repeat Y', 'zoloblocks')
+}];
+
+// mask sizes
+const MASK_SIZES = [{
+  value: 'auto',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Auto', 'zoloblocks')
+}, {
+  value: 'cover',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Cover', 'zoloblocks')
+}, {
+  value: 'contain',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Contain', 'zoloblocks')
+}];
+const ANIMATION_TYPES = [{
+  label: 'Fade',
+  value: 'fade'
+},
+// { label: 'Slide', value: 'slide' },
+// { label: 'Scale', value: 'scale' },
+// { label: 'Rotate', value: 'rotate' },
+// { label: 'Flip', value: 'flip' },
+// { label: 'Zoom', value: 'zoom' },
+{
+  label: 'Scale Up',
+  value: 'scaleUp'
+}, {
+  label: 'Scale Down',
+  value: 'scaleDown'
+}, {
+  label: 'Top',
+  value: 'top'
+}, {
+  label: 'Right',
+  value: 'right'
+}, {
+  label: 'Bottom',
+  value: 'bottom'
+}, {
+  label: 'Left',
+  value: 'left'
+}, {
+  label: 'Top Small',
+  value: 'topSmall'
+}, {
+  label: 'Right Small',
+  value: 'rightSmall'
+}, {
+  label: 'Bottom Small',
+  value: 'bottomSmall'
+}, {
+  label: 'Left Small',
+  value: 'leftSmall'
+}, {
+  label: 'Top Medium',
+  value: 'topMedium'
+}, {
+  label: 'Right Medium',
+  value: 'rightMedium'
+}, {
+  label: 'Bottom Medium',
+  value: 'bottomMedium'
+}, {
+  label: 'Left Medium',
+  value: 'leftMedium'
+}, {
+  label: 'Custom (Pro)',
+  value: 'custom'
+}];
+const TRANSFORM_ORIGINS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Top'),
+  value: 'top'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right'),
+  value: 'right'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Bottom'),
+  value: 'bottom'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left'),
+  value: 'left'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center'),
+  value: 'center'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Initial'),
+  value: 'initial'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Inherit'),
+  value: 'inherit'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Revert'),
+  value: 'revert'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Unset'),
+  value: 'unset'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Revert Layer'),
+  value: 'revert-layer'
+}, {
+  label: 'Custom',
+  value: 'custom'
+}];
+const EASING_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ease Out', 'zoloblocks'),
+  value: 'ease-out'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ease In Out', 'zoloblocks'),
+  value: 'ease-in-out'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Linear', 'zoloblocks'),
+  value: 'linear'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'zoloblocks'),
+  value: 'custom'
+}];
+const TRANSLATE_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M18.5818 15.3211L22 11.9184L18.5818 8.58813",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M5.41818 15.3211L2 11.9184L5.41818 8.58813",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2.35461 11.9548H21.6455",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M15.3818 5.4027L11.9636 2L8.61816 5.4027",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M8.61816 18.5974L12.0363 22.0001L15.3818 18.5974",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 2.35278V21.2396",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const ROTATE_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M21.4401 8.67C19.7801 4.22 15.9301 2 12.0001 2C6.85006 2 2.61006 5.89 2.06006 10.89",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M21.9401 13.1201C21.3901 18.1201 17.1501 22.0001 12.0001 22.0001C8.08006 22.0001 4.22006 19.7801 2.56006 15.3301",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22.0001 2.21997V8.66997H15.5601",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2 21.7801V15.3301H8.44",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const SCALE_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M21.9999 8.16V2L15.8799 2.07",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M16.2598 13.8798H10.0798L10.1398 7.78979",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M10.4299 13.5898L21.7299 2.30981",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M20.62 13.88V19.97C20.62 21.09 19.71 22 18.58 22H4.04C2.91 22 2 21.09 2 19.97V5.47995C2 4.35995 2.91 3.44995 4.04 3.44995H9.64",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const SKEW_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M22 4H7.74545L2 20H16.2545L22 4Z",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })
+});
+const OPACITY_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22 2L2 22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2 2L22 22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const FLIP_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2 12H22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 2L22 12L12 22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const INCLUDE_BY = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Authors', 'zoloblocks'),
+  value: 'authors'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Terms', 'zoloblocks'),
+  value: 'terms'
+}];
+const EXCLUDE_BY = [{
+  value: 'authors',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Authors', 'zoloblocks')
+}, {
+  value: 'current_post',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Current Post', 'zoloblocks')
+}, {
+  value: 'manual_selection',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Manual Selection', 'zoloblocks')
+}, {
+  value: 'terms',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Terms', 'zoloblocks')
+}];
+const PAGINARION_TYPE = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default Pagination', 'zoloblocks'),
+  value: 'normal'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ajax Pagination', 'zoloblocks'),
+  value: 'number'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Load More-Click', 'zoloblocks'),
+  value: 'button'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Load More-Scroll', 'zoloblocks'),
+  value: 'scroll'
+}];
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/editor.scss":
+/*!**********************************************!*\
+  !*** ./src/blocks/post-carousel/editor.scss ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/style.scss":
+/*!*********************************************!*\
+  !*** ./src/blocks/post-carousel/style.scss ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["ReactJSXRuntime"];
+
+/***/ }),
+
+/***/ "@wordpress/api-fetch":
+/*!**********************************!*\
+  !*** external ["wp","apiFetch"] ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["apiFetch"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/element":
+/*!*********************************!*\
+  !*** external ["wp","element"] ***!
+  \*********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["element"];
+
+/***/ }),
+
+/***/ "@wordpress/hooks":
+/*!*******************************!*\
+  !*** external ["wp","hooks"] ***!
+  \*******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["hooks"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = '';
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (arg) {
+				classes = appendClass(classes, parseValue(arg));
+			}
+		}
+
+		return classes;
+	}
+
+	function parseValue (arg) {
+		if (typeof arg === 'string' || typeof arg === 'number') {
+			return arg;
+		}
+
+		if (typeof arg !== 'object') {
+			return '';
+		}
+
+		if (Array.isArray(arg)) {
+			return classNames.apply(null, arg);
+		}
+
+		if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+			return arg.toString();
+		}
+
+		var classes = '';
+
+		for (var key in arg) {
+			if (hasOwn.call(arg, key) && arg[key]) {
+				classes = appendClass(classes, key);
+			}
+		}
+
+		return classes;
+	}
+
+	function appendClass (value, newClass) {
+		if (!newClass) {
+			return value;
+		}
+	
+		if (value) {
+			return value + ' ' + newClass;
+		}
+	
+		return value + newClass;
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
+/***/ "./src/blocks/post-carousel/block.json":
+/*!*********************************************!*\
+  !*** ./src/blocks/post-carousel/block.json ***!
+  \*********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"Post Carousel","name":"zolo/post-carousel","category":"zoloblocks","keywords":["post","carousel","slider","feature","highlight","news"],"description":"Feature posts in an interactive, customizable carousel.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":410},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":["file:./index.js","zolo-swiper-editor-script"],"editorStyle":["file:./index.css","zolo-swiper-editor-style"],"style":["zolo-swiper-frontend-style","file:./style-index.css"],"viewScript":["file:./frontend.js","zolo-swiper-frontend-script"]}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"blocks/post-carousel/index": 0,
+/******/ 			"blocks/post-carousel/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkzoloblocks"] = globalThis["webpackChunkzoloblocks"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/post-carousel/style-index"], () => (__webpack_require__("./src/blocks/post-carousel/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

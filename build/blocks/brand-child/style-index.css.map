@@ -1,0 +1,1 @@
+{"version":3,"file":"blocks/brand-child/style-index.css","mappings":";;;AAAA;EACI;AACJ,C","sources":["webpack://zoloblocks/./src/blocks/brand-child/style.scss"],"sourcesContent":[".zb-brand-title-link {\n    display: inline-block;\n}\n"],"names":[],"sourceRoot":""}

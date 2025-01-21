@@ -1,1 +1,102 @@
-.wp-block-zolo-image-compare .zolo-image-wrap.placeholder{display:grid;grid-template-columns:repeat(2,1fr);grid-gap:1rem;align-items:center}.wp-block-zolo-image-compare .compare-slider-label{-webkit-backdrop-filter:blur(15px);backdrop-filter:blur(15px);background-color:hsla(0,0%,100%,.09);border:1px solid hsla(0,0%,100%,.2);color:#fff;display:inline-block;font-size:16px;opacity:1;overflow:hidden;padding:10px 20px;position:absolute;text-transform:capitalize;transition:opacity .25s ease-in-out}.wp-block-zolo-image-compare .image-item-One,.wp-block-zolo-image-compare .image-item-two{align-items:center;display:flex;height:100%;justify-content:flex-start;width:100%}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-right{border-bottom-right-radius:6px;border-top-right-radius:6px;left:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-right.h_top{border-top-right-radius:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-right.h_bottom{border-bottom-right-radius:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-left{border-bottom-left-radius:6px;border-top-left-radius:6px;right:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-left.h_top{border-top-left-radius:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-left.h_bottom{border-bottom-left-radius:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label.h_bottom{bottom:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label.h_top{top:0}.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label.h_center{top:50%;transform:translateY(-50%)}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label.v_center{right:50%;transform:translateX(50%)}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label.v_top{right:0}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label.v_bottom{left:0}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-left{border-bottom-right-radius:6px;border-bottom-left-radius:6px;top:0}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-left.v_top{border-bottom-right-radius:0}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-left.v_bottom{border-bottom-left-radius:0}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-right{border-top-right-radius:6px;border-top-left-radius:6px;bottom:0}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-right.v_top{border-top-right-radius:0}.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-right.v_bottom{border-top-left-radius:0}
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/image-compare/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+.wp-block-zolo-image-compare .zolo-image-wrap.placeholder {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+}
+.wp-block-zolo-image-compare .compare-slider-label {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  font-size: 16px;
+  padding: 10px 20px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.09);
+  text-transform: capitalize;
+  display: inline-block;
+  overflow: hidden;
+}
+.wp-block-zolo-image-compare .image-item-One {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+.wp-block-zolo-image-compare .image-item-two {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-right {
+  left: 0;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-right.h_top {
+  border-top-right-radius: 0;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-right.h_bottom {
+  border-bottom-right-radius: 0;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-left {
+  right: 0;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-left.h_top {
+  border-top-left-radius: 0;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label-left.h_bottom {
+  border-bottom-left-radius: 0;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label.h_bottom {
+  bottom: 0;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label.h_top {
+  top: 0;
+}
+.wp-block-zolo-image-compare.horizontal_direction .compare-slider-label.h_center {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label.v_center {
+  right: 50%;
+  transform: translateX(50%);
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label.v_top {
+  right: 0;
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label.v_bottom {
+  left: 0;
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-left {
+  top: 0;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-left.v_top {
+  border-bottom-right-radius: 0;
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-left.v_bottom {
+  border-bottom-left-radius: 0;
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-right {
+  bottom: 0;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-right.v_top {
+  border-top-right-radius: 0;
+}
+.wp-block-zolo-image-compare.vertical_direction .compare-slider-label-right.v_bottom {
+  border-top-left-radius: 0;
+}

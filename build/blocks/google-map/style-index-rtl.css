@@ -1,1 +1,28 @@
-.wp-block-zolo-google-map{--zolo-map-height:clamp(18.75rem,50vw,43.75rem);--zolo-marker-info-margin:10px 0 0;--zolo-gm-style-padding:15px}.wp-block-zolo-google-map .zolo-gmap-wrapper{height:var(--zolo-map-height);overflow:hidden}.wp-block-zolo-google-map .zolo-gmap-wrapper .gm-style-iw.gm-style-iw-c{line-height:1.4;max-width:300px!important;padding:var(--zolo-gm-style-padding);top:-35px}.wp-block-zolo-google-map .zolo-gmap-wrapper .gm-style-iw-tc{top:-35px}.wp-block-zolo-google-map .zolo-gmap-wrapper button.gm-ui-hover-effect{left:0!important;top:0!important}.wp-block-zolo-google-map .zolo-gmap-wrapper .zolo-gmap-marker-info{margin:var(--zolo-marker-info-margin)}
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/google-map/style.scss ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-zolo-google-map {
+  --zolo-map-height: clamp(18.75rem, 50vw, 43.75rem);
+  --zolo-marker-info-margin: 10px 0 0;
+  --zolo-gm-style-padding: 15px;
+}
+.wp-block-zolo-google-map .zolo-gmap-wrapper {
+  height: var(--zolo-map-height);
+  overflow: hidden;
+}
+.wp-block-zolo-google-map .zolo-gmap-wrapper .gm-style-iw.gm-style-iw-c {
+  max-width: 300px !important;
+  line-height: 1.4;
+  padding: var(--zolo-gm-style-padding);
+  top: -35px;
+}
+.wp-block-zolo-google-map .zolo-gmap-wrapper .gm-style-iw-tc {
+  top: -35px;
+}
+.wp-block-zolo-google-map .zolo-gmap-wrapper button.gm-ui-hover-effect {
+  top: 0 !important;
+  left: 0 !important;
+}
+.wp-block-zolo-google-map .zolo-gmap-wrapper .zolo-gmap-marker-info {
+  margin: var(--zolo-marker-info-margin);
+}

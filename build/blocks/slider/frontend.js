@@ -1,1 +1,92 @@
-document.addEventListener("DOMContentLoaded",(()=>{document.querySelectorAll(".wp-block-zolo-slider").forEach((e=>{const t=e.querySelector(".swiper"),o=JSON.parse(e.dataset?.swiperOptions||"{}"),l=e.querySelectorAll("video.zolo-html5-video"),{speed:i=800,autoplay:s=!1,autoplayDelay:a=3e3,pauseOnMouseEnter:n=!1,loop:p=!1,navigation:r=!0,effect:d="slide",pagination:c=!0,paginationType:u="bullets"}=o;l.forEach((e=>{Object.assign(e,{autoplay:!1,muted:!0,loop:!1}),e.pause()}));const y={loop:p||!1,autoplay:!!s&&{delay:a||3,disableOnInteraction:!1,pauseOnMouseEnter:n||!1},speed:i||800,effect:d||"slide",navigation:!!r&&{nextEl:e.querySelector(".swiper-button-next"),prevEl:e.querySelector(".swiper-button-prev")},pagination:!!c&&{el:".swiper-pagination",type:u||"bullets",clickable:!0},on:{init(){const e=this.slides[0].querySelector("video.zolo-html5-video");e&&(this.autoplay.stop(),e.play().catch((e=>console.log("Autoplay prevented for first slide:",e))))},slideChangeTransitionEnd(){const e=this.slides[this.activeIndex].querySelector("video.zolo-html5-video");l.forEach((e=>{e.pause(),e.currentTime=0})),e&&(e.play().catch((e=>console.log("Autoplay prevented:",e))),this.autoplay.stop(),e.onended=()=>{this.autoplay.start()})},slideChange(){const e=this.slides[this.activeIndex].querySelector("video.zolo-html5-video");e&&!e.paused&&this.slideTo(this.previousIndex)}}};new Swiper(t,y)}))}));
+/******/ (() => { // webpackBootstrap
+/*!***************************************!*\
+  !*** ./src/blocks/slider/frontend.js ***!
+  \***************************************/
+document.addEventListener('DOMContentLoaded', () => {
+  const zoloSliders = document.querySelectorAll('.wp-block-zolo-slider');
+  zoloSliders.forEach(slider => {
+    const sliderSelector = slider.querySelector('.swiper');
+    const sliderOptions = JSON.parse(slider.dataset?.swiperOptions || '{}');
+    const videos = slider.querySelectorAll('video.zolo-html5-video');
+    const {
+      speed = 800,
+      autoplay = false,
+      autoplayDelay = 3000,
+      pauseOnMouseEnter = false,
+      loop = false,
+      navigation = true,
+      effect = 'slide',
+      pagination = true,
+      paginationType = 'bullets'
+    } = sliderOptions;
+
+    // Initialize all videos
+    videos.forEach(video => {
+      Object.assign(video, {
+        autoplay: false,
+        muted: true,
+        loop: false
+      });
+      video.pause();
+    });
+    const defaultOptions = {
+      // navigation: { nextEl, prevEl },
+      loop: loop || false,
+      autoplay: autoplay ? {
+        delay: autoplayDelay || 3,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: pauseOnMouseEnter || false
+      } : false,
+      speed: speed || 800,
+      effect: effect || 'slide',
+      navigation: navigation ? {
+        nextEl: slider.querySelector('.swiper-button-next'),
+        prevEl: slider.querySelector('.swiper-button-prev')
+      } : false,
+      pagination: pagination ? {
+        el: '.swiper-pagination',
+        type: paginationType || 'bullets',
+        clickable: true
+      } : false,
+      on: {
+        init() {
+          const firstVideo = this.slides[0].querySelector('video.zolo-html5-video');
+          if (firstVideo) {
+            this.autoplay.stop();
+            firstVideo.play().catch(error => console.log('Autoplay prevented for first slide:', error));
+          }
+        },
+        slideChangeTransitionEnd() {
+          const activeSlide = this.slides[this.activeIndex];
+          const activeVideo = activeSlide.querySelector('video.zolo-html5-video');
+
+          // Pause all videos and reset current time
+          videos.forEach(video => {
+            video.pause();
+            video.currentTime = 0;
+          });
+          if (activeVideo) {
+            activeVideo.play().catch(error => console.log('Autoplay prevented:', error));
+            this.autoplay.stop();
+
+            // Restart autoplay based on video duration
+            activeVideo.onended = () => {
+              this.autoplay.start();
+            };
+          }
+        },
+        slideChange() {
+          const activeVideo = this.slides[this.activeIndex].querySelector('video.zolo-html5-video');
+          if (activeVideo && !activeVideo.paused) {
+            this.slideTo(this.previousIndex);
+          }
+        }
+      }
+    };
+    // Initialize Swiper
+    new Swiper(sliderSelector, defaultOptions);
+  });
+});
+/******/ })()
+;
+//# sourceMappingURL=frontend.js.map

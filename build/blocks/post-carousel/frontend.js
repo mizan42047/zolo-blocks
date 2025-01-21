@@ -1,1 +1,18 @@
-window.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelectorAll(".wp-block-zolo-post-carousel");e.length>0&&e.forEach((e=>{const t=e.querySelector(".swiper"),o=e.dataset.settings,n=JSON.parse(o);new Swiper(t,n)}))}));
+/******/ (() => { // webpackBootstrap
+/*!**********************************************!*\
+  !*** ./src/blocks/post-carousel/frontend.js ***!
+  \**********************************************/
+window.addEventListener('DOMContentLoaded', () => {
+  const zoloPostCarousel = document.querySelectorAll('.wp-block-zolo-post-carousel');
+  if (zoloPostCarousel.length > 0) {
+    zoloPostCarousel.forEach(carousel => {
+      const carouselSelector = carousel.querySelector('.swiper');
+      const carouselOptions = carousel.dataset.settings;
+      const carouselOptionsObj = JSON.parse(carouselOptions);
+      new Swiper(carouselSelector, carouselOptionsObj);
+    });
+  }
+});
+/******/ })()
+;
+//# sourceMappingURL=frontend.js.map

@@ -1,1 +1,184 @@
-document.addEventListener("DOMContentLoaded",(()=>{const t=new Map,e="zolo-pagination-wrap";let a=null,n=null,o=!1;const s=async(n,s,r,i=!1)=>{if(i&&t.has(s)){const e=t.get(s);return n.innerHTML="",n.insertAdjacentHTML("beforeend",e),void c()}const l=(()=>{const t=document.createElement("div");return t.classList.add("preloader"),t.innerHTML='<div class="container"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>',t})(),d=n.querySelector(".zolo-block"),p=n.querySelector(`.${e}`);d&&d.appendChild(l);try{const e=new FormData;e.append("action","zolo_ajax_post_pagination"),e.append("pageNumber",s),e.append("settings",r),e.append("zolo_nonce",zoloSettings.zolo_nonce);const o=await fetch(zoloSettings.ajaxurl,{method:"POST",body:e}),l=await o.json();if(l.success){if(i&&t.set(s,l.data),"number"===a&&(n.innerHTML="",n.insertAdjacentHTML("beforeend",l.data),c()),"button"===a||"scroll"===a){const t=document.createElement("div");t.innerHTML=l.data;const e=t.querySelectorAll(".zolo-post-item");e.length>0?e.forEach((t=>{d.appendChild(t)})):p.innerHTML=""}}else console.error("Failed to fetch content:",l)}catch(t){console.error("Error fetching content:",t)}finally{d&&d.removeChild(l),o=!1}},c=()=>{document.querySelectorAll(`.${e}`).forEach(p)},r=async t=>{if(t.preventDefault(),o)return;o=!0;const c=t.target.getAttribute("href");if(!c)return;const r=(t=>t.includes("admin-ajax.php")?t.match(/admin-ajax.*/)?.[0]||"":t.match(/\/page\/\d+\//)?.[0]||"")(c),i=(t=>{const e=t.match(/\d+/);return e?parseInt(e[0],10):1})(r);n=t.target.closest(`.${e}`).dataset.blockname,a=t.target.closest(`.${e}`).dataset.paginationtype;const l=t.target.closest(`.wp-block-zolo-${n}`);if(l){const t=l.dataset.attributes;await s(l,i,t,!0),o=!1}},i=(t,e)=>{t.forEach((t=>t.addEventListener("click",e)))},l=t=>{const e=t.querySelector(".zolo-pagination-button");if(e){let c=parseInt(e.dataset.pagenumber,10)||1;e.addEventListener("click",(async r=>{if(r.preventDefault(),o)return;o=!0,e.classList.add("loading"),c+=1,a=t.dataset.paginationtype,n=t.dataset.blockname;const i=r.target.closest(`.wp-block-zolo-${n}`);if(i){const t=i.dataset.attributes;await s(i,c,t),o=!1,e.classList.remove("loading")}}))}},d=t=>{let e=parseInt(t.dataset.pagenumber,10)||1;a=t.dataset.paginationtype,n=t.dataset.blockname;const c=t.dataset.totalpage;window.addEventListener("scroll",(()=>{if(!o&&window.scrollY+window.innerHeight>=document.documentElement.offsetHeight-200){const a=t.closest(`.wp-block-zolo-${n}`);if(a){const t=a.dataset.attributes;e+=1,o=!0,c>=e&&s(a,e,t)}}}))};function p(t){switch(a=t.dataset.paginationtype,n=t.dataset.blockname,a){case"normal":break;case"number":i(t.querySelectorAll("a"),r);break;case"button":l(t);break;case"scroll":d(t)}}document.querySelectorAll(`.${e}`).forEach(p)}));
+/******/ (() => { // webpackBootstrap
+/*!******************************************!*\
+  !*** ./src/blocks/post-list/frontend.js ***!
+  \******************************************/
+document.addEventListener('DOMContentLoaded', () => {
+  // Declare globally
+  const pageContentCache = new Map();
+  const PAGINATION_WRAP_CLASS = 'zolo-pagination-wrap';
+  let paginationType = null;
+  let blockName = null;
+  let isLoading = false;
+  const createPreloader = () => {
+    const preloader = document.createElement('div');
+    preloader.classList.add('preloader');
+    preloader.innerHTML = `<div class="container"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>`;
+    return preloader;
+  };
+  const fetchContent = async (wrapper, pageNumber, settings, useCache = false) => {
+    if (useCache && pageContentCache.has(pageNumber)) {
+      const cachedContent = pageContentCache.get(pageNumber);
+      wrapper.innerHTML = '';
+      wrapper.insertAdjacentHTML('beforeend', cachedContent);
+      reinitPaginationListeners();
+      return;
+    }
+    const preloader = createPreloader();
+    const itemWrapper = wrapper.querySelector('.zolo-block');
+    const paginationWrap = wrapper.querySelector(`.${PAGINATION_WRAP_CLASS}`);
+    if (itemWrapper) {
+      itemWrapper.appendChild(preloader);
+    }
+    try {
+      const formData = new FormData();
+      formData.append('action', 'zolo_ajax_post_pagination');
+      formData.append('pageNumber', pageNumber);
+      formData.append('settings', settings);
+      formData.append('zolo_nonce', zoloSettings.zolo_nonce);
+      const response = await fetch(zoloSettings.ajaxurl, {
+        method: 'POST',
+        body: formData
+      });
+      const result = await response.json();
+      if (result.success) {
+        if (useCache) {
+          pageContentCache.set(pageNumber, result.data); // Cache the content
+        }
+        if (paginationType === 'number') {
+          wrapper.innerHTML = '';
+          wrapper.insertAdjacentHTML('beforeend', result.data);
+          reinitPaginationListeners();
+        }
+        if (paginationType === 'button' || paginationType === 'scroll') {
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = result.data;
+          const postItems = tempDiv.querySelectorAll('.zolo-post-item');
+          if (postItems.length > 0) {
+            postItems.forEach(postItem => {
+              itemWrapper.appendChild(postItem);
+            });
+          } else {
+            paginationWrap.innerHTML = "";
+          }
+        }
+      } else {
+        console.error('Failed to fetch content:', result);
+      }
+    } catch (error) {
+      console.error('Error fetching content:', error);
+    } finally {
+      if (itemWrapper) {
+        itemWrapper.removeChild(preloader); // Remove the preloader
+      }
+      isLoading = false;
+    }
+  };
+  const getPageLink = href => href.includes('admin-ajax.php') ? href.match(/admin-ajax.*/)?.[0] || '' : href.match(/\/page\/\d+\//)?.[0] || '';
+  const getPageNumber = link => {
+    const match = link.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 1;
+  };
+  const reinitPaginationListeners = () => {
+    const updatedPaginationElements = document.querySelectorAll(`.${PAGINATION_WRAP_CLASS}`);
+    updatedPaginationElements.forEach(initPaginationListeners);
+  };
+
+  //only form ajax number pagination
+  const handlePaginationClick = async event => {
+    event.preventDefault();
+
+    // Prevent multiple requests when already loading
+    if (isLoading) return;
+    isLoading = true;
+    const href = event.target.getAttribute('href');
+    if (!href) return;
+    const pageLink = getPageLink(href);
+    const pageNumber = getPageNumber(pageLink);
+    blockName = event.target.closest(`.${PAGINATION_WRAP_CLASS}`).dataset.blockname;
+    paginationType = event.target.closest(`.${PAGINATION_WRAP_CLASS}`).dataset.paginationtype;
+    const blockWrapper = event.target.closest(`.wp-block-zolo-${blockName}`);
+    if (blockWrapper) {
+      const blockSettings = blockWrapper.dataset.attributes;
+      await fetchContent(blockWrapper, pageNumber, blockSettings, true);
+      isLoading = false;
+    }
+  };
+  const addClickListeners = (elements, handler) => {
+    elements.forEach(element => element.addEventListener('click', handler));
+  };
+
+  //only for ajax load more on click pagination
+  const handleButtonPagination = paginationElement => {
+    const button = paginationElement.querySelector('.zolo-pagination-button');
+    if (button) {
+      let pageNumber = parseInt(button.dataset.pagenumber, 10) || 1;
+      button.addEventListener('click', async event => {
+        event.preventDefault();
+
+        // Prevent multiple requests when already loading
+        if (isLoading) return;
+
+        // Set loading state
+        isLoading = true;
+        button.classList.add('loading');
+        pageNumber += 1;
+        paginationType = paginationElement.dataset.paginationtype;
+        blockName = paginationElement.dataset.blockname;
+        const blockWrapper = event.target.closest(`.wp-block-zolo-${blockName}`);
+        if (blockWrapper) {
+          const blockSettings = blockWrapper.dataset.attributes;
+          await fetchContent(blockWrapper, pageNumber, blockSettings);
+          // Remove loading state after fetching content
+          isLoading = false;
+          button.classList.remove('loading');
+        }
+      });
+    }
+  };
+  //only for ajax scroll pagination
+  const handleScrollPagination = paginationElement => {
+    let pageNumber = parseInt(paginationElement.dataset.pagenumber, 10) || 1;
+    paginationType = paginationElement.dataset.paginationtype;
+    blockName = paginationElement.dataset.blockname;
+    const totalPage = paginationElement.dataset.totalpage;
+    window.addEventListener('scroll', () => {
+      // Prevent multiple requests when already loading
+      if (isLoading) return;
+      const scrollPosition = window.scrollY + window.innerHeight;
+      const documentHeight = document.documentElement.offsetHeight;
+      if (scrollPosition >= documentHeight - 200) {
+        const blockWrapper = paginationElement.closest(`.wp-block-zolo-${blockName}`);
+        if (blockWrapper) {
+          const blockSettings = blockWrapper.dataset.attributes;
+          pageNumber += 1;
+          isLoading = true;
+          if (totalPage >= pageNumber) {
+            fetchContent(blockWrapper, pageNumber, blockSettings);
+          }
+        }
+      }
+    });
+  };
+  function initPaginationListeners(paginationElement) {
+    paginationType = paginationElement.dataset.paginationtype;
+    blockName = paginationElement.dataset.blockname;
+    switch (paginationType) {
+      case 'normal':
+        break;
+      case 'number':
+        addClickListeners(paginationElement.querySelectorAll('a'), handlePaginationClick);
+        break;
+      case 'button':
+        handleButtonPagination(paginationElement);
+        break;
+      case 'scroll':
+        handleScrollPagination(paginationElement);
+        break;
+    }
+  }
+  const paginationElements = document.querySelectorAll(`.${PAGINATION_WRAP_CLASS}`);
+  paginationElements.forEach(initPaginationListeners);
+});
+/******/ })()
+;
+//# sourceMappingURL=frontend.js.map

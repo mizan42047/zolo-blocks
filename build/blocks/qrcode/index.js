@@ -1,1 +1,6122 @@
-(()=>{var e,t={7866:(e,t,r)=>{"use strict";var o={};r.r(o),r.d(o,{BADGE_TYPOGRAPHY:()=>w});const n=window.wp.blocks,a=window.wp.i18n,l=[{label:(0,a.__)("Low (7%)","zoloblocks"),value:"L"},{label:(0,a.__)("Medium (15%)","zoloblocks"),value:"M"},{label:(0,a.__)("Qurtile (25%)","zoloblocks"),value:"Q"},{label:(0,a.__)("High (30%)","zoloblocks"),value:"H"}],i=((0,a.__)("Squares","zoloblocks"),(0,a.__)("Dots","zoloblocks"),(0,a.__)("Fluid","zoloblocks"),(0,a.__)("Square","zoloblocks"),(0,a.__)("Circle","zoloblocks"),"qrCodeAlign"),s="qrCodeBorderRadius",c="qrCodeBorder",u="wrapQrCodeBorder",d="wrapQrCodeBorderRadius",f="wrapQrCodePadding",g="wrapQrCodeBoxShadow",p="badgeQrCodeBorder",h="badgeQrCodeBorderRadius",b="badgeQrCodePadding",y="badgeQrCodeMargin",v="badgeQrCodeBoxShadow",m="badgeIconSize",w="badgeTypography",{generateResAlignmentAttributies:C,generateBorderAttributies:k,generateDimensionAttributes:_,generateBoxShadowAttributies:z,generateTypographyAttributes:S,generateResRangeAttributies:B}=window.zoloModule,q={globalConfig:{type:"object",default:{margin:{prefix:"mainMargin"},padding:{prefix:"mainPadding"},background:{prefix:"mainBg"},border:{prefix:"mainBorder"},borderRadius:{prefix:"mainBorderRadius"},boxShadow:{prefix:"mainBoxShadow"},responsiveControls:!0}},badgeStyle:{type:"string",default:"zolo-badge-style-1"},showBadge:{type:"boolean",default:!1},showBadgeIcon:{type:"boolean",default:!1},badgeText:{type:"string",default:"Scan me"},badgeIcon:{type:"string",default:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 32C170.5 32 192 53.49 192 80V176C192 202.5 170.5 224 144 224H48C21.49 224 0 202.5 0 176V80C0 53.49 21.49 32 48 32H144zM128 96H64V160H128V96zM144 288C170.5 288 192 309.5 192 336V432C192 458.5 170.5 480 144 480H48C21.49 480 0 458.5 0 432V336C0 309.5 21.49 288 48 288H144zM128 352H64V416H128V352zM256 80C256 53.49 277.5 32 304 32H400C426.5 32 448 53.49 448 80V176C448 202.5 426.5 224 400 224H304C277.5 224 256 202.5 256 176V80zM320 160H384V96H320V160zM352 448H384V480H352V448zM448 480H416V448H448V480zM416 288H448V416H352V384H320V480H256V288H352V320H416V288z"/></svg>'},qrContent:{type:"string",default:"https://zoloblocks.com"},qrCodeLink:{type:"boolean",default:!1},qrCodeStyle:{type:"string",deafult:"#000"},logoQr:{type:"object"},logoQrBehind:{type:"boolean",default:!1},codeColor:{type:"string",default:"#000"},backgroundColor:{type:"string"},qrCodePadding:{type:"number",default:""},qrCodeLevel:{type:"string",default:""},qrCodeSize:{type:"number",default:240},qrCodeLevel:{type:"string",default:"M"},logoWidth:{type:"number",default:48},logoOpacity:{type:"number",default:1},logoPaddingStyle:{type:"string",default:"square"},logoPadding:{type:"number",default:""},eyeColor:{type:"string",default:"#000"},eyeRadius:{type:"number",default:0},wrapBackgroundColor:{type:"string"},badgeTextColor:{type:"string"},badgeBackgroundColor:{type:"string"},badgeBackgroundArrowColor:{type:"string"},...k(c),..._(s),...C(i),...k(u),..._(d),..._(f),...z(g),...S(Object.values(o)),...k(p),..._(h),..._(b),..._(y),...z(v),...B(m)},A=JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"QR Code","name":"zolo/qrcode","category":"zoloblocks","keywords":["qr","code","link","text","brand","scan","barcode","url"],"description":"Generate customized, branded QR codes for links or text.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":400},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./frontend.js"}');var x=r(1609);const M=window.wp.blockEditor;var P=r(6942),R=r.n(P);const E=window.wp.hooks,j=window.wp.components,{ColorControl:$,SimpleRangeControl:O,BorderControl:T,ResDimensionsControl:L,HeaderTabs:D,ResAlignmentControl:N,AdvancedOptions:I,ZoloPanelBody:F,BoxShadowControl:H,TypographyDropdown:Q,ResRangeControl:V}=window.zoloModule;function U(e){const{attributes:t,setAttributes:r,block:o}=e,{resMode:n,badgeStyle:C,qrContent:k,qrCodeLink:_,codeColor:z,backgroundColor:S,qrCodePadding:B,qrCodeLevel:A,qrCodeSize:P,eyeColor:R,eyeRadius:U,showBadge:W,showBadgeIcon:Z,wrapBackgroundColor:G,badgeTextColor:J,badgeBackgroundColor:Y,badgeBackgroundArrowColor:K}=t,X={resMode:n,attributes:t,setAttributes:r,objAttributes:q},ee=(0,E.applyFilters)("zolo.blocks.controls.qrcode.pageLinks",[],e,"zolo/qrcode"),te=(0,E.applyFilters)("zolo.blocks.controls.qrcode.styles",[],e,"zolo/qrcode"),re=(0,E.applyFilters)("zolo.blocks.controls.qrcode.logo",[],e,"zolo/qrcode"),oe=(0,E.applyFilters)("zolo.blocks.controls.qrcode.logoStyle",[],e,"zolo/qrcode");return(0,x.createElement)(x.Fragment,null,(0,x.createElement)(M.InspectorControls,null,(0,x.createElement)(D,{block:"zolo/qrcode",attributes:t,setAttributes:r,generalTab:(0,x.createElement)(x.Fragment,null,(0,x.createElement)(F,{title:(0,a.__)("QR Code","zoloblocks"),panelProps:X,firstOpen:!0},!_&&(0,x.createElement)(j.TextareaControl,{className:"zolo-flex-col-control",label:(0,a.__)("Content","zoloblocks"),value:k,onChange:e=>r({qrContent:e})}),ee&&ee.length>0&&ee,(0,x.createElement)("div",{className:"zolo-flex-col-control"},(0,x.createElement)(O,{label:(0,a.__)("Size","zoloblocks"),value:P,onChange:e=>r({qrCodeSize:e}),onReset:()=>r({qrCodeSize:0}),max:500,noUnits:!0})),(0,x.createElement)(j.SelectControl,{label:(0,a.__)("Error Level","zoloblocks"),value:A,onChange:e=>r({qrCodeLevel:e}),options:l}),te&&te.length>0&&te,(0,x.createElement)(N,{label:(0,a.__)("Alignment","zoloblocks"),controlName:i,requiredProps:X})),re&&re.length>0&&re),styleTab:(0,x.createElement)(x.Fragment,null,W&&(0,x.createElement)(F,{title:(0,a.__)("Wrapper","zoloblocks"),panelProps:X,firstOpen:!!W,isPro:!0},(0,x.createElement)(T,{label:(0,a.__)("Border Type","zoloblocks"),controlName:u,requiredProps:X}),(0,x.createElement)(L,{label:(0,a.__)("Border Radius","zoloblocks"),controlName:d,requiredProps:X,forBorderRadius:!0}),(0,x.createElement)(L,{label:(0,a.__)("Padding","zoloblocks"),controlName:f,requiredProps:X,forBorderRadius:!1}),(0,x.createElement)($,{label:(0,a.__)("Background Color","zoloblocks"),color:G,onChange:e=>r({wrapBackgroundColor:e})}),(0,x.createElement)(H,{controlName:g,requiredProps:X})),(0,x.createElement)(F,{title:(0,a.__)("QR Code","zoloblocks"),panelProps:X,firstOpen:!W},(0,x.createElement)($,{label:(0,a.__)("Color","zoloblocks"),color:z,onChange:e=>r({codeColor:e})}),(0,x.createElement)($,{label:(0,a.__)("Eye Color","zoloblocks"),color:R,onChange:e=>r({eyeColor:e})}),(0,x.createElement)("div",{className:"zolo-flex-col-control"},(0,x.createElement)(O,{label:(0,a.__)("Eye Radius","zoloblocks"),value:U,onChange:e=>r({eyeRadius:e}),onReset:()=>r({eyeRadius:""}),min:0,max:100,noUnits:!0})),(0,x.createElement)($,{label:(0,a.__)("Background Type","zoloblocks"),color:S,onChange:e=>r({backgroundColor:e})}),(0,x.createElement)(T,{label:(0,a.__)("Border Type","zoloblocks"),controlName:c,requiredProps:X}),(0,x.createElement)(L,{label:(0,a.__)("Border Radius","zoloblocks"),controlName:s,requiredProps:X,forBorderRadius:!0}),(0,x.createElement)("div",{className:"zolo-flex-col-control"},(0,x.createElement)(O,{label:(0,a.__)("Padding","zoloblocks"),value:B,onChange:e=>r({qrCodePadding:e}),onReset:()=>r({qrCodePadding:""}),min:1,max:300,noUnits:!0}))),oe&&oe.length>0&&oe,W&&(0,x.createElement)(F,{title:(0,a.__)("Badge","zoloblocks"),panelProps:X,isPro:!0},(0,x.createElement)($,{label:(0,a.__)("Color","zoloblocks"),color:J,onChange:e=>r({badgeTextColor:e})}),(0,x.createElement)(Q,{label:(0,a.__)("Title Typography","zoloblocks"),typoPrefixConstant:w,requiredProps:X,max:72}),(0,x.createElement)(L,{label:(0,a.__)("Margin","zoloblocks"),controlName:y,requiredProps:X,forBorderRadius:!1}),"zolo-badge-style-1"!==C&&(0,x.createElement)(x.Fragment,null,(0,x.createElement)(T,{label:(0,a.__)("Border Type","zoloblocks"),controlName:p,requiredProps:X}),(0,x.createElement)(L,{label:(0,a.__)("Border Radius","zoloblocks"),controlName:h,requiredProps:X,forBorderRadius:!0}),(0,x.createElement)(L,{label:(0,a.__)("Padding","zoloblocks"),controlName:b,requiredProps:X,forBorderRadius:!1}),Z&&(0,x.createElement)(V,{label:(0,a.__)("Icon Size","zoloblocks"),controlName:m,requiredProps:X,min:0,max:50,step:1}),(0,x.createElement)($,{label:(0,a.__)("Background Color","zoloblocks"),color:Y,onChange:e=>r({badgeBackgroundColor:e})}),(0,x.createElement)($,{label:(0,a.__)("Arrow Color","zoloblocks"),color:K,onChange:e=>r({badgeBackgroundArrowColor:e})}),(0,x.createElement)(H,{controlName:v,requiredProps:X})))),advancedTab:(0,x.createElement)(I,{key:"zolo/qr-block/advanced-options",block:"zolo/qr-block",attributes:t,setAttributes:r,requiredProps:X})})))}var W=r(60);const{generateResAlignmentStyle:Z,generateBorderStyle:G,generateDimensionStyle:J,GlobalStyleHanlder:Y,generateBoxShadowStyles:K,generateTypographyStyles:X,generateResRangeStyle:ee}=window.zoloModule;function te({props:e}){const{attributes:t,setAttributes:r}=e,{uniqueId:o,showBadge:n,badgeStyle:a,wrapBackgroundColor:l,badgeBackgroundColor:C,badgeBackgroundArrowColor:k,badgeTextColor:_}=t,{desktopAlignStyle:z,tabAlignStyle:S,mobAlignStyle:B}=Z({controlName:i,property:"text-align",attributes:t}),{desktopBorderStyle:q,tabBorderStyle:A,mobBorderStyle:M}=G({controlName:c,attributes:t}),{dimensionStylesDesktop:P,dimensionStylesTab:R,dimensionStylesMobile:j}=J({controlName:s,styleFor:"border-radius",attributes:t}),{desktopBorderStyle:$,tabBorderStyle:O,mobBorderStyle:T}=G({controlName:u,attributes:t}),{dimensionStylesDesktop:L,dimensionStylesTab:D,dimensionStylesMobile:N}=J({controlName:d,styleFor:"border-radius",attributes:t}),{dimensionStylesDesktop:I,dimensionStylesTab:F,dimensionStylesMobile:H}=J({controlName:f,styleFor:"padding",attributes:t}),{boxShadowStyle:Q}=K({attributes:t,controlName:g}),{desktopBorderStyle:V,tabBorderStyle:U,mobBorderStyle:W}=G({controlName:p,attributes:t}),{dimensionStylesDesktop:te,dimensionStylesTab:re,dimensionStylesMobile:oe}=J({controlName:h,styleFor:"border-radius",attributes:t}),{dimensionStylesDesktop:ne,dimensionStylesTab:ae,dimensionStylesMobile:le}=J({controlName:b,styleFor:"padding",attributes:t}),{dimensionStylesDesktop:ie,dimensionStylesTab:se,dimensionStylesMobile:ce}=J({controlName:y,styleFor:"margin",attributes:t}),{boxShadowStyle:ue}=K({attributes:t,controlName:v}),{typoStylesDesktop:de,typoStylesTab:fe,typoStylesMobile:ge}=X({prefixConstant:w,defaultFontSize:"",attributes:t}),{desktopRangeStyle:pe,tabRangeStyle:he,mobRangeStyle:be}=ee({controlName:m,property:"height",attributes:t}),{desktopRangeStyle:ye,tabRangeStyle:ve,mobRangeStyle:me}=ee({controlName:m,property:"width",attributes:t}),we=`\n        ${n?`\n                    .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-wrapper {\n                        ${I}\n                        ${L}\n                        ${$}\n                        ${Q}\n                        ${l?`background: ${l};`:""}\n                    }\n\n                    .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {\n                        ${de}\n                        ${ie}\n                        ${_?`color: ${_};`:""}\n                    }\n                    ${"zolo-badge-style-1"!==a?`\n                                .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {\n                                    ${ne}\n                                    ${te}\n                                    ${V}\n                                    ${ue}\n                                    ${C?`background: ${C};`:""}\n                                }\n\n                                .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge:after {\n                                    ${k?`--zolo-badge-arrow-color: ${k};`:""}\n                                }\n\n                                .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge-icon svg {\n                                    ${pe}\n                                    ${ye}\n                                }\n                            `:""}\n                `:""}\n\n        .${o}.zolo-block.wp-block-zolo-qrcode {\n            ${""!==z?z:"text-align: center;"}\n        }\n\n        .${o} .zolo-qrcode-wrapper canvas{\n            ${P}\n            ${q}\n\n        }\n    `,Ce=`\n\n        ${n?`\n                    .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-wrapper {\n                        ${F}\n                        ${D}\n                        ${O}\n                    }\n\n                    .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {\n                        ${fe}\n                        ${se}\n                    }\n                    ${"zolo-badge-style-1"!==a?`\n                                .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {\n                                    ${ae}\n                                    ${re}}\n                                    ${U}\n                                }\n                            `:""}\n                `:""}\n        .${o} .zolo-qrcode-wrapper {\n            ${S}\n        }\n\n        .${o} .zolo-qrcode-wrapper canvas{\n            ${R}\n              ${A}\n        }\n    `,ke=`\n\n        ${n?`\n                    .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-wrapper {\n                        ${H}\n                        ${N}\n                        ${T}\n                    }\n                    .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {\n                        ${ge}\n                        ${ce}\n                    }\n                    ${"zolo-badge-style-1"!==a?`\n                                .${o}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {\n                                    ${le}\n                                    ${oe}\n                                    ${W}\n                                }\n                            `:""}\n            `:""}\n        .${o} .zolo-qrcode-wrapper {\n            ${B}\n        }\n\n        .${o} .zolo-qrcode-wrapper canvas{\n            ${j}\n              ${M}\n        }\n    `;return(0,x.createElement)(x.Fragment,null,(0,x.createElement)(Y,{attributes:t,setAttributes:r,desktopAllStyle:(0,E.applyFilters)("zolo.qrCode.desktopAllStyle",we,e),tabAllStyle:(0,E.applyFilters)("zolo.qrCode.tabletAllStyle",Ce,e),mobileAllStyle:(0,E.applyFilters)("zolo.qrCode.mobileAllStyle",ke,e)}))}const{DisplayZoloIcon:re,classArrayToStr:oe}=window.zoloModule,{DisplayZoloIcon:ne,classArrayToStr:ae}=window.zoloModule,{BlockIcons:le}=window.zoloIcons;(0,n.registerBlockType)(A,{icon:{src:le.qrcode},attributes:q,edit:function(e){const{attributes:t,setAttributes:r,isSelected:o}=e,{uniqueId:n,parentClasses:l,preview:i,qrContent:s,qrCodeSize:c,qrCodeLevel:u,qrCodeStyle:d,codeColor:f,backgroundColor:g,qrCodePadding:p,logoQr:h,logoHeight:b,logoWidth:y,logoOpacity:v,logoPaddingStyle:m,logoPadding:w,logoQrBehind:C,eyeColor:k,eyeRadius:_,badgeStyle:z,showBadge:S,showBadgeIcon:B,badgeText:q,badgeIcon:A}=t,P=(0,M.useBlockProps)({className:R()(n,oe(l),{[z]:S})}),j=(0,E.applyFilters)("zolo.blocks.render.hook.before",[],e),$=(0,E.applyFilters)("zolo.blocks.render.hook.after",[],e);if(i)return(0,x.createElement)("img",{src:zoloParams.blocksPreview.qrcode,alt:(0,a.__)("QR Code Preview","zoloblocks")});const O=()=>(0,x.createElement)(W.QRCode,{value:s,ecLevel:u,size:0!==c?c:240,qrStyle:d,fgColor:""!==f?f:"#000",bgColor:""!==g?g:"#fff",logoImage:h?.url,logoWidth:y,logoHeight:b,logoOpacity:v,quietZone:""!==p?p:10,logoPadding:w,logoPaddingStyle:m,removeQrCodeBehindLogo:C,eyeColor:k,eyeRadius:_});return(0,x.createElement)(x.Fragment,null,o&&(0,x.createElement)(U,{attributes:t,setAttributes:r}),(0,x.createElement)(te,{props:e}),(0,x.createElement)("div",{...P},j&&j,"zolo-badge-style-1"==z&&(0,x.createElement)("div",{className:"zolo-qrcode-wrapper"},(0,x.createElement)(O,null),S&&(0,x.createElement)("span",{className:"zolo-qrcode-badge"},(0,x.createElement)(M.RichText,{tagName:"span",className:"zolo-qrcode-badge-text",value:q,onChange:e=>r({badgeText:e})}))),"zolo-badge-style-1"!=z&&(0,x.createElement)("div",{className:"zolo-qrcode-badge-wrapper"},(0,x.createElement)("div",{className:"zolo-qrcode-wrapper"},(0,x.createElement)(O,null)),S&&(0,x.createElement)("span",{className:"zolo-qrcode-badge"},(0,x.createElement)(M.RichText,{tagName:"span",className:"zolo-qrcode-badge-text",value:q,onChange:e=>r({badgeText:e})}),B&&(0,x.createElement)("span",{className:"zolo-qrcode-badge-icon"},(0,x.createElement)(re,{icon:A})))),$&&$))},save:function(e){const{attributes:t}=e,{uniqueId:r,parentClasses:o,qrContent:n,qrCodeSize:a,qrCodeLevel:l,qrCodeStyle:i,codeColor:s,backgroundColor:c,qrCodePadding:u,logoQr:d,logoHeight:f,logoWidth:g,logoOpacity:p,logoPaddingStyle:h,logoPadding:b,logoQrBehind:y,eyeColor:v,eyeRadius:m,badgeStyle:w,showBadge:C,showBadgeIcon:k,badgeText:_,badgeIcon:z}=t,S={qrContent:n,qrCodeSize:a,qrCodeLevel:l,qrCodeStyle:i,codeColor:s,backgroundColor:c,qrCodePadding:u,logoQr:d,logoHeight:f,logoWidth:g,logoOpacity:p,logoPaddingStyle:h,logoPadding:b,logoQrBehind:y,eyeColor:v,eyeRadius:m,badgeStyle:w,showBadge:C,showBadgeIcon:k,badgeText:_,badgeIcon:z},B=M.useBlockProps.save({id:r,className:R()(r,ae(o),{[w]:C})}),q=(0,E.applyFilters)("zolo.blocks.render.hook.before",[],e),A=(0,E.applyFilters)("zolo.blocks.render.hook.after",[],e);return(0,x.createElement)(x.Fragment,null,(0,x.createElement)("div",{...B},q&&q,"zolo-badge-style-1"==w&&(0,x.createElement)("div",{className:"zolo-qrcode-wrapper","data-options":JSON.stringify(S)}),"zolo-badge-style-1"!=w&&(0,x.createElement)("div",{className:"zolo-qrcode-badge-wrapper"},(0,x.createElement)("div",{className:"zolo-qrcode-wrapper","data-options":JSON.stringify(S)}),C&&(0,x.createElement)("span",{className:"zolo-qrcode-badge"},(0,x.createElement)("span",{className:"zolo-qrcode-badge-text"},_),k&&(0,x.createElement)("span",{className:"zolo-qrcode-badge-icon"},(0,x.createElement)(ne,{icon:z})))),A&&A))}})},8142:(e,t,r)=>{e=r.nmd(e);var o="__lodash_hash_undefined__",n=1,a=2,l=9007199254740991,i="[object Arguments]",s="[object Array]",c="[object AsyncFunction]",u="[object Boolean]",d="[object Date]",f="[object Error]",g="[object Function]",p="[object GeneratorFunction]",h="[object Map]",b="[object Number]",y="[object Null]",v="[object Object]",m="[object Promise]",w="[object Proxy]",C="[object RegExp]",k="[object Set]",_="[object String]",z="[object Undefined]",S="[object WeakMap]",B="[object ArrayBuffer]",q="[object DataView]",A=/^\[object .+?Constructor\]$/,x=/^(?:0|[1-9]\d*)$/,M={};M["[object Float32Array]"]=M["[object Float64Array]"]=M["[object Int8Array]"]=M["[object Int16Array]"]=M["[object Int32Array]"]=M["[object Uint8Array]"]=M["[object Uint8ClampedArray]"]=M["[object Uint16Array]"]=M["[object Uint32Array]"]=!0,M[i]=M[s]=M[B]=M[u]=M[q]=M[d]=M[f]=M[g]=M[h]=M[b]=M[v]=M[C]=M[k]=M[_]=M[S]=!1;var P="object"==typeof r.g&&r.g&&r.g.Object===Object&&r.g,R="object"==typeof self&&self&&self.Object===Object&&self,E=P||R||Function("return this")(),j=t&&!t.nodeType&&t,$=j&&e&&!e.nodeType&&e,O=$&&$.exports===j,T=O&&P.process,L=function(){try{return T&&T.binding&&T.binding("util")}catch(e){}}(),D=L&&L.isTypedArray;function N(e,t){for(var r=-1,o=null==e?0:e.length;++r<o;)if(t(e[r],r,e))return!0;return!1}function I(e){var t=-1,r=Array(e.size);return e.forEach((function(e,o){r[++t]=[o,e]})),r}function F(e){var t=-1,r=Array(e.size);return e.forEach((function(e){r[++t]=e})),r}var H,Q,V,U=Array.prototype,W=Function.prototype,Z=Object.prototype,G=E["__core-js_shared__"],J=W.toString,Y=Z.hasOwnProperty,K=(H=/[^.]+$/.exec(G&&G.keys&&G.keys.IE_PROTO||""))?"Symbol(src)_1."+H:"",X=Z.toString,ee=RegExp("^"+J.call(Y).replace(/[\\^$.*+?()[\]{}|]/g,"\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,"$1.*?")+"$"),te=O?E.Buffer:void 0,re=E.Symbol,oe=E.Uint8Array,ne=Z.propertyIsEnumerable,ae=U.splice,le=re?re.toStringTag:void 0,ie=Object.getOwnPropertySymbols,se=te?te.isBuffer:void 0,ce=(Q=Object.keys,V=Object,function(e){return Q(V(e))}),ue=$e(E,"DataView"),de=$e(E,"Map"),fe=$e(E,"Promise"),ge=$e(E,"Set"),pe=$e(E,"WeakMap"),he=$e(Object,"create"),be=De(ue),ye=De(de),ve=De(fe),me=De(ge),we=De(pe),Ce=re?re.prototype:void 0,ke=Ce?Ce.valueOf:void 0;function _e(e){var t=-1,r=null==e?0:e.length;for(this.clear();++t<r;){var o=e[t];this.set(o[0],o[1])}}function ze(e){var t=-1,r=null==e?0:e.length;for(this.clear();++t<r;){var o=e[t];this.set(o[0],o[1])}}function Se(e){var t=-1,r=null==e?0:e.length;for(this.clear();++t<r;){var o=e[t];this.set(o[0],o[1])}}function Be(e){var t=-1,r=null==e?0:e.length;for(this.__data__=new Se;++t<r;)this.add(e[t])}function qe(e){var t=this.__data__=new ze(e);this.size=t.size}function Ae(e,t){for(var r=e.length;r--;)if(Ne(e[r][0],t))return r;return-1}function xe(e){return null==e?void 0===e?z:y:le&&le in Object(e)?function(e){var t=Y.call(e,le),r=e[le];try{e[le]=void 0;var o=!0}catch(e){}var n=X.call(e);return o&&(t?e[le]=r:delete e[le]),n}(e):function(e){return X.call(e)}(e)}function Me(e){return We(e)&&xe(e)==i}function Pe(e,t,r,o,l){return e===t||(null==e||null==t||!We(e)&&!We(t)?e!=e&&t!=t:function(e,t,r,o,l,c){var g=Fe(e),p=Fe(t),y=g?s:Te(e),m=p?s:Te(t),w=(y=y==i?v:y)==v,z=(m=m==i?v:m)==v,S=y==m;if(S&&He(e)){if(!He(t))return!1;g=!0,w=!1}if(S&&!w)return c||(c=new qe),g||Ze(e)?Re(e,t,r,o,l,c):function(e,t,r,o,l,i,s){switch(r){case q:if(e.byteLength!=t.byteLength||e.byteOffset!=t.byteOffset)return!1;e=e.buffer,t=t.buffer;case B:return!(e.byteLength!=t.byteLength||!i(new oe(e),new oe(t)));case u:case d:case b:return Ne(+e,+t);case f:return e.name==t.name&&e.message==t.message;case C:case _:return e==t+"";case h:var c=I;case k:var g=o&n;if(c||(c=F),e.size!=t.size&&!g)return!1;var p=s.get(e);if(p)return p==t;o|=a,s.set(e,t);var y=Re(c(e),c(t),o,l,i,s);return s.delete(e),y;case"[object Symbol]":if(ke)return ke.call(e)==ke.call(t)}return!1}(e,t,y,r,o,l,c);if(!(r&n)){var A=w&&Y.call(e,"__wrapped__"),x=z&&Y.call(t,"__wrapped__");if(A||x){var M=A?e.value():e,P=x?t.value():t;return c||(c=new qe),l(M,P,r,o,c)}}return!!S&&(c||(c=new qe),function(e,t,r,o,a,l){var i=r&n,s=Ee(e),c=s.length;if(c!=Ee(t).length&&!i)return!1;for(var u=c;u--;){var d=s[u];if(!(i?d in t:Y.call(t,d)))return!1}var f=l.get(e);if(f&&l.get(t))return f==t;var g=!0;l.set(e,t),l.set(t,e);for(var p=i;++u<c;){var h=e[d=s[u]],b=t[d];if(o)var y=i?o(b,h,d,t,e,l):o(h,b,d,e,t,l);if(!(void 0===y?h===b||a(h,b,r,o,l):y)){g=!1;break}p||(p="constructor"==d)}if(g&&!p){var v=e.constructor,m=t.constructor;v==m||!("constructor"in e)||!("constructor"in t)||"function"==typeof v&&v instanceof v&&"function"==typeof m&&m instanceof m||(g=!1)}return l.delete(e),l.delete(t),g}(e,t,r,o,l,c))}(e,t,r,o,Pe,l))}function Re(e,t,r,o,l,i){var s=r&n,c=e.length,u=t.length;if(c!=u&&!(s&&u>c))return!1;var d=i.get(e);if(d&&i.get(t))return d==t;var f=-1,g=!0,p=r&a?new Be:void 0;for(i.set(e,t),i.set(t,e);++f<c;){var h=e[f],b=t[f];if(o)var y=s?o(b,h,f,t,e,i):o(h,b,f,e,t,i);if(void 0!==y){if(y)continue;g=!1;break}if(p){if(!N(t,(function(e,t){if(n=t,!p.has(n)&&(h===e||l(h,e,r,o,i)))return p.push(t);var n}))){g=!1;break}}else if(h!==b&&!l(h,b,r,o,i)){g=!1;break}}return i.delete(e),i.delete(t),g}function Ee(e){return function(e,t,r){var o=t(e);return Fe(e)?o:function(e,t){for(var r=-1,o=t.length,n=e.length;++r<o;)e[n+r]=t[r];return e}(o,r(e))}(e,Ge,Oe)}function je(e,t){var r,o,n=e.__data__;return("string"==(o=typeof(r=t))||"number"==o||"symbol"==o||"boolean"==o?"__proto__"!==r:null===r)?n["string"==typeof t?"string":"hash"]:n.map}function $e(e,t){var r=function(e,t){return null==e?void 0:e[t]}(e,t);return function(e){return!(!Ue(e)||function(e){return!!K&&K in e}(e))&&(Qe(e)?ee:A).test(De(e))}(r)?r:void 0}_e.prototype.clear=function(){this.__data__=he?he(null):{},this.size=0},_e.prototype.delete=function(e){var t=this.has(e)&&delete this.__data__[e];return this.size-=t?1:0,t},_e.prototype.get=function(e){var t=this.__data__;if(he){var r=t[e];return r===o?void 0:r}return Y.call(t,e)?t[e]:void 0},_e.prototype.has=function(e){var t=this.__data__;return he?void 0!==t[e]:Y.call(t,e)},_e.prototype.set=function(e,t){var r=this.__data__;return this.size+=this.has(e)?0:1,r[e]=he&&void 0===t?o:t,this},ze.prototype.clear=function(){this.__data__=[],this.size=0},ze.prototype.delete=function(e){var t=this.__data__,r=Ae(t,e);return!(r<0||(r==t.length-1?t.pop():ae.call(t,r,1),--this.size,0))},ze.prototype.get=function(e){var t=this.__data__,r=Ae(t,e);return r<0?void 0:t[r][1]},ze.prototype.has=function(e){return Ae(this.__data__,e)>-1},ze.prototype.set=function(e,t){var r=this.__data__,o=Ae(r,e);return o<0?(++this.size,r.push([e,t])):r[o][1]=t,this},Se.prototype.clear=function(){this.size=0,this.__data__={hash:new _e,map:new(de||ze),string:new _e}},Se.prototype.delete=function(e){var t=je(this,e).delete(e);return this.size-=t?1:0,t},Se.prototype.get=function(e){return je(this,e).get(e)},Se.prototype.has=function(e){return je(this,e).has(e)},Se.prototype.set=function(e,t){var r=je(this,e),o=r.size;return r.set(e,t),this.size+=r.size==o?0:1,this},Be.prototype.add=Be.prototype.push=function(e){return this.__data__.set(e,o),this},Be.prototype.has=function(e){return this.__data__.has(e)},qe.prototype.clear=function(){this.__data__=new ze,this.size=0},qe.prototype.delete=function(e){var t=this.__data__,r=t.delete(e);return this.size=t.size,r},qe.prototype.get=function(e){return this.__data__.get(e)},qe.prototype.has=function(e){return this.__data__.has(e)},qe.prototype.set=function(e,t){var r=this.__data__;if(r instanceof ze){var o=r.__data__;if(!de||o.length<199)return o.push([e,t]),this.size=++r.size,this;r=this.__data__=new Se(o)}return r.set(e,t),this.size=r.size,this};var Oe=ie?function(e){return null==e?[]:(e=Object(e),function(t){for(var r=-1,o=null==t?0:t.length,n=0,a=[];++r<o;){var l=t[r];i=l,ne.call(e,i)&&(a[n++]=l)}var i;return a}(ie(e)))}:function(){return[]},Te=xe;function Le(e,t){return!!(t=null==t?l:t)&&("number"==typeof e||x.test(e))&&e>-1&&e%1==0&&e<t}function De(e){if(null!=e){try{return J.call(e)}catch(e){}try{return e+""}catch(e){}}return""}function Ne(e,t){return e===t||e!=e&&t!=t}(ue&&Te(new ue(new ArrayBuffer(1)))!=q||de&&Te(new de)!=h||fe&&Te(fe.resolve())!=m||ge&&Te(new ge)!=k||pe&&Te(new pe)!=S)&&(Te=function(e){var t=xe(e),r=t==v?e.constructor:void 0,o=r?De(r):"";if(o)switch(o){case be:return q;case ye:return h;case ve:return m;case me:return k;case we:return S}return t});var Ie=Me(function(){return arguments}())?Me:function(e){return We(e)&&Y.call(e,"callee")&&!ne.call(e,"callee")},Fe=Array.isArray,He=se||function(){return!1};function Qe(e){if(!Ue(e))return!1;var t=xe(e);return t==g||t==p||t==c||t==w}function Ve(e){return"number"==typeof e&&e>-1&&e%1==0&&e<=l}function Ue(e){var t=typeof e;return null!=e&&("object"==t||"function"==t)}function We(e){return null!=e&&"object"==typeof e}var Ze=D?function(e){return function(t){return e(t)}}(D):function(e){return We(e)&&Ve(e.length)&&!!M[xe(e)]};function Ge(e){return null!=(t=e)&&Ve(t.length)&&!Qe(t)?function(e,t){var r=Fe(e),o=!r&&Ie(e),n=!r&&!o&&He(e),a=!r&&!o&&!n&&Ze(e),l=r||o||n||a,i=l?function(e,t){for(var r=-1,o=Array(e);++r<e;)o[r]=t(r);return o}(e.length,String):[],s=i.length;for(var c in e)!t&&!Y.call(e,c)||l&&("length"==c||n&&("offset"==c||"parent"==c)||a&&("buffer"==c||"byteLength"==c||"byteOffset"==c)||Le(c,s))||i.push(c);return i}(e):function(e){if(r=(t=e)&&t.constructor,t!==("function"==typeof r&&r.prototype||Z))return ce(e);var t,r,o=[];for(var n in Object(e))Y.call(e,n)&&"constructor"!=n&&o.push(n);return o}(e);var t}e.exports=function(e,t){return Pe(e,t)}},9873:(e,t)=>{var r,o,n=function(){var e=function(e,t){var r=e,o=l[t],n=null,a=0,s=null,b=[],y={},m=function(e,t){n=function(e){for(var t=new Array(e),r=0;r<e;r+=1){t[r]=new Array(e);for(var o=0;o<e;o+=1)t[r][o]=null}return t}(a=4*r+17),w(0,0),w(a-7,0),w(0,a-7),k(),C(),z(e,t),r>=7&&_(e),null==s&&(s=B(r,o,b)),S(s,t)},w=function(e,t){for(var r=-1;r<=7;r+=1)if(!(e+r<=-1||a<=e+r))for(var o=-1;o<=7;o+=1)t+o<=-1||a<=t+o||(n[e+r][t+o]=0<=r&&r<=6&&(0==o||6==o)||0<=o&&o<=6&&(0==r||6==r)||2<=r&&r<=4&&2<=o&&o<=4)},C=function(){for(var e=8;e<a-8;e+=1)null==n[e][6]&&(n[e][6]=e%2==0);for(var t=8;t<a-8;t+=1)null==n[6][t]&&(n[6][t]=t%2==0)},k=function(){for(var e=i.getPatternPosition(r),t=0;t<e.length;t+=1)for(var o=0;o<e.length;o+=1){var a=e[t],l=e[o];if(null==n[a][l])for(var s=-2;s<=2;s+=1)for(var c=-2;c<=2;c+=1)n[a+s][l+c]=-2==s||2==s||-2==c||2==c||0==s&&0==c}},_=function(e){for(var t=i.getBCHTypeNumber(r),o=0;o<18;o+=1){var l=!e&&1==(t>>o&1);n[Math.floor(o/3)][o%3+a-8-3]=l}for(o=0;o<18;o+=1)l=!e&&1==(t>>o&1),n[o%3+a-8-3][Math.floor(o/3)]=l},z=function(e,t){for(var r=o<<3|t,l=i.getBCHTypeInfo(r),s=0;s<15;s+=1){var c=!e&&1==(l>>s&1);s<6?n[s][8]=c:s<8?n[s+1][8]=c:n[a-15+s][8]=c}for(s=0;s<15;s+=1)c=!e&&1==(l>>s&1),s<8?n[8][a-s-1]=c:s<9?n[8][15-s-1+1]=c:n[8][15-s-1]=c;n[a-8][8]=!e},S=function(e,t){for(var r=-1,o=a-1,l=7,s=0,c=i.getMaskFunction(t),u=a-1;u>0;u-=2)for(6==u&&(u-=1);;){for(var d=0;d<2;d+=1)if(null==n[o][u-d]){var f=!1;s<e.length&&(f=1==(e[s]>>>l&1)),c(o,u-d)&&(f=!f),n[o][u-d]=f,-1==(l-=1)&&(s+=1,l=7)}if((o+=r)<0||a<=o){o-=r,r=-r;break}}},B=function(e,t,r){for(var o=u.getRSBlocks(e,t),n=d(),a=0;a<r.length;a+=1){var l=r[a];n.put(l.getMode(),4),n.put(l.getLength(),i.getLengthInBits(l.getMode(),e)),l.write(n)}var s=0;for(a=0;a<o.length;a+=1)s+=o[a].dataCount;if(n.getLengthInBits()>8*s)throw"code length overflow. ("+n.getLengthInBits()+">"+8*s+")";for(n.getLengthInBits()+4<=8*s&&n.put(0,4);n.getLengthInBits()%8!=0;)n.putBit(!1);for(;!(n.getLengthInBits()>=8*s||(n.put(236,8),n.getLengthInBits()>=8*s));)n.put(17,8);return function(e,t){for(var r=0,o=0,n=0,a=new Array(t.length),l=new Array(t.length),s=0;s<t.length;s+=1){var u=t[s].dataCount,d=t[s].totalCount-u;o=Math.max(o,u),n=Math.max(n,d),a[s]=new Array(u);for(var f=0;f<a[s].length;f+=1)a[s][f]=255&e.getBuffer()[f+r];r+=u;var g=i.getErrorCorrectPolynomial(d),p=c(a[s],g.getLength()-1).mod(g);for(l[s]=new Array(g.getLength()-1),f=0;f<l[s].length;f+=1){var h=f+p.getLength()-l[s].length;l[s][f]=h>=0?p.getAt(h):0}}var b=0;for(f=0;f<t.length;f+=1)b+=t[f].totalCount;var y=new Array(b),v=0;for(f=0;f<o;f+=1)for(s=0;s<t.length;s+=1)f<a[s].length&&(y[v]=a[s][f],v+=1);for(f=0;f<n;f+=1)for(s=0;s<t.length;s+=1)f<l[s].length&&(y[v]=l[s][f],v+=1);return y}(n,o)};y.addData=function(e,t){var r=null;switch(t=t||"Byte"){case"Numeric":r=f(e);break;case"Alphanumeric":r=g(e);break;case"Byte":r=p(e);break;case"Kanji":r=h(e);break;default:throw"mode:"+t}b.push(r),s=null},y.isDark=function(e,t){if(e<0||a<=e||t<0||a<=t)throw e+","+t;return n[e][t]},y.getModuleCount=function(){return a},y.make=function(){if(r<1){for(var e=1;e<40;e++){for(var t=u.getRSBlocks(e,o),n=d(),a=0;a<b.length;a++){var l=b[a];n.put(l.getMode(),4),n.put(l.getLength(),i.getLengthInBits(l.getMode(),e)),l.write(n)}var s=0;for(a=0;a<t.length;a++)s+=t[a].dataCount;if(n.getLengthInBits()<=8*s)break}r=e}m(!1,function(){for(var e=0,t=0,r=0;r<8;r+=1){m(!0,r);var o=i.getLostPoint(y);(0==r||e>o)&&(e=o,t=r)}return t}())},y.createTableTag=function(e,t){e=e||2;var r="";r+='<table style="',r+=" border-width: 0px; border-style: none;",r+=" border-collapse: collapse;",r+=" padding: 0px; margin: "+(t=void 0===t?4*e:t)+"px;",r+='">',r+="<tbody>";for(var o=0;o<y.getModuleCount();o+=1){r+="<tr>";for(var n=0;n<y.getModuleCount();n+=1)r+='<td style="',r+=" border-width: 0px; border-style: none;",r+=" border-collapse: collapse;",r+=" padding: 0px; margin: 0px;",r+=" width: "+e+"px;",r+=" height: "+e+"px;",r+=" background-color: ",r+=y.isDark(o,n)?"#000000":"#ffffff",r+=";",r+='"/>';r+="</tr>"}return(r+="</tbody>")+"</table>"},y.createSvgTag=function(e,t,r,o){var n={};"object"==typeof arguments[0]&&(e=(n=arguments[0]).cellSize,t=n.margin,r=n.alt,o=n.title),e=e||2,t=void 0===t?4*e:t,(r="string"==typeof r?{text:r}:r||{}).text=r.text||null,r.id=r.text?r.id||"qrcode-description":null,(o="string"==typeof o?{text:o}:o||{}).text=o.text||null,o.id=o.text?o.id||"qrcode-title":null;var a,l,i,s,c=y.getModuleCount()*e+2*t,u="";for(s="l"+e+",0 0,"+e+" -"+e+",0 0,-"+e+"z ",u+='<svg version="1.1" xmlns="http://www.w3.org/2000/svg"',u+=n.scalable?"":' width="'+c+'px" height="'+c+'px"',u+=' viewBox="0 0 '+c+" "+c+'" ',u+=' preserveAspectRatio="xMinYMin meet"',u+=o.text||r.text?' role="img" aria-labelledby="'+q([o.id,r.id].join(" ").trim())+'"':"",u+=">",u+=o.text?'<title id="'+q(o.id)+'">'+q(o.text)+"</title>":"",u+=r.text?'<description id="'+q(r.id)+'">'+q(r.text)+"</description>":"",u+='<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>',u+='<path d="',l=0;l<y.getModuleCount();l+=1)for(i=l*e+t,a=0;a<y.getModuleCount();a+=1)y.isDark(l,a)&&(u+="M"+(a*e+t)+","+i+s);return(u+='" stroke="transparent" fill="black"/>')+"</svg>"},y.createDataURL=function(e,t){e=e||2,t=void 0===t?4*e:t;var r=y.getModuleCount()*e+2*t,o=t,n=r-t;return v(r,r,(function(t,r){if(o<=t&&t<n&&o<=r&&r<n){var a=Math.floor((t-o)/e),l=Math.floor((r-o)/e);return y.isDark(l,a)?0:1}return 1}))},y.createImgTag=function(e,t,r){e=e||2,t=void 0===t?4*e:t;var o=y.getModuleCount()*e+2*t,n="";return n+="<img",n+=' src="',n+=y.createDataURL(e,t),n+='"',n+=' width="',n+=o,n+='"',n+=' height="',n+=o,n+='"',r&&(n+=' alt="',n+=q(r),n+='"'),n+"/>"};var q=function(e){for(var t="",r=0;r<e.length;r+=1){var o=e.charAt(r);switch(o){case"<":t+="&lt;";break;case">":t+="&gt;";break;case"&":t+="&amp;";break;case'"':t+="&quot;";break;default:t+=o}}return t};return y.createASCII=function(e,t){if((e=e||1)<2)return function(e){e=void 0===e?2:e;var t,r,o,n,a,l=1*y.getModuleCount()+2*e,i=e,s=l-e,c={"██":"█","█ ":"▀"," █":"▄","  ":" "},u={"██":"▀","█ ":"▀"," █":" ","  ":" "},d="";for(t=0;t<l;t+=2){for(o=Math.floor((t-i)/1),n=Math.floor((t+1-i)/1),r=0;r<l;r+=1)a="█",i<=r&&r<s&&i<=t&&t<s&&y.isDark(o,Math.floor((r-i)/1))&&(a=" "),i<=r&&r<s&&i<=t+1&&t+1<s&&y.isDark(n,Math.floor((r-i)/1))?a+=" ":a+="█",d+=e<1&&t+1>=s?u[a]:c[a];d+="\n"}return l%2&&e>0?d.substring(0,d.length-l-1)+Array(l+1).join("▀"):d.substring(0,d.length-1)}(t);e-=1,t=void 0===t?2*e:t;var r,o,n,a,l=y.getModuleCount()*e+2*t,i=t,s=l-t,c=Array(e+1).join("██"),u=Array(e+1).join("  "),d="",f="";for(r=0;r<l;r+=1){for(n=Math.floor((r-i)/e),f="",o=0;o<l;o+=1)a=1,i<=o&&o<s&&i<=r&&r<s&&y.isDark(n,Math.floor((o-i)/e))&&(a=0),f+=a?c:u;for(n=0;n<e;n+=1)d+=f+"\n"}return d.substring(0,d.length-1)},y.renderTo2dContext=function(e,t){t=t||2;for(var r=y.getModuleCount(),o=0;o<r;o++)for(var n=0;n<r;n++)e.fillStyle=y.isDark(o,n)?"black":"white",e.fillRect(o*t,n*t,t,t)},y};e.stringToBytes=(e.stringToBytesFuncs={default:function(e){for(var t=[],r=0;r<e.length;r+=1){var o=e.charCodeAt(r);t.push(255&o)}return t}}).default,e.createStringToBytes=function(e,t){var r=function(){for(var r=y(e),o=function(){var e=r.read();if(-1==e)throw"eof";return e},n=0,a={};;){var l=r.read();if(-1==l)break;var i=o(),s=o()<<8|o();a[String.fromCharCode(l<<8|i)]=s,n+=1}if(n!=t)throw n+" != "+t;return a}(),o="?".charCodeAt(0);return function(e){for(var t=[],n=0;n<e.length;n+=1){var a=e.charCodeAt(n);if(a<128)t.push(a);else{var l=r[e.charAt(n)];"number"==typeof l?(255&l)==l?t.push(l):(t.push(l>>>8),t.push(255&l)):t.push(o)}}return t}};var t,r,o,n,a,l={L:1,M:0,Q:3,H:2},i=(t=[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],r=1335,o=7973,a=function(e){for(var t=0;0!=e;)t+=1,e>>>=1;return t},(n={}).getBCHTypeInfo=function(e){for(var t=e<<10;a(t)-a(r)>=0;)t^=r<<a(t)-a(r);return 21522^(e<<10|t)},n.getBCHTypeNumber=function(e){for(var t=e<<12;a(t)-a(o)>=0;)t^=o<<a(t)-a(o);return e<<12|t},n.getPatternPosition=function(e){return t[e-1]},n.getMaskFunction=function(e){switch(e){case 0:return function(e,t){return(e+t)%2==0};case 1:return function(e,t){return e%2==0};case 2:return function(e,t){return t%3==0};case 3:return function(e,t){return(e+t)%3==0};case 4:return function(e,t){return(Math.floor(e/2)+Math.floor(t/3))%2==0};case 5:return function(e,t){return e*t%2+e*t%3==0};case 6:return function(e,t){return(e*t%2+e*t%3)%2==0};case 7:return function(e,t){return(e*t%3+(e+t)%2)%2==0};default:throw"bad maskPattern:"+e}},n.getErrorCorrectPolynomial=function(e){for(var t=c([1],0),r=0;r<e;r+=1)t=t.multiply(c([1,s.gexp(r)],0));return t},n.getLengthInBits=function(e,t){if(1<=t&&t<10)switch(e){case 1:return 10;case 2:return 9;case 4:case 8:return 8;default:throw"mode:"+e}else if(t<27)switch(e){case 1:return 12;case 2:return 11;case 4:return 16;case 8:return 10;default:throw"mode:"+e}else{if(!(t<41))throw"type:"+t;switch(e){case 1:return 14;case 2:return 13;case 4:return 16;case 8:return 12;default:throw"mode:"+e}}},n.getLostPoint=function(e){for(var t=e.getModuleCount(),r=0,o=0;o<t;o+=1)for(var n=0;n<t;n+=1){for(var a=0,l=e.isDark(o,n),i=-1;i<=1;i+=1)if(!(o+i<0||t<=o+i))for(var s=-1;s<=1;s+=1)n+s<0||t<=n+s||0==i&&0==s||l==e.isDark(o+i,n+s)&&(a+=1);a>5&&(r+=3+a-5)}for(o=0;o<t-1;o+=1)for(n=0;n<t-1;n+=1){var c=0;e.isDark(o,n)&&(c+=1),e.isDark(o+1,n)&&(c+=1),e.isDark(o,n+1)&&(c+=1),e.isDark(o+1,n+1)&&(c+=1),0!=c&&4!=c||(r+=3)}for(o=0;o<t;o+=1)for(n=0;n<t-6;n+=1)e.isDark(o,n)&&!e.isDark(o,n+1)&&e.isDark(o,n+2)&&e.isDark(o,n+3)&&e.isDark(o,n+4)&&!e.isDark(o,n+5)&&e.isDark(o,n+6)&&(r+=40);for(n=0;n<t;n+=1)for(o=0;o<t-6;o+=1)e.isDark(o,n)&&!e.isDark(o+1,n)&&e.isDark(o+2,n)&&e.isDark(o+3,n)&&e.isDark(o+4,n)&&!e.isDark(o+5,n)&&e.isDark(o+6,n)&&(r+=40);var u=0;for(n=0;n<t;n+=1)for(o=0;o<t;o+=1)e.isDark(o,n)&&(u+=1);return r+Math.abs(100*u/t/t-50)/5*10},n),s=function(){for(var e=new Array(256),t=new Array(256),r=0;r<8;r+=1)e[r]=1<<r;for(r=8;r<256;r+=1)e[r]=e[r-4]^e[r-5]^e[r-6]^e[r-8];for(r=0;r<255;r+=1)t[e[r]]=r;return{glog:function(e){if(e<1)throw"glog("+e+")";return t[e]},gexp:function(t){for(;t<0;)t+=255;for(;t>=256;)t-=255;return e[t]}}}();function c(e,t){if(void 0===e.length)throw e.length+"/"+t;var r=function(){for(var r=0;r<e.length&&0==e[r];)r+=1;for(var o=new Array(e.length-r+t),n=0;n<e.length-r;n+=1)o[n]=e[n+r];return o}(),o={getAt:function(e){return r[e]},getLength:function(){return r.length},multiply:function(e){for(var t=new Array(o.getLength()+e.getLength()-1),r=0;r<o.getLength();r+=1)for(var n=0;n<e.getLength();n+=1)t[r+n]^=s.gexp(s.glog(o.getAt(r))+s.glog(e.getAt(n)));return c(t,0)},mod:function(e){if(o.getLength()-e.getLength()<0)return o;for(var t=s.glog(o.getAt(0))-s.glog(e.getAt(0)),r=new Array(o.getLength()),n=0;n<o.getLength();n+=1)r[n]=o.getAt(n);for(n=0;n<e.getLength();n+=1)r[n]^=s.gexp(s.glog(e.getAt(n))+t);return c(r,0).mod(e)}};return o}var u=function(){var e=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12,7,37,13],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],t=function(e,t){var r={};return r.totalCount=e,r.dataCount=t,r},r={getRSBlocks:function(r,o){var n=function(t,r){switch(r){case l.L:return e[4*(t-1)+0];case l.M:return e[4*(t-1)+1];case l.Q:return e[4*(t-1)+2];case l.H:return e[4*(t-1)+3];default:return}}(r,o);if(void 0===n)throw"bad rs block @ typeNumber:"+r+"/errorCorrectionLevel:"+o;for(var a=n.length/3,i=[],s=0;s<a;s+=1)for(var c=n[3*s+0],u=n[3*s+1],d=n[3*s+2],f=0;f<c;f+=1)i.push(t(u,d));return i}};return r}(),d=function(){var e=[],t=0,r={getBuffer:function(){return e},getAt:function(t){var r=Math.floor(t/8);return 1==(e[r]>>>7-t%8&1)},put:function(e,t){for(var o=0;o<t;o+=1)r.putBit(1==(e>>>t-o-1&1))},getLengthInBits:function(){return t},putBit:function(r){var o=Math.floor(t/8);e.length<=o&&e.push(0),r&&(e[o]|=128>>>t%8),t+=1}};return r},f=function(e){var t=e,r={getMode:function(){return 1},getLength:function(e){return t.length},write:function(e){for(var r=t,n=0;n+2<r.length;)e.put(o(r.substring(n,n+3)),10),n+=3;n<r.length&&(r.length-n==1?e.put(o(r.substring(n,n+1)),4):r.length-n==2&&e.put(o(r.substring(n,n+2)),7))}},o=function(e){for(var t=0,r=0;r<e.length;r+=1)t=10*t+n(e.charAt(r));return t},n=function(e){if("0"<=e&&e<="9")return e.charCodeAt(0)-"0".charCodeAt(0);throw"illegal char :"+e};return r},g=function(e){var t=e,r={getMode:function(){return 2},getLength:function(e){return t.length},write:function(e){for(var r=t,n=0;n+1<r.length;)e.put(45*o(r.charAt(n))+o(r.charAt(n+1)),11),n+=2;n<r.length&&e.put(o(r.charAt(n)),6)}},o=function(e){if("0"<=e&&e<="9")return e.charCodeAt(0)-"0".charCodeAt(0);if("A"<=e&&e<="Z")return e.charCodeAt(0)-"A".charCodeAt(0)+10;switch(e){case" ":return 36;case"$":return 37;case"%":return 38;case"*":return 39;case"+":return 40;case"-":return 41;case".":return 42;case"/":return 43;case":":return 44;default:throw"illegal char :"+e}};return r},p=function(t){var r=e.stringToBytes(t);return{getMode:function(){return 4},getLength:function(e){return r.length},write:function(e){for(var t=0;t<r.length;t+=1)e.put(r[t],8)}}},h=function(t){var r=e.stringToBytesFuncs.SJIS;if(!r)throw"sjis not supported.";!function(){var e=r("友");if(2!=e.length||38726!=(e[0]<<8|e[1]))throw"sjis not supported."}();var o=r(t),n={getMode:function(){return 8},getLength:function(e){return~~(o.length/2)},write:function(e){for(var t=o,r=0;r+1<t.length;){var n=(255&t[r])<<8|255&t[r+1];if(33088<=n&&n<=40956)n-=33088;else{if(!(57408<=n&&n<=60351))throw"illegal char at "+(r+1)+"/"+n;n-=49472}n=192*(n>>>8&255)+(255&n),e.put(n,13),r+=2}if(r<t.length)throw"illegal char at "+(r+1)}};return n},b=function(){var e=[],t={writeByte:function(t){e.push(255&t)},writeShort:function(e){t.writeByte(e),t.writeByte(e>>>8)},writeBytes:function(e,r,o){r=r||0,o=o||e.length;for(var n=0;n<o;n+=1)t.writeByte(e[n+r])},writeString:function(e){for(var r=0;r<e.length;r+=1)t.writeByte(e.charCodeAt(r))},toByteArray:function(){return e},toString:function(){var t="";t+="[";for(var r=0;r<e.length;r+=1)r>0&&(t+=","),t+=e[r];return t+"]"}};return t},y=function(e){var t=e,r=0,o=0,n=0,a={read:function(){for(;n<8;){if(r>=t.length){if(0==n)return-1;throw"unexpected end of file./"+n}var e=t.charAt(r);if(r+=1,"="==e)return n=0,-1;e.match(/^\s$/)||(o=o<<6|l(e.charCodeAt(0)),n+=6)}var a=o>>>n-8&255;return n-=8,a}},l=function(e){if(65<=e&&e<=90)return e-65;if(97<=e&&e<=122)return e-97+26;if(48<=e&&e<=57)return e-48+52;if(43==e)return 62;if(47==e)return 63;throw"c:"+e};return a},v=function(e,t,r){for(var o=function(e,t){var r=e,o=t,n=new Array(e*t),a={setPixel:function(e,t,o){n[t*r+e]=o},write:function(e){e.writeString("GIF87a"),e.writeShort(r),e.writeShort(o),e.writeByte(128),e.writeByte(0),e.writeByte(0),e.writeByte(0),e.writeByte(0),e.writeByte(0),e.writeByte(255),e.writeByte(255),e.writeByte(255),e.writeString(","),e.writeShort(0),e.writeShort(0),e.writeShort(r),e.writeShort(o),e.writeByte(0);var t=l(2);e.writeByte(2);for(var n=0;t.length-n>255;)e.writeByte(255),e.writeBytes(t,n,255),n+=255;e.writeByte(t.length-n),e.writeBytes(t,n,t.length-n),e.writeByte(0),e.writeString(";")}},l=function(e){for(var t=1<<e,r=1+(1<<e),o=e+1,a=i(),l=0;l<t;l+=1)a.add(String.fromCharCode(l));a.add(String.fromCharCode(t)),a.add(String.fromCharCode(r));var s,c,u,d=b(),f=(s=d,c=0,u=0,{write:function(e,t){if(e>>>t!=0)throw"length over";for(;c+t>=8;)s.writeByte(255&(e<<c|u)),t-=8-c,e>>>=8-c,u=0,c=0;u|=e<<c,c+=t},flush:function(){c>0&&s.writeByte(u)}});f.write(t,o);var g=0,p=String.fromCharCode(n[g]);for(g+=1;g<n.length;){var h=String.fromCharCode(n[g]);g+=1,a.contains(p+h)?p+=h:(f.write(a.indexOf(p),o),a.size()<4095&&(a.size()==1<<o&&(o+=1),a.add(p+h)),p=h)}return f.write(a.indexOf(p),o),f.write(r,o),f.flush(),d.toByteArray()},i=function(){var e={},t=0,r={add:function(o){if(r.contains(o))throw"dup key:"+o;e[o]=t,t+=1},size:function(){return t},indexOf:function(t){return e[t]},contains:function(t){return void 0!==e[t]}};return r};return a}(e,t),n=0;n<t;n+=1)for(var a=0;a<e;a+=1)o.setPixel(a,n,r(a,n));var l=b();o.write(l);for(var i=function(){var e=0,t=0,r=0,o="",n={},a=function(e){o+=String.fromCharCode(l(63&e))},l=function(e){if(e<0);else{if(e<26)return 65+e;if(e<52)return e-26+97;if(e<62)return e-52+48;if(62==e)return 43;if(63==e)return 47}throw"n:"+e};return n.writeByte=function(o){for(e=e<<8|255&o,t+=8,r+=1;t>=6;)a(e>>>t-6),t-=6},n.flush=function(){if(t>0&&(a(e<<6-t),e=0,t=0),r%3!=0)for(var n=3-r%3,l=0;l<n;l+=1)o+="="},n.toString=function(){return o},n}(),s=l.toByteArray(),c=0;c<s.length;c+=1)i.writeByte(s[c]);return i.flush(),"data:image/gif;base64,"+i};return e}();n.stringToBytesFuncs["UTF-8"]=function(e){return function(e){for(var t=[],r=0;r<e.length;r++){var o=e.charCodeAt(r);o<128?t.push(o):o<2048?t.push(192|o>>6,128|63&o):o<55296||o>=57344?t.push(224|o>>12,128|o>>6&63,128|63&o):(r++,o=65536+((1023&o)<<10|1023&e.charCodeAt(r)),t.push(240|o>>18,128|o>>12&63,128|o>>6&63,128|63&o))}return t}(e)},void 0===(o="function"==typeof(r=function(){return n})?r.apply(t,[]):r)||(e.exports=o)},60:function(e,t,r){"use strict";var o,n=this&&this.__extends||(o=function(e,t){return o=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,t){e.__proto__=t}||function(e,t){for(var r in t)Object.prototype.hasOwnProperty.call(t,r)&&(e[r]=t[r])},o(e,t)},function(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Class extends value "+String(t)+" is not a constructor or null");function __(){this.constructor=e}o(e,t),e.prototype=null===t?Object.create(t):(__.prototype=t.prototype,new __)}),a=this&&this.__assign||function(){return a=Object.assign||function(e){for(var t,r=1,o=arguments.length;r<o;r++)for(var n in t=arguments[r])Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n]);return e},a.apply(this,arguments)};Object.defineProperty(t,"__esModule",{value:!0}),t.QRCode=void 0;var l=r(8142),i=r(9873),s=r(1609),c=function(e){function t(t){var r=e.call(this,t)||this;return r.canvasRef=s.createRef(),r}return n(t,e),t.prototype.download=function(e,t){if(this.canvasRef.current){var r=void 0;switch(e){case"jpg":r="image/jpeg";break;case"webp":r="image/webp";break;default:r="image/png"}var o=this.canvasRef.current.toDataURL(r,1),n=document.createElement("a");n.download=null!=t?t:"react-qrcode-logo",n.href=o,n.click()}},t.prototype.utf16to8=function(e){var t,r,o="",n=e.length;for(t=0;t<n;t++)(r=e.charCodeAt(t))>=1&&r<=127?o+=e.charAt(t):r>2047?(o+=String.fromCharCode(224|r>>12&15),o+=String.fromCharCode(128|r>>6&63),o+=String.fromCharCode(128|63&r)):(o+=String.fromCharCode(192|r>>6&31),o+=String.fromCharCode(128|63&r));return o},t.prototype.drawRoundedSquare=function(e,t,r,o,n,a,l,i){i.lineWidth=e,i.fillStyle=n,i.strokeStyle=n,r+=e/2,t+=e/2,o-=e,Array.isArray(a)||(a=[a,a,a,a]);var s=(a=a.map((function(e){return(e=Math.min(e,o/2))<0?0:e})))[0]||0,c=a[1]||0,u=a[2]||0,d=a[3]||0;i.beginPath(),i.moveTo(t+s,r),i.lineTo(t+o-c,r),c&&i.quadraticCurveTo(t+o,r,t+o,r+c),i.lineTo(t+o,r+o-u),u&&i.quadraticCurveTo(t+o,r+o,t+o-u,r+o),i.lineTo(t+d,r+o),d&&i.quadraticCurveTo(t,r+o,t,r+o-d),i.lineTo(t,r+s),s&&i.quadraticCurveTo(t,r,t+s,r),i.closePath(),i.stroke(),l&&i.fill()},t.prototype.drawPositioningPattern=function(e,t,r,o,n,a,l){void 0===l&&(l=[0,0,0,0]);var i,s,c,u,d=Math.ceil(t);"number"==typeof l||Array.isArray(l)?s=i=l:(i=l.outer||0,s=l.inner||0),"string"!=typeof a?(c=a.outer,u=a.inner):(c=a,u=a);var f=o*t+r,g=n*t+r,p=7*t;this.drawRoundedSquare(d,g,f,p,c,i,!1,e),p=3*t,f+=2*t,g+=2*t,this.drawRoundedSquare(d,g,f,p,u,s,!0,e)},t.prototype.isInPositioninZone=function(e,t,r){return r.some((function(r){return t>=r.row&&t<=r.row+7&&e>=r.col&&e<=r.col+7}))},t.prototype.transformPixelLengthIntoNumberOfCells=function(e,t){return e/t},t.prototype.isCoordinateInImage=function(e,t,r,o,n,a,l,i){if(i){var s=this.transformPixelLengthIntoNumberOfCells(n,l),c=this.transformPixelLengthIntoNumberOfCells(a,l),u=this.transformPixelLengthIntoNumberOfCells(r,l)-1,d=this.transformPixelLengthIntoNumberOfCells(o,l)-1;return t>=s-2&&t<=s+u+2&&e>=c-2&&e<=c+d+2}return!1},t.prototype.shouldComponentUpdate=function(e){return!l(this.props,e)},t.prototype.componentDidMount=function(){this.update()},t.prototype.componentDidUpdate=function(){this.update()},t.prototype.update=function(){var e,t=this.props,r=t.value,o=t.ecLevel,n=t.enableCORS,a=t.bgColor,l=t.fgColor,s=t.logoImage,c=t.logoOpacity,u=t.logoOnLoad,d=t.removeQrCodeBehindLogo,f=t.qrStyle,g=t.eyeRadius,p=t.eyeColor,h=t.logoPaddingStyle,b=+this.props.size,y=+this.props.quietZone,v=this.props.logoWidth?+this.props.logoWidth:0,m=this.props.logoHeight?+this.props.logoHeight:0,w=this.props.logoPadding?+this.props.logoPadding:0,C=i(0,o);C.addData(this.utf16to8(r)),C.make();var k=null===(e=this.canvasRef)||void 0===e?void 0:e.current,_=k.getContext("2d"),z=b+2*y,S=C.getModuleCount(),B=b/S,q=window.devicePixelRatio||1;k.height=k.width=z*q,_.scale(q,q),_.fillStyle=a,_.fillRect(0,0,z,z);var A=y,x=[{row:0,col:0},{row:0,col:S-7},{row:S-7,col:0}];if(_.strokeStyle=l,"dots"===f){_.fillStyle=l;for(var M=B/2,P=0;P<S;P++)for(var R=0;R<S;R++)C.isDark(P,R)&&!this.isInPositioninZone(P,R,x)&&(_.beginPath(),_.arc(Math.round(R*B)+M+A,Math.round(P*B)+M+A,M/100*75,0,2*Math.PI,!1),_.closePath(),_.fill())}else if("fluid"===f){for(M=Math.ceil(B/2),P=0;P<S;P++)for(R=0;R<S;R++)if(C.isDark(P,R)&&!this.isInPositioninZone(P,R,x)){var E=[!1,!1,!1,!1];P>0&&!C.isDark(P-1,R)&&R>0&&!C.isDark(P,R-1)&&(E[0]=!0),P>0&&!C.isDark(P-1,R)&&R<S-1&&!C.isDark(P,R+1)&&(E[1]=!0),P<S-1&&!C.isDark(P+1,R)&&R<S-1&&!C.isDark(P,R+1)&&(E[2]=!0),P<S-1&&!C.isDark(P+1,R)&&R>0&&!C.isDark(P,R-1)&&(E[3]=!0);var j=Math.ceil((R+1)*B)-Math.floor(R*B),$=Math.ceil((P+1)*B)-Math.floor(P*B);_.fillStyle=l,_.beginPath(),_.arc(Math.round(R*B)+M+A,Math.round(P*B)+M+A,M,0,2*Math.PI,!1),_.closePath(),_.fill(),E[0]||_.fillRect(Math.round(R*B)+A,Math.round(P*B)+A,j/2,$/2),E[1]||_.fillRect(Math.round(R*B)+A+Math.floor(j/2),Math.round(P*B)+A,j/2,$/2),E[2]||_.fillRect(Math.round(R*B)+A+Math.floor(j/2),Math.round(P*B)+A+Math.floor($/2),j/2,$/2),E[3]||_.fillRect(Math.round(R*B)+A,Math.round(P*B)+A+Math.floor($/2),j/2,$/2)}}else for(P=0;P<S;P++)for(R=0;R<S;R++)C.isDark(P,R)&&!this.isInPositioninZone(P,R,x)&&(_.fillStyle=l,j=Math.ceil((R+1)*B)-Math.floor(R*B),$=Math.ceil((P+1)*B)-Math.floor(P*B),_.fillRect(Math.round(R*B)+A,Math.round(P*B)+A,j,$));for(var O=0;O<3;O++){var T,L=x[O],D=(P=L.row,R=L.col,g);Array.isArray(D)&&(D=D[O]),"number"==typeof D&&(D=[D,D,D,D]),T=p?Array.isArray(p)?p[O]:p:l,this.drawPositioningPattern(_,B,A,P,R,T,D)}if(s){var N=new Image;n&&(N.crossOrigin="Anonymous"),N.onload=function(e){_.save();var t=v||.2*b,r=m||t,o=(b-t)/2,n=(b-r)/2;if(d||w){_.beginPath(),_.strokeStyle=a,_.fillStyle=a;var l=t+2*w,i=r+2*w,s=o+A-w,f=n+A-w;if("circle"===h){var g=s+l/2,p=f+i/2;_.ellipse(g,p,l/2,i/2,0,0,2*Math.PI),_.stroke(),_.fill()}else _.fillRect(s,f,l,i)}_.globalAlpha=c,_.drawImage(N,o+A,n+A,t,r),_.restore(),u&&u(e)},N.src=s}},t.prototype.render=function(){var e,t=+this.props.size+2*+this.props.quietZone;return s.createElement("canvas",{id:null!==(e=this.props.id)&&void 0!==e?e:"react-qrcode-logo",height:t,width:t,style:a({height:t+"px",width:t+"px"},this.props.style),ref:this.canvasRef})},t.defaultProps={value:"https://reactjs.org/",ecLevel:"M",enableCORS:!1,size:150,quietZone:10,bgColor:"#FFFFFF",fgColor:"#000000",logoOpacity:1,qrStyle:"squares",eyeRadius:[0,0,0],logoPaddingStyle:"square"},t}(s.Component);t.QRCode=c},1609:e=>{"use strict";e.exports=window.React},6942:(e,t)=>{var r;!function(){"use strict";var o={}.hasOwnProperty;function n(){for(var e="",t=0;t<arguments.length;t++){var r=arguments[t];r&&(e=l(e,a(r)))}return e}function a(e){if("string"==typeof e||"number"==typeof e)return e;if("object"!=typeof e)return"";if(Array.isArray(e))return n.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes("[native code]"))return e.toString();var t="";for(var r in e)o.call(e,r)&&e[r]&&(t=l(t,r));return t}function l(e,t){return t?e?e+" "+t:e+t:e}e.exports?(n.default=n,e.exports=n):void 0===(r=function(){return n}.apply(t,[]))||(e.exports=r)}()}},r={};function o(e){var n=r[e];if(void 0!==n)return n.exports;var a=r[e]={id:e,loaded:!1,exports:{}};return t[e].call(a.exports,a,a.exports,o),a.loaded=!0,a.exports}o.m=t,e=[],o.O=(t,r,n,a)=>{if(!r){var l=1/0;for(u=0;u<e.length;u++){r=e[u][0],n=e[u][1],a=e[u][2];for(var i=!0,s=0;s<r.length;s++)(!1&a||l>=a)&&Object.keys(o.O).every((e=>o.O[e](r[s])))?r.splice(s--,1):(i=!1,a<l&&(l=a));if(i){e.splice(u--,1);var c=n();void 0!==c&&(t=c)}}return t}a=a||0;for(var u=e.length;u>0&&e[u-1][2]>a;u--)e[u]=e[u-1];e[u]=[r,n,a]},o.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return o.d(t,{a:t}),t},o.d=(e,t)=>{for(var r in t)o.o(t,r)&&!o.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},o.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(e){if("object"==typeof window)return window}}(),o.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),o.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},o.nmd=e=>(e.paths=[],e.children||(e.children=[]),e),(()=>{var e={2867:0,8251:0};o.O.j=t=>0===e[t];var t=(t,r)=>{var n,a,l=r[0],i=r[1],s=r[2],c=0;if(l.some((t=>0!==e[t]))){for(n in i)o.o(i,n)&&(o.m[n]=i[n]);if(s)var u=s(o)}for(t&&t(r);c<l.length;c++)a=l[c],o.o(e,a)&&e[a]&&e[a][0](),e[a]=0;return o.O(u)},r=self.webpackChunkzoloblocks=self.webpackChunkzoloblocks||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})();var n=o.O(void 0,[8251],(()=>o(7866)));n=o.O(n)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/qrcode/attributes.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/qrcode/attributes.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _constants_index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants/index */ "./src/blocks/qrcode/constants/index.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/qrcode/constants/typoPrefixConstant.js");
+const {
+  generateResAlignmentAttributies,
+  generateBorderAttributies,
+  generateDimensionAttributes,
+  generateBoxShadowAttributies,
+  generateTypographyAttributes,
+  generateResRangeAttributies
+} = window.zoloModule;
+
+
+const attributes = {
+  globalConfig: {
+    type: 'object',
+    default: {
+      margin: {
+        prefix: 'mainMargin'
+      },
+      padding: {
+        prefix: 'mainPadding'
+      },
+      background: {
+        prefix: 'mainBg'
+      },
+      border: {
+        prefix: 'mainBorder'
+      },
+      borderRadius: {
+        prefix: 'mainBorderRadius'
+      },
+      boxShadow: {
+        prefix: 'mainBoxShadow'
+      },
+      responsiveControls: true
+    }
+  },
+  badgeStyle: {
+    type: 'string',
+    default: 'zolo-badge-style-1'
+  },
+  showBadge: {
+    type: 'boolean',
+    default: false
+  },
+  showBadgeIcon: {
+    type: 'boolean',
+    default: false
+  },
+  badgeText: {
+    type: 'string',
+    default: 'Scan me'
+  },
+  badgeIcon: {
+    type: 'string',
+    default: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M144 32C170.5 32 192 53.49 192 80V176C192 202.5 170.5 224 144 224H48C21.49 224 0 202.5 0 176V80C0 53.49 21.49 32 48 32H144zM128 96H64V160H128V96zM144 288C170.5 288 192 309.5 192 336V432C192 458.5 170.5 480 144 480H48C21.49 480 0 458.5 0 432V336C0 309.5 21.49 288 48 288H144zM128 352H64V416H128V352zM256 80C256 53.49 277.5 32 304 32H400C426.5 32 448 53.49 448 80V176C448 202.5 426.5 224 400 224H304C277.5 224 256 202.5 256 176V80zM320 160H384V96H320V160zM352 448H384V480H352V448zM448 480H416V448H448V480zM416 288H448V416H352V384H320V480H256V288H352V320H416V288z"/></svg>'
+  },
+  qrContent: {
+    type: 'string',
+    default: 'https://zoloblocks.com'
+  },
+  qrCodeLink: {
+    type: 'boolean',
+    default: false
+  },
+  qrCodeStyle: {
+    type: 'string',
+    deafult: '#000'
+  },
+  logoQr: {
+    type: 'object'
+  },
+  logoQrBehind: {
+    type: 'boolean',
+    default: false
+  },
+  codeColor: {
+    type: 'string',
+    default: '#000'
+  },
+  backgroundColor: {
+    type: 'string'
+  },
+  qrCodePadding: {
+    type: 'number',
+    default: ''
+  },
+  qrCodeLevel: {
+    type: 'string',
+    default: ''
+  },
+  qrCodeSize: {
+    type: 'number',
+    default: 240
+  },
+  qrCodeLevel: {
+    type: 'string',
+    default: 'M'
+  },
+  logoWidth: {
+    type: 'number',
+    default: 48
+  },
+  logoOpacity: {
+    type: 'number',
+    default: 1
+  },
+  logoPaddingStyle: {
+    type: 'string',
+    default: 'square'
+  },
+  logoPadding: {
+    type: 'number',
+    default: ''
+  },
+  eyeColor: {
+    type: 'string',
+    default: '#000'
+  },
+  eyeRadius: {
+    type: 'number',
+    default: 0
+  },
+  wrapBackgroundColor: {
+    type: 'string'
+  },
+  badgeTextColor: {
+    type: 'string'
+  },
+  badgeBackgroundColor: {
+    type: 'string'
+  },
+  badgeBackgroundArrowColor: {
+    type: 'string'
+  },
+  ...generateBorderAttributies(_constants_index__WEBPACK_IMPORTED_MODULE_0__.QR_CODE_BORDER),
+  ...generateDimensionAttributes(_constants_index__WEBPACK_IMPORTED_MODULE_0__.QR_CODE_BORDER_RADIUS),
+  ...generateResAlignmentAttributies(_constants_index__WEBPACK_IMPORTED_MODULE_0__.QR_CODE_ALIGN),
+  ...generateBorderAttributies(_constants_index__WEBPACK_IMPORTED_MODULE_0__.WRAP_QR_CODE_BORDER),
+  ...generateDimensionAttributes(_constants_index__WEBPACK_IMPORTED_MODULE_0__.WRAP_QR_CODE_BORDER_RADIUS),
+  ...generateDimensionAttributes(_constants_index__WEBPACK_IMPORTED_MODULE_0__.WRAP_QR_CODE_PADDING),
+  ...generateBoxShadowAttributies(_constants_index__WEBPACK_IMPORTED_MODULE_0__.WRAP_QR_CODE_BOX_SHADOW),
+  ...generateTypographyAttributes(Object.values(_constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_1__)),
+  ...generateBorderAttributies(_constants_index__WEBPACK_IMPORTED_MODULE_0__.BADGE_QR_CODE_BORDER),
+  ...generateDimensionAttributes(_constants_index__WEBPACK_IMPORTED_MODULE_0__.BADGE_QR_CODE_BORDER_RADIUS),
+  ...generateDimensionAttributes(_constants_index__WEBPACK_IMPORTED_MODULE_0__.BADGE_QR_CODE_PADDING),
+  ...generateDimensionAttributes(_constants_index__WEBPACK_IMPORTED_MODULE_0__.BADGE_QR_CODE_MARGIN),
+  ...generateBoxShadowAttributies(_constants_index__WEBPACK_IMPORTED_MODULE_0__.BADGE_QR_CODE_BOX_SHADOW),
+  ...generateResRangeAttributies(_constants_index__WEBPACK_IMPORTED_MODULE_0__.BADGE_ICON_SIZE)
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (attributes);
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/constants/index.js":
+/*!**********************************************!*\
+  !*** ./src/blocks/qrcode/constants/index.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BADGE_ICON_SIZE: () => (/* binding */ BADGE_ICON_SIZE),
+/* harmony export */   BADGE_QR_CODE_BORDER: () => (/* binding */ BADGE_QR_CODE_BORDER),
+/* harmony export */   BADGE_QR_CODE_BORDER_RADIUS: () => (/* binding */ BADGE_QR_CODE_BORDER_RADIUS),
+/* harmony export */   BADGE_QR_CODE_BOX_SHADOW: () => (/* binding */ BADGE_QR_CODE_BOX_SHADOW),
+/* harmony export */   BADGE_QR_CODE_MARGIN: () => (/* binding */ BADGE_QR_CODE_MARGIN),
+/* harmony export */   BADGE_QR_CODE_PADDING: () => (/* binding */ BADGE_QR_CODE_PADDING),
+/* harmony export */   BLOCK_PREFIX: () => (/* binding */ BLOCK_PREFIX),
+/* harmony export */   QR_CODE_ALIGN: () => (/* binding */ QR_CODE_ALIGN),
+/* harmony export */   QR_CODE_BORDER: () => (/* binding */ QR_CODE_BORDER),
+/* harmony export */   QR_CODE_BORDER_RADIUS: () => (/* binding */ QR_CODE_BORDER_RADIUS),
+/* harmony export */   QR_CODE_LEVEL: () => (/* binding */ QR_CODE_LEVEL),
+/* harmony export */   QR_CODE_STYLE: () => (/* binding */ QR_CODE_STYLE),
+/* harmony export */   QR_LOGO_PADDING_STYLE: () => (/* binding */ QR_LOGO_PADDING_STYLE),
+/* harmony export */   WRAP_QR_CODE_BORDER: () => (/* binding */ WRAP_QR_CODE_BORDER),
+/* harmony export */   WRAP_QR_CODE_BORDER_RADIUS: () => (/* binding */ WRAP_QR_CODE_BORDER_RADIUS),
+/* harmony export */   WRAP_QR_CODE_BOX_SHADOW: () => (/* binding */ WRAP_QR_CODE_BOX_SHADOW),
+/* harmony export */   WRAP_QR_CODE_PADDING: () => (/* binding */ WRAP_QR_CODE_PADDING)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+
+// Block Prefix
+const BLOCK_PREFIX = 'qrcode';
+const QR_CODE_LEVEL = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Low (7%)', 'zoloblocks'),
+  value: 'L'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Medium (15%)', 'zoloblocks'),
+  value: 'M'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Qurtile (25%)', 'zoloblocks'),
+  value: 'Q'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('High (30%)', 'zoloblocks'),
+  value: 'H'
+}];
+const QR_CODE_STYLE = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Squares', 'zoloblocks'),
+  value: 'squares'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Dots', 'zoloblocks'),
+  value: 'dots'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fluid', 'zoloblocks'),
+  value: 'fluid'
+}];
+const QR_LOGO_PADDING_STYLE = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Square', 'zoloblocks'),
+  value: 'square'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Circle', 'zoloblocks'),
+  value: 'circle'
+}];
+const QR_CODE_ALIGN = 'qrCodeAlign';
+const QR_CODE_BORDER_RADIUS = 'qrCodeBorderRadius';
+const QR_CODE_BORDER = 'qrCodeBorder';
+const WRAP_QR_CODE_BORDER = 'wrapQrCodeBorder';
+const WRAP_QR_CODE_BORDER_RADIUS = 'wrapQrCodeBorderRadius';
+const WRAP_QR_CODE_PADDING = 'wrapQrCodePadding';
+const WRAP_QR_CODE_BOX_SHADOW = 'wrapQrCodeBoxShadow';
+const BADGE_QR_CODE_BORDER = 'badgeQrCodeBorder';
+const BADGE_QR_CODE_BORDER_RADIUS = 'badgeQrCodeBorderRadius';
+const BADGE_QR_CODE_PADDING = 'badgeQrCodePadding';
+const BADGE_QR_CODE_MARGIN = 'badgeQrCodeMargin';
+const BADGE_QR_CODE_BOX_SHADOW = 'badgeQrCodeBoxShadow';
+const BADGE_ICON_SIZE = 'badgeIconSize';
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/constants/typoPrefixConstant.js":
+/*!***********************************************************!*\
+  !*** ./src/blocks/qrcode/constants/typoPrefixConstant.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BADGE_TYPOGRAPHY: () => (/* binding */ BADGE_TYPOGRAPHY)
+/* harmony export */ });
+const BADGE_TYPOGRAPHY = 'badgeTypography';
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/edit.js":
+/*!***********************************!*\
+  !*** ./src/blocks/qrcode/edit.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _inspector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./inspector */ "./src/blocks/qrcode/inspector.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/qrcode/style.scss");
+/* harmony import */ var react_qrcode_logo__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-qrcode-logo */ "./node_modules/react-qrcode-logo/dist/index.js");
+/* harmony import */ var react_qrcode_logo__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_qrcode_logo__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style */ "./src/blocks/qrcode/style.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__);
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+
+/**
+ * Internal depencencies
+ */
+
+
+
+
+
+const {
+  DisplayZoloIcon,
+  classArrayToStr
+} = window.zoloModule;
+function Edit(props) {
+  const {
+    attributes,
+    setAttributes,
+    isSelected
+  } = props;
+  const {
+    uniqueId,
+    parentClasses,
+    preview,
+    // settings
+    qrContent,
+    qrCodeSize,
+    qrCodeLevel,
+    qrCodeStyle,
+    codeColor,
+    backgroundColor,
+    qrCodePadding,
+    logoQr,
+    logoHeight,
+    logoWidth,
+    logoOpacity,
+    logoPaddingStyle,
+    logoPadding,
+    logoQrBehind,
+    eyeColor,
+    eyeRadius,
+    // badge
+    badgeStyle,
+    showBadge,
+    showBadgeIcon,
+    badgeText,
+    badgeIcon
+  } = attributes;
+  const blocksProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(uniqueId, classArrayToStr(parentClasses), {
+      [badgeStyle]: showBadge
+    })
+  });
+
+  // filter hooks for render
+  const renderHookBefore = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.applyFilters)('zolo.blocks.render.hook.before', [], props);
+  const renderHookAfter = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.applyFilters)('zolo.blocks.render.hook.after', [], props);
+  // preview image
+  if (preview) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("img", {
+      src: zoloParams.blocksPreview.qrcode,
+      alt: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('QR Code Preview', 'zoloblocks')
+    });
+  }
+  const QRCodeWrapper = () => /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(react_qrcode_logo__WEBPACK_IMPORTED_MODULE_6__.QRCode, {
+    value: qrContent,
+    ecLevel: qrCodeLevel,
+    size: qrCodeSize !== 0 ? qrCodeSize : 240,
+    qrStyle: qrCodeStyle,
+    fgColor: codeColor !== '' ? codeColor : '#000',
+    bgColor: backgroundColor !== '' ? backgroundColor : '#fff',
+    logoImage: logoQr?.url,
+    logoWidth: logoWidth,
+    logoHeight: logoHeight,
+    logoOpacity: logoOpacity,
+    quietZone: qrCodePadding !== '' ? qrCodePadding : 10,
+    logoPadding: logoPadding,
+    logoPaddingStyle: logoPaddingStyle,
+    removeQrCodeBehindLogo: logoQrBehind,
+    eyeColor: eyeColor,
+    eyeRadius: eyeRadius
+  });
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.Fragment, {
+    children: [isSelected && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_inspector__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      attributes: attributes,
+      setAttributes: setAttributes
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_style__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      props: props
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+      ...blocksProps,
+      children: [renderHookBefore && renderHookBefore, badgeStyle == 'zolo-badge-style-1' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        className: `zolo-qrcode-wrapper`,
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(QRCodeWrapper, {}), showBadge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+          className: "zolo-qrcode-badge",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+            tagName: "span",
+            className: "zolo-qrcode-badge-text",
+            value: badgeText,
+            onChange: v => setAttributes({
+              badgeText: v
+            })
+          })
+        })]
+      }), badgeStyle != 'zolo-badge-style-1' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("div", {
+        className: "zolo-qrcode-badge-wrapper",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("div", {
+          className: `zolo-qrcode-wrapper`,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(QRCodeWrapper, {})
+        }), showBadge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsxs)("span", {
+          className: "zolo-qrcode-badge",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+            tagName: "span",
+            className: "zolo-qrcode-badge-text",
+            value: badgeText,
+            onChange: v => setAttributes({
+              badgeText: v
+            })
+          }), showBadgeIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)("span", {
+            className: "zolo-qrcode-badge-icon",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_8__.jsx)(DisplayZoloIcon, {
+              icon: badgeIcon
+            })
+          })]
+        })]
+      }), renderHookAfter && renderHookAfter]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/index.js":
+/*!************************************!*\
+  !*** ./src/blocks/qrcode/index.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./attributes */ "./src/blocks/qrcode/attributes.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./block.json */ "./src/blocks/qrcode/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/qrcode/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/qrcode/save.js");
+
+
+
+
+
+const {
+  BlockIcons
+} = window.zoloIcons;
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_2__, {
+  icon: {
+    src: BlockIcons['qrcode']
+  },
+  attributes: _attributes__WEBPACK_IMPORTED_MODULE_1__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
+});
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/inspector.js":
+/*!****************************************!*\
+  !*** ./src/blocks/qrcode/inspector.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Inspector)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./attributes */ "./src/blocks/qrcode/attributes.js");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _constants_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants/index */ "./src/blocks/qrcode/constants/index.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/qrcode/constants/typoPrefixConstant.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__);
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+
+
+/**
+ * Internal depencencies
+ */
+const {
+  ColorControl,
+  SimpleRangeControl,
+  BorderControl,
+  ResDimensionsControl,
+  HeaderTabs,
+  ResAlignmentControl,
+  AdvancedOptions,
+  ZoloPanelBody,
+  BoxShadowControl,
+  TypographyDropdown,
+  ResRangeControl
+} = window.zoloModule;
+
+
+
+function Inspector(props) {
+  const {
+    attributes,
+    setAttributes,
+    block
+  } = props;
+  const {
+    resMode,
+    badgeStyle,
+    // settings
+    qrContent,
+    qrCodeLink,
+    codeColor,
+    backgroundColor,
+    qrCodePadding,
+    qrCodeLevel,
+    qrCodeSize,
+    eyeColor,
+    eyeRadius,
+    showBadge,
+    showBadgeIcon,
+    wrapBackgroundColor,
+    badgeTextColor,
+    badgeBackgroundColor,
+    badgeBackgroundArrowColor
+  } = attributes;
+  const requiredProps = {
+    resMode,
+    attributes,
+    setAttributes,
+    objAttributes: _attributes__WEBPACK_IMPORTED_MODULE_3__["default"]
+  };
+  const hookLinks = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_4__.applyFilters)('zolo.blocks.controls.qrcode.pageLinks', [], props, 'zolo/qrcode');
+  const hookStyles = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_4__.applyFilters)('zolo.blocks.controls.qrcode.styles', [], props, 'zolo/qrcode');
+  const hookLogo = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_4__.applyFilters)('zolo.blocks.controls.qrcode.logo', [], props, 'zolo/qrcode');
+  const hookLogoStyle = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_4__.applyFilters)('zolo.blocks.controls.qrcode.logoStyle', [], props, 'zolo/qrcode');
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InspectorControls, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(HeaderTabs, {
+        block: "zolo/qrcode",
+        attributes: attributes,
+        setAttributes: setAttributes,
+        generalTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(ZoloPanelBody, {
+            title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('QR Code', 'zoloblocks'),
+            panelProps: requiredProps,
+            firstOpen: true,
+            children: [!qrCodeLink && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.TextareaControl, {
+              className: "zolo-flex-col-control",
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Content', 'zoloblocks'),
+              value: qrContent,
+              onChange: value => setAttributes({
+                qrContent: value
+              })
+            }), hookLinks && hookLinks.length > 0 && hookLinks, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+              className: "zolo-flex-col-control",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(SimpleRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Size', 'zoloblocks'),
+                value: qrCodeSize,
+                onChange: value => setAttributes({
+                  qrCodeSize: value
+                }),
+                onReset: () => setAttributes({
+                  qrCodeSize: 0
+                }),
+                max: 500,
+                noUnits: true
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_1__.SelectControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Error Level', 'zoloblocks'),
+              value: qrCodeLevel,
+              onChange: value => setAttributes({
+                qrCodeLevel: value
+              }),
+              options: _constants_index__WEBPACK_IMPORTED_MODULE_5__.QR_CODE_LEVEL
+            }), hookStyles && hookStyles.length > 0 && hookStyles, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResAlignmentControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Alignment', 'zoloblocks'),
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.QR_CODE_ALIGN,
+              requiredProps: requiredProps
+            })]
+          }), hookLogo && hookLogo.length > 0 && hookLogo]
+        }),
+        styleTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+          children: [showBadge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(ZoloPanelBody, {
+            title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Wrapper', 'zoloblocks'),
+            panelProps: requiredProps,
+            firstOpen: showBadge ? true : false,
+            isPro: true,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(BorderControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Type', 'zoloblocks'),
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.WRAP_QR_CODE_BORDER,
+              requiredProps: requiredProps
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResDimensionsControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.WRAP_QR_CODE_BORDER_RADIUS,
+              requiredProps: requiredProps,
+              forBorderRadius: true
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResDimensionsControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.WRAP_QR_CODE_PADDING,
+              requiredProps: requiredProps,
+              forBorderRadius: false
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ColorControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background Color', 'zoloblocks'),
+              color: wrapBackgroundColor,
+              onChange: value => setAttributes({
+                wrapBackgroundColor: value
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(BoxShadowControl, {
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.WRAP_QR_CODE_BOX_SHADOW,
+              requiredProps: requiredProps
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(ZoloPanelBody, {
+            title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('QR Code', 'zoloblocks'),
+            panelProps: requiredProps,
+            firstOpen: !showBadge ? true : false,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ColorControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+              color: codeColor,
+              onChange: value => setAttributes({
+                codeColor: value
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ColorControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Eye Color', 'zoloblocks'),
+              color: eyeColor,
+              onChange: value => setAttributes({
+                eyeColor: value
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+              className: "zolo-flex-col-control",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(SimpleRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Eye Radius', 'zoloblocks'),
+                value: eyeRadius,
+                onChange: value => setAttributes({
+                  eyeRadius: value
+                }),
+                onReset: () => setAttributes({
+                  eyeRadius: ''
+                }),
+                min: 0,
+                max: 100,
+                noUnits: true
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ColorControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background Type', 'zoloblocks'),
+              color: backgroundColor,
+              onChange: value => setAttributes({
+                backgroundColor: value
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(BorderControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Type', 'zoloblocks'),
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.QR_CODE_BORDER,
+              requiredProps: requiredProps
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResDimensionsControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.QR_CODE_BORDER_RADIUS,
+              requiredProps: requiredProps,
+              forBorderRadius: true
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
+              className: "zolo-flex-col-control",
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(SimpleRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+                value: qrCodePadding,
+                onChange: value => setAttributes({
+                  qrCodePadding: value
+                }),
+                onReset: () => setAttributes({
+                  qrCodePadding: ''
+                }),
+                min: 1,
+                max: 300,
+                noUnits: true
+              })
+            })]
+          }), hookLogoStyle && hookLogoStyle.length > 0 && hookLogoStyle, showBadge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(ZoloPanelBody, {
+            title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Badge', 'zoloblocks'),
+            panelProps: requiredProps,
+            isPro: true,
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ColorControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Color', 'zoloblocks'),
+              color: badgeTextColor,
+              onChange: value => setAttributes({
+                badgeTextColor: value
+              })
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(TypographyDropdown, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Title Typography', 'zoloblocks'),
+              typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_6__.BADGE_TYPOGRAPHY,
+              requiredProps: requiredProps,
+              max: 72
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResDimensionsControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Margin', 'zoloblocks'),
+              controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.BADGE_QR_CODE_MARGIN,
+              requiredProps: requiredProps,
+              forBorderRadius: false
+            }), badgeStyle !== 'zolo-badge-style-1' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(BorderControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Type', 'zoloblocks'),
+                controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.BADGE_QR_CODE_BORDER,
+                requiredProps: requiredProps
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Border Radius', 'zoloblocks'),
+                controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.BADGE_QR_CODE_BORDER_RADIUS,
+                requiredProps: requiredProps,
+                forBorderRadius: true
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResDimensionsControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Padding', 'zoloblocks'),
+                controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.BADGE_QR_CODE_PADDING,
+                requiredProps: requiredProps,
+                forBorderRadius: false
+              }), showBadgeIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Icon Size', 'zoloblocks'),
+                controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.BADGE_ICON_SIZE,
+                requiredProps: requiredProps,
+                min: 0,
+                max: 50,
+                step: 1
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Background Color', 'zoloblocks'),
+                color: badgeBackgroundColor,
+                onChange: value => setAttributes({
+                  badgeBackgroundColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_2__.__)('Arrow Color', 'zoloblocks'),
+                color: badgeBackgroundArrowColor,
+                onChange: value => setAttributes({
+                  badgeBackgroundArrowColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(BoxShadowControl, {
+                controlName: _constants_index__WEBPACK_IMPORTED_MODULE_5__.BADGE_QR_CODE_BOX_SHADOW,
+                requiredProps: requiredProps
+              })]
+            })]
+          })]
+        }),
+        advancedTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)(AdvancedOptions, {
+          block: "zolo/qr-block",
+          attributes: attributes,
+          setAttributes: setAttributes,
+          requiredProps: requiredProps
+        }, "zolo/qr-block/advanced-options")
+      })
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/save.js":
+/*!***********************************!*\
+  !*** ./src/blocks/qrcode/save.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Save)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+
+/**
+ * Internal Dependencies
+ */
+
+const {
+  DisplayZoloIcon,
+  classArrayToStr
+} = window.zoloModule;
+function Save(props) {
+  const {
+    attributes
+  } = props;
+  const {
+    uniqueId,
+    parentClasses,
+    // settings
+    qrContent,
+    qrCodeSize,
+    qrCodeLevel,
+    qrCodeStyle,
+    codeColor,
+    backgroundColor,
+    qrCodePadding,
+    logoQr,
+    logoHeight,
+    logoWidth,
+    logoOpacity,
+    logoPaddingStyle,
+    logoPadding,
+    logoQrBehind,
+    eyeColor,
+    eyeRadius,
+    // badge
+    badgeStyle,
+    showBadge,
+    showBadgeIcon,
+    badgeText,
+    badgeIcon
+  } = attributes;
+  const options = {
+    qrContent,
+    qrCodeSize,
+    qrCodeLevel,
+    qrCodeStyle,
+    codeColor,
+    backgroundColor,
+    qrCodePadding,
+    logoQr,
+    logoHeight,
+    logoWidth,
+    logoOpacity,
+    logoPaddingStyle,
+    logoPadding,
+    logoQrBehind,
+    eyeColor,
+    eyeRadius,
+    // badge
+    badgeStyle,
+    showBadge,
+    showBadgeIcon,
+    badgeText,
+    badgeIcon
+  };
+  const blocksProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
+    id: uniqueId,
+    className: classnames__WEBPACK_IMPORTED_MODULE_2___default()(uniqueId, classArrayToStr(parentClasses), {
+      [badgeStyle]: showBadge
+    })
+  });
+
+  // filter hooks for render
+  const renderHookBefore = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.applyFilters)('zolo.blocks.render.hook.before', [], props);
+  const renderHookAfter = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_3__.applyFilters)('zolo.blocks.render.hook.after', [], props);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      ...blocksProps,
+      children: [renderHookBefore && renderHookBefore, badgeStyle == 'zolo-badge-style-1' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+        className: "zolo-qrcode-wrapper",
+        "data-options": JSON.stringify(options)
+      }), badgeStyle != 'zolo-badge-style-1' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+        className: "zolo-qrcode-badge-wrapper",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+          className: "zolo-qrcode-wrapper",
+          "data-options": JSON.stringify(options)
+        }), showBadge && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("span", {
+          className: "zolo-qrcode-badge",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "zolo-qrcode-badge-text",
+            children: badgeText
+          }), showBadgeIcon && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+            className: "zolo-qrcode-badge-icon",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(DisplayZoloIcon, {
+              icon: badgeIcon
+            })
+          })]
+        })]
+      }), renderHookAfter && renderHookAfter]
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/style.js":
+/*!************************************!*\
+  !*** ./src/blocks/qrcode/style.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Style)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/qrcode/constants/typoPrefixConstant.js");
+/* harmony import */ var _constants_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants/index */ "./src/blocks/qrcode/constants/index.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+/**
+ * Internal depencencies
+ */
+const {
+  generateResAlignmentStyle,
+  generateBorderStyle,
+  generateDimensionStyle,
+  GlobalStyleHanlder,
+  generateBoxShadowStyles,
+  generateTypographyStyles,
+  generateResRangeStyle
+} = window.zoloModule;
+
+
+function Style({
+  props
+}) {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    uniqueId,
+    showBadge,
+    badgeStyle,
+    wrapBackgroundColor,
+    badgeBackgroundColor,
+    badgeBackgroundArrowColor,
+    badgeTextColor
+  } = attributes;
+  const {
+    desktopAlignStyle: qrCodeAlignDesk,
+    tabAlignStyle: qrCodeAlignTab,
+    mobAlignStyle: qrCodeAlignMob
+  } = generateResAlignmentStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.QR_CODE_ALIGN,
+    property: 'text-align',
+    attributes
+  });
+  const {
+    desktopBorderStyle: qrCodeBorderDesk,
+    tabBorderStyle: qrCodeBorderTab,
+    mobBorderStyle: qrCodeBorderMob
+  } = generateBorderStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.QR_CODE_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: qrCodeBorderRadiusDesk,
+    dimensionStylesTab: qrCodeBorderRadiusTab,
+    dimensionStylesMobile: qrCodeBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.QR_CODE_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+
+  // WRAP
+
+  const {
+    desktopBorderStyle: wrapQrCodeBorderDesk,
+    tabBorderStyle: wrapQrCodeBorderTab,
+    mobBorderStyle: wrapQrCodeBorderMob
+  } = generateBorderStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.WRAP_QR_CODE_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: wrapQrCodeBorderRadiusDesk,
+    dimensionStylesTab: wrapQrCodeBorderRadiusTab,
+    dimensionStylesMobile: wrapQrCodeBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.WRAP_QR_CODE_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: wrapQrCodePaddingDesk,
+    dimensionStylesTab: wrapQrCodePaddingTab,
+    dimensionStylesMobile: wrapQrCodePaddingMob
+  } = generateDimensionStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.WRAP_QR_CODE_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+  const {
+    boxShadowStyle: wrapQrCodeBoxShadow
+  } = generateBoxShadowStyles({
+    attributes,
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.WRAP_QR_CODE_BOX_SHADOW
+  });
+
+  // BADGE
+
+  const {
+    desktopBorderStyle: badgeQrCodeBorderDesk,
+    tabBorderStyle: badgeQrCodeBorderTab,
+    mobBorderStyle: badgeQrCodeBorderMob
+  } = generateBorderStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.BADGE_QR_CODE_BORDER,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: badgeQrCodeBorderRadiusDesk,
+    dimensionStylesTab: badgeQrCodeBorderRadiusTab,
+    dimensionStylesMobile: badgeQrCodeBorderRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.BADGE_QR_CODE_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: badgeQrCodePaddingDesk,
+    dimensionStylesTab: badgeQrCodePaddingTab,
+    dimensionStylesMobile: badgeQrCodePaddingMob
+  } = generateDimensionStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.BADGE_QR_CODE_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: badgeQrCodeMarginDesk,
+    dimensionStylesTab: badgeQrCodeMarginTab,
+    dimensionStylesMobile: badgeQrCodeMarginMob
+  } = generateDimensionStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.BADGE_QR_CODE_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+  const {
+    boxShadowStyle: badgeQrCodeBoxShadow
+  } = generateBoxShadowStyles({
+    attributes,
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.BADGE_QR_CODE_BOX_SHADOW
+  });
+  const {
+    typoStylesDesktop: badgeTypoDesktop,
+    typoStylesTab: badgeTypoTab,
+    typoStylesMobile: badgeTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_2__.BADGE_TYPOGRAPHY,
+    defaultFontSize: '',
+    attributes
+  });
+
+  // icon size
+
+  const {
+    desktopRangeStyle: badgeIconHeight,
+    tabRangeStyle: badgeIconHeightTab,
+    mobRangeStyle: badgeIconHeightMob
+  } = generateResRangeStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.BADGE_ICON_SIZE,
+    property: 'height',
+    attributes
+  });
+  const {
+    desktopRangeStyle: badgeIconWidth,
+    tabRangeStyle: badgeIconWidthTab,
+    mobRangeStyle: badgeIconWidthMob
+  } = generateResRangeStyle({
+    controlName: _constants_index__WEBPACK_IMPORTED_MODULE_3__.BADGE_ICON_SIZE,
+    property: 'width',
+    attributes
+  });
+  const desktopAllStyle = `
+        ${showBadge ? `
+                    .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-wrapper {
+                        ${wrapQrCodePaddingDesk}
+                        ${wrapQrCodeBorderRadiusDesk}
+                        ${wrapQrCodeBorderDesk}
+                        ${wrapQrCodeBoxShadow}
+                        ${wrapBackgroundColor ? `background: ${wrapBackgroundColor};` : ''}
+                    }
+
+                    .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {
+                        ${badgeTypoDesktop}
+                        ${badgeQrCodeMarginDesk}
+                        ${badgeTextColor ? `color: ${badgeTextColor};` : ''}
+                    }
+                    ${badgeStyle !== 'zolo-badge-style-1' ? `
+                                .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {
+                                    ${badgeQrCodePaddingDesk}
+                                    ${badgeQrCodeBorderRadiusDesk}
+                                    ${badgeQrCodeBorderDesk}
+                                    ${badgeQrCodeBoxShadow}
+                                    ${badgeBackgroundColor ? `background: ${badgeBackgroundColor};` : ''}
+                                }
+
+                                .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge:after {
+                                    ${badgeBackgroundArrowColor ? `--zolo-badge-arrow-color: ${badgeBackgroundArrowColor};` : ''}
+                                }
+
+                                .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge-icon svg {
+                                    ${badgeIconHeight}
+                                    ${badgeIconWidth}
+                                }
+                            ` : ''}
+                ` : ''}
+
+        .${uniqueId}.zolo-block.wp-block-zolo-qrcode {
+            ${qrCodeAlignDesk !== '' ? qrCodeAlignDesk : 'text-align: center;'}
+        }
+
+        .${uniqueId} .zolo-qrcode-wrapper canvas{
+            ${qrCodeBorderRadiusDesk}
+            ${qrCodeBorderDesk}
+
+        }
+    `;
+  const tabletAllStyle = `
+
+        ${showBadge ? `
+                    .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-wrapper {
+                        ${wrapQrCodePaddingTab}
+                        ${wrapQrCodeBorderRadiusTab}
+                        ${wrapQrCodeBorderTab}
+                    }
+
+                    .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {
+                        ${badgeTypoTab}
+                        ${badgeQrCodeMarginTab}
+                    }
+                    ${badgeStyle !== 'zolo-badge-style-1' ? `
+                                .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {
+                                    ${badgeQrCodePaddingTab}
+                                    ${badgeQrCodeBorderRadiusTab}}
+                                    ${badgeQrCodeBorderTab}
+                                }
+                            ` : ''}
+                ` : ''}
+        .${uniqueId} .zolo-qrcode-wrapper {
+            ${qrCodeAlignTab}
+        }
+
+        .${uniqueId} .zolo-qrcode-wrapper canvas{
+            ${qrCodeBorderRadiusTab}
+              ${qrCodeBorderTab}
+        }
+    `;
+  const mobileAllStyle = `
+
+        ${showBadge ? `
+                    .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-wrapper {
+                        ${wrapQrCodePaddingMob}
+                        ${wrapQrCodeBorderRadiusMob}
+                        ${wrapQrCodeBorderMob}
+                    }
+                    .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {
+                        ${badgeTypoMob}
+                        ${badgeQrCodeMarginMob}
+                    }
+                    ${badgeStyle !== 'zolo-badge-style-1' ? `
+                                .${uniqueId}.zolo-block.wp-block-zolo-qrcode .zolo-qrcode-badge {
+                                    ${badgeQrCodePaddingMob}
+                                    ${badgeQrCodeBorderRadiusMob}
+                                    ${badgeQrCodeBorderMob}
+                                }
+                            ` : ''}
+            ` : ''}
+        .${uniqueId} .zolo-qrcode-wrapper {
+            ${qrCodeAlignMob}
+        }
+
+        .${uniqueId} .zolo-qrcode-wrapper canvas{
+            ${qrCodeBorderRadiusMob}
+              ${qrCodeBorderMob}
+        }
+    `;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(GlobalStyleHanlder, {
+      attributes: attributes,
+      setAttributes: setAttributes,
+      desktopAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.qrCode.desktopAllStyle', desktopAllStyle, props),
+      tabAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.qrCode.tabletAllStyle', tabletAllStyle, props),
+      mobileAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.qrCode.mobileAllStyle', mobileAllStyle, props)
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./node_modules/lodash.isequal/index.js":
+/*!**********************************************!*\
+  !*** ./node_modules/lodash.isequal/index.js ***!
+  \**********************************************/
+/***/ ((module, exports, __webpack_require__) => {
+
+/* module decorator */ module = __webpack_require__.nmd(module);
+/**
+ * Lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright JS Foundation and other contributors <https://js.foundation/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** Used as the size to enable large array optimizations. */
+var LARGE_ARRAY_SIZE = 200;
+
+/** Used to stand-in for `undefined` hash values. */
+var HASH_UNDEFINED = '__lodash_hash_undefined__';
+
+/** Used to compose bitmasks for value comparisons. */
+var COMPARE_PARTIAL_FLAG = 1,
+    COMPARE_UNORDERED_FLAG = 2;
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]',
+    arrayTag = '[object Array]',
+    asyncTag = '[object AsyncFunction]',
+    boolTag = '[object Boolean]',
+    dateTag = '[object Date]',
+    errorTag = '[object Error]',
+    funcTag = '[object Function]',
+    genTag = '[object GeneratorFunction]',
+    mapTag = '[object Map]',
+    numberTag = '[object Number]',
+    nullTag = '[object Null]',
+    objectTag = '[object Object]',
+    promiseTag = '[object Promise]',
+    proxyTag = '[object Proxy]',
+    regexpTag = '[object RegExp]',
+    setTag = '[object Set]',
+    stringTag = '[object String]',
+    symbolTag = '[object Symbol]',
+    undefinedTag = '[object Undefined]',
+    weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]',
+    dataViewTag = '[object DataView]',
+    float32Tag = '[object Float32Array]',
+    float64Tag = '[object Float64Array]',
+    int8Tag = '[object Int8Array]',
+    int16Tag = '[object Int16Array]',
+    int32Tag = '[object Int32Array]',
+    uint8Tag = '[object Uint8Array]',
+    uint8ClampedTag = '[object Uint8ClampedArray]',
+    uint16Tag = '[object Uint16Array]',
+    uint32Tag = '[object Uint32Array]';
+
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */
+var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+
+/** Used to detect host constructors (Safari). */
+var reIsHostCtor = /^\[object .+?Constructor\]$/;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof __webpack_require__.g == 'object' && __webpack_require__.g && __webpack_require__.g.Object === Object && __webpack_require__.g;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = freeGlobal || freeSelf || Function('return this')();
+
+/** Detect free variable `exports`. */
+var freeExports =  true && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && "object" == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+/* Node.js helper references. */
+var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+
+/**
+ * A specialized version of `_.filter` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */
+function arrayFilter(array, predicate) {
+  var index = -1,
+      length = array == null ? 0 : array.length,
+      resIndex = 0,
+      result = [];
+
+  while (++index < length) {
+    var value = array[index];
+    if (predicate(value, index, array)) {
+      result[resIndex++] = value;
+    }
+  }
+  return result;
+}
+
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */
+function arrayPush(array, values) {
+  var index = -1,
+      length = values.length,
+      offset = array.length;
+
+  while (++index < length) {
+    array[offset + index] = values[index];
+  }
+  return array;
+}
+
+/**
+ * A specialized version of `_.some` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {boolean} Returns `true` if any element passes the predicate check,
+ *  else `false`.
+ */
+function arraySome(array, predicate) {
+  var index = -1,
+      length = array == null ? 0 : array.length;
+
+  while (++index < length) {
+    if (predicate(array[index], index, array)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+/**
+ * Checks if a `cache` value for `key` exists.
+ *
+ * @private
+ * @param {Object} cache The cache to query.
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function cacheHas(cache, key) {
+  return cache.has(key);
+}
+
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */
+function getValue(object, key) {
+  return object == null ? undefined : object[key];
+}
+
+/**
+ * Converts `map` to its key-value pairs.
+ *
+ * @private
+ * @param {Object} map The map to convert.
+ * @returns {Array} Returns the key-value pairs.
+ */
+function mapToArray(map) {
+  var index = -1,
+      result = Array(map.size);
+
+  map.forEach(function(value, key) {
+    result[++index] = [key, value];
+  });
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/**
+ * Converts `set` to an array of its values.
+ *
+ * @private
+ * @param {Object} set The set to convert.
+ * @returns {Array} Returns the values.
+ */
+function setToArray(set) {
+  var index = -1,
+      result = Array(set.size);
+
+  set.forEach(function(value) {
+    result[++index] = value;
+  });
+  return result;
+}
+
+/** Used for built-in method references. */
+var arrayProto = Array.prototype,
+    funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to detect overreaching core-js shims. */
+var coreJsData = root['__core-js_shared__'];
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Used to detect methods masquerading as native. */
+var maskSrcKey = (function() {
+  var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+  return uid ? ('Symbol(src)_1.' + uid) : '';
+}());
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Used to detect if a method is native. */
+var reIsNative = RegExp('^' +
+  funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&')
+  .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$'
+);
+
+/** Built-in value references. */
+var Buffer = moduleExports ? root.Buffer : undefined,
+    Symbol = root.Symbol,
+    Uint8Array = root.Uint8Array,
+    propertyIsEnumerable = objectProto.propertyIsEnumerable,
+    splice = arrayProto.splice,
+    symToStringTag = Symbol ? Symbol.toStringTag : undefined;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeGetSymbols = Object.getOwnPropertySymbols,
+    nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined,
+    nativeKeys = overArg(Object.keys, Object);
+
+/* Built-in method references that are verified to be native. */
+var DataView = getNative(root, 'DataView'),
+    Map = getNative(root, 'Map'),
+    Promise = getNative(root, 'Promise'),
+    Set = getNative(root, 'Set'),
+    WeakMap = getNative(root, 'WeakMap'),
+    nativeCreate = getNative(Object, 'create');
+
+/** Used to detect maps, sets, and weakmaps. */
+var dataViewCtorString = toSource(DataView),
+    mapCtorString = toSource(Map),
+    promiseCtorString = toSource(Promise),
+    setCtorString = toSource(Set),
+    weakMapCtorString = toSource(WeakMap);
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = Symbol ? Symbol.prototype : undefined,
+    symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Hash(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */
+function hashClear() {
+  this.__data__ = nativeCreate ? nativeCreate(null) : {};
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function hashDelete(key) {
+  var result = this.has(key) && delete this.__data__[key];
+  this.size -= result ? 1 : 0;
+  return result;
+}
+
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function hashGet(key) {
+  var data = this.__data__;
+  if (nativeCreate) {
+    var result = data[key];
+    return result === HASH_UNDEFINED ? undefined : result;
+  }
+  return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function hashHas(key) {
+  var data = this.__data__;
+  return nativeCreate ? (data[key] !== undefined) : hasOwnProperty.call(data, key);
+}
+
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */
+function hashSet(key, value) {
+  var data = this.__data__;
+  this.size += this.has(key) ? 0 : 1;
+  data[key] = (nativeCreate && value === undefined) ? HASH_UNDEFINED : value;
+  return this;
+}
+
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function ListCache(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */
+function listCacheClear() {
+  this.__data__ = [];
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function listCacheDelete(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    return false;
+  }
+  var lastIndex = data.length - 1;
+  if (index == lastIndex) {
+    data.pop();
+  } else {
+    splice.call(data, index, 1);
+  }
+  --this.size;
+  return true;
+}
+
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function listCacheGet(key) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  return index < 0 ? undefined : data[index][1];
+}
+
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function listCacheHas(key) {
+  return assocIndexOf(this.__data__, key) > -1;
+}
+
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */
+function listCacheSet(key, value) {
+  var data = this.__data__,
+      index = assocIndexOf(data, key);
+
+  if (index < 0) {
+    ++this.size;
+    data.push([key, value]);
+  } else {
+    data[index][1] = value;
+  }
+  return this;
+}
+
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function MapCache(entries) {
+  var index = -1,
+      length = entries == null ? 0 : entries.length;
+
+  this.clear();
+  while (++index < length) {
+    var entry = entries[index];
+    this.set(entry[0], entry[1]);
+  }
+}
+
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */
+function mapCacheClear() {
+  this.size = 0;
+  this.__data__ = {
+    'hash': new Hash,
+    'map': new (Map || ListCache),
+    'string': new Hash
+  };
+}
+
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function mapCacheDelete(key) {
+  var result = getMapData(this, key)['delete'](key);
+  this.size -= result ? 1 : 0;
+  return result;
+}
+
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function mapCacheGet(key) {
+  return getMapData(this, key).get(key);
+}
+
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function mapCacheHas(key) {
+  return getMapData(this, key).has(key);
+}
+
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */
+function mapCacheSet(key, value) {
+  var data = getMapData(this, key),
+      size = data.size;
+
+  data.set(key, value);
+  this.size += data.size == size ? 0 : 1;
+  return this;
+}
+
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+
+/**
+ *
+ * Creates an array cache object to store unique values.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [values] The values to cache.
+ */
+function SetCache(values) {
+  var index = -1,
+      length = values == null ? 0 : values.length;
+
+  this.__data__ = new MapCache;
+  while (++index < length) {
+    this.add(values[index]);
+  }
+}
+
+/**
+ * Adds `value` to the array cache.
+ *
+ * @private
+ * @name add
+ * @memberOf SetCache
+ * @alias push
+ * @param {*} value The value to cache.
+ * @returns {Object} Returns the cache instance.
+ */
+function setCacheAdd(value) {
+  this.__data__.set(value, HASH_UNDEFINED);
+  return this;
+}
+
+/**
+ * Checks if `value` is in the array cache.
+ *
+ * @private
+ * @name has
+ * @memberOf SetCache
+ * @param {*} value The value to search for.
+ * @returns {number} Returns `true` if `value` is found, else `false`.
+ */
+function setCacheHas(value) {
+  return this.__data__.has(value);
+}
+
+// Add methods to `SetCache`.
+SetCache.prototype.add = SetCache.prototype.push = setCacheAdd;
+SetCache.prototype.has = setCacheHas;
+
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */
+function Stack(entries) {
+  var data = this.__data__ = new ListCache(entries);
+  this.size = data.size;
+}
+
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */
+function stackClear() {
+  this.__data__ = new ListCache;
+  this.size = 0;
+}
+
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */
+function stackDelete(key) {
+  var data = this.__data__,
+      result = data['delete'](key);
+
+  this.size = data.size;
+  return result;
+}
+
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */
+function stackGet(key) {
+  return this.__data__.get(key);
+}
+
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */
+function stackHas(key) {
+  return this.__data__.has(key);
+}
+
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */
+function stackSet(key, value) {
+  var data = this.__data__;
+  if (data instanceof ListCache) {
+    var pairs = data.__data__;
+    if (!Map || (pairs.length < LARGE_ARRAY_SIZE - 1)) {
+      pairs.push([key, value]);
+      this.size = ++data.size;
+      return this;
+    }
+    data = this.__data__ = new MapCache(pairs);
+  }
+  data.set(key, value);
+  this.size = data.size;
+  return this;
+}
+
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  var isArr = isArray(value),
+      isArg = !isArr && isArguments(value),
+      isBuff = !isArr && !isArg && isBuffer(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? baseTimes(value.length, String) : [],
+      length = result.length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty.call(value, key)) &&
+        !(skipIndexes && (
+           // Safari 9 has enumerable `arguments.length` in strict mode.
+           key == 'length' ||
+           // Node.js 0.10 has enumerable non-index properties on buffers.
+           (isBuff && (key == 'offset' || key == 'parent')) ||
+           // PhantomJS 2 has enumerable non-index properties on typed arrays.
+           (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
+           // Skip index properties.
+           isIndex(key, length)
+        ))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */
+function assocIndexOf(array, key) {
+  var length = array.length;
+  while (length--) {
+    if (eq(array[length][0], key)) {
+      return length;
+    }
+  }
+  return -1;
+}
+
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+  var result = keysFunc(object);
+  return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return (symToStringTag && symToStringTag in Object(value))
+    ? getRawTag(value)
+    : objectToString(value);
+}
+
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */
+function baseIsArguments(value) {
+  return isObjectLike(value) && baseGetTag(value) == argsTag;
+}
+
+/**
+ * The base implementation of `_.isEqual` which supports partial comparisons
+ * and tracks traversed objects.
+ *
+ * @private
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Unordered comparison
+ *  2 - Partial comparison
+ * @param {Function} [customizer] The function to customize comparisons.
+ * @param {Object} [stack] Tracks traversed `value` and `other` objects.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ */
+function baseIsEqual(value, other, bitmask, customizer, stack) {
+  if (value === other) {
+    return true;
+  }
+  if (value == null || other == null || (!isObjectLike(value) && !isObjectLike(other))) {
+    return value !== value && other !== other;
+  }
+  return baseIsEqualDeep(value, other, bitmask, customizer, baseIsEqual, stack);
+}
+
+/**
+ * A specialized version of `baseIsEqual` for arrays and objects which performs
+ * deep comparisons and tracks traversed objects enabling objects with circular
+ * references to be compared.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} [stack] Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function baseIsEqualDeep(object, other, bitmask, customizer, equalFunc, stack) {
+  var objIsArr = isArray(object),
+      othIsArr = isArray(other),
+      objTag = objIsArr ? arrayTag : getTag(object),
+      othTag = othIsArr ? arrayTag : getTag(other);
+
+  objTag = objTag == argsTag ? objectTag : objTag;
+  othTag = othTag == argsTag ? objectTag : othTag;
+
+  var objIsObj = objTag == objectTag,
+      othIsObj = othTag == objectTag,
+      isSameTag = objTag == othTag;
+
+  if (isSameTag && isBuffer(object)) {
+    if (!isBuffer(other)) {
+      return false;
+    }
+    objIsArr = true;
+    objIsObj = false;
+  }
+  if (isSameTag && !objIsObj) {
+    stack || (stack = new Stack);
+    return (objIsArr || isTypedArray(object))
+      ? equalArrays(object, other, bitmask, customizer, equalFunc, stack)
+      : equalByTag(object, other, objTag, bitmask, customizer, equalFunc, stack);
+  }
+  if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
+    var objIsWrapped = objIsObj && hasOwnProperty.call(object, '__wrapped__'),
+        othIsWrapped = othIsObj && hasOwnProperty.call(other, '__wrapped__');
+
+    if (objIsWrapped || othIsWrapped) {
+      var objUnwrapped = objIsWrapped ? object.value() : object,
+          othUnwrapped = othIsWrapped ? other.value() : other;
+
+      stack || (stack = new Stack);
+      return equalFunc(objUnwrapped, othUnwrapped, bitmask, customizer, stack);
+    }
+  }
+  if (!isSameTag) {
+    return false;
+  }
+  stack || (stack = new Stack);
+  return equalObjects(object, other, bitmask, customizer, equalFunc, stack);
+}
+
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */
+function baseIsNative(value) {
+  if (!isObject(value) || isMasked(value)) {
+    return false;
+  }
+  var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+  return pattern.test(toSource(value));
+}
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike(value) &&
+    isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+}
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!isPrototype(object)) {
+    return nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for arrays with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Array} array The array to compare.
+ * @param {Array} other The other array to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `array` and `other` objects.
+ * @returns {boolean} Returns `true` if the arrays are equivalent, else `false`.
+ */
+function equalArrays(array, other, bitmask, customizer, equalFunc, stack) {
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+      arrLength = array.length,
+      othLength = other.length;
+
+  if (arrLength != othLength && !(isPartial && othLength > arrLength)) {
+    return false;
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(array);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var index = -1,
+      result = true,
+      seen = (bitmask & COMPARE_UNORDERED_FLAG) ? new SetCache : undefined;
+
+  stack.set(array, other);
+  stack.set(other, array);
+
+  // Ignore non-index properties.
+  while (++index < arrLength) {
+    var arrValue = array[index],
+        othValue = other[index];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, arrValue, index, other, array, stack)
+        : customizer(arrValue, othValue, index, array, other, stack);
+    }
+    if (compared !== undefined) {
+      if (compared) {
+        continue;
+      }
+      result = false;
+      break;
+    }
+    // Recursively compare arrays (susceptible to call stack limits).
+    if (seen) {
+      if (!arraySome(other, function(othValue, othIndex) {
+            if (!cacheHas(seen, othIndex) &&
+                (arrValue === othValue || equalFunc(arrValue, othValue, bitmask, customizer, stack))) {
+              return seen.push(othIndex);
+            }
+          })) {
+        result = false;
+        break;
+      }
+    } else if (!(
+          arrValue === othValue ||
+            equalFunc(arrValue, othValue, bitmask, customizer, stack)
+        )) {
+      result = false;
+      break;
+    }
+  }
+  stack['delete'](array);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for comparing objects of
+ * the same `toStringTag`.
+ *
+ * **Note:** This function only supports comparing values with tags of
+ * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {string} tag The `toStringTag` of the objects to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalByTag(object, other, tag, bitmask, customizer, equalFunc, stack) {
+  switch (tag) {
+    case dataViewTag:
+      if ((object.byteLength != other.byteLength) ||
+          (object.byteOffset != other.byteOffset)) {
+        return false;
+      }
+      object = object.buffer;
+      other = other.buffer;
+
+    case arrayBufferTag:
+      if ((object.byteLength != other.byteLength) ||
+          !equalFunc(new Uint8Array(object), new Uint8Array(other))) {
+        return false;
+      }
+      return true;
+
+    case boolTag:
+    case dateTag:
+    case numberTag:
+      // Coerce booleans to `1` or `0` and dates to milliseconds.
+      // Invalid dates are coerced to `NaN`.
+      return eq(+object, +other);
+
+    case errorTag:
+      return object.name == other.name && object.message == other.message;
+
+    case regexpTag:
+    case stringTag:
+      // Coerce regexes to strings and treat strings, primitives and objects,
+      // as equal. See http://www.ecma-international.org/ecma-262/7.0/#sec-regexp.prototype.tostring
+      // for more details.
+      return object == (other + '');
+
+    case mapTag:
+      var convert = mapToArray;
+
+    case setTag:
+      var isPartial = bitmask & COMPARE_PARTIAL_FLAG;
+      convert || (convert = setToArray);
+
+      if (object.size != other.size && !isPartial) {
+        return false;
+      }
+      // Assume cyclic values are equal.
+      var stacked = stack.get(object);
+      if (stacked) {
+        return stacked == other;
+      }
+      bitmask |= COMPARE_UNORDERED_FLAG;
+
+      // Recursively compare objects (susceptible to call stack limits).
+      stack.set(object, other);
+      var result = equalArrays(convert(object), convert(other), bitmask, customizer, equalFunc, stack);
+      stack['delete'](object);
+      return result;
+
+    case symbolTag:
+      if (symbolValueOf) {
+        return symbolValueOf.call(object) == symbolValueOf.call(other);
+      }
+  }
+  return false;
+}
+
+/**
+ * A specialized version of `baseIsEqualDeep` for objects with support for
+ * partial deep comparisons.
+ *
+ * @private
+ * @param {Object} object The object to compare.
+ * @param {Object} other The other object to compare.
+ * @param {number} bitmask The bitmask flags. See `baseIsEqual` for more details.
+ * @param {Function} customizer The function to customize comparisons.
+ * @param {Function} equalFunc The function to determine equivalents of values.
+ * @param {Object} stack Tracks traversed `object` and `other` objects.
+ * @returns {boolean} Returns `true` if the objects are equivalent, else `false`.
+ */
+function equalObjects(object, other, bitmask, customizer, equalFunc, stack) {
+  var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
+      objProps = getAllKeys(object),
+      objLength = objProps.length,
+      othProps = getAllKeys(other),
+      othLength = othProps.length;
+
+  if (objLength != othLength && !isPartial) {
+    return false;
+  }
+  var index = objLength;
+  while (index--) {
+    var key = objProps[index];
+    if (!(isPartial ? key in other : hasOwnProperty.call(other, key))) {
+      return false;
+    }
+  }
+  // Assume cyclic values are equal.
+  var stacked = stack.get(object);
+  if (stacked && stack.get(other)) {
+    return stacked == other;
+  }
+  var result = true;
+  stack.set(object, other);
+  stack.set(other, object);
+
+  var skipCtor = isPartial;
+  while (++index < objLength) {
+    key = objProps[index];
+    var objValue = object[key],
+        othValue = other[key];
+
+    if (customizer) {
+      var compared = isPartial
+        ? customizer(othValue, objValue, key, other, object, stack)
+        : customizer(objValue, othValue, key, object, other, stack);
+    }
+    // Recursively compare objects (susceptible to call stack limits).
+    if (!(compared === undefined
+          ? (objValue === othValue || equalFunc(objValue, othValue, bitmask, customizer, stack))
+          : compared
+        )) {
+      result = false;
+      break;
+    }
+    skipCtor || (skipCtor = key == 'constructor');
+  }
+  if (result && !skipCtor) {
+    var objCtor = object.constructor,
+        othCtor = other.constructor;
+
+    // Non `Object` object instances with different constructors are not equal.
+    if (objCtor != othCtor &&
+        ('constructor' in object && 'constructor' in other) &&
+        !(typeof objCtor == 'function' && objCtor instanceof objCtor &&
+          typeof othCtor == 'function' && othCtor instanceof othCtor)) {
+      result = false;
+    }
+  }
+  stack['delete'](object);
+  stack['delete'](other);
+  return result;
+}
+
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */
+function getAllKeys(object) {
+  return baseGetAllKeys(object, keys, getSymbols);
+}
+
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */
+function getMapData(map, key) {
+  var data = map.__data__;
+  return isKeyable(key)
+    ? data[typeof key == 'string' ? 'string' : 'hash']
+    : data.map;
+}
+
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */
+function getNative(object, key) {
+  var value = getValue(object, key);
+  return baseIsNative(value) ? value : undefined;
+}
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
+    }
+  }
+  return result;
+}
+
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */
+var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+  if (object == null) {
+    return [];
+  }
+  object = Object(object);
+  return arrayFilter(nativeGetSymbols(object), function(symbol) {
+    return propertyIsEnumerable.call(object, symbol);
+  });
+};
+
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+var getTag = baseGetTag;
+
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if ((DataView && getTag(new DataView(new ArrayBuffer(1))) != dataViewTag) ||
+    (Map && getTag(new Map) != mapTag) ||
+    (Promise && getTag(Promise.resolve()) != promiseTag) ||
+    (Set && getTag(new Set) != setTag) ||
+    (WeakMap && getTag(new WeakMap) != weakMapTag)) {
+  getTag = function(value) {
+    var result = baseGetTag(value),
+        Ctor = result == objectTag ? value.constructor : undefined,
+        ctorString = Ctor ? toSource(Ctor) : '';
+
+    if (ctorString) {
+      switch (ctorString) {
+        case dataViewCtorString: return dataViewTag;
+        case mapCtorString: return mapTag;
+        case promiseCtorString: return promiseTag;
+        case setCtorString: return setTag;
+        case weakMapCtorString: return weakMapTag;
+      }
+    }
+    return result;
+  };
+}
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  length = length == null ? MAX_SAFE_INTEGER : length;
+  return !!length &&
+    (typeof value == 'number' || reIsUint.test(value)) &&
+    (value > -1 && value % 1 == 0 && value < length);
+}
+
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */
+function isKeyable(value) {
+  var type = typeof value;
+  return (type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean')
+    ? (value !== '__proto__')
+    : (value === null);
+}
+
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */
+function isMasked(func) {
+  return !!maskSrcKey && (maskSrcKey in func);
+}
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto;
+
+  return value === proto;
+}
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString.call(value);
+}
+
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */
+function toSource(func) {
+  if (func != null) {
+    try {
+      return funcToString.call(func);
+    } catch (e) {}
+    try {
+      return (func + '');
+    } catch (e) {}
+  }
+  return '';
+}
+
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */
+function eq(value, other) {
+  return value === other || (value !== value && other !== other);
+}
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+var isArguments = baseIsArguments(function() { return arguments; }()) ? baseIsArguments : function(value) {
+  return isObjectLike(value) && hasOwnProperty.call(value, 'callee') &&
+    !propertyIsEnumerable.call(value, 'callee');
+};
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength(value.length) && !isFunction(value);
+}
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse;
+
+/**
+ * Performs a deep comparison between two values to determine if they are
+ * equivalent.
+ *
+ * **Note:** This method supports comparing arrays, array buffers, booleans,
+ * date objects, error objects, maps, numbers, `Object` objects, regexes,
+ * sets, strings, symbols, and typed arrays. `Object` objects are compared
+ * by their own, not inherited, enumerable properties. Functions and DOM
+ * nodes are compared by strict equality, i.e. `===`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.isEqual(object, other);
+ * // => true
+ *
+ * object === other;
+ * // => false
+ */
+function isEqual(value, other) {
+  return baseIsEqual(value, other);
+}
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  if (!isObject(value)) {
+    return false;
+  }
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 9 which returns 'object' for typed arrays and other constructors.
+  var tag = baseGetTag(value);
+  return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */
+function stubArray() {
+  return [];
+}
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+module.exports = isEqual;
+
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/style.scss":
+/*!**************************************!*\
+  !*** ./src/blocks/qrcode/style.scss ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./node_modules/qrcode-generator/qrcode.js":
+/*!*************************************************!*\
+  !*** ./node_modules/qrcode-generator/qrcode.js ***!
+  \*************************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;//---------------------------------------------------------------------
+//
+// QR Code Generator for JavaScript
+//
+// Copyright (c) 2009 Kazuhiko Arase
+//
+// URL: http://www.d-project.com/
+//
+// Licensed under the MIT license:
+//  http://www.opensource.org/licenses/mit-license.php
+//
+// The word 'QR Code' is registered trademark of
+// DENSO WAVE INCORPORATED
+//  http://www.denso-wave.com/qrcode/faqpatent-e.html
+//
+//---------------------------------------------------------------------
+
+var qrcode = function() {
+
+  //---------------------------------------------------------------------
+  // qrcode
+  //---------------------------------------------------------------------
+
+  /**
+   * qrcode
+   * @param typeNumber 1 to 40
+   * @param errorCorrectionLevel 'L','M','Q','H'
+   */
+  var qrcode = function(typeNumber, errorCorrectionLevel) {
+
+    var PAD0 = 0xEC;
+    var PAD1 = 0x11;
+
+    var _typeNumber = typeNumber;
+    var _errorCorrectionLevel = QRErrorCorrectionLevel[errorCorrectionLevel];
+    var _modules = null;
+    var _moduleCount = 0;
+    var _dataCache = null;
+    var _dataList = [];
+
+    var _this = {};
+
+    var makeImpl = function(test, maskPattern) {
+
+      _moduleCount = _typeNumber * 4 + 17;
+      _modules = function(moduleCount) {
+        var modules = new Array(moduleCount);
+        for (var row = 0; row < moduleCount; row += 1) {
+          modules[row] = new Array(moduleCount);
+          for (var col = 0; col < moduleCount; col += 1) {
+            modules[row][col] = null;
+          }
+        }
+        return modules;
+      }(_moduleCount);
+
+      setupPositionProbePattern(0, 0);
+      setupPositionProbePattern(_moduleCount - 7, 0);
+      setupPositionProbePattern(0, _moduleCount - 7);
+      setupPositionAdjustPattern();
+      setupTimingPattern();
+      setupTypeInfo(test, maskPattern);
+
+      if (_typeNumber >= 7) {
+        setupTypeNumber(test);
+      }
+
+      if (_dataCache == null) {
+        _dataCache = createData(_typeNumber, _errorCorrectionLevel, _dataList);
+      }
+
+      mapData(_dataCache, maskPattern);
+    };
+
+    var setupPositionProbePattern = function(row, col) {
+
+      for (var r = -1; r <= 7; r += 1) {
+
+        if (row + r <= -1 || _moduleCount <= row + r) continue;
+
+        for (var c = -1; c <= 7; c += 1) {
+
+          if (col + c <= -1 || _moduleCount <= col + c) continue;
+
+          if ( (0 <= r && r <= 6 && (c == 0 || c == 6) )
+              || (0 <= c && c <= 6 && (r == 0 || r == 6) )
+              || (2 <= r && r <= 4 && 2 <= c && c <= 4) ) {
+            _modules[row + r][col + c] = true;
+          } else {
+            _modules[row + r][col + c] = false;
+          }
+        }
+      }
+    };
+
+    var getBestMaskPattern = function() {
+
+      var minLostPoint = 0;
+      var pattern = 0;
+
+      for (var i = 0; i < 8; i += 1) {
+
+        makeImpl(true, i);
+
+        var lostPoint = QRUtil.getLostPoint(_this);
+
+        if (i == 0 || minLostPoint > lostPoint) {
+          minLostPoint = lostPoint;
+          pattern = i;
+        }
+      }
+
+      return pattern;
+    };
+
+    var setupTimingPattern = function() {
+
+      for (var r = 8; r < _moduleCount - 8; r += 1) {
+        if (_modules[r][6] != null) {
+          continue;
+        }
+        _modules[r][6] = (r % 2 == 0);
+      }
+
+      for (var c = 8; c < _moduleCount - 8; c += 1) {
+        if (_modules[6][c] != null) {
+          continue;
+        }
+        _modules[6][c] = (c % 2 == 0);
+      }
+    };
+
+    var setupPositionAdjustPattern = function() {
+
+      var pos = QRUtil.getPatternPosition(_typeNumber);
+
+      for (var i = 0; i < pos.length; i += 1) {
+
+        for (var j = 0; j < pos.length; j += 1) {
+
+          var row = pos[i];
+          var col = pos[j];
+
+          if (_modules[row][col] != null) {
+            continue;
+          }
+
+          for (var r = -2; r <= 2; r += 1) {
+
+            for (var c = -2; c <= 2; c += 1) {
+
+              if (r == -2 || r == 2 || c == -2 || c == 2
+                  || (r == 0 && c == 0) ) {
+                _modules[row + r][col + c] = true;
+              } else {
+                _modules[row + r][col + c] = false;
+              }
+            }
+          }
+        }
+      }
+    };
+
+    var setupTypeNumber = function(test) {
+
+      var bits = QRUtil.getBCHTypeNumber(_typeNumber);
+
+      for (var i = 0; i < 18; i += 1) {
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+        _modules[Math.floor(i / 3)][i % 3 + _moduleCount - 8 - 3] = mod;
+      }
+
+      for (var i = 0; i < 18; i += 1) {
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+        _modules[i % 3 + _moduleCount - 8 - 3][Math.floor(i / 3)] = mod;
+      }
+    };
+
+    var setupTypeInfo = function(test, maskPattern) {
+
+      var data = (_errorCorrectionLevel << 3) | maskPattern;
+      var bits = QRUtil.getBCHTypeInfo(data);
+
+      // vertical
+      for (var i = 0; i < 15; i += 1) {
+
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+
+        if (i < 6) {
+          _modules[i][8] = mod;
+        } else if (i < 8) {
+          _modules[i + 1][8] = mod;
+        } else {
+          _modules[_moduleCount - 15 + i][8] = mod;
+        }
+      }
+
+      // horizontal
+      for (var i = 0; i < 15; i += 1) {
+
+        var mod = (!test && ( (bits >> i) & 1) == 1);
+
+        if (i < 8) {
+          _modules[8][_moduleCount - i - 1] = mod;
+        } else if (i < 9) {
+          _modules[8][15 - i - 1 + 1] = mod;
+        } else {
+          _modules[8][15 - i - 1] = mod;
+        }
+      }
+
+      // fixed module
+      _modules[_moduleCount - 8][8] = (!test);
+    };
+
+    var mapData = function(data, maskPattern) {
+
+      var inc = -1;
+      var row = _moduleCount - 1;
+      var bitIndex = 7;
+      var byteIndex = 0;
+      var maskFunc = QRUtil.getMaskFunction(maskPattern);
+
+      for (var col = _moduleCount - 1; col > 0; col -= 2) {
+
+        if (col == 6) col -= 1;
+
+        while (true) {
+
+          for (var c = 0; c < 2; c += 1) {
+
+            if (_modules[row][col - c] == null) {
+
+              var dark = false;
+
+              if (byteIndex < data.length) {
+                dark = ( ( (data[byteIndex] >>> bitIndex) & 1) == 1);
+              }
+
+              var mask = maskFunc(row, col - c);
+
+              if (mask) {
+                dark = !dark;
+              }
+
+              _modules[row][col - c] = dark;
+              bitIndex -= 1;
+
+              if (bitIndex == -1) {
+                byteIndex += 1;
+                bitIndex = 7;
+              }
+            }
+          }
+
+          row += inc;
+
+          if (row < 0 || _moduleCount <= row) {
+            row -= inc;
+            inc = -inc;
+            break;
+          }
+        }
+      }
+    };
+
+    var createBytes = function(buffer, rsBlocks) {
+
+      var offset = 0;
+
+      var maxDcCount = 0;
+      var maxEcCount = 0;
+
+      var dcdata = new Array(rsBlocks.length);
+      var ecdata = new Array(rsBlocks.length);
+
+      for (var r = 0; r < rsBlocks.length; r += 1) {
+
+        var dcCount = rsBlocks[r].dataCount;
+        var ecCount = rsBlocks[r].totalCount - dcCount;
+
+        maxDcCount = Math.max(maxDcCount, dcCount);
+        maxEcCount = Math.max(maxEcCount, ecCount);
+
+        dcdata[r] = new Array(dcCount);
+
+        for (var i = 0; i < dcdata[r].length; i += 1) {
+          dcdata[r][i] = 0xff & buffer.getBuffer()[i + offset];
+        }
+        offset += dcCount;
+
+        var rsPoly = QRUtil.getErrorCorrectPolynomial(ecCount);
+        var rawPoly = qrPolynomial(dcdata[r], rsPoly.getLength() - 1);
+
+        var modPoly = rawPoly.mod(rsPoly);
+        ecdata[r] = new Array(rsPoly.getLength() - 1);
+        for (var i = 0; i < ecdata[r].length; i += 1) {
+          var modIndex = i + modPoly.getLength() - ecdata[r].length;
+          ecdata[r][i] = (modIndex >= 0)? modPoly.getAt(modIndex) : 0;
+        }
+      }
+
+      var totalCodeCount = 0;
+      for (var i = 0; i < rsBlocks.length; i += 1) {
+        totalCodeCount += rsBlocks[i].totalCount;
+      }
+
+      var data = new Array(totalCodeCount);
+      var index = 0;
+
+      for (var i = 0; i < maxDcCount; i += 1) {
+        for (var r = 0; r < rsBlocks.length; r += 1) {
+          if (i < dcdata[r].length) {
+            data[index] = dcdata[r][i];
+            index += 1;
+          }
+        }
+      }
+
+      for (var i = 0; i < maxEcCount; i += 1) {
+        for (var r = 0; r < rsBlocks.length; r += 1) {
+          if (i < ecdata[r].length) {
+            data[index] = ecdata[r][i];
+            index += 1;
+          }
+        }
+      }
+
+      return data;
+    };
+
+    var createData = function(typeNumber, errorCorrectionLevel, dataList) {
+
+      var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, errorCorrectionLevel);
+
+      var buffer = qrBitBuffer();
+
+      for (var i = 0; i < dataList.length; i += 1) {
+        var data = dataList[i];
+        buffer.put(data.getMode(), 4);
+        buffer.put(data.getLength(), QRUtil.getLengthInBits(data.getMode(), typeNumber) );
+        data.write(buffer);
+      }
+
+      // calc num max data.
+      var totalDataCount = 0;
+      for (var i = 0; i < rsBlocks.length; i += 1) {
+        totalDataCount += rsBlocks[i].dataCount;
+      }
+
+      if (buffer.getLengthInBits() > totalDataCount * 8) {
+        throw 'code length overflow. ('
+          + buffer.getLengthInBits()
+          + '>'
+          + totalDataCount * 8
+          + ')';
+      }
+
+      // end code
+      if (buffer.getLengthInBits() + 4 <= totalDataCount * 8) {
+        buffer.put(0, 4);
+      }
+
+      // padding
+      while (buffer.getLengthInBits() % 8 != 0) {
+        buffer.putBit(false);
+      }
+
+      // padding
+      while (true) {
+
+        if (buffer.getLengthInBits() >= totalDataCount * 8) {
+          break;
+        }
+        buffer.put(PAD0, 8);
+
+        if (buffer.getLengthInBits() >= totalDataCount * 8) {
+          break;
+        }
+        buffer.put(PAD1, 8);
+      }
+
+      return createBytes(buffer, rsBlocks);
+    };
+
+    _this.addData = function(data, mode) {
+
+      mode = mode || 'Byte';
+
+      var newData = null;
+
+      switch(mode) {
+      case 'Numeric' :
+        newData = qrNumber(data);
+        break;
+      case 'Alphanumeric' :
+        newData = qrAlphaNum(data);
+        break;
+      case 'Byte' :
+        newData = qr8BitByte(data);
+        break;
+      case 'Kanji' :
+        newData = qrKanji(data);
+        break;
+      default :
+        throw 'mode:' + mode;
+      }
+
+      _dataList.push(newData);
+      _dataCache = null;
+    };
+
+    _this.isDark = function(row, col) {
+      if (row < 0 || _moduleCount <= row || col < 0 || _moduleCount <= col) {
+        throw row + ',' + col;
+      }
+      return _modules[row][col];
+    };
+
+    _this.getModuleCount = function() {
+      return _moduleCount;
+    };
+
+    _this.make = function() {
+      if (_typeNumber < 1) {
+        var typeNumber = 1;
+
+        for (; typeNumber < 40; typeNumber++) {
+          var rsBlocks = QRRSBlock.getRSBlocks(typeNumber, _errorCorrectionLevel);
+          var buffer = qrBitBuffer();
+
+          for (var i = 0; i < _dataList.length; i++) {
+            var data = _dataList[i];
+            buffer.put(data.getMode(), 4);
+            buffer.put(data.getLength(), QRUtil.getLengthInBits(data.getMode(), typeNumber) );
+            data.write(buffer);
+          }
+
+          var totalDataCount = 0;
+          for (var i = 0; i < rsBlocks.length; i++) {
+            totalDataCount += rsBlocks[i].dataCount;
+          }
+
+          if (buffer.getLengthInBits() <= totalDataCount * 8) {
+            break;
+          }
+        }
+
+        _typeNumber = typeNumber;
+      }
+
+      makeImpl(false, getBestMaskPattern() );
+    };
+
+    _this.createTableTag = function(cellSize, margin) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var qrHtml = '';
+
+      qrHtml += '<table style="';
+      qrHtml += ' border-width: 0px; border-style: none;';
+      qrHtml += ' border-collapse: collapse;';
+      qrHtml += ' padding: 0px; margin: ' + margin + 'px;';
+      qrHtml += '">';
+      qrHtml += '<tbody>';
+
+      for (var r = 0; r < _this.getModuleCount(); r += 1) {
+
+        qrHtml += '<tr>';
+
+        for (var c = 0; c < _this.getModuleCount(); c += 1) {
+          qrHtml += '<td style="';
+          qrHtml += ' border-width: 0px; border-style: none;';
+          qrHtml += ' border-collapse: collapse;';
+          qrHtml += ' padding: 0px; margin: 0px;';
+          qrHtml += ' width: ' + cellSize + 'px;';
+          qrHtml += ' height: ' + cellSize + 'px;';
+          qrHtml += ' background-color: ';
+          qrHtml += _this.isDark(r, c)? '#000000' : '#ffffff';
+          qrHtml += ';';
+          qrHtml += '"/>';
+        }
+
+        qrHtml += '</tr>';
+      }
+
+      qrHtml += '</tbody>';
+      qrHtml += '</table>';
+
+      return qrHtml;
+    };
+
+    _this.createSvgTag = function(cellSize, margin, alt, title) {
+
+      var opts = {};
+      if (typeof arguments[0] == 'object') {
+        // Called by options.
+        opts = arguments[0];
+        // overwrite cellSize and margin.
+        cellSize = opts.cellSize;
+        margin = opts.margin;
+        alt = opts.alt;
+        title = opts.title;
+      }
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      // Compose alt property surrogate
+      alt = (typeof alt === 'string') ? {text: alt} : alt || {};
+      alt.text = alt.text || null;
+      alt.id = (alt.text) ? alt.id || 'qrcode-description' : null;
+
+      // Compose title property surrogate
+      title = (typeof title === 'string') ? {text: title} : title || {};
+      title.text = title.text || null;
+      title.id = (title.text) ? title.id || 'qrcode-title' : null;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var c, mc, r, mr, qrSvg='', rect;
+
+      rect = 'l' + cellSize + ',0 0,' + cellSize +
+        ' -' + cellSize + ',0 0,-' + cellSize + 'z ';
+
+      qrSvg += '<svg version="1.1" xmlns="http://www.w3.org/2000/svg"';
+      qrSvg += !opts.scalable ? ' width="' + size + 'px" height="' + size + 'px"' : '';
+      qrSvg += ' viewBox="0 0 ' + size + ' ' + size + '" ';
+      qrSvg += ' preserveAspectRatio="xMinYMin meet"';
+      qrSvg += (title.text || alt.text) ? ' role="img" aria-labelledby="' +
+          escapeXml([title.id, alt.id].join(' ').trim() ) + '"' : '';
+      qrSvg += '>';
+      qrSvg += (title.text) ? '<title id="' + escapeXml(title.id) + '">' +
+          escapeXml(title.text) + '</title>' : '';
+      qrSvg += (alt.text) ? '<description id="' + escapeXml(alt.id) + '">' +
+          escapeXml(alt.text) + '</description>' : '';
+      qrSvg += '<rect width="100%" height="100%" fill="white" cx="0" cy="0"/>';
+      qrSvg += '<path d="';
+
+      for (r = 0; r < _this.getModuleCount(); r += 1) {
+        mr = r * cellSize + margin;
+        for (c = 0; c < _this.getModuleCount(); c += 1) {
+          if (_this.isDark(r, c) ) {
+            mc = c*cellSize+margin;
+            qrSvg += 'M' + mc + ',' + mr + rect;
+          }
+        }
+      }
+
+      qrSvg += '" stroke="transparent" fill="black"/>';
+      qrSvg += '</svg>';
+
+      return qrSvg;
+    };
+
+    _this.createDataURL = function(cellSize, margin) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var min = margin;
+      var max = size - margin;
+
+      return createDataURL(size, size, function(x, y) {
+        if (min <= x && x < max && min <= y && y < max) {
+          var c = Math.floor( (x - min) / cellSize);
+          var r = Math.floor( (y - min) / cellSize);
+          return _this.isDark(r, c)? 0 : 1;
+        } else {
+          return 1;
+        }
+      } );
+    };
+
+    _this.createImgTag = function(cellSize, margin, alt) {
+
+      cellSize = cellSize || 2;
+      margin = (typeof margin == 'undefined')? cellSize * 4 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+
+      var img = '';
+      img += '<img';
+      img += '\u0020src="';
+      img += _this.createDataURL(cellSize, margin);
+      img += '"';
+      img += '\u0020width="';
+      img += size;
+      img += '"';
+      img += '\u0020height="';
+      img += size;
+      img += '"';
+      if (alt) {
+        img += '\u0020alt="';
+        img += escapeXml(alt);
+        img += '"';
+      }
+      img += '/>';
+
+      return img;
+    };
+
+    var escapeXml = function(s) {
+      var escaped = '';
+      for (var i = 0; i < s.length; i += 1) {
+        var c = s.charAt(i);
+        switch(c) {
+        case '<': escaped += '&lt;'; break;
+        case '>': escaped += '&gt;'; break;
+        case '&': escaped += '&amp;'; break;
+        case '"': escaped += '&quot;'; break;
+        default : escaped += c; break;
+        }
+      }
+      return escaped;
+    };
+
+    var _createHalfASCII = function(margin) {
+      var cellSize = 1;
+      margin = (typeof margin == 'undefined')? cellSize * 2 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var min = margin;
+      var max = size - margin;
+
+      var y, x, r1, r2, p;
+
+      var blocks = {
+        '██': '█',
+        '█ ': '▀',
+        ' █': '▄',
+        '  ': ' '
+      };
+
+      var blocksLastLineNoMargin = {
+        '██': '▀',
+        '█ ': '▀',
+        ' █': ' ',
+        '  ': ' '
+      };
+
+      var ascii = '';
+      for (y = 0; y < size; y += 2) {
+        r1 = Math.floor((y - min) / cellSize);
+        r2 = Math.floor((y + 1 - min) / cellSize);
+        for (x = 0; x < size; x += 1) {
+          p = '█';
+
+          if (min <= x && x < max && min <= y && y < max && _this.isDark(r1, Math.floor((x - min) / cellSize))) {
+            p = ' ';
+          }
+
+          if (min <= x && x < max && min <= y+1 && y+1 < max && _this.isDark(r2, Math.floor((x - min) / cellSize))) {
+            p += ' ';
+          }
+          else {
+            p += '█';
+          }
+
+          // Output 2 characters per pixel, to create full square. 1 character per pixels gives only half width of square.
+          ascii += (margin < 1 && y+1 >= max) ? blocksLastLineNoMargin[p] : blocks[p];
+        }
+
+        ascii += '\n';
+      }
+
+      if (size % 2 && margin > 0) {
+        return ascii.substring(0, ascii.length - size - 1) + Array(size+1).join('▀');
+      }
+
+      return ascii.substring(0, ascii.length-1);
+    };
+
+    _this.createASCII = function(cellSize, margin) {
+      cellSize = cellSize || 1;
+
+      if (cellSize < 2) {
+        return _createHalfASCII(margin);
+      }
+
+      cellSize -= 1;
+      margin = (typeof margin == 'undefined')? cellSize * 2 : margin;
+
+      var size = _this.getModuleCount() * cellSize + margin * 2;
+      var min = margin;
+      var max = size - margin;
+
+      var y, x, r, p;
+
+      var white = Array(cellSize+1).join('██');
+      var black = Array(cellSize+1).join('  ');
+
+      var ascii = '';
+      var line = '';
+      for (y = 0; y < size; y += 1) {
+        r = Math.floor( (y - min) / cellSize);
+        line = '';
+        for (x = 0; x < size; x += 1) {
+          p = 1;
+
+          if (min <= x && x < max && min <= y && y < max && _this.isDark(r, Math.floor((x - min) / cellSize))) {
+            p = 0;
+          }
+
+          // Output 2 characters per pixel, to create full square. 1 character per pixels gives only half width of square.
+          line += p ? white : black;
+        }
+
+        for (r = 0; r < cellSize; r += 1) {
+          ascii += line + '\n';
+        }
+      }
+
+      return ascii.substring(0, ascii.length-1);
+    };
+
+    _this.renderTo2dContext = function(context, cellSize) {
+      cellSize = cellSize || 2;
+      var length = _this.getModuleCount();
+      for (var row = 0; row < length; row++) {
+        for (var col = 0; col < length; col++) {
+          context.fillStyle = _this.isDark(row, col) ? 'black' : 'white';
+          context.fillRect(row * cellSize, col * cellSize, cellSize, cellSize);
+        }
+      }
+    }
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrcode.stringToBytes
+  //---------------------------------------------------------------------
+
+  qrcode.stringToBytesFuncs = {
+    'default' : function(s) {
+      var bytes = [];
+      for (var i = 0; i < s.length; i += 1) {
+        var c = s.charCodeAt(i);
+        bytes.push(c & 0xff);
+      }
+      return bytes;
+    }
+  };
+
+  qrcode.stringToBytes = qrcode.stringToBytesFuncs['default'];
+
+  //---------------------------------------------------------------------
+  // qrcode.createStringToBytes
+  //---------------------------------------------------------------------
+
+  /**
+   * @param unicodeData base64 string of byte array.
+   * [16bit Unicode],[16bit Bytes], ...
+   * @param numChars
+   */
+  qrcode.createStringToBytes = function(unicodeData, numChars) {
+
+    // create conversion map.
+
+    var unicodeMap = function() {
+
+      var bin = base64DecodeInputStream(unicodeData);
+      var read = function() {
+        var b = bin.read();
+        if (b == -1) throw 'eof';
+        return b;
+      };
+
+      var count = 0;
+      var unicodeMap = {};
+      while (true) {
+        var b0 = bin.read();
+        if (b0 == -1) break;
+        var b1 = read();
+        var b2 = read();
+        var b3 = read();
+        var k = String.fromCharCode( (b0 << 8) | b1);
+        var v = (b2 << 8) | b3;
+        unicodeMap[k] = v;
+        count += 1;
+      }
+      if (count != numChars) {
+        throw count + ' != ' + numChars;
+      }
+
+      return unicodeMap;
+    }();
+
+    var unknownChar = '?'.charCodeAt(0);
+
+    return function(s) {
+      var bytes = [];
+      for (var i = 0; i < s.length; i += 1) {
+        var c = s.charCodeAt(i);
+        if (c < 128) {
+          bytes.push(c);
+        } else {
+          var b = unicodeMap[s.charAt(i)];
+          if (typeof b == 'number') {
+            if ( (b & 0xff) == b) {
+              // 1byte
+              bytes.push(b);
+            } else {
+              // 2bytes
+              bytes.push(b >>> 8);
+              bytes.push(b & 0xff);
+            }
+          } else {
+            bytes.push(unknownChar);
+          }
+        }
+      }
+      return bytes;
+    };
+  };
+
+  //---------------------------------------------------------------------
+  // QRMode
+  //---------------------------------------------------------------------
+
+  var QRMode = {
+    MODE_NUMBER :    1 << 0,
+    MODE_ALPHA_NUM : 1 << 1,
+    MODE_8BIT_BYTE : 1 << 2,
+    MODE_KANJI :     1 << 3
+  };
+
+  //---------------------------------------------------------------------
+  // QRErrorCorrectionLevel
+  //---------------------------------------------------------------------
+
+  var QRErrorCorrectionLevel = {
+    L : 1,
+    M : 0,
+    Q : 3,
+    H : 2
+  };
+
+  //---------------------------------------------------------------------
+  // QRMaskPattern
+  //---------------------------------------------------------------------
+
+  var QRMaskPattern = {
+    PATTERN000 : 0,
+    PATTERN001 : 1,
+    PATTERN010 : 2,
+    PATTERN011 : 3,
+    PATTERN100 : 4,
+    PATTERN101 : 5,
+    PATTERN110 : 6,
+    PATTERN111 : 7
+  };
+
+  //---------------------------------------------------------------------
+  // QRUtil
+  //---------------------------------------------------------------------
+
+  var QRUtil = function() {
+
+    var PATTERN_POSITION_TABLE = [
+      [],
+      [6, 18],
+      [6, 22],
+      [6, 26],
+      [6, 30],
+      [6, 34],
+      [6, 22, 38],
+      [6, 24, 42],
+      [6, 26, 46],
+      [6, 28, 50],
+      [6, 30, 54],
+      [6, 32, 58],
+      [6, 34, 62],
+      [6, 26, 46, 66],
+      [6, 26, 48, 70],
+      [6, 26, 50, 74],
+      [6, 30, 54, 78],
+      [6, 30, 56, 82],
+      [6, 30, 58, 86],
+      [6, 34, 62, 90],
+      [6, 28, 50, 72, 94],
+      [6, 26, 50, 74, 98],
+      [6, 30, 54, 78, 102],
+      [6, 28, 54, 80, 106],
+      [6, 32, 58, 84, 110],
+      [6, 30, 58, 86, 114],
+      [6, 34, 62, 90, 118],
+      [6, 26, 50, 74, 98, 122],
+      [6, 30, 54, 78, 102, 126],
+      [6, 26, 52, 78, 104, 130],
+      [6, 30, 56, 82, 108, 134],
+      [6, 34, 60, 86, 112, 138],
+      [6, 30, 58, 86, 114, 142],
+      [6, 34, 62, 90, 118, 146],
+      [6, 30, 54, 78, 102, 126, 150],
+      [6, 24, 50, 76, 102, 128, 154],
+      [6, 28, 54, 80, 106, 132, 158],
+      [6, 32, 58, 84, 110, 136, 162],
+      [6, 26, 54, 82, 110, 138, 166],
+      [6, 30, 58, 86, 114, 142, 170]
+    ];
+    var G15 = (1 << 10) | (1 << 8) | (1 << 5) | (1 << 4) | (1 << 2) | (1 << 1) | (1 << 0);
+    var G18 = (1 << 12) | (1 << 11) | (1 << 10) | (1 << 9) | (1 << 8) | (1 << 5) | (1 << 2) | (1 << 0);
+    var G15_MASK = (1 << 14) | (1 << 12) | (1 << 10) | (1 << 4) | (1 << 1);
+
+    var _this = {};
+
+    var getBCHDigit = function(data) {
+      var digit = 0;
+      while (data != 0) {
+        digit += 1;
+        data >>>= 1;
+      }
+      return digit;
+    };
+
+    _this.getBCHTypeInfo = function(data) {
+      var d = data << 10;
+      while (getBCHDigit(d) - getBCHDigit(G15) >= 0) {
+        d ^= (G15 << (getBCHDigit(d) - getBCHDigit(G15) ) );
+      }
+      return ( (data << 10) | d) ^ G15_MASK;
+    };
+
+    _this.getBCHTypeNumber = function(data) {
+      var d = data << 12;
+      while (getBCHDigit(d) - getBCHDigit(G18) >= 0) {
+        d ^= (G18 << (getBCHDigit(d) - getBCHDigit(G18) ) );
+      }
+      return (data << 12) | d;
+    };
+
+    _this.getPatternPosition = function(typeNumber) {
+      return PATTERN_POSITION_TABLE[typeNumber - 1];
+    };
+
+    _this.getMaskFunction = function(maskPattern) {
+
+      switch (maskPattern) {
+
+      case QRMaskPattern.PATTERN000 :
+        return function(i, j) { return (i + j) % 2 == 0; };
+      case QRMaskPattern.PATTERN001 :
+        return function(i, j) { return i % 2 == 0; };
+      case QRMaskPattern.PATTERN010 :
+        return function(i, j) { return j % 3 == 0; };
+      case QRMaskPattern.PATTERN011 :
+        return function(i, j) { return (i + j) % 3 == 0; };
+      case QRMaskPattern.PATTERN100 :
+        return function(i, j) { return (Math.floor(i / 2) + Math.floor(j / 3) ) % 2 == 0; };
+      case QRMaskPattern.PATTERN101 :
+        return function(i, j) { return (i * j) % 2 + (i * j) % 3 == 0; };
+      case QRMaskPattern.PATTERN110 :
+        return function(i, j) { return ( (i * j) % 2 + (i * j) % 3) % 2 == 0; };
+      case QRMaskPattern.PATTERN111 :
+        return function(i, j) { return ( (i * j) % 3 + (i + j) % 2) % 2 == 0; };
+
+      default :
+        throw 'bad maskPattern:' + maskPattern;
+      }
+    };
+
+    _this.getErrorCorrectPolynomial = function(errorCorrectLength) {
+      var a = qrPolynomial([1], 0);
+      for (var i = 0; i < errorCorrectLength; i += 1) {
+        a = a.multiply(qrPolynomial([1, QRMath.gexp(i)], 0) );
+      }
+      return a;
+    };
+
+    _this.getLengthInBits = function(mode, type) {
+
+      if (1 <= type && type < 10) {
+
+        // 1 - 9
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 10;
+        case QRMode.MODE_ALPHA_NUM : return 9;
+        case QRMode.MODE_8BIT_BYTE : return 8;
+        case QRMode.MODE_KANJI     : return 8;
+        default :
+          throw 'mode:' + mode;
+        }
+
+      } else if (type < 27) {
+
+        // 10 - 26
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 12;
+        case QRMode.MODE_ALPHA_NUM : return 11;
+        case QRMode.MODE_8BIT_BYTE : return 16;
+        case QRMode.MODE_KANJI     : return 10;
+        default :
+          throw 'mode:' + mode;
+        }
+
+      } else if (type < 41) {
+
+        // 27 - 40
+
+        switch(mode) {
+        case QRMode.MODE_NUMBER    : return 14;
+        case QRMode.MODE_ALPHA_NUM : return 13;
+        case QRMode.MODE_8BIT_BYTE : return 16;
+        case QRMode.MODE_KANJI     : return 12;
+        default :
+          throw 'mode:' + mode;
+        }
+
+      } else {
+        throw 'type:' + type;
+      }
+    };
+
+    _this.getLostPoint = function(qrcode) {
+
+      var moduleCount = qrcode.getModuleCount();
+
+      var lostPoint = 0;
+
+      // LEVEL1
+
+      for (var row = 0; row < moduleCount; row += 1) {
+        for (var col = 0; col < moduleCount; col += 1) {
+
+          var sameCount = 0;
+          var dark = qrcode.isDark(row, col);
+
+          for (var r = -1; r <= 1; r += 1) {
+
+            if (row + r < 0 || moduleCount <= row + r) {
+              continue;
+            }
+
+            for (var c = -1; c <= 1; c += 1) {
+
+              if (col + c < 0 || moduleCount <= col + c) {
+                continue;
+              }
+
+              if (r == 0 && c == 0) {
+                continue;
+              }
+
+              if (dark == qrcode.isDark(row + r, col + c) ) {
+                sameCount += 1;
+              }
+            }
+          }
+
+          if (sameCount > 5) {
+            lostPoint += (3 + sameCount - 5);
+          }
+        }
+      };
+
+      // LEVEL2
+
+      for (var row = 0; row < moduleCount - 1; row += 1) {
+        for (var col = 0; col < moduleCount - 1; col += 1) {
+          var count = 0;
+          if (qrcode.isDark(row, col) ) count += 1;
+          if (qrcode.isDark(row + 1, col) ) count += 1;
+          if (qrcode.isDark(row, col + 1) ) count += 1;
+          if (qrcode.isDark(row + 1, col + 1) ) count += 1;
+          if (count == 0 || count == 4) {
+            lostPoint += 3;
+          }
+        }
+      }
+
+      // LEVEL3
+
+      for (var row = 0; row < moduleCount; row += 1) {
+        for (var col = 0; col < moduleCount - 6; col += 1) {
+          if (qrcode.isDark(row, col)
+              && !qrcode.isDark(row, col + 1)
+              &&  qrcode.isDark(row, col + 2)
+              &&  qrcode.isDark(row, col + 3)
+              &&  qrcode.isDark(row, col + 4)
+              && !qrcode.isDark(row, col + 5)
+              &&  qrcode.isDark(row, col + 6) ) {
+            lostPoint += 40;
+          }
+        }
+      }
+
+      for (var col = 0; col < moduleCount; col += 1) {
+        for (var row = 0; row < moduleCount - 6; row += 1) {
+          if (qrcode.isDark(row, col)
+              && !qrcode.isDark(row + 1, col)
+              &&  qrcode.isDark(row + 2, col)
+              &&  qrcode.isDark(row + 3, col)
+              &&  qrcode.isDark(row + 4, col)
+              && !qrcode.isDark(row + 5, col)
+              &&  qrcode.isDark(row + 6, col) ) {
+            lostPoint += 40;
+          }
+        }
+      }
+
+      // LEVEL4
+
+      var darkCount = 0;
+
+      for (var col = 0; col < moduleCount; col += 1) {
+        for (var row = 0; row < moduleCount; row += 1) {
+          if (qrcode.isDark(row, col) ) {
+            darkCount += 1;
+          }
+        }
+      }
+
+      var ratio = Math.abs(100 * darkCount / moduleCount / moduleCount - 50) / 5;
+      lostPoint += ratio * 10;
+
+      return lostPoint;
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // QRMath
+  //---------------------------------------------------------------------
+
+  var QRMath = function() {
+
+    var EXP_TABLE = new Array(256);
+    var LOG_TABLE = new Array(256);
+
+    // initialize tables
+    for (var i = 0; i < 8; i += 1) {
+      EXP_TABLE[i] = 1 << i;
+    }
+    for (var i = 8; i < 256; i += 1) {
+      EXP_TABLE[i] = EXP_TABLE[i - 4]
+        ^ EXP_TABLE[i - 5]
+        ^ EXP_TABLE[i - 6]
+        ^ EXP_TABLE[i - 8];
+    }
+    for (var i = 0; i < 255; i += 1) {
+      LOG_TABLE[EXP_TABLE[i] ] = i;
+    }
+
+    var _this = {};
+
+    _this.glog = function(n) {
+
+      if (n < 1) {
+        throw 'glog(' + n + ')';
+      }
+
+      return LOG_TABLE[n];
+    };
+
+    _this.gexp = function(n) {
+
+      while (n < 0) {
+        n += 255;
+      }
+
+      while (n >= 256) {
+        n -= 255;
+      }
+
+      return EXP_TABLE[n];
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // qrPolynomial
+  //---------------------------------------------------------------------
+
+  function qrPolynomial(num, shift) {
+
+    if (typeof num.length == 'undefined') {
+      throw num.length + '/' + shift;
+    }
+
+    var _num = function() {
+      var offset = 0;
+      while (offset < num.length && num[offset] == 0) {
+        offset += 1;
+      }
+      var _num = new Array(num.length - offset + shift);
+      for (var i = 0; i < num.length - offset; i += 1) {
+        _num[i] = num[i + offset];
+      }
+      return _num;
+    }();
+
+    var _this = {};
+
+    _this.getAt = function(index) {
+      return _num[index];
+    };
+
+    _this.getLength = function() {
+      return _num.length;
+    };
+
+    _this.multiply = function(e) {
+
+      var num = new Array(_this.getLength() + e.getLength() - 1);
+
+      for (var i = 0; i < _this.getLength(); i += 1) {
+        for (var j = 0; j < e.getLength(); j += 1) {
+          num[i + j] ^= QRMath.gexp(QRMath.glog(_this.getAt(i) ) + QRMath.glog(e.getAt(j) ) );
+        }
+      }
+
+      return qrPolynomial(num, 0);
+    };
+
+    _this.mod = function(e) {
+
+      if (_this.getLength() - e.getLength() < 0) {
+        return _this;
+      }
+
+      var ratio = QRMath.glog(_this.getAt(0) ) - QRMath.glog(e.getAt(0) );
+
+      var num = new Array(_this.getLength() );
+      for (var i = 0; i < _this.getLength(); i += 1) {
+        num[i] = _this.getAt(i);
+      }
+
+      for (var i = 0; i < e.getLength(); i += 1) {
+        num[i] ^= QRMath.gexp(QRMath.glog(e.getAt(i) ) + ratio);
+      }
+
+      // recursive call
+      return qrPolynomial(num, 0).mod(e);
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // QRRSBlock
+  //---------------------------------------------------------------------
+
+  var QRRSBlock = function() {
+
+    var RS_BLOCK_TABLE = [
+
+      // L
+      // M
+      // Q
+      // H
+
+      // 1
+      [1, 26, 19],
+      [1, 26, 16],
+      [1, 26, 13],
+      [1, 26, 9],
+
+      // 2
+      [1, 44, 34],
+      [1, 44, 28],
+      [1, 44, 22],
+      [1, 44, 16],
+
+      // 3
+      [1, 70, 55],
+      [1, 70, 44],
+      [2, 35, 17],
+      [2, 35, 13],
+
+      // 4
+      [1, 100, 80],
+      [2, 50, 32],
+      [2, 50, 24],
+      [4, 25, 9],
+
+      // 5
+      [1, 134, 108],
+      [2, 67, 43],
+      [2, 33, 15, 2, 34, 16],
+      [2, 33, 11, 2, 34, 12],
+
+      // 6
+      [2, 86, 68],
+      [4, 43, 27],
+      [4, 43, 19],
+      [4, 43, 15],
+
+      // 7
+      [2, 98, 78],
+      [4, 49, 31],
+      [2, 32, 14, 4, 33, 15],
+      [4, 39, 13, 1, 40, 14],
+
+      // 8
+      [2, 121, 97],
+      [2, 60, 38, 2, 61, 39],
+      [4, 40, 18, 2, 41, 19],
+      [4, 40, 14, 2, 41, 15],
+
+      // 9
+      [2, 146, 116],
+      [3, 58, 36, 2, 59, 37],
+      [4, 36, 16, 4, 37, 17],
+      [4, 36, 12, 4, 37, 13],
+
+      // 10
+      [2, 86, 68, 2, 87, 69],
+      [4, 69, 43, 1, 70, 44],
+      [6, 43, 19, 2, 44, 20],
+      [6, 43, 15, 2, 44, 16],
+
+      // 11
+      [4, 101, 81],
+      [1, 80, 50, 4, 81, 51],
+      [4, 50, 22, 4, 51, 23],
+      [3, 36, 12, 8, 37, 13],
+
+      // 12
+      [2, 116, 92, 2, 117, 93],
+      [6, 58, 36, 2, 59, 37],
+      [4, 46, 20, 6, 47, 21],
+      [7, 42, 14, 4, 43, 15],
+
+      // 13
+      [4, 133, 107],
+      [8, 59, 37, 1, 60, 38],
+      [8, 44, 20, 4, 45, 21],
+      [12, 33, 11, 4, 34, 12],
+
+      // 14
+      [3, 145, 115, 1, 146, 116],
+      [4, 64, 40, 5, 65, 41],
+      [11, 36, 16, 5, 37, 17],
+      [11, 36, 12, 5, 37, 13],
+
+      // 15
+      [5, 109, 87, 1, 110, 88],
+      [5, 65, 41, 5, 66, 42],
+      [5, 54, 24, 7, 55, 25],
+      [11, 36, 12, 7, 37, 13],
+
+      // 16
+      [5, 122, 98, 1, 123, 99],
+      [7, 73, 45, 3, 74, 46],
+      [15, 43, 19, 2, 44, 20],
+      [3, 45, 15, 13, 46, 16],
+
+      // 17
+      [1, 135, 107, 5, 136, 108],
+      [10, 74, 46, 1, 75, 47],
+      [1, 50, 22, 15, 51, 23],
+      [2, 42, 14, 17, 43, 15],
+
+      // 18
+      [5, 150, 120, 1, 151, 121],
+      [9, 69, 43, 4, 70, 44],
+      [17, 50, 22, 1, 51, 23],
+      [2, 42, 14, 19, 43, 15],
+
+      // 19
+      [3, 141, 113, 4, 142, 114],
+      [3, 70, 44, 11, 71, 45],
+      [17, 47, 21, 4, 48, 22],
+      [9, 39, 13, 16, 40, 14],
+
+      // 20
+      [3, 135, 107, 5, 136, 108],
+      [3, 67, 41, 13, 68, 42],
+      [15, 54, 24, 5, 55, 25],
+      [15, 43, 15, 10, 44, 16],
+
+      // 21
+      [4, 144, 116, 4, 145, 117],
+      [17, 68, 42],
+      [17, 50, 22, 6, 51, 23],
+      [19, 46, 16, 6, 47, 17],
+
+      // 22
+      [2, 139, 111, 7, 140, 112],
+      [17, 74, 46],
+      [7, 54, 24, 16, 55, 25],
+      [34, 37, 13],
+
+      // 23
+      [4, 151, 121, 5, 152, 122],
+      [4, 75, 47, 14, 76, 48],
+      [11, 54, 24, 14, 55, 25],
+      [16, 45, 15, 14, 46, 16],
+
+      // 24
+      [6, 147, 117, 4, 148, 118],
+      [6, 73, 45, 14, 74, 46],
+      [11, 54, 24, 16, 55, 25],
+      [30, 46, 16, 2, 47, 17],
+
+      // 25
+      [8, 132, 106, 4, 133, 107],
+      [8, 75, 47, 13, 76, 48],
+      [7, 54, 24, 22, 55, 25],
+      [22, 45, 15, 13, 46, 16],
+
+      // 26
+      [10, 142, 114, 2, 143, 115],
+      [19, 74, 46, 4, 75, 47],
+      [28, 50, 22, 6, 51, 23],
+      [33, 46, 16, 4, 47, 17],
+
+      // 27
+      [8, 152, 122, 4, 153, 123],
+      [22, 73, 45, 3, 74, 46],
+      [8, 53, 23, 26, 54, 24],
+      [12, 45, 15, 28, 46, 16],
+
+      // 28
+      [3, 147, 117, 10, 148, 118],
+      [3, 73, 45, 23, 74, 46],
+      [4, 54, 24, 31, 55, 25],
+      [11, 45, 15, 31, 46, 16],
+
+      // 29
+      [7, 146, 116, 7, 147, 117],
+      [21, 73, 45, 7, 74, 46],
+      [1, 53, 23, 37, 54, 24],
+      [19, 45, 15, 26, 46, 16],
+
+      // 30
+      [5, 145, 115, 10, 146, 116],
+      [19, 75, 47, 10, 76, 48],
+      [15, 54, 24, 25, 55, 25],
+      [23, 45, 15, 25, 46, 16],
+
+      // 31
+      [13, 145, 115, 3, 146, 116],
+      [2, 74, 46, 29, 75, 47],
+      [42, 54, 24, 1, 55, 25],
+      [23, 45, 15, 28, 46, 16],
+
+      // 32
+      [17, 145, 115],
+      [10, 74, 46, 23, 75, 47],
+      [10, 54, 24, 35, 55, 25],
+      [19, 45, 15, 35, 46, 16],
+
+      // 33
+      [17, 145, 115, 1, 146, 116],
+      [14, 74, 46, 21, 75, 47],
+      [29, 54, 24, 19, 55, 25],
+      [11, 45, 15, 46, 46, 16],
+
+      // 34
+      [13, 145, 115, 6, 146, 116],
+      [14, 74, 46, 23, 75, 47],
+      [44, 54, 24, 7, 55, 25],
+      [59, 46, 16, 1, 47, 17],
+
+      // 35
+      [12, 151, 121, 7, 152, 122],
+      [12, 75, 47, 26, 76, 48],
+      [39, 54, 24, 14, 55, 25],
+      [22, 45, 15, 41, 46, 16],
+
+      // 36
+      [6, 151, 121, 14, 152, 122],
+      [6, 75, 47, 34, 76, 48],
+      [46, 54, 24, 10, 55, 25],
+      [2, 45, 15, 64, 46, 16],
+
+      // 37
+      [17, 152, 122, 4, 153, 123],
+      [29, 74, 46, 14, 75, 47],
+      [49, 54, 24, 10, 55, 25],
+      [24, 45, 15, 46, 46, 16],
+
+      // 38
+      [4, 152, 122, 18, 153, 123],
+      [13, 74, 46, 32, 75, 47],
+      [48, 54, 24, 14, 55, 25],
+      [42, 45, 15, 32, 46, 16],
+
+      // 39
+      [20, 147, 117, 4, 148, 118],
+      [40, 75, 47, 7, 76, 48],
+      [43, 54, 24, 22, 55, 25],
+      [10, 45, 15, 67, 46, 16],
+
+      // 40
+      [19, 148, 118, 6, 149, 119],
+      [18, 75, 47, 31, 76, 48],
+      [34, 54, 24, 34, 55, 25],
+      [20, 45, 15, 61, 46, 16]
+    ];
+
+    var qrRSBlock = function(totalCount, dataCount) {
+      var _this = {};
+      _this.totalCount = totalCount;
+      _this.dataCount = dataCount;
+      return _this;
+    };
+
+    var _this = {};
+
+    var getRsBlockTable = function(typeNumber, errorCorrectionLevel) {
+
+      switch(errorCorrectionLevel) {
+      case QRErrorCorrectionLevel.L :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 0];
+      case QRErrorCorrectionLevel.M :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 1];
+      case QRErrorCorrectionLevel.Q :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 2];
+      case QRErrorCorrectionLevel.H :
+        return RS_BLOCK_TABLE[(typeNumber - 1) * 4 + 3];
+      default :
+        return undefined;
+      }
+    };
+
+    _this.getRSBlocks = function(typeNumber, errorCorrectionLevel) {
+
+      var rsBlock = getRsBlockTable(typeNumber, errorCorrectionLevel);
+
+      if (typeof rsBlock == 'undefined') {
+        throw 'bad rs block @ typeNumber:' + typeNumber +
+            '/errorCorrectionLevel:' + errorCorrectionLevel;
+      }
+
+      var length = rsBlock.length / 3;
+
+      var list = [];
+
+      for (var i = 0; i < length; i += 1) {
+
+        var count = rsBlock[i * 3 + 0];
+        var totalCount = rsBlock[i * 3 + 1];
+        var dataCount = rsBlock[i * 3 + 2];
+
+        for (var j = 0; j < count; j += 1) {
+          list.push(qrRSBlock(totalCount, dataCount) );
+        }
+      }
+
+      return list;
+    };
+
+    return _this;
+  }();
+
+  //---------------------------------------------------------------------
+  // qrBitBuffer
+  //---------------------------------------------------------------------
+
+  var qrBitBuffer = function() {
+
+    var _buffer = [];
+    var _length = 0;
+
+    var _this = {};
+
+    _this.getBuffer = function() {
+      return _buffer;
+    };
+
+    _this.getAt = function(index) {
+      var bufIndex = Math.floor(index / 8);
+      return ( (_buffer[bufIndex] >>> (7 - index % 8) ) & 1) == 1;
+    };
+
+    _this.put = function(num, length) {
+      for (var i = 0; i < length; i += 1) {
+        _this.putBit( ( (num >>> (length - i - 1) ) & 1) == 1);
+      }
+    };
+
+    _this.getLengthInBits = function() {
+      return _length;
+    };
+
+    _this.putBit = function(bit) {
+
+      var bufIndex = Math.floor(_length / 8);
+      if (_buffer.length <= bufIndex) {
+        _buffer.push(0);
+      }
+
+      if (bit) {
+        _buffer[bufIndex] |= (0x80 >>> (_length % 8) );
+      }
+
+      _length += 1;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrNumber
+  //---------------------------------------------------------------------
+
+  var qrNumber = function(data) {
+
+    var _mode = QRMode.MODE_NUMBER;
+    var _data = data;
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _data.length;
+    };
+
+    _this.write = function(buffer) {
+
+      var data = _data;
+
+      var i = 0;
+
+      while (i + 2 < data.length) {
+        buffer.put(strToNum(data.substring(i, i + 3) ), 10);
+        i += 3;
+      }
+
+      if (i < data.length) {
+        if (data.length - i == 1) {
+          buffer.put(strToNum(data.substring(i, i + 1) ), 4);
+        } else if (data.length - i == 2) {
+          buffer.put(strToNum(data.substring(i, i + 2) ), 7);
+        }
+      }
+    };
+
+    var strToNum = function(s) {
+      var num = 0;
+      for (var i = 0; i < s.length; i += 1) {
+        num = num * 10 + chatToNum(s.charAt(i) );
+      }
+      return num;
+    };
+
+    var chatToNum = function(c) {
+      if ('0' <= c && c <= '9') {
+        return c.charCodeAt(0) - '0'.charCodeAt(0);
+      }
+      throw 'illegal char :' + c;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrAlphaNum
+  //---------------------------------------------------------------------
+
+  var qrAlphaNum = function(data) {
+
+    var _mode = QRMode.MODE_ALPHA_NUM;
+    var _data = data;
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _data.length;
+    };
+
+    _this.write = function(buffer) {
+
+      var s = _data;
+
+      var i = 0;
+
+      while (i + 1 < s.length) {
+        buffer.put(
+          getCode(s.charAt(i) ) * 45 +
+          getCode(s.charAt(i + 1) ), 11);
+        i += 2;
+      }
+
+      if (i < s.length) {
+        buffer.put(getCode(s.charAt(i) ), 6);
+      }
+    };
+
+    var getCode = function(c) {
+
+      if ('0' <= c && c <= '9') {
+        return c.charCodeAt(0) - '0'.charCodeAt(0);
+      } else if ('A' <= c && c <= 'Z') {
+        return c.charCodeAt(0) - 'A'.charCodeAt(0) + 10;
+      } else {
+        switch (c) {
+        case ' ' : return 36;
+        case '$' : return 37;
+        case '%' : return 38;
+        case '*' : return 39;
+        case '+' : return 40;
+        case '-' : return 41;
+        case '.' : return 42;
+        case '/' : return 43;
+        case ':' : return 44;
+        default :
+          throw 'illegal char :' + c;
+        }
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qr8BitByte
+  //---------------------------------------------------------------------
+
+  var qr8BitByte = function(data) {
+
+    var _mode = QRMode.MODE_8BIT_BYTE;
+    var _data = data;
+    var _bytes = qrcode.stringToBytes(data);
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return _bytes.length;
+    };
+
+    _this.write = function(buffer) {
+      for (var i = 0; i < _bytes.length; i += 1) {
+        buffer.put(_bytes[i], 8);
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // qrKanji
+  //---------------------------------------------------------------------
+
+  var qrKanji = function(data) {
+
+    var _mode = QRMode.MODE_KANJI;
+    var _data = data;
+
+    var stringToBytes = qrcode.stringToBytesFuncs['SJIS'];
+    if (!stringToBytes) {
+      throw 'sjis not supported.';
+    }
+    !function(c, code) {
+      // self test for sjis support.
+      var test = stringToBytes(c);
+      if (test.length != 2 || ( (test[0] << 8) | test[1]) != code) {
+        throw 'sjis not supported.';
+      }
+    }('\u53cb', 0x9746);
+
+    var _bytes = stringToBytes(data);
+
+    var _this = {};
+
+    _this.getMode = function() {
+      return _mode;
+    };
+
+    _this.getLength = function(buffer) {
+      return ~~(_bytes.length / 2);
+    };
+
+    _this.write = function(buffer) {
+
+      var data = _bytes;
+
+      var i = 0;
+
+      while (i + 1 < data.length) {
+
+        var c = ( (0xff & data[i]) << 8) | (0xff & data[i + 1]);
+
+        if (0x8140 <= c && c <= 0x9FFC) {
+          c -= 0x8140;
+        } else if (0xE040 <= c && c <= 0xEBBF) {
+          c -= 0xC140;
+        } else {
+          throw 'illegal char at ' + (i + 1) + '/' + c;
+        }
+
+        c = ( (c >>> 8) & 0xff) * 0xC0 + (c & 0xff);
+
+        buffer.put(c, 13);
+
+        i += 2;
+      }
+
+      if (i < data.length) {
+        throw 'illegal char at ' + (i + 1);
+      }
+    };
+
+    return _this;
+  };
+
+  //=====================================================================
+  // GIF Support etc.
+  //
+
+  //---------------------------------------------------------------------
+  // byteArrayOutputStream
+  //---------------------------------------------------------------------
+
+  var byteArrayOutputStream = function() {
+
+    var _bytes = [];
+
+    var _this = {};
+
+    _this.writeByte = function(b) {
+      _bytes.push(b & 0xff);
+    };
+
+    _this.writeShort = function(i) {
+      _this.writeByte(i);
+      _this.writeByte(i >>> 8);
+    };
+
+    _this.writeBytes = function(b, off, len) {
+      off = off || 0;
+      len = len || b.length;
+      for (var i = 0; i < len; i += 1) {
+        _this.writeByte(b[i + off]);
+      }
+    };
+
+    _this.writeString = function(s) {
+      for (var i = 0; i < s.length; i += 1) {
+        _this.writeByte(s.charCodeAt(i) );
+      }
+    };
+
+    _this.toByteArray = function() {
+      return _bytes;
+    };
+
+    _this.toString = function() {
+      var s = '';
+      s += '[';
+      for (var i = 0; i < _bytes.length; i += 1) {
+        if (i > 0) {
+          s += ',';
+        }
+        s += _bytes[i];
+      }
+      s += ']';
+      return s;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // base64EncodeOutputStream
+  //---------------------------------------------------------------------
+
+  var base64EncodeOutputStream = function() {
+
+    var _buffer = 0;
+    var _buflen = 0;
+    var _length = 0;
+    var _base64 = '';
+
+    var _this = {};
+
+    var writeEncoded = function(b) {
+      _base64 += String.fromCharCode(encode(b & 0x3f) );
+    };
+
+    var encode = function(n) {
+      if (n < 0) {
+        // error.
+      } else if (n < 26) {
+        return 0x41 + n;
+      } else if (n < 52) {
+        return 0x61 + (n - 26);
+      } else if (n < 62) {
+        return 0x30 + (n - 52);
+      } else if (n == 62) {
+        return 0x2b;
+      } else if (n == 63) {
+        return 0x2f;
+      }
+      throw 'n:' + n;
+    };
+
+    _this.writeByte = function(n) {
+
+      _buffer = (_buffer << 8) | (n & 0xff);
+      _buflen += 8;
+      _length += 1;
+
+      while (_buflen >= 6) {
+        writeEncoded(_buffer >>> (_buflen - 6) );
+        _buflen -= 6;
+      }
+    };
+
+    _this.flush = function() {
+
+      if (_buflen > 0) {
+        writeEncoded(_buffer << (6 - _buflen) );
+        _buffer = 0;
+        _buflen = 0;
+      }
+
+      if (_length % 3 != 0) {
+        // padding
+        var padlen = 3 - _length % 3;
+        for (var i = 0; i < padlen; i += 1) {
+          _base64 += '=';
+        }
+      }
+    };
+
+    _this.toString = function() {
+      return _base64;
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // base64DecodeInputStream
+  //---------------------------------------------------------------------
+
+  var base64DecodeInputStream = function(str) {
+
+    var _str = str;
+    var _pos = 0;
+    var _buffer = 0;
+    var _buflen = 0;
+
+    var _this = {};
+
+    _this.read = function() {
+
+      while (_buflen < 8) {
+
+        if (_pos >= _str.length) {
+          if (_buflen == 0) {
+            return -1;
+          }
+          throw 'unexpected end of file./' + _buflen;
+        }
+
+        var c = _str.charAt(_pos);
+        _pos += 1;
+
+        if (c == '=') {
+          _buflen = 0;
+          return -1;
+        } else if (c.match(/^\s$/) ) {
+          // ignore if whitespace.
+          continue;
+        }
+
+        _buffer = (_buffer << 6) | decode(c.charCodeAt(0) );
+        _buflen += 6;
+      }
+
+      var n = (_buffer >>> (_buflen - 8) ) & 0xff;
+      _buflen -= 8;
+      return n;
+    };
+
+    var decode = function(c) {
+      if (0x41 <= c && c <= 0x5a) {
+        return c - 0x41;
+      } else if (0x61 <= c && c <= 0x7a) {
+        return c - 0x61 + 26;
+      } else if (0x30 <= c && c <= 0x39) {
+        return c - 0x30 + 52;
+      } else if (c == 0x2b) {
+        return 62;
+      } else if (c == 0x2f) {
+        return 63;
+      } else {
+        throw 'c:' + c;
+      }
+    };
+
+    return _this;
+  };
+
+  //---------------------------------------------------------------------
+  // gifImage (B/W)
+  //---------------------------------------------------------------------
+
+  var gifImage = function(width, height) {
+
+    var _width = width;
+    var _height = height;
+    var _data = new Array(width * height);
+
+    var _this = {};
+
+    _this.setPixel = function(x, y, pixel) {
+      _data[y * _width + x] = pixel;
+    };
+
+    _this.write = function(out) {
+
+      //---------------------------------
+      // GIF Signature
+
+      out.writeString('GIF87a');
+
+      //---------------------------------
+      // Screen Descriptor
+
+      out.writeShort(_width);
+      out.writeShort(_height);
+
+      out.writeByte(0x80); // 2bit
+      out.writeByte(0);
+      out.writeByte(0);
+
+      //---------------------------------
+      // Global Color Map
+
+      // black
+      out.writeByte(0x00);
+      out.writeByte(0x00);
+      out.writeByte(0x00);
+
+      // white
+      out.writeByte(0xff);
+      out.writeByte(0xff);
+      out.writeByte(0xff);
+
+      //---------------------------------
+      // Image Descriptor
+
+      out.writeString(',');
+      out.writeShort(0);
+      out.writeShort(0);
+      out.writeShort(_width);
+      out.writeShort(_height);
+      out.writeByte(0);
+
+      //---------------------------------
+      // Local Color Map
+
+      //---------------------------------
+      // Raster Data
+
+      var lzwMinCodeSize = 2;
+      var raster = getLZWRaster(lzwMinCodeSize);
+
+      out.writeByte(lzwMinCodeSize);
+
+      var offset = 0;
+
+      while (raster.length - offset > 255) {
+        out.writeByte(255);
+        out.writeBytes(raster, offset, 255);
+        offset += 255;
+      }
+
+      out.writeByte(raster.length - offset);
+      out.writeBytes(raster, offset, raster.length - offset);
+      out.writeByte(0x00);
+
+      //---------------------------------
+      // GIF Terminator
+      out.writeString(';');
+    };
+
+    var bitOutputStream = function(out) {
+
+      var _out = out;
+      var _bitLength = 0;
+      var _bitBuffer = 0;
+
+      var _this = {};
+
+      _this.write = function(data, length) {
+
+        if ( (data >>> length) != 0) {
+          throw 'length over';
+        }
+
+        while (_bitLength + length >= 8) {
+          _out.writeByte(0xff & ( (data << _bitLength) | _bitBuffer) );
+          length -= (8 - _bitLength);
+          data >>>= (8 - _bitLength);
+          _bitBuffer = 0;
+          _bitLength = 0;
+        }
+
+        _bitBuffer = (data << _bitLength) | _bitBuffer;
+        _bitLength = _bitLength + length;
+      };
+
+      _this.flush = function() {
+        if (_bitLength > 0) {
+          _out.writeByte(_bitBuffer);
+        }
+      };
+
+      return _this;
+    };
+
+    var getLZWRaster = function(lzwMinCodeSize) {
+
+      var clearCode = 1 << lzwMinCodeSize;
+      var endCode = (1 << lzwMinCodeSize) + 1;
+      var bitLength = lzwMinCodeSize + 1;
+
+      // Setup LZWTable
+      var table = lzwTable();
+
+      for (var i = 0; i < clearCode; i += 1) {
+        table.add(String.fromCharCode(i) );
+      }
+      table.add(String.fromCharCode(clearCode) );
+      table.add(String.fromCharCode(endCode) );
+
+      var byteOut = byteArrayOutputStream();
+      var bitOut = bitOutputStream(byteOut);
+
+      // clear code
+      bitOut.write(clearCode, bitLength);
+
+      var dataIndex = 0;
+
+      var s = String.fromCharCode(_data[dataIndex]);
+      dataIndex += 1;
+
+      while (dataIndex < _data.length) {
+
+        var c = String.fromCharCode(_data[dataIndex]);
+        dataIndex += 1;
+
+        if (table.contains(s + c) ) {
+
+          s = s + c;
+
+        } else {
+
+          bitOut.write(table.indexOf(s), bitLength);
+
+          if (table.size() < 0xfff) {
+
+            if (table.size() == (1 << bitLength) ) {
+              bitLength += 1;
+            }
+
+            table.add(s + c);
+          }
+
+          s = c;
+        }
+      }
+
+      bitOut.write(table.indexOf(s), bitLength);
+
+      // end code
+      bitOut.write(endCode, bitLength);
+
+      bitOut.flush();
+
+      return byteOut.toByteArray();
+    };
+
+    var lzwTable = function() {
+
+      var _map = {};
+      var _size = 0;
+
+      var _this = {};
+
+      _this.add = function(key) {
+        if (_this.contains(key) ) {
+          throw 'dup key:' + key;
+        }
+        _map[key] = _size;
+        _size += 1;
+      };
+
+      _this.size = function() {
+        return _size;
+      };
+
+      _this.indexOf = function(key) {
+        return _map[key];
+      };
+
+      _this.contains = function(key) {
+        return typeof _map[key] != 'undefined';
+      };
+
+      return _this;
+    };
+
+    return _this;
+  };
+
+  var createDataURL = function(width, height, getPixel) {
+    var gif = gifImage(width, height);
+    for (var y = 0; y < height; y += 1) {
+      for (var x = 0; x < width; x += 1) {
+        gif.setPixel(x, y, getPixel(x, y) );
+      }
+    }
+
+    var b = byteArrayOutputStream();
+    gif.write(b);
+
+    var base64 = base64EncodeOutputStream();
+    var bytes = b.toByteArray();
+    for (var i = 0; i < bytes.length; i += 1) {
+      base64.writeByte(bytes[i]);
+    }
+    base64.flush();
+
+    return 'data:image/gif;base64,' + base64;
+  };
+
+  //---------------------------------------------------------------------
+  // returns qrcode function.
+
+  return qrcode;
+}();
+
+// multibyte support
+!function() {
+
+  qrcode.stringToBytesFuncs['UTF-8'] = function(s) {
+    // http://stackoverflow.com/questions/18729405/how-to-convert-utf8-string-to-byte-array
+    function toUTF8Array(str) {
+      var utf8 = [];
+      for (var i=0; i < str.length; i++) {
+        var charcode = str.charCodeAt(i);
+        if (charcode < 0x80) utf8.push(charcode);
+        else if (charcode < 0x800) {
+          utf8.push(0xc0 | (charcode >> 6),
+              0x80 | (charcode & 0x3f));
+        }
+        else if (charcode < 0xd800 || charcode >= 0xe000) {
+          utf8.push(0xe0 | (charcode >> 12),
+              0x80 | ((charcode>>6) & 0x3f),
+              0x80 | (charcode & 0x3f));
+        }
+        // surrogate pair
+        else {
+          i++;
+          // UTF-16 encodes 0x10000-0x10FFFF by
+          // subtracting 0x10000 and splitting the
+          // 20 bits of 0x0-0xFFFFF into two halves
+          charcode = 0x10000 + (((charcode & 0x3ff)<<10)
+            | (str.charCodeAt(i) & 0x3ff));
+          utf8.push(0xf0 | (charcode >>18),
+              0x80 | ((charcode>>12) & 0x3f),
+              0x80 | ((charcode>>6) & 0x3f),
+              0x80 | (charcode & 0x3f));
+        }
+      }
+      return utf8;
+    }
+    return toUTF8Array(s);
+  };
+
+}();
+
+(function (factory) {
+  if (true) {
+      !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
+		(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {}
+}(function () {
+    return qrcode;
+}));
+
+
+/***/ }),
+
+/***/ "./node_modules/react-qrcode-logo/dist/index.js":
+/*!******************************************************!*\
+  !*** ./node_modules/react-qrcode-logo/dist/index.js ***!
+  \******************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.QRCode = void 0;
+var isEqual = __webpack_require__(/*! lodash.isequal */ "./node_modules/lodash.isequal/index.js");
+var qrGenerator = __webpack_require__(/*! qrcode-generator */ "./node_modules/qrcode-generator/qrcode.js");
+var React = __webpack_require__(/*! react */ "react");
+var QRCode = /** @class */ (function (_super) {
+    __extends(QRCode, _super);
+    function QRCode(props) {
+        var _this = _super.call(this, props) || this;
+        _this.canvasRef = React.createRef();
+        return _this;
+    }
+    QRCode.prototype.download = function (fileType, fileName) {
+        if (this.canvasRef.current) {
+            var mimeType = void 0;
+            switch (fileType) {
+                case 'jpg':
+                    mimeType = 'image/jpeg';
+                    break;
+                case 'webp':
+                    mimeType = 'image/webp';
+                    break;
+                case 'png':
+                default:
+                    mimeType = 'image/png';
+                    break;
+            }
+            var url = this.canvasRef.current.toDataURL(mimeType, 1.0);
+            var link = document.createElement('a');
+            link.download = fileName !== null && fileName !== void 0 ? fileName : 'react-qrcode-logo';
+            link.href = url;
+            link.click();
+        }
+    };
+    QRCode.prototype.utf16to8 = function (str) {
+        var out = '', i, c;
+        var len = str.length;
+        for (i = 0; i < len; i++) {
+            c = str.charCodeAt(i);
+            if ((c >= 0x0001) && (c <= 0x007F)) {
+                out += str.charAt(i);
+            }
+            else if (c > 0x07FF) {
+                out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+            }
+            else {
+                out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+            }
+        }
+        return out;
+    };
+    /**
+     * Draw a rounded square in the canvas
+     */
+    QRCode.prototype.drawRoundedSquare = function (lineWidth, x, y, size, color, radii, fill, ctx) {
+        ctx.lineWidth = lineWidth;
+        ctx.fillStyle = color;
+        ctx.strokeStyle = color;
+        // Adjust coordinates so that the outside of the stroke is aligned to the edges
+        y += lineWidth / 2;
+        x += lineWidth / 2;
+        size -= lineWidth;
+        if (!Array.isArray(radii)) {
+            radii = [radii, radii, radii, radii];
+        }
+        // Radius should not be greater than half the size or less than zero
+        radii = radii.map(function (r) {
+            r = Math.min(r, size / 2);
+            return (r < 0) ? 0 : r;
+        });
+        var rTopLeft = radii[0] || 0;
+        var rTopRight = radii[1] || 0;
+        var rBottomRight = radii[2] || 0;
+        var rBottomLeft = radii[3] || 0;
+        ctx.beginPath();
+        ctx.moveTo(x + rTopLeft, y);
+        ctx.lineTo(x + size - rTopRight, y);
+        if (rTopRight)
+            ctx.quadraticCurveTo(x + size, y, x + size, y + rTopRight);
+        ctx.lineTo(x + size, y + size - rBottomRight);
+        if (rBottomRight)
+            ctx.quadraticCurveTo(x + size, y + size, x + size - rBottomRight, y + size);
+        ctx.lineTo(x + rBottomLeft, y + size);
+        if (rBottomLeft)
+            ctx.quadraticCurveTo(x, y + size, x, y + size - rBottomLeft);
+        ctx.lineTo(x, y + rTopLeft);
+        if (rTopLeft)
+            ctx.quadraticCurveTo(x, y, x + rTopLeft, y);
+        ctx.closePath();
+        ctx.stroke();
+        if (fill) {
+            ctx.fill();
+        }
+    };
+    /**
+     * Draw a single positional pattern eye.
+     */
+    QRCode.prototype.drawPositioningPattern = function (ctx, cellSize, offset, row, col, color, radii) {
+        if (radii === void 0) { radii = [0, 0, 0, 0]; }
+        var lineWidth = Math.ceil(cellSize);
+        var radiiOuter;
+        var radiiInner;
+        if (typeof radii !== 'number' && !Array.isArray(radii)) {
+            radiiOuter = radii.outer || 0;
+            radiiInner = radii.inner || 0;
+        }
+        else {
+            radiiOuter = radii;
+            radiiInner = radiiOuter;
+        }
+        var colorOuter;
+        var colorInner;
+        if (typeof color !== 'string') {
+            colorOuter = color.outer;
+            colorInner = color.inner;
+        }
+        else {
+            colorOuter = color;
+            colorInner = color;
+        }
+        var y = (row * cellSize) + offset;
+        var x = (col * cellSize) + offset;
+        var size = cellSize * 7;
+        // Outer box
+        this.drawRoundedSquare(lineWidth, x, y, size, colorOuter, radiiOuter, false, ctx);
+        // Inner box
+        size = cellSize * 3;
+        y += cellSize * 2;
+        x += cellSize * 2;
+        this.drawRoundedSquare(lineWidth, x, y, size, colorInner, radiiInner, true, ctx);
+    };
+    ;
+    /**
+     * Is this dot inside a positional pattern zone.
+     */
+    QRCode.prototype.isInPositioninZone = function (col, row, zones) {
+        return zones.some(function (zone) { return (row >= zone.row && row <= zone.row + 7 &&
+            col >= zone.col && col <= zone.col + 7); });
+    };
+    QRCode.prototype.transformPixelLengthIntoNumberOfCells = function (pixelLength, cellSize) {
+        return pixelLength / cellSize;
+    };
+    QRCode.prototype.isCoordinateInImage = function (col, row, dWidthLogo, dHeightLogo, dxLogo, dyLogo, cellSize, logoImage) {
+        if (logoImage) {
+            var numberOfCellsMargin = 2;
+            var firstRowOfLogo = this.transformPixelLengthIntoNumberOfCells(dxLogo, cellSize);
+            var firstColumnOfLogo = this.transformPixelLengthIntoNumberOfCells(dyLogo, cellSize);
+            var logoWidthInCells = this.transformPixelLengthIntoNumberOfCells(dWidthLogo, cellSize) - 1;
+            var logoHeightInCells = this.transformPixelLengthIntoNumberOfCells(dHeightLogo, cellSize) - 1;
+            return row >= firstRowOfLogo - numberOfCellsMargin && row <= firstRowOfLogo + logoWidthInCells + numberOfCellsMargin // check rows
+                && col >= firstColumnOfLogo - numberOfCellsMargin && col <= firstColumnOfLogo + logoHeightInCells + numberOfCellsMargin; // check cols
+        }
+        else {
+            return false;
+        }
+    };
+    QRCode.prototype.shouldComponentUpdate = function (nextProps) {
+        return !isEqual(this.props, nextProps);
+    };
+    QRCode.prototype.componentDidMount = function () {
+        this.update();
+    };
+    QRCode.prototype.componentDidUpdate = function () {
+        this.update();
+    };
+    QRCode.prototype.update = function () {
+        var _a;
+        var _b = this.props, value = _b.value, ecLevel = _b.ecLevel, enableCORS = _b.enableCORS, bgColor = _b.bgColor, fgColor = _b.fgColor, logoImage = _b.logoImage, logoOpacity = _b.logoOpacity, logoOnLoad = _b.logoOnLoad, removeQrCodeBehindLogo = _b.removeQrCodeBehindLogo, qrStyle = _b.qrStyle, eyeRadius = _b.eyeRadius, eyeColor = _b.eyeColor, logoPaddingStyle = _b.logoPaddingStyle;
+        // just make sure that these params are passed as numbers
+        var size = +this.props.size;
+        var quietZone = +this.props.quietZone;
+        var logoWidth = this.props.logoWidth ? +this.props.logoWidth : 0;
+        var logoHeight = this.props.logoHeight ? +this.props.logoHeight : 0;
+        var logoPadding = this.props.logoPadding ? +this.props.logoPadding : 0;
+        var qrCode = qrGenerator(0, ecLevel);
+        qrCode.addData(this.utf16to8(value));
+        qrCode.make();
+        var canvas = (_a = this.canvasRef) === null || _a === void 0 ? void 0 : _a.current;
+        var ctx = canvas.getContext('2d');
+        var canvasSize = size + (2 * quietZone);
+        var length = qrCode.getModuleCount();
+        var cellSize = size / length;
+        var scale = (window.devicePixelRatio || 1);
+        canvas.height = canvas.width = canvasSize * scale;
+        ctx.scale(scale, scale);
+        ctx.fillStyle = bgColor;
+        ctx.fillRect(0, 0, canvasSize, canvasSize);
+        var offset = quietZone;
+        var positioningZones = [
+            { row: 0, col: 0 },
+            { row: 0, col: length - 7 },
+            { row: length - 7, col: 0 },
+        ];
+        ctx.strokeStyle = fgColor;
+        if (qrStyle === 'dots') {
+            ctx.fillStyle = fgColor;
+            var radius = cellSize / 2;
+            for (var row = 0; row < length; row++) {
+                for (var col = 0; col < length; col++) {
+                    if (qrCode.isDark(row, col) && !this.isInPositioninZone(row, col, positioningZones)) {
+                        ctx.beginPath();
+                        ctx.arc(Math.round(col * cellSize) + radius + offset, Math.round(row * cellSize) + radius + offset, (radius / 100) * 75, 0, 2 * Math.PI, false);
+                        ctx.closePath();
+                        ctx.fill();
+                    }
+                }
+            }
+        }
+        else if (qrStyle === 'fluid') {
+            var radius = Math.ceil(cellSize / 2);
+            for (var row = 0; row < length; row++) {
+                for (var col = 0; col < length; col++) {
+                    if (qrCode.isDark(row, col) && !this.isInPositioninZone(row, col, positioningZones)) {
+                        var roundedCorners = [false, false, false, false]; // top-left, top-right, bottom-right, bottom-left
+                        if ((row > 0 && !qrCode.isDark(row - 1, col)) && (col > 0 && !qrCode.isDark(row, col - 1)))
+                            roundedCorners[0] = true;
+                        if ((row > 0 && !qrCode.isDark(row - 1, col)) && (col < length - 1 && !qrCode.isDark(row, col + 1)))
+                            roundedCorners[1] = true;
+                        if ((row < length - 1 && !qrCode.isDark(row + 1, col)) && (col < length - 1 && !qrCode.isDark(row, col + 1)))
+                            roundedCorners[2] = true;
+                        if ((row < length - 1 && !qrCode.isDark(row + 1, col)) && (col > 0 && !qrCode.isDark(row, col - 1)))
+                            roundedCorners[3] = true;
+                        var w = (Math.ceil((col + 1) * cellSize) - Math.floor(col * cellSize));
+                        var h = (Math.ceil((row + 1) * cellSize) - Math.floor(row * cellSize));
+                        ctx.fillStyle = fgColor;
+                        ctx.beginPath();
+                        ctx.arc(Math.round(col * cellSize) + radius + offset, Math.round(row * cellSize) + radius + offset, radius, 0, 2 * Math.PI, false);
+                        ctx.closePath();
+                        ctx.fill();
+                        if (!roundedCorners[0])
+                            ctx.fillRect(Math.round(col * cellSize) + offset, Math.round(row * cellSize) + offset, w / 2, h / 2);
+                        if (!roundedCorners[1])
+                            ctx.fillRect(Math.round(col * cellSize) + offset + Math.floor(w / 2), Math.round(row * cellSize) + offset, w / 2, h / 2);
+                        if (!roundedCorners[2])
+                            ctx.fillRect(Math.round(col * cellSize) + offset + Math.floor(w / 2), Math.round(row * cellSize) + offset + Math.floor(h / 2), w / 2, h / 2);
+                        if (!roundedCorners[3])
+                            ctx.fillRect(Math.round(col * cellSize) + offset, Math.round(row * cellSize) + offset + Math.floor(h / 2), w / 2, h / 2);
+                    }
+                }
+            }
+        }
+        else {
+            for (var row = 0; row < length; row++) {
+                for (var col = 0; col < length; col++) {
+                    if (qrCode.isDark(row, col) && !this.isInPositioninZone(row, col, positioningZones)) {
+                        ctx.fillStyle = fgColor;
+                        var w = (Math.ceil((col + 1) * cellSize) - Math.floor(col * cellSize));
+                        var h = (Math.ceil((row + 1) * cellSize) - Math.floor(row * cellSize));
+                        ctx.fillRect(Math.round(col * cellSize) + offset, Math.round(row * cellSize) + offset, w, h);
+                    }
+                }
+            }
+        }
+        // Draw positioning patterns
+        for (var i = 0; i < 3; i++) {
+            var _c = positioningZones[i], row = _c.row, col = _c.col;
+            var radii = eyeRadius;
+            var color = void 0;
+            if (Array.isArray(radii)) {
+                radii = radii[i];
+            }
+            if (typeof radii == 'number') {
+                radii = [radii, radii, radii, radii];
+            }
+            if (!eyeColor) { // if not specified, eye color is the same as foreground, 
+                color = fgColor;
+            }
+            else {
+                if (Array.isArray(eyeColor)) { // if array, we pass the single color
+                    color = eyeColor[i];
+                }
+                else {
+                    color = eyeColor;
+                }
+            }
+            this.drawPositioningPattern(ctx, cellSize, offset, row, col, color, radii);
+        }
+        if (logoImage) {
+            var image_1 = new Image();
+            if (enableCORS) {
+                image_1.crossOrigin = 'Anonymous';
+            }
+            image_1.onload = function (e) {
+                ctx.save();
+                var dWidthLogo = logoWidth || size * 0.2;
+                var dHeightLogo = logoHeight || dWidthLogo;
+                var dxLogo = ((size - dWidthLogo) / 2);
+                var dyLogo = ((size - dHeightLogo) / 2);
+                if (removeQrCodeBehindLogo || logoPadding) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = bgColor;
+                    ctx.fillStyle = bgColor;
+                    var dWidthLogoPadding = dWidthLogo + (2 * logoPadding);
+                    var dHeightLogoPadding = dHeightLogo + (2 * logoPadding);
+                    var dxLogoPadding = dxLogo + offset - logoPadding;
+                    var dyLogoPadding = dyLogo + offset - logoPadding;
+                    if (logoPaddingStyle === 'circle') {
+                        var dxCenterLogoPadding = dxLogoPadding + (dWidthLogoPadding / 2);
+                        var dyCenterLogoPadding = dyLogoPadding + (dHeightLogoPadding / 2);
+                        ctx.ellipse(dxCenterLogoPadding, dyCenterLogoPadding, dWidthLogoPadding / 2, dHeightLogoPadding / 2, 0, 0, 2 * Math.PI);
+                        ctx.stroke();
+                        ctx.fill();
+                    }
+                    else {
+                        ctx.fillRect(dxLogoPadding, dyLogoPadding, dWidthLogoPadding, dHeightLogoPadding);
+                    }
+                }
+                ctx.globalAlpha = logoOpacity;
+                ctx.drawImage(image_1, dxLogo + offset, dyLogo + offset, dWidthLogo, dHeightLogo);
+                ctx.restore();
+                if (logoOnLoad) {
+                    logoOnLoad(e);
+                }
+            };
+            image_1.src = logoImage;
+        }
+    };
+    QRCode.prototype.render = function () {
+        var _a;
+        var qrSize = +this.props.size + (2 * +this.props.quietZone);
+        return React.createElement("canvas", { id: (_a = this.props.id) !== null && _a !== void 0 ? _a : 'react-qrcode-logo', height: qrSize, width: qrSize, style: __assign({ height: qrSize + 'px', width: qrSize + 'px' }, this.props.style), ref: this.canvasRef });
+    };
+    QRCode.defaultProps = {
+        value: 'https://reactjs.org/',
+        ecLevel: 'M',
+        enableCORS: false,
+        size: 150,
+        quietZone: 10,
+        bgColor: '#FFFFFF',
+        fgColor: '#000000',
+        logoOpacity: 1,
+        qrStyle: 'squares',
+        eyeRadius: [0, 0, 0],
+        logoPaddingStyle: 'square'
+    };
+    return QRCode;
+}(React.Component));
+exports.QRCode = QRCode;
+
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "React" ***!
+  \************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["React"];
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["ReactJSXRuntime"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/hooks":
+/*!*******************************!*\
+  !*** external ["wp","hooks"] ***!
+  \*******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["hooks"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = '';
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (arg) {
+				classes = appendClass(classes, parseValue(arg));
+			}
+		}
+
+		return classes;
+	}
+
+	function parseValue (arg) {
+		if (typeof arg === 'string' || typeof arg === 'number') {
+			return arg;
+		}
+
+		if (typeof arg !== 'object') {
+			return '';
+		}
+
+		if (Array.isArray(arg)) {
+			return classNames.apply(null, arg);
+		}
+
+		if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+			return arg.toString();
+		}
+
+		var classes = '';
+
+		for (var key in arg) {
+			if (hasOwn.call(arg, key) && arg[key]) {
+				classes = appendClass(classes, key);
+			}
+		}
+
+		return classes;
+	}
+
+	function appendClass (value, newClass) {
+		if (!newClass) {
+			return value;
+		}
+	
+		if (value) {
+			return value + ' ' + newClass;
+		}
+	
+		return value + newClass;
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
+/***/ "./src/blocks/qrcode/block.json":
+/*!**************************************!*\
+  !*** ./src/blocks/qrcode/block.json ***!
+  \**************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"QR Code","name":"zolo/qrcode","category":"zoloblocks","keywords":["qr","code","link","text","brand","scan","barcode","url"],"description":"Generate customized, branded QR codes for links or text.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":400},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":"file:./index.js","style":"file:./style-index.css","viewScript":"file:./frontend.js"}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"blocks/qrcode/index": 0,
+/******/ 			"blocks/qrcode/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkzoloblocks"] = globalThis["webpackChunkzoloblocks"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/qrcode/style-index"], () => (__webpack_require__("./src/blocks/qrcode/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

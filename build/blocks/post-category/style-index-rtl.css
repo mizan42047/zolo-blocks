@@ -1,1 +1,90 @@
-.zolo-post-category-wrap{display:grid;grid-template-columns:repeat(4,1fr);grid-gap:10px}.zolo-post-category-wrap .zolo-category-name{color:#fff;font-weight:600;transition:all .3s ease}.zolo-post-category-wrap .zolo-category-count{align-items:center;background:hsla(0,0%,100%,.3);border-radius:6px;box-sizing:content-box;color:#fff;display:flex;font-size:13px;height:1em;justify-content:center;padding:10px;transition:all .3s ease;width:1em}.zolo-post-category-wrap .zolo-category-item{background:#2b2d42;border-radius:8px;overflow:hidden;padding:20px;position:relative;text-decoration:none!important}.zolo-post-category-wrap .zolo-content{align-items:center;display:flex;gap:15px;justify-content:space-between}.zolo-post-category-wrap .zolo-category-text{color:#e0e0e0;font-size:14px;margin:0;margin-bottom:0!important;transition:all .3s ease}.zolo-post-category-wrap .zolo-category-img{height:100%;width:100%}.zolo-post-category-wrap .zolo-category-img img{height:100%;-o-object-fit:cover;object-fit:cover;vertical-align:middle;width:100%}.zolo-post-category-wrap .zolo-category-link{align-items:center;background-color:#ddd;border-radius:6px;color:#29272e;display:inline-flex;font-size:14px;font-weight:600;gap:5px;justify-content:space-between;padding:10px;text-transform:capitalize}.zolo-post-category-wrap .zolo-category-link .zolo__display-icon svg{display:block;height:1em;width:1em;fill:currentColor;box-sizing:content-box}.zolo-post-category-wrap .zolo-category-link:hover{background-color:#fff}.zolo-post-category-wrap.zolo-category-style-1 .zolo-category-item{display:flex;flex-direction:column;justify-content:space-between}.zolo-post-category-wrap.zolo-category-style-1 .zolo-category-bottom-content .zolo-category-link{margin-top:15px}
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/post-category/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+.zolo-post-category-wrap {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.zolo-post-category-wrap .zolo-category-name {
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.zolo-post-category-wrap .zolo-category-count {
+  font-size: 13px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  box-sizing: content-box;
+}
+.zolo-post-category-wrap .zolo-category-item {
+  position: relative;
+  background: #2b2d42;
+  padding: 20px;
+  border-radius: 8px;
+  text-decoration: none !important;
+  overflow: hidden;
+}
+.zolo-post-category-wrap .zolo-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+}
+.zolo-post-category-wrap .zolo-category-text {
+  color: #e0e0e0;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin: 0;
+  margin-bottom: 0 !important;
+}
+.zolo-post-category-wrap .zolo-category-img {
+  height: 100%;
+  width: 100%;
+}
+.zolo-post-category-wrap .zolo-category-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+.zolo-post-category-wrap .zolo-category-link {
+  background-color: #ddd;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  text-transform: capitalize;
+  font-weight: 600;
+  gap: 5px;
+  color: #29272e;
+  border-radius: 6px;
+}
+.zolo-post-category-wrap .zolo-category-link .zolo__display-icon svg {
+  width: 1em;
+  height: 1em;
+  display: block;
+  fill: currentColor;
+  box-sizing: content-box;
+}
+.zolo-post-category-wrap .zolo-category-link:hover {
+  background-color: #fff;
+}
+.zolo-post-category-wrap.zolo-category-style-1 .zolo-category-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.zolo-post-category-wrap.zolo-category-style-1 .zolo-category-bottom-content .zolo-category-link {
+  margin-top: 15px;
+}

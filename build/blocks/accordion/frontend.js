@@ -1,1 +1,25 @@
-document.addEventListener("DOMContentLoaded",(function(){const t=document.querySelectorAll(".wp-block-zolo-accordion");t&&t.length>0&&t.forEach((t=>{const n=t.dataset.initialOpen?parseInt(t.dataset.initialOpen):0,e=!!t.dataset.allowinitialopen,o="true"===t.dataset.multiple;new Accordion(t,{duration:400,...e&&{openOnInit:n?[n-1]:[0]},showMultiple:!!o})}))}));
+/******/ (() => { // webpackBootstrap
+/*!******************************************!*\
+  !*** ./src/blocks/accordion/frontend.js ***!
+  \******************************************/
+document.addEventListener('DOMContentLoaded', function () {
+  const zoloAccordions = document.querySelectorAll('.wp-block-zolo-accordion');
+  if (zoloAccordions && zoloAccordions.length > 0) {
+    zoloAccordions.forEach(accordion => {
+      // options
+      const initialOpen = accordion.dataset.initialOpen ? parseInt(accordion.dataset.initialOpen) : 0;
+      const allowInitialOpen = accordion.dataset.allowinitialopen ? true : false;
+      const allowMultiple = accordion.dataset.multiple === 'true' ? true : false;
+      new Accordion(accordion, {
+        duration: 400,
+        ...(allowInitialOpen && {
+          openOnInit: initialOpen ? [initialOpen - 1] : [0]
+        }),
+        showMultiple: allowMultiple ? true : false
+      });
+    });
+  }
+});
+/******/ })()
+;
+//# sourceMappingURL=frontend.js.map

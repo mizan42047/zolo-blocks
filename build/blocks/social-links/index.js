@@ -1,1 +1,4362 @@
-(()=>{var e,t={6639:(e,t,o)=>{"use strict";var r={};o.r(r),o.d(r,{TEXT_TYPOGRAPHY:()=>E});const n=window.wp.blocks,l=window.wp.i18n,s=[{label:(0,l.__)("Preset 1","zoloblocks"),value:"preset-1"},{label:(0,l.__)("Preset 2","zoloblocks"),value:"preset-2"},{label:(0,l.__)("Preset 3","zoloblocks"),value:"preset-3"}],i=[{label:(0,l.__)("Original","zoloblocks"),value:"original"},{label:(0,l.__)("Custom","zoloblocks"),value:"custom"}],a="columnCount",c="columnsGap",k="btnPadding",d="btnSize",h="btnBorder",p="btnBorderRadius",D="btnShadow",u="btnHoverShadow",m="iconTextSpacing",w="blockMargin",g="blockAlignment",L="ptIconWidth",b="ptIconHeight",E="textTypography",{generateResRangeAttributies:_,generateBorderAttributies:v,generateResCounterAttributies:x,generateDimensionAttributes:z,generateBoxShadowAttributies:M,generateTypographyAttributes:W,generateGapAttributes:y,generateResAlignmentAttributies:f}=window.zoloModule,j={globalConfig:{type:"object",default:{margin:{prefix:"mainMargin"},padding:{prefix:"mainPadding"},background:{prefix:"mainBg"},border:{prefix:"mainBorder"},borderRadius:{prefix:"mainBorderRadius"},boxShadow:{prefix:"mainBoxShadow"},responsiveControls:!0}},...v(h),...z(p),...M(D),...M(u),...x(a,{defaultRange:5}),...y(c,{defaultUnit:"px"}),...z(k),..._(d),..._(m),...z(w),...W(Object.values(r)),..._(L),..._(b),...f(g),preset:{type:"string",default:"preset-1"},layout:{type:"string",default:"flex"},socialText:{type:"string",default:"iconText"},socialProfiles:{type:"array",default:[{id:1,icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>',link:{url:"#",openInNewTab:!1},text:"Facebook"},{id:2,icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>',link:{url:"#",openInNewTab:!1},text:"Twitter"},{id:3,icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>',link:{url:"#",openInNewTab:!1},text:"Instagram"},{id:4,icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>',link:{url:"#",openInNewTab:!1},text:"Linkedin"}]},socialProfilesLinkTarget:{type:"boolean",default:!0},socialStyle:{type:"string",default:"default"},targetPage:{type:"string"},customLink:{type:"string"},socialColor:{type:"string",default:"original"},socialTextColor:{type:"string"},socialTextHoverColor:{type:"string"},socialBgColor:{type:"string"},socialBgHoverColor:{type:"string"},icon:{type:"string"},iconPosition:{type:"string",default:"right"},textColor:{type:"string"},textHoverColor:{type:"string"},borderHoverColor:{type:"string"},iconColor:{type:"string"},iconBgColor:{type:"string"},iconHoverColor:{type:"string"},iconBgHoverColor:{type:"string"}},C=JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"Social Links","name":"zolo/social-links","category":"zoloblocks","keywords":["icon","links","social","connect","share","follow","twitter","facebook","instagram","youtube"],"description":"Add social links to enhance connectivity with your audience.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":410},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":"file:./index.js","style":"file:./style-index.css"}'),B=window.React,S=window.wp.blockEditor,$=window.wp.hooks;var V=o(6942),H=o.n(V);const P=window.lodash,{ZoloIconPicker:T,SortableControl:R,SortableItem:N,LinkControl:A}=window.zoloModule,{__:I}=wp.i18n,{Button:O,PanelBody:F,TextControl:q}=wp.components,G=({socialProfiles:e,setAttributes:t})=>{const o=(0,P.cloneDeep)(e);return(0,B.createElement)("div",{className:"sortable"},(0,B.createElement)("div",{className:"zb-repeater-flex"},(0,B.createElement)("div",{className:"repeater-label"},I("Add a Profile","zoloblocks")),(0,B.createElement)(O,{onClick:()=>t({socialProfiles:[...e,{id:e.length+1,icon:'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>',link:{url:"#",openInNewTab:!1},text:"Facebook"}]})},(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12 8V16",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,B.createElement)("path",{d:"M16 12H8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"})))),(0,B.createElement)(R,{defaultItems:e,attributeName:"socialProfiles",setAttributes:t},o&&o.map(((r,n)=>(0,B.createElement)("div",{className:"dnd-container",key:n},(0,B.createElement)(O,{className:"dnd-trash",icon:"trash",onClick:()=>{t({socialProfiles:e.filter(((e,t)=>n!==t))})}}),(0,B.createElement)(N,{key:r.id,id:r.id},(0,B.createElement)(F,{title:r.text||"Title",initialOpen:!1},(0,B.createElement)(q,{label:I("Title","zoloblocks"),value:r.text,onChange:e=>{const r=[...o];r[n].text=e,t({socialProfiles:r})}}),(0,B.createElement)(T,{label:I("Select Icon","zoloblocks"),value:r.icon,onChange:e=>{const r=[...o];r[n].icon=e,t({socialProfiles:r})}}),(0,B.createElement)(A,{label:I("Link","zoloblocks"),value:r.link,onChange:e=>{const r=[...o];r[n].link=e,t({socialProfiles:r})}}))))))))},Z=window.wp.components,Y=((0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M4 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:8,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M2 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:6,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M4 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:8,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 12L16 12",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M8 12L2 12",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:16,y:4,width:16,height:8,rx:1,transform:"rotate(90 16 4)",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),[{label:"Left",value:"flex-start",icon:(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M4 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:8,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"}))},{label:"Center",value:"center",icon:(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12 2L12 8",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M12 16L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:16,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"}))},{label:"Right",value:"flex-end",icon:(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"}))}]),U=((0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M6.64246 7.53723H17.2781",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M17.2781 7.53729L15.3485 5.28601",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M17.2781 7.53723L15.3485 9.78851",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M6.64246 16.4172H17.2781",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M17.2781 16.4173L15.3485 14.1774",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M17.2781 16.4172L15.3485 18.6685",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M2.85132 21.1473V2.85278",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21.1487 21.1473V2.85278",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.391 6.72949L16.391 17.1923",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.3909 17.1923L18.606 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.391 17.1923L14.176 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.65393 6.72949L7.65393 17.1923",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.65381 17.1923L9.85767 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.65393 17.1923L5.43889 15.2941",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M17.2705 16.391L6.80771 16.391",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M6.80767 16.3909L8.70593 18.606",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M6.80767 16.391L8.70593 14.176",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M17.2705 7.65393L6.80771 7.65393",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M6.80767 7.65381L8.70593 9.85767",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M6.80767 7.65393L8.70593 5.43889",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M7.60901 17.2705L7.60901 6.80771",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.60908 6.80767L5.39404 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.60901 6.80767L9.82405 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.3461 17.2705L16.3461 6.80771",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.3462 6.80767L14.1423 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.3461 6.80767L18.5611 8.70593",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12.142 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.15051 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M9.46875 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M14.4974 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M11.858 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.8495 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{xmlns:"http://www.w3.org/2000/svg",width:24,height:24,viewBox:"0 0 24 24",fill:"none"},(0,B.createElement)("path",{d:"M8.00001 15.27L16.39 15.27",stroke:"#4D4D4D",strokeWidth:3,strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M8.00001 9.27002L16.39 9.27002",stroke:"#4D4D4D",strokeWidth:3,strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M20.51 4.03003L3.97001 4.03003",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M20.51 20.51L3.97001 20.51",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M7.39385 12.142L16.5189 12.142",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.39385 7.15051L16.5189 7.15051",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.5599 9.46875L7.42934 9.46875",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.5599 14.4974L7.42934 14.4974",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.606 11.858L7.48088 11.858",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.606 16.8495L7.48088 16.8495",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M15.72 16.64H8.91003",stroke:"#4D4D4D",strokeWidth:"7",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M4 20.48H20.54",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M4 4H20.54",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15.72 7.83997H8.91003",stroke:"#4D4D4D",strokeWidth:"7",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M7.39385 12.142L16.5189 12.142",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.39385 7.15051L16.5189 7.15051",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.5599 9.46875L7.42934 9.46875",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.5599 14.4974L7.42934 14.4974",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3L3 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21L3 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.606 11.858L7.48088 11.858",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.606 16.8495L7.48088 16.8495",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.606 7.1615L7.48088 7.1615",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.606 16.8386L7.48088 16.8386",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.6713 8.21777L7.54619 8.21777",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.606 15.8041L7.48088 15.8041",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M16.606 8.73425L7.48088 8.73425",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.606 15.2767L7.48088 15.2767",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21L21 21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3L21 3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12.142 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.15051 16.6062V7.48108",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M9.46875 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M14.4974 7.44006V16.5707",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M11.858 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.8495 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M7.1615 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.8386 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M8.21777 7.32874V16.4538",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15.8041 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M8.73425 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15.2767 7.39404V16.5191",stroke:"#4D4D4D",strokeWidth:"3",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 21V3",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.37 15.2757H15.27C16.35 15.2757 17.23 14.318 17.23 13.1427V7.451C17.23 6.27567 16.35 5.31799 15.27 5.31799H7.53",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M10.07 11.8368L6.77002 15.2757L10.07 18.7255",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M17.51 12.0109H6.18005",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M14.8101 8.5719L18.1101 12.0108L14.8101 15.4607",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M3 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21 3V21",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M7.35999 8.76794H15.26C16.34 8.76794 17.22 9.72562 17.22 10.901V16.5926C17.22 17.7679 16.34 18.7256 15.26 18.7256H7.51999",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M10.0699 12.2068L6.7699 8.76783L10.0699 5.30713",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,l.__)("H1","zoloblocks"),(0,l.__)("H2","zoloblocks"),(0,l.__)("H3","zoloblocks"),(0,l.__)("H4","zoloblocks"),(0,l.__)("H5","zoloblocks"),(0,l.__)("H6","zoloblocks"),(0,l.__)("P","zoloblocks"),(0,l.__)("Span","zoloblocks"),(0,l.__)("P","zoloblocks"),(0,l.__)("Span","zoloblocks"),(0,l.__)("None","zoloblocks"),(0,l.__)("Solid","zoloblocks"),(0,l.__)("Custom","zoloblocks"),(0,l.__)("Dashed","zoloblocks"),(0,l.__)("Dotted","zoloblocks"),(0,l.__)("Double","zoloblocks"),(0,l.__)("Groove","zoloblocks"),(0,l.__)("Outset","zoloblocks"),(0,l.__)("Ridge","zoloblocks"),(0,l.__)("Classic","zoloblocks"),(0,l.__)("Gradient","zoloblocks"),(0,l.__)("Color","zoloblocks"),(0,l.__)("Gradient","zoloblocks"),(0,l.__)("Image","zoloblocks"),(0,l.__)("Outer","zoloblocks"),(0,l.__)("Inner","zoloblocks"),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M2 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:"7",y:"8",width:"12",height:"8",rx:"1",fill:"none",stroke:"#4D4D4D",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"1"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("rect",{x:11,y:12,width:11,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,B.createElement)("rect",{x:3,y:10,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("rect",{x:3,y:12,width:11,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,B.createElement)("rect",{x:18,y:10,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("rect",{x:6,y:16,width:12,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,B.createElement)("rect",{x:10,y:8,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("rect",{x:6,y:8,width:12,height:"0.01",rx:"0.005",stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,B.createElement)("rect",{x:10,y:12,width:4,height:4,rx:2,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,B.createElement)("svg",{width:"24",height:"24",viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M2 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:"7",y:"8",width:"12",height:"8",rx:"1",fill:"none",stroke:"#4D4D4D",strokeLinecap:"round",strokeLinejoin:"round",strokeWidth:"1"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M20 2V22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("rect",{x:4,y:8,width:12,height:8,rx:1,stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,l.__)("Top","zoloblocks"),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 4L2 4",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),(0,l.__)("Bottom","zoloblocks"),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 20L2 20",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",stroke:"#4D4D4D",strokeWidth:"1.5"})),[{label:(0,l.__)("No Icon","zoloblocks"),value:"none",icon:(0,B.createElement)("svg",{width:18,height:18,viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("circle",{cx:9,cy:9,r:8,stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,B.createElement)("path",{d:"M3.13904 4.3877L14.3609 14.1124",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}))},{label:(0,l.__)("Icon & Text","zoloblocks"),value:"iconText",icon:(0,B.createElement)("svg",{width:35,height:24,viewBox:"0 0 35 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M12 12V16",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,B.createElement)("path",{d:"M12 9.5V9",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,B.createElement)("path",{d:"M23 12H31M23 15H27.7059",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,B.createElement)("circle",{cx:12,cy:12,r:8,stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,B.createElement)("path",{d:"M23 9H33.5",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}))},{label:(0,l.__)("Only Icon","zoloblocks"),value:"iconOnly",icon:(0,B.createElement)("svg",{width:18,height:18,viewBox:"0 0 18 18",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("circle",{cx:9,cy:9,r:8,stroke:"#4D4D4D",strokeWidth:"1.5"}),(0,B.createElement)("path",{d:"M9 9V13",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}),(0,B.createElement)("path",{d:"M9 6.5V6",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round"}))}]),{ResRangeControl:X,ColorControl:J,TabPanelControl:K,HeaderTabs:Q,IconicBtnGroup:ee,ResCounterControl:te,ResDimensionsControl:oe,BorderControl:re,BoxShadowControl:ne,TypographyDropdown:le,AdvancedOptions:se,ResGapControl:ie,ZoloPanelBody:ae,ResAlignmentControl:ce}=((0,l.__)("Date","zoloblocks"),(0,l.__)("Author","zoloblocks"),(0,l.__)("Title","zoloblocks"),(0,l.__)("Last modified date","zoloblocks"),(0,l.__)("Post parent ID","zoloblocks"),(0,l.__)("ASC","zoloblocks"),(0,l.__)("DESC","zoloblocks"),(0,l.__)("Default","zoloblocks"),(0,l.__)("Thumbnail","zoloblocks"),(0,l.__)("Medium","zoloblocks"),(0,l.__)("Large","zoloblocks"),(0,l.__)("Full","zoloblocks"),(0,l.__)("Image","zoloblocks"),(0,l.__)("Icon","zoloblocks"),(0,l.__)("Full","zoloblocks"),(0,l.__)("Boxed","zoloblocks"),(0,l.__)("Custom","zoloblocks"),(0,l.__)("Boxed","zoloblocks"),(0,l.__)("Full Width","zoloblocks"),(0,l.__)("Default","zoloblocks"),(0,l.__)("Auto","zoloblocks"),(0,l.__)("Hidden","zoloblocks"),(0,l.__)("Scroll","zoloblocks"),(0,l.__)("Clip","zoloblocks"),(0,l.__)("Default","zoloblocks"),(0,l.__)("Relative","zoloblocks"),(0,l.__)("Absolute","zoloblocks"),(0,l.__)("Fixed","zoloblocks"),(0,l.__)("Default","zoloblocks"),(0,l.__)("Full Width","zoloblocks"),(0,l.__)("Inline (auto)","zoloblocks"),(0,l.__)("Custom","azoloblocks"),(0,l.__)("None","zoloblocks"),(0,l.__)("Fill","zoloblocks"),(0,l.__)("Contain","zoloblocks"),(0,l.__)("Cover","zoloblocks"),(0,l.__)("Scale Down","zoloblocks"),(0,l.__)("None","zoloblocks"),(0,l.__)("Abstract","zoloblocks"),(0,l.__)("Abstract Brush 1","zoloblocks"),(0,l.__)("Abstract Brush 2","zoloblocks"),(0,l.__)("Aesthetic Blob","zoloblocks"),(0,l.__)("Amorphous Blob","zoloblocks"),(0,l.__)("Brush","zoloblocks"),(0,l.__)("Comment","zoloblocks"),(0,l.__)("Container","zoloblocks"),(0,l.__)("Hand Drawn Blob","zoloblocks"),(0,l.__)("Hexagon","zoloblocks"),(0,l.__)("Hexagon Blob","zoloblocks"),(0,l.__)("Irregular Blob","zoloblocks"),(0,l.__)("Minimal Round","zoloblocks"),(0,l.__)("Octagon","zoloblocks"),(0,l.__)("Organic Blob","zoloblocks"),(0,l.__)("Oval Blob","zoloblocks"),(0,l.__)("Pattern","zoloblocks"),(0,l.__)("Popup 1","zoloblocks"),(0,l.__)("Popup 2","zoloblocks"),(0,l.__)("Popup 3","zoloblocks"),(0,l.__)("Round Brush","zoloblocks"),(0,l.__)("Round Design","zoloblocks"),(0,l.__)("Square Pattern","zoloblocks"),(0,l.__)("Testimonial","zoloblocks"),(0,l.__)("Triangle Blob","zoloblocks"),(0,l.__)("Center Top","zoloblocks"),(0,l.__)("Center Center","zoloblocks"),(0,l.__)("Center Bottom","zoloblocks"),(0,l.__)("Left Top","zoloblocks"),(0,l.__)("Left Center","zoloblocks"),(0,l.__)("Left Bottom","zoloblocks"),(0,l.__)("Right Top","zoloblocks"),(0,l.__)("Right Center","zoloblocks"),(0,l.__)("Right Bottom","zoloblocks"),(0,l.__)("No Repeat","zoloblocks"),(0,l.__)("Repeat","zoloblocks"),(0,l.__)("Repeat X","zoloblocks"),(0,l.__)("Repeat Y","zoloblocks"),(0,l.__)("Auto","zoloblocks"),(0,l.__)("Cover","zoloblocks"),(0,l.__)("Contain","zoloblocks"),(0,l.__)("Top"),(0,l.__)("Right"),(0,l.__)("Bottom"),(0,l.__)("Left"),(0,l.__)("Center"),(0,l.__)("Initial"),(0,l.__)("Inherit"),(0,l.__)("Revert"),(0,l.__)("Unset"),(0,l.__)("Revert Layer"),(0,l.__)("Ease Out","zoloblocks"),(0,l.__)("Ease In Out","zoloblocks"),(0,l.__)("Linear","zoloblocks"),(0,l.__)("Custom","zoloblocks"),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M18.5818 15.3211L22 11.9184L18.5818 8.58813",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M5.41818 15.3211L2 11.9184L5.41818 8.58813",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M2.35461 11.9548H21.6455",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M15.3818 5.4027L11.9636 2L8.61816 5.4027",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M8.61816 18.5974L12.0363 22.0001L15.3818 18.5974",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M12 2.35278V21.2396",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M21.4401 8.67C19.7801 4.22 15.9301 2 12.0001 2C6.85006 2 2.61006 5.89 2.06006 10.89",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M21.9401 13.1201C21.3901 18.1201 17.1501 22.0001 12.0001 22.0001C8.08006 22.0001 4.22006 19.7801 2.56006 15.3301",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M22.0001 2.21997V8.66997H15.5601",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M2 21.7801V15.3301H8.44",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M21.9999 8.16V2L15.8799 2.07",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M16.2598 13.8798H10.0798L10.1398 7.78979",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M10.4299 13.5898L21.7299 2.30981",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M20.62 13.88V19.97C20.62 21.09 19.71 22 18.58 22H4.04C2.91 22 2 21.09 2 19.97V5.47995C2 4.35995 2.91 3.44995 4.04 3.44995H9.64",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{fillRule:"evenodd",clipRule:"evenodd",d:"M22 4H7.74545L2 20H16.2545L22 4Z",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M22 2L2 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M2 2L22 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,B.createElement)("svg",{width:24,height:24,viewBox:"0 0 24 24",fill:"none",xmlns:"http://www.w3.org/2000/svg"},(0,B.createElement)("path",{d:"M2 12H22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"}),(0,B.createElement)("path",{d:"M12 2L22 12L12 22",stroke:"#4D4D4D",strokeWidth:"1.5",strokeLinecap:"round",strokeLinejoin:"round"})),(0,l.__)("Authors","zoloblocks"),(0,l.__)("Terms","zoloblocks"),(0,l.__)("Authors","zoloblocks"),(0,l.__)("Current Post","zoloblocks"),(0,l.__)("Manual Selection","zoloblocks"),(0,l.__)("Terms","zoloblocks"),(0,l.__)("Default Pagination","zoloblocks"),(0,l.__)("Ajax Pagination","zoloblocks"),(0,l.__)("Load More-Click","zoloblocks"),(0,l.__)("Load More-Scroll","zoloblocks"),window.zoloModule),ke=function(e){const{attributes:t,setAttributes:o}=e,{preset:r,resMode:n,socialText:w,socialProfiles:_,socialColor:v,socialTextColor:x,socialTextHoverColor:z,socialBgColor:M,socialBgHoverColor:W,borderHoverColor:y,layout:f,iconColor:C,iconHoverColor:V,iconBgColor:H,iconBgHoverColor:P}=t,T={attributes:t,setAttributes:o,resMode:n,objAttributes:j};return(0,B.createElement)(S.InspectorControls,{key:"controls"},(0,B.createElement)(Q,{block:"zolo/social-links",attributes:t,setAttributes:o,generalTab:(0,B.createElement)(B.Fragment,null,(0,B.createElement)(ae,{title:(0,l.__)("General","zoloblocks"),firstOpen:!0,panelProps:e},(0,B.createElement)(Z.SelectControl,{label:(0,l.__)("Presets","zoloblocks"),value:r,options:(0,$.applyFilters)("zolo.socialLinks.presets",s),onChange:e=>(e=>{switch(o({preset:e}),e){case"preset-1":case"preset-3":default:o({socialText:"iconText"});break;case"preset-2":o({socialText:"iconOnly"})}})(e)}),(0,B.createElement)("div",{className:"zolo-flex-row-control-tab"},(0,B.createElement)(ee,{label:(0,l.__)("Type","zoloblocks"),value:w,onChange:e=>o({socialText:e}),options:U}))),(0,B.createElement)(ae,{title:(0,l.__)("Layout","zoloblocks"),panelProps:e},(0,B.createElement)("div",{className:"zolo-flex-row-control-tab"},(0,B.createElement)(ee,{label:(0,l.__)("Layout Type","zoloblocks"),value:f,onChange:e=>o({layout:e}),options:[{label:(0,l.__)("Flex","zoloblocks"),value:"flex"},{label:(0,l.__)("Grid","zoloblocks"),value:"grid"}]})),"grid"===f&&(0,B.createElement)(B.Fragment,null,(0,B.createElement)(te,{label:(0,l.__)("Column Number","zoloblocks"),controlName:a,requiredProps:T,min:1,max:10,defaults:{deskRange:5,tabRange:3,mobRange:2}})),(0,B.createElement)(ie,{label:(0,l.__)("Gap","zoloblocks"),controlName:c,requiredProps:T,max:200}),"flex"===f&&(0,B.createElement)(B.Fragment,null,(0,B.createElement)(ce,{label:(0,l.__)("Alignment","zoloblocks"),controlName:g,requiredProps:T,alignOptions:Y}))),(0,B.createElement)(ae,{title:(0,l.__)("Social Profiles","zoloblocks"),panelProps:e},(0,B.createElement)(G,{socialProfiles:_,setAttributes:o}))),styleTab:(0,B.createElement)(B.Fragment,null,(0,B.createElement)(ae,{title:(0,l.__)("Social Icons","zoloblocks"),stylePanel:!0,panelProps:e,firstOpen:!0},"iconOnly"!==w&&(0,B.createElement)(le,{label:(0,l.__)("Typography","zoloblocks"),typoPrefixConstant:E,requiredProps:T,max:36}),"none"!==w&&(0,B.createElement)(B.Fragment,null,"preset-3"===r&&(0,B.createElement)(B.Fragment,null,(0,B.createElement)(X,{label:(0,l.__)("Width","zoloblocks"),controlName:L,requiredProps:T,min:0,max:500,step:1}),(0,B.createElement)(X,{label:(0,l.__)("Height","zoloblocks"),controlName:b,requiredProps:T,min:0,max:500,step:1}))),"preset-1"!==r&&(0,B.createElement)(X,{label:(0,l.__)("Icon Size","zoloblocks"),controlName:d,requiredProps:T,min:0,max:100,step:1}),"preset-1"===r&&"iconOnly"===w&&(0,B.createElement)(X,{label:(0,l.__)("Icon Size","zoloblocks"),controlName:d,requiredProps:T,min:0,max:100,step:1}),"iconText"===w&&(0,B.createElement)(X,{label:(0,l.__)("Gap","zoloblocks"),controlName:m,requiredProps:T,min:0,max:100,step:1}),"custom"===v&&(0,B.createElement)(re,{label:(0,l.__)("Border","zoloblocks"),controlName:h,requiredProps:T,hoverControl:(0,B.createElement)(J,{label:(0,l.__)("Border Color","zoloblocks"),color:y,onChange:e=>o({borderHoverColor:e})})}),(0,B.createElement)(oe,{label:(0,l.__)("Border Radius","zoloblocks"),controlName:p,requiredProps:T,forBorderRadius:!0}),(0,B.createElement)(oe,{label:(0,l.__)("Padding","zoloblocks"),controlName:k,requiredProps:T,forBorderRadius:!1}),(0,B.createElement)("div",{className:"zolo-flex-row-control-tab"},(0,B.createElement)(ee,{label:(0,l.__)("Color Type","zoloblocks"),value:v,onChange:e=>o({socialColor:e}),options:i})),"custom"===v&&(0,B.createElement)(K,{normalComponents:(0,B.createElement)(B.Fragment,null,(0,B.createElement)(J,{label:(0,l.__)("Color","zoloblocks"),color:x,onChange:e=>o({socialTextColor:e})}),(0,B.createElement)(J,{label:(0,l.__)("Background","zoloblocks"),color:M,onChange:e=>o({socialBgColor:e})}),"none"!==w&&"preset-3"===r&&(0,B.createElement)(B.Fragment,null,(0,B.createElement)(J,{label:(0,l.__)("Icon Color","zoloblocks"),color:C,onChange:e=>o({iconColor:e})}),(0,B.createElement)(J,{label:(0,l.__)("Icon Background","zoloblocks"),color:H,onChange:e=>o({iconBgColor:e})})),(0,B.createElement)(ne,{controlName:D,requiredProps:T})),hoverComponents:(0,B.createElement)(B.Fragment,null,(0,B.createElement)(J,{label:(0,l.__)("Color","zoloblocks"),color:z,onChange:e=>o({socialTextHoverColor:e})}),(0,B.createElement)(J,{label:(0,l.__)("Background","zoloblocks"),color:W,onChange:e=>o({socialBgHoverColor:e})}),"none"!==w&&"preset-3"===r&&(0,B.createElement)(B.Fragment,null,(0,B.createElement)(J,{label:(0,l.__)("Icon Color","zoloblocks"),color:V,onChange:e=>o({iconHoverColor:e})}),(0,B.createElement)(J,{label:(0,l.__)("Icon Background","zoloblocks"),color:P,onChange:e=>o({iconBgHoverColor:e})})),(0,B.createElement)(ne,{controlName:u,requiredProps:T}))}))),advancedTab:(0,B.createElement)(B.Fragment,null,(0,B.createElement)(se,{attributes:t,setAttributes:o,requiredProps:T,block:"zolo/social-links"}))}))},{generateResRangeStyle:de,generateBorderStyle:he,generateResCounterStyle:pe,generateDimensionStyle:De,generateBoxShadowStyles:ue,generateTypographyStyles:me,generateGapStyle:we,GlobalStyleHanlder:ge,generateResAlignmentStyle:Le}=window.zoloModule,be=({props:e})=>{const{attributes:t,setAttributes:o}=e,{preset:r,uniqueId:n,socialText:l,socialBgColor:s,socialColor:i,socialBgHoverColor:_,socialTextColor:v,socialTextHoverColor:x,borderHoverColor:z,iconColor:M,iconHoverColor:W,iconBgColor:y,iconBgHoverColor:f}=t,{desktopBorderStyle:j,tabBorderStyle:C,mobBorderStyle:S}=he({controlName:h,attributes:t}),{desktopRangeStyle:V,tabRangeStyle:H,mobRangeStyle:P}=de({controlName:d,property:"width",attributes:t}),{desktopRangeStyle:T,tabRangeStyle:R,mobRangeStyle:N}=de({controlName:d,property:"height",attributes:t}),{dimensionStylesDesktop:A,dimensionStylesTab:I,dimensionStylesMobile:O}=De({controlName:p,styleFor:"border-radius",attributes:t}),{boxShadowStyle:F}=ue({attributes:t,controlName:D}),{boxShadowStyle:q}=ue({attributes:t,controlName:u}),{typoStylesDesktop:G,typoStylesTab:Z,typoStylesMobile:Y}=me({prefixConstant:E,attributes:t}),{dimensionStylesDesktop:U,dimensionStylesTab:X,dimensionStylesMobile:J}=De({controlName:k,styleFor:"padding",attributes:t}),{desktopRangeStyle:K,tabRangeStyle:Q,mobRangeStyle:ee}=de({controlName:m,property:"gap",attributes:t}),{desktopRangeStyle:te,tabRangeStyle:oe,mobRangeStyle:re}=pe({controlName:a,attributes:t,noProperty:!0,defaults:{deskRange:5,tabRange:3,mobRange:2}}),{gapStylesDesktop:ne,gapStylesTab:le,gapStylesMobile:se}=we({controlName:c,attributes:t}),{dimensionStylesDesktop:ie,dimensionStylesTab:ae,dimensionStylesMobile:ce}=De({controlName:w,styleFor:"margin",attributes:t}),{desktopRangeStyle:ke,tabRangeStyle:be,mobRangeStyle:Ee}=de({controlName:L,property:"width",attributes:t}),{desktopRangeStyle:_e,tabRangeStyle:ve,mobRangeStyle:xe}=de({controlName:b,property:"height",attributes:t}),{desktopAlignStyle:ze,tabAlignStyle:Me,mobAlignStyle:We}=Le({controlName:g,property:"justify-content",attributes:t}),ye=`\n\t\t.${n}.wp-block-zolo-social-links.flex {\n    ${ze}\n\t\t}\n\t\t.${n}.wp-block-zolo-social-links {\n\t\t\t${ie}\n\t\t\t${ne}\n\t\t\tgrid-template-columns:repeat(${te}, 1fr);\n\t\t}\n\t\t.${n}.wp-block-zolo-social-links .zolo-social-item {\n\t\t\t${U}\n\t\t\t${K}\n\t\t\t${A}\n            ${G}\n\t\t}\n        ${"preset-1"!==r?`.${n}.wp-block-zolo-social-links .zolo-social-item svg{\n           ${V}\n            ${T}\n        }`:" "}\n        ${"preset-1"===r&&"iconOnly"===l?`.${n}.wp-block-zolo-social-links .zolo-social-item svg{\n           ${V}\n            ${T}\n        }`:" "}\n\n\t\t${"custom"===i?`.${n}.wp-block-zolo-social-links .zolo-social-item{\n\t\t\t\t\tcolor:${v};\n\t\t\t\t\tbackground:${s};\n                    ${j}\n                    ${F}\n\t\t\t\t} .${n}.wp-block-zolo-social-links .zolo-social-item svg{\n                    fill:${v};\n                }`:" "}\n\t\t${"custom"===i?`.${n}.wp-block-zolo-social-links .zolo-social-item:hover{\n\t\t\t\t\tcolor:${x};\n                    border-color:${z};\n                    background:${_};\n                    ${q}\n\t\t\t\t}\n                .${n}.wp-block-zolo-social-links .zolo-social-item:hover svg{\n\t\t\t\t\tfill:${x};\n\t\t\t\t}`:" "}\n\n        ${"custom"===i?`.${n}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{\n                    background:${y};\n                }\n                .${n}.wp-block-zolo-social-links.preset-3 .zolo-social-item svg{\n                    fill:${M};\n                }\n                .${n}.wp-block-zolo-social-links.preset-3 .zolo-social-item:hover .zolo-social-icon {\n                    background:${f};\n                }\n                .${n}.wp-block-zolo-social-links.preset-3 .zolo-social-item:hover svg{\n                    fill:${W};\n                }\n         `:" "}\n\n        ${"preset-3"===r?`.${n}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{\n                    ${ke}\n                    ${_e}\n                }\n         `:" "}\n  \t`,fe=`\n    \t\t.${n}.wp-block-zolo-social-links.flex {\n    ${Me}\n\t\t}\n\t\t.${n}.wp-block-zolo-social-links{\n\t\t\t${ae}\n\t\t\t${le}\n\t\t\tgrid-template-columns:repeat(${oe}, 1fr);\n\t\t}\n\t\t.${n}.wp-block-zolo-social-links .zolo-social-item {\n\t\t\t${C}\n\t\t\t${X}\n\t\t\t${Q}\n\t\t\t${I}\n            ${Z}\n\t\t}\n         ${"preset-1"!==r?`.${n}.wp-block-zolo-social-links .zolo-social-item svg{\n           ${H}\n            ${R}\n        }`:" "}\n        ${"preset-3"===r?`.${n}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{\n                ${be}\n                ${ve}\n        }`:" "}\n\t`,je=`\n    \t\t.${n}.wp-block-zolo-social-links.flex {\n    ${We}\n\t\t}\n\t\t.${n}.wp-block-zolo-social-links{\n\t\t\t${ce}\n\t\t\t${se}\n\t\t\tgrid-template-columns:repeat(${re}, 1fr);\n\t\t}\n\t\t.${n}.wp-block-zolo-social-links .zolo-social-item {\n\t\t\t${S}\n\t\t\t${J}\n\t\t\t${ee}\n\t\t\t${O}\n            ${Y}\n\t\t}\n         ${"preset-1"!==r?`.${n}.wp-block-zolo-social-links .zolo-social-item svg{\n           ${P}\n            ${N}\n        }`:" "}\n        ${"preset-3"===r?`.${n}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{\n                ${Ee}\n                ${xe}\n        }`:" "}\n  \t`;return(0,B.createElement)(B.Fragment,null,(0,B.createElement)(ge,{attributes:t,setAttributes:o,desktopAllStyle:(0,$.applyFilters)("zolo.socialLinks.desktopAllStyle",ye,e),tabAllStyle:(0,$.applyFilters)("zolo.socialLinks.tabletAllStyle",fe,e),mobileAllStyle:(0,$.applyFilters)("zolo.socialLinks.mobileAllStyle",je,e)}))},{DisplayZoloIcon:Ee,classArrayToStr:_e,SidebarOpener:ve}=window.zoloModule,{DisplayZoloIcon:xe,classArrayToStr:ze}=window.zoloModule,{BlockIcons:Me}=window.zoloIcons;(0,n.registerBlockType)(C,{icon:{src:Me["social-links"]},attributes:j,edit:function(e){const{attributes:t,setAttributes:o,className:r,isSelected:n,clientId:s}=e,{preview:i,uniqueId:a,preset:c,parentClasses:k,socialText:d,socialProfiles:h,socialColor:p,layout:D}=t,u=(0,S.useBlockProps)({className:H()(r,`${c} ${a}`,D,_e(k))}),m=(0,$.applyFilters)("zolo.blocks.render.hook.before",[],e),w=(0,$.applyFilters)("zolo.blocks.render.hook.after",[],e);return i?(0,B.createElement)("img",{src:zoloParams.blocksPreview.socialLinks,alt:(0,l.__)("Social Links Preview","zoloblocks")}):(0,B.createElement)(B.Fragment,null,n&&(0,B.createElement)(ke,{attributes:t,setAttributes:o}),(0,B.createElement)(be,{props:e}),(0,B.createElement)("div",{...u},m&&m,(0,B.createElement)(ve,{clientId:s}),h&&h.map(((e,t)=>{let o=Object.keys(e.icon)[0];const r=e&&e.text&&e.text.toLowerCase();return(0,B.createElement)("a",{href:e.link&&e.link.url,key:t,target:e.link&&e.link.openInNewTab&&"_blank",rel:e.link&&e.link.openInNewTab&&"noopener noreferrer",className:`zolo-social-item zolo-${o} ${p} ${r}`},"none"!==d&&(0,B.createElement)("span",{className:"zolo-social-icon"},(0,B.createElement)(Ee,{icon:e.icon})),"iconOnly"!==d&&(0,B.createElement)("span",{className:"zolo-social-text"},e.text))})),w&&w))},save:e=>{const{attributes:t}=e,{uniqueId:o,parentClasses:r,preset:n,socialProfiles:l,socialColor:s,socialText:i,layout:a,zoloId:c}=t,k=(0,$.applyFilters)("zolo.blocks.render.hook.before",[],e),d=(0,$.applyFilters)("zolo.blocks.render.hook.after",[],e);return(0,B.createElement)("div",{...S.useBlockProps.save({className:H()(`${n} ${o} ${a}`,ze(r))}),...c&&{id:c}},k&&k,l&&l.map(((e,t)=>{let o=Object.keys(e.icon)[0];const r=e&&e.text&&e.text.toLowerCase();return(0,B.createElement)("a",{href:e.link&&e.link.url,key:t,target:e.link&&e.link.openInNewTab&&"_blank",rel:e.link&&e.link.openInNewTab&&"noopener noreferrer",className:`zolo-social-item zolo-${o} ${s} ${r}`,title:e.text},"none"!==i&&(0,B.createElement)("span",{className:"zolo-social-icon"},(0,B.createElement)(xe,{icon:e.icon})),"iconOnly"!==i&&(0,B.createElement)("span",{className:"zolo-social-text"},e.text))})),d&&d)}})},6942:(e,t)=>{var o;!function(){"use strict";var r={}.hasOwnProperty;function n(){for(var e="",t=0;t<arguments.length;t++){var o=arguments[t];o&&(e=s(e,l(o)))}return e}function l(e){if("string"==typeof e||"number"==typeof e)return e;if("object"!=typeof e)return"";if(Array.isArray(e))return n.apply(null,e);if(e.toString!==Object.prototype.toString&&!e.toString.toString().includes("[native code]"))return e.toString();var t="";for(var o in e)r.call(e,o)&&e[o]&&(t=s(t,o));return t}function s(e,t){return t?e?e+" "+t:e+t:e}e.exports?(n.default=n,e.exports=n):void 0===(o=function(){return n}.apply(t,[]))||(e.exports=o)}()}},o={};function r(e){var n=o[e];if(void 0!==n)return n.exports;var l=o[e]={exports:{}};return t[e](l,l.exports,r),l.exports}r.m=t,e=[],r.O=(t,o,n,l)=>{if(!o){var s=1/0;for(k=0;k<e.length;k++){o=e[k][0],n=e[k][1],l=e[k][2];for(var i=!0,a=0;a<o.length;a++)(!1&l||s>=l)&&Object.keys(r.O).every((e=>r.O[e](o[a])))?o.splice(a--,1):(i=!1,l<s&&(s=l));if(i){e.splice(k--,1);var c=n();void 0!==c&&(t=c)}}return t}l=l||0;for(var k=e.length;k>0&&e[k-1][2]>l;k--)e[k]=e[k-1];e[k]=[o,n,l]},r.n=e=>{var t=e&&e.__esModule?()=>e.default:()=>e;return r.d(t,{a:t}),t},r.d=(e,t)=>{for(var o in t)r.o(t,o)&&!r.o(e,o)&&Object.defineProperty(e,o,{enumerable:!0,get:t[o]})},r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),r.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},(()=>{var e={5780:0,2236:0};r.O.j=t=>0===e[t];var t=(t,o)=>{var n,l,s=o[0],i=o[1],a=o[2],c=0;if(s.some((t=>0!==e[t]))){for(n in i)r.o(i,n)&&(r.m[n]=i[n]);if(a)var k=a(r)}for(t&&t(o);c<s.length;c++)l=s[c],r.o(e,l)&&e[l]&&e[l][0](),e[l]=0;return r.O(k)},o=self.webpackChunkzoloblocks=self.webpackChunkzoloblocks||[];o.forEach(t.bind(null,0)),o.push=t.bind(null,o.push.bind(o))})();var n=r.O(void 0,[2236],(()=>r(6639)));n=r.O(n)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/blocks/social-links/attributes.js":
+/*!***********************************************!*\
+  !*** ./src/blocks/social-links/attributes.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "./src/blocks/social-links/constants/index.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/social-links/constants/typoPrefixConstant.js");
+const {
+  generateResRangeAttributies,
+  generateBorderAttributies,
+  generateResCounterAttributies,
+  generateDimensionAttributes,
+  generateBoxShadowAttributies,
+  generateTypographyAttributes,
+  generateGapAttributes,
+  generateResAlignmentAttributies
+} = window.zoloModule;
+
+
+const attributes = {
+  //Global Attributes
+  globalConfig: {
+    type: 'object',
+    default: {
+      margin: {
+        prefix: 'mainMargin'
+      },
+      padding: {
+        prefix: 'mainPadding'
+      },
+      background: {
+        prefix: 'mainBg'
+      },
+      border: {
+        prefix: 'mainBorder'
+      },
+      borderRadius: {
+        prefix: 'mainBorderRadius'
+      },
+      boxShadow: {
+        prefix: 'mainBoxShadow'
+      },
+      responsiveControls: true
+    }
+  },
+  // border attributes
+  ...generateBorderAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.BUTTON_BORDER),
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.BTN_BORDER_RADIUS),
+  ...generateBoxShadowAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.BTN_SHADOW),
+  ...generateBoxShadowAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.BTN_HOVER_SHADOW),
+  // column count
+  ...generateResCounterAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMN_COUNT, {
+    defaultRange: 5
+  }),
+  //gaps
+  ...generateGapAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.COLUMNS_GAP, {
+    defaultUnit: 'px'
+  }),
+  //button
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.BUTTON_PADDING),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.BUTTON_SIZE),
+  //icon spacing
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.ICON_TEXT_SPACING),
+  // block margin
+  ...generateDimensionAttributes(_constants__WEBPACK_IMPORTED_MODULE_0__.BLOCK_MARGIN),
+  ...generateTypographyAttributes(Object.values(_constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_1__)),
+  // preset 3 icon
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.PT_ICON_WIDTH),
+  ...generateResRangeAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.PT_ICON_HEIGHT),
+  ...generateResAlignmentAttributies(_constants__WEBPACK_IMPORTED_MODULE_0__.BLOCK_ALIGNMENT),
+  //Block specific Attributes
+  preset: {
+    type: 'string',
+    default: 'preset-1'
+  },
+  layout: {
+    type: 'string',
+    default: 'flex'
+  },
+  socialText: {
+    type: 'string',
+    default: 'iconText'
+  },
+  socialProfiles: {
+    type: 'array',
+    default: [{
+      id: 1,
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>',
+      link: {
+        url: '#',
+        openInNewTab: false
+      },
+      text: 'Facebook'
+    }, {
+      id: 2,
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>',
+      link: {
+        url: '#',
+        openInNewTab: false
+      },
+      text: 'Twitter'
+    }, {
+      id: 3,
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>',
+      link: {
+        url: '#',
+        openInNewTab: false
+      },
+      text: 'Instagram'
+    }, {
+      id: 4,
+      icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>',
+      link: {
+        url: '#',
+        openInNewTab: false
+      },
+      text: 'Linkedin'
+    }]
+  },
+  socialProfilesLinkTarget: {
+    type: 'boolean',
+    default: true
+  },
+  socialStyle: {
+    type: 'string',
+    default: 'default'
+  },
+  targetPage: {
+    type: 'string'
+  },
+  customLink: {
+    type: 'string'
+  },
+  socialColor: {
+    type: 'string',
+    default: 'original'
+  },
+  socialTextColor: {
+    type: 'string'
+  },
+  socialTextHoverColor: {
+    type: 'string'
+  },
+  socialBgColor: {
+    type: 'string'
+  },
+  socialBgHoverColor: {
+    type: 'string'
+  },
+  icon: {
+    type: 'string'
+  },
+  iconPosition: {
+    type: 'string',
+    default: 'right'
+  },
+  textColor: {
+    type: 'string'
+  },
+  textHoverColor: {
+    type: 'string'
+  },
+  borderHoverColor: {
+    type: 'string'
+  },
+  // preset 3 icon
+  iconColor: {
+    type: 'string'
+  },
+  iconBgColor: {
+    type: 'string'
+  },
+  iconHoverColor: {
+    type: 'string'
+  },
+  iconBgHoverColor: {
+    type: 'string'
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (attributes);
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/constants/index.js":
+/*!****************************************************!*\
+  !*** ./src/blocks/social-links/constants/index.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   BLOCK_ALIGNMENT: () => (/* binding */ BLOCK_ALIGNMENT),
+/* harmony export */   BLOCK_MARGIN: () => (/* binding */ BLOCK_MARGIN),
+/* harmony export */   BLOCK_PREFIX: () => (/* binding */ BLOCK_PREFIX),
+/* harmony export */   BTN_BORDER_RADIUS: () => (/* binding */ BTN_BORDER_RADIUS),
+/* harmony export */   BTN_HOVER_SHADOW: () => (/* binding */ BTN_HOVER_SHADOW),
+/* harmony export */   BTN_SHADOW: () => (/* binding */ BTN_SHADOW),
+/* harmony export */   BUTTON_BORDER: () => (/* binding */ BUTTON_BORDER),
+/* harmony export */   BUTTON_PADDING: () => (/* binding */ BUTTON_PADDING),
+/* harmony export */   BUTTON_SIZE: () => (/* binding */ BUTTON_SIZE),
+/* harmony export */   COLUMNS_GAP: () => (/* binding */ COLUMNS_GAP),
+/* harmony export */   COLUMNS_NUMBER: () => (/* binding */ COLUMNS_NUMBER),
+/* harmony export */   COLUMN_COUNT: () => (/* binding */ COLUMN_COUNT),
+/* harmony export */   ICON_POSITIONS: () => (/* binding */ ICON_POSITIONS),
+/* harmony export */   ICON_TEXT_SPACING: () => (/* binding */ ICON_TEXT_SPACING),
+/* harmony export */   PRESETS: () => (/* binding */ PRESETS),
+/* harmony export */   PT_ICON_HEIGHT: () => (/* binding */ PT_ICON_HEIGHT),
+/* harmony export */   PT_ICON_WIDTH: () => (/* binding */ PT_ICON_WIDTH),
+/* harmony export */   SOCIAL_ICON_COLOR: () => (/* binding */ SOCIAL_ICON_COLOR)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/**
+ * WordPress dependencies
+ */
+
+
+// Block Prefix
+const BLOCK_PREFIX = 'social-icon';
+// Presets
+const PRESETS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Preset 1', 'zoloblocks'),
+  value: 'preset-1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Preset 2', 'zoloblocks'),
+  value: 'preset-2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Preset 3', 'zoloblocks'),
+  value: 'preset-3'
+}];
+
+// button icon positions
+const ICON_POSITIONS = [{
+  label: 'Left',
+  value: 'left'
+}, {
+  label: 'Right',
+  value: 'right'
+}, {
+  label: 'Top',
+  value: 'top'
+}, {
+  label: 'Bottom',
+  value: 'bottom'
+}];
+
+// social icon color
+const SOCIAL_ICON_COLOR = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Original', 'zoloblocks'),
+  value: 'original'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'zoloblocks'),
+  value: 'custom'
+}];
+
+// column count
+const COLUMN_COUNT = 'columnCount';
+
+//columns Number
+const COLUMNS_NUMBER = 'columns';
+const COLUMNS_GAP = 'columnsGap';
+
+//button
+const BUTTON_PADDING = 'btnPadding';
+const BUTTON_SIZE = 'btnSize';
+const BUTTON_BORDER = 'btnBorder';
+const BTN_BORDER_RADIUS = 'btnBorderRadius';
+const BTN_SHADOW = 'btnShadow';
+const BTN_HOVER_SHADOW = 'btnHoverShadow';
+
+// Icon
+const ICON_TEXT_SPACING = 'iconTextSpacing';
+
+// Block Margin
+const BLOCK_MARGIN = 'blockMargin';
+const BLOCK_ALIGNMENT = 'blockAlignment';
+
+// preset 3 icon
+const PT_ICON_WIDTH = 'ptIconWidth';
+const PT_ICON_HEIGHT = 'ptIconHeight';
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/constants/typoPrefixConstant.js":
+/*!*****************************************************************!*\
+  !*** ./src/blocks/social-links/constants/typoPrefixConstant.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   TEXT_TYPOGRAPHY: () => (/* binding */ TEXT_TYPOGRAPHY)
+/* harmony export */ });
+// Button Typography
+const TEXT_TYPOGRAPHY = 'textTypography';
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/edit.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/social-links/edit.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Edit)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _inspector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./inspector */ "./src/blocks/social-links/inspector.js");
+/* harmony import */ var _style__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style */ "./src/blocks/social-links/style.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__);
+/**
+ * WordPress dependencies
+ */
+
+
+
+
+
+/**
+ * Internal depencencies
+ */
+
+const {
+  DisplayZoloIcon,
+  classArrayToStr,
+  SidebarOpener
+} = window.zoloModule;
+
+
+// import style
+
+
+function Edit(props) {
+  const {
+    attributes,
+    setAttributes,
+    className,
+    isSelected,
+    clientId
+  } = props;
+  const {
+    preview,
+    uniqueId,
+    preset,
+    parentClasses,
+    socialText,
+    socialProfiles,
+    socialColor,
+    layout
+  } = attributes;
+
+  // this useEffect is for creating a unique id for each block's unique className by a random unique number
+  const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
+    className: classnames__WEBPACK_IMPORTED_MODULE_3___default()(className, `${preset} ${uniqueId}`, layout, classArrayToStr(parentClasses))
+  });
+
+  // filter hooks for render
+  const renderHookBefore = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__.applyFilters)('zolo.blocks.render.hook.before', [], props);
+  const renderHookAfter = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_2__.applyFilters)('zolo.blocks.render.hook.after', [], props);
+
+  // preview image
+  if (preview) {
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+      src: zoloParams.blocksPreview.socialLinks,
+      alt: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Social Links Preview', 'zoloblocks')
+    });
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.Fragment, {
+    children: [isSelected && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_inspector__WEBPACK_IMPORTED_MODULE_4__["default"], {
+      attributes: attributes,
+      setAttributes: setAttributes
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_style__WEBPACK_IMPORTED_MODULE_5__["default"], {
+      props: props
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      ...blockProps,
+      children: [renderHookBefore && renderHookBefore, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(SidebarOpener, {
+        clientId: clientId
+      }), socialProfiles && socialProfiles.map((profile, index) => {
+        let socialName = Object.keys(profile.icon)[0];
+        const iconName = profile && profile.text && profile.text.toLowerCase();
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("a", {
+          href: profile.link && profile.link.url,
+          target: profile.link && profile.link.openInNewTab && '_blank',
+          rel: profile.link && profile.link.openInNewTab && 'noopener noreferrer',
+          className: `zolo-social-item zolo-${socialName} ${socialColor} ${iconName}`,
+          children: [socialText !== 'none' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+            className: "zolo-social-icon",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(DisplayZoloIcon, {
+              icon: profile.icon
+            })
+          }), socialText !== 'iconOnly' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("span", {
+            className: "zolo-social-text",
+            children: profile.text
+          })]
+        }, index);
+      }), renderHookAfter && renderHookAfter]
+    })]
+  });
+}
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/index.js":
+/*!******************************************!*\
+  !*** ./src/blocks/social-links/index.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./attributes */ "./src/blocks/social-links/attributes.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./block.json */ "./src/blocks/social-links/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./edit */ "./src/blocks/social-links/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./save */ "./src/blocks/social-links/save.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./style.scss */ "./src/blocks/social-links/style.scss");
+
+
+
+
+
+
+const {
+  BlockIcons
+} = window.zoloIcons;
+(0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockType)(_block_json__WEBPACK_IMPORTED_MODULE_2__, {
+  icon: {
+    src: BlockIcons['social-links']
+  },
+  attributes: _attributes__WEBPACK_IMPORTED_MODULE_1__["default"],
+  edit: _edit__WEBPACK_IMPORTED_MODULE_3__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_4__["default"]
+});
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/inspector.js":
+/*!**********************************************!*\
+  !*** ./src/blocks/social-links/inspector.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _sortable__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sortable */ "./src/blocks/social-links/sortable.js");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _attributes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./attributes */ "./src/blocks/social-links/attributes.js");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./constants */ "./src/blocks/social-links/constants/index.js");
+/* harmony import */ var _src_global_constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../src/global/constants */ "./src/global/constants.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/social-links/constants/typoPrefixConstant.js");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__);
+/**
+ * Internal depencencies
+ */
+const {
+  ResRangeControl,
+  ColorControl,
+  TabPanelControl,
+  HeaderTabs,
+  IconicBtnGroup,
+  ResCounterControl,
+  ResDimensionsControl,
+  BorderControl,
+  BoxShadowControl,
+  TypographyDropdown,
+  AdvancedOptions,
+  ResGapControl,
+  ZoloPanelBody,
+  ResAlignmentControl
+} = window.zoloModule;
+
+
+/**
+ * WordPress depencencies
+ */
+
+
+
+
+
+
+
+
+
+function Inspector(props) {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    preset,
+    resMode,
+    socialText,
+    socialProfiles,
+    socialColor,
+    socialTextColor,
+    socialTextHoverColor,
+    socialBgColor,
+    socialBgHoverColor,
+    borderHoverColor,
+    layout,
+    iconColor,
+    iconHoverColor,
+    iconBgColor,
+    iconBgHoverColor
+  } = attributes;
+  const requiredProps = {
+    attributes,
+    setAttributes,
+    resMode,
+    objAttributes: _attributes__WEBPACK_IMPORTED_MODULE_4__["default"]
+  };
+
+  /**
+   * Preset
+   */
+  const changePremade = selected => {
+    setAttributes({
+      preset: selected
+    });
+    switch (selected) {
+      case 'preset-1':
+        setAttributes({
+          socialText: 'iconText'
+        });
+        break;
+      case 'preset-2':
+        setAttributes({
+          socialText: 'iconOnly'
+        });
+        break;
+      case 'preset-3':
+        setAttributes({
+          socialText: 'iconText'
+        });
+        break;
+      default:
+        setAttributes({
+          socialText: 'iconText'
+        });
+        break;
+    }
+  };
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InspectorControls, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(HeaderTabs, {
+      block: "zolo/social-links",
+      attributes: attributes,
+      setAttributes: setAttributes,
+      generalTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('General', 'zoloblocks'),
+          firstOpen: true,
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_wordpress_components__WEBPACK_IMPORTED_MODULE_2__.SelectControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Presets', 'zoloblocks'),
+            value: preset,
+            options: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_8__.applyFilters)('zolo.socialLinks.presets', _constants__WEBPACK_IMPORTED_MODULE_5__.PRESETS),
+            onChange: value => changePremade(value)
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+            className: "zolo-flex-row-control-tab",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(IconicBtnGroup, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Type', 'zoloblocks'),
+              value: socialText,
+              onChange: value => setAttributes({
+                socialText: value
+              }),
+              options: _src_global_constants__WEBPACK_IMPORTED_MODULE_6__.ICON_STATUS
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Layout', 'zoloblocks'),
+          panelProps: props,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+            className: "zolo-flex-row-control-tab",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(IconicBtnGroup, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Layout Type', 'zoloblocks'),
+              value: layout,
+              onChange: value => setAttributes({
+                layout: value
+              }),
+              options: [{
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Flex', 'zoloblocks'),
+                value: 'flex'
+              }, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Grid', 'zoloblocks'),
+                value: 'grid'
+              }]
+            })
+          }), layout === 'grid' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResCounterControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Column Number', 'zoloblocks'),
+              controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.COLUMN_COUNT,
+              requiredProps: requiredProps,
+              min: 1,
+              max: 10,
+              defaults: {
+                deskRange: 5,
+                tabRange: 3,
+                mobRange: 2
+              }
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResGapControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Gap', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.COLUMNS_GAP,
+            requiredProps: requiredProps,
+            max: 200
+          }), layout === 'flex' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResAlignmentControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Alignment', 'zoloblocks'),
+              controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BLOCK_ALIGNMENT,
+              requiredProps: requiredProps,
+              alignOptions: _src_global_constants__WEBPACK_IMPORTED_MODULE_6__.FLEX_HORIZONTAL_OPTIONS
+            })
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Social Profiles', 'zoloblocks'),
+          panelProps: props,
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(_sortable__WEBPACK_IMPORTED_MODULE_0__["default"], {
+            socialProfiles: socialProfiles,
+            setAttributes: setAttributes
+          })
+        })]
+      }),
+      styleTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(ZoloPanelBody, {
+          title: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Social Icons', 'zoloblocks'),
+          stylePanel: true,
+          panelProps: props,
+          firstOpen: true,
+          children: [socialText !== 'iconOnly' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(TypographyDropdown, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Typography', 'zoloblocks'),
+            typoPrefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_7__.TEXT_TYPOGRAPHY,
+            requiredProps: requiredProps,
+            max: 36
+          }), socialText !== 'none' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+            children: preset === 'preset-3' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Width', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.PT_ICON_WIDTH,
+                requiredProps: requiredProps,
+                min: 0,
+                max: 500,
+                step: 1
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResRangeControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Height', 'zoloblocks'),
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.PT_ICON_HEIGHT,
+                requiredProps: requiredProps,
+                min: 0,
+                max: 500,
+                step: 1
+              })]
+            })
+          }), preset !== 'preset-1' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Icon Size', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BUTTON_SIZE,
+            requiredProps: requiredProps,
+            min: 0,
+            max: 100,
+            step: 1
+          }), preset === 'preset-1' && socialText === 'iconOnly' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Icon Size', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BUTTON_SIZE,
+            requiredProps: requiredProps,
+            min: 0,
+            max: 100,
+            step: 1
+          }), socialText === 'iconText' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResRangeControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Gap', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.ICON_TEXT_SPACING,
+            requiredProps: requiredProps,
+            min: 0,
+            max: 100,
+            step: 1
+          }), socialColor === 'custom' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(BorderControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Border', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BUTTON_BORDER,
+            requiredProps: requiredProps,
+            hoverControl: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Border Color', 'zoloblocks'),
+              color: borderHoverColor,
+              onChange: value => setAttributes({
+                borderHoverColor: value
+              })
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Border Radius', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BTN_BORDER_RADIUS,
+            requiredProps: requiredProps,
+            forBorderRadius: true
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ResDimensionsControl, {
+            label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Padding', 'zoloblocks'),
+            controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BUTTON_PADDING,
+            requiredProps: requiredProps,
+            forBorderRadius: false
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)("div", {
+            className: "zolo-flex-row-control-tab",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(IconicBtnGroup, {
+              label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Color Type', 'zoloblocks'),
+              value: socialColor,
+              onChange: value => setAttributes({
+                socialColor: value
+              }),
+              options: _constants__WEBPACK_IMPORTED_MODULE_5__.SOCIAL_ICON_COLOR
+            })
+          }), socialColor === 'custom' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(TabPanelControl, {
+            normalComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Color', 'zoloblocks'),
+                color: socialTextColor,
+                onChange: value => setAttributes({
+                  socialTextColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Background', 'zoloblocks'),
+                color: socialBgColor,
+                onChange: value => setAttributes({
+                  socialBgColor: value
+                })
+              }), socialText !== 'none' && preset === 'preset-3' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Icon Color', 'zoloblocks'),
+                  color: iconColor,
+                  onChange: value => setAttributes({
+                    iconColor: value
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Icon Background', 'zoloblocks'),
+                  color: iconBgColor,
+                  onChange: value => setAttributes({
+                    iconBgColor: value
+                  })
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(BoxShadowControl, {
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BTN_SHADOW,
+                requiredProps: requiredProps
+              })]
+            }),
+            hoverComponents: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Color', 'zoloblocks'),
+                color: socialTextHoverColor,
+                onChange: value => setAttributes({
+                  socialTextHoverColor: value
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Background', 'zoloblocks'),
+                color: socialBgHoverColor,
+                onChange: value => setAttributes({
+                  socialBgHoverColor: value
+                })
+              }), socialText !== 'none' && preset === 'preset-3' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Icon Color', 'zoloblocks'),
+                  color: iconHoverColor,
+                  onChange: value => setAttributes({
+                    iconHoverColor: value
+                  })
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(ColorControl, {
+                  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.__)('Icon Background', 'zoloblocks'),
+                  color: iconBgHoverColor,
+                  onChange: value => setAttributes({
+                    iconBgHoverColor: value
+                  })
+                })]
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(BoxShadowControl, {
+                controlName: _constants__WEBPACK_IMPORTED_MODULE_5__.BTN_HOVER_SHADOW,
+                requiredProps: requiredProps
+              })]
+            })
+          })]
+        })
+      }),
+      advancedTab: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.Fragment, {
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_9__.jsx)(AdvancedOptions, {
+          attributes: attributes,
+          setAttributes: setAttributes,
+          requiredProps: requiredProps,
+          block: "zolo/social-links"
+        })
+      })
+    })
+  }, "controls");
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Inspector);
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/save.js":
+/*!*****************************************!*\
+  !*** ./src/blocks/social-links/save.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! classnames */ "./node_modules/classnames/index.js");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+/**
+ * Internal depencencies
+ */
+const {
+  DisplayZoloIcon,
+  classArrayToStr
+} = window.zoloModule;
+
+
+
+
+const Save = props => {
+  const {
+    attributes
+  } = props;
+  const {
+    uniqueId,
+    parentClasses,
+    preset,
+    socialProfiles,
+    socialColor,
+    socialText,
+    layout,
+    zoloId
+  } = attributes;
+  // filter hooks for render
+  const renderHookBefore = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.blocks.render.hook.before', [], props);
+  const renderHookAfter = (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.blocks.render.hook.after', [], props);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+    ..._wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save({
+      className: classnames__WEBPACK_IMPORTED_MODULE_0___default()(`${preset} ${uniqueId} ${layout}`, classArrayToStr(parentClasses))
+    }),
+    ...(zoloId && {
+      id: zoloId
+    }),
+    children: [renderHookBefore && renderHookBefore, socialProfiles && socialProfiles.map((profile, index) => {
+      let socialName = Object.keys(profile.icon)[0];
+      const iconName = profile && profile.text && profile.text.toLowerCase();
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("a", {
+        href: profile.link && profile.link.url,
+        target: profile.link && profile.link.openInNewTab && '_blank',
+        rel: profile.link && profile.link.openInNewTab && 'noopener noreferrer',
+        className: `zolo-social-item zolo-${socialName} ${socialColor} ${iconName}`,
+        title: profile.text,
+        children: [socialText !== 'none' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+          className: "zolo-social-icon",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(DisplayZoloIcon, {
+            icon: profile.icon
+          })
+        }), socialText !== 'iconOnly' && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+          className: "zolo-social-text",
+          children: profile.text
+        })]
+      }, index);
+    }), renderHookAfter && renderHookAfter]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Save);
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/sortable.js":
+/*!*********************************************!*\
+  !*** ./src/blocks/social-links/sortable.js ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "lodash");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * Internal depencencies
+ */
+const {
+  ZoloIconPicker,
+  SortableControl,
+  SortableItem,
+  LinkControl
+} = window.zoloModule;
+const {
+  __
+} = wp.i18n;
+const {
+  Button,
+  PanelBody,
+  TextControl
+} = wp.components;
+
+
+const Sortable = ({
+  socialProfiles,
+  setAttributes
+}) => {
+  const deepCloneProfiles = (0,lodash__WEBPACK_IMPORTED_MODULE_0__.cloneDeep)(socialProfiles);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+    className: "sortable",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "zb-repeater-flex",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "repeater-label",
+        children: __('Add a Profile', 'zoloblocks')
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Button, {
+        onClick: () => setAttributes({
+          socialProfiles: [...socialProfiles, {
+            id: socialProfiles.length + 1,
+            icon: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>',
+            link: {
+              url: '#',
+              openInNewTab: false
+            },
+            text: 'Facebook'
+          }]
+        }),
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+          width: 24,
+          height: 24,
+          viewBox: "0 0 24 24",
+          fill: "none",
+          xmlns: "http://www.w3.org/2000/svg",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+            d: "M12 8V16",
+            stroke: "#4D4D4D",
+            strokeWidth: "1.5",
+            strokeLinecap: "round"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+            d: "M16 12H8",
+            stroke: "#4D4D4D",
+            strokeWidth: "1.5",
+            strokeLinecap: "round"
+          })]
+        })
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(SortableControl, {
+      defaultItems: socialProfiles,
+      attributeName: "socialProfiles",
+      setAttributes: setAttributes,
+      children: deepCloneProfiles && deepCloneProfiles.map((profile, index) => {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "dnd-container",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(Button, {
+            className: "dnd-trash",
+            icon: "trash",
+            onClick: () => {
+              setAttributes({
+                socialProfiles: socialProfiles.filter((profile, i) => index !== i)
+              });
+            }
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(SortableItem, {
+            id: profile.id,
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(PanelBody, {
+              title: profile.text || 'Title',
+              initialOpen: false,
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(TextControl, {
+                label: __('Title', 'zoloblocks'),
+                value: profile.text,
+                onChange: v => {
+                  const newItems = [...deepCloneProfiles];
+                  newItems[index].text = v;
+                  setAttributes({
+                    socialProfiles: newItems
+                  });
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(ZoloIconPicker, {
+                label: __('Select Icon', 'zoloblocks'),
+                value: profile.icon,
+                onChange: value => {
+                  const newItems = [...deepCloneProfiles];
+                  newItems[index].icon = value;
+                  setAttributes({
+                    socialProfiles: newItems
+                  });
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(LinkControl, {
+                label: __('Link', 'zoloblocks'),
+                value: profile.link,
+                onChange: value => {
+                  const newItems = [...deepCloneProfiles];
+                  newItems[index].link = value;
+                  setAttributes({
+                    socialProfiles: newItems
+                  });
+                }
+              })]
+            })
+          }, profile.id)]
+        }, index);
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Sortable);
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/style.js":
+/*!******************************************!*\
+  !*** ./src/blocks/social-links/style.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/hooks */ "@wordpress/hooks");
+/* harmony import */ var _wordpress_hooks__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./constants */ "./src/blocks/social-links/constants/index.js");
+/* harmony import */ var _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./constants/typoPrefixConstant */ "./src/blocks/social-links/constants/typoPrefixConstant.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__);
+/**
+ * WordPress dependencies
+ */
+
+
+
+/**
+ * Internal depencencies
+ */
+const {
+  generateResRangeStyle,
+  generateBorderStyle,
+  generateResCounterStyle,
+  generateDimensionStyle,
+  generateBoxShadowStyles,
+  generateTypographyStyles,
+  generateGapStyle,
+  GlobalStyleHanlder,
+  generateResAlignmentStyle
+} = window.zoloModule;
+
+
+
+const Style = ({
+  props
+}) => {
+  const {
+    attributes,
+    setAttributes
+  } = props;
+  const {
+    preset,
+    uniqueId,
+    socialText,
+    socialBgColor,
+    socialColor,
+    socialBgHoverColor,
+    socialTextColor,
+    socialTextHoverColor,
+    borderHoverColor,
+    iconColor,
+    iconHoverColor,
+    iconBgColor,
+    iconBgHoverColor
+  } = attributes;
+
+  //  button general settings
+  const {
+    desktopBorderStyle: borderStyles,
+    tabBorderStyle: borderStylesTab,
+    mobBorderStyle: borderStylesMob
+  } = generateBorderStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BUTTON_BORDER,
+    attributes
+  });
+
+  //  button general settings
+  const {
+    desktopRangeStyle: buttonSize,
+    tabRangeStyle: buttonSizeTab,
+    mobRangeStyle: buttonSizeMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BUTTON_SIZE,
+    property: 'width',
+    attributes
+  });
+  const {
+    desktopRangeStyle: buttonHSize,
+    tabRangeStyle: buttonHSizeTab,
+    mobRangeStyle: buttonHSizeMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BUTTON_SIZE,
+    property: 'height',
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: btnRadiusDesk,
+    dimensionStylesTab: btnRadiusTab,
+    dimensionStylesMobile: btnRadiusMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BTN_BORDER_RADIUS,
+    styleFor: 'border-radius',
+    attributes
+  });
+  const {
+    boxShadowStyle: normalShadow
+  } = generateBoxShadowStyles({
+    attributes,
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BTN_SHADOW
+  });
+  const {
+    boxShadowStyle: hoverShadow
+  } = generateBoxShadowStyles({
+    attributes,
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BTN_HOVER_SHADOW
+  });
+  const {
+    typoStylesDesktop: textTypoDesk,
+    typoStylesTab: textTypoTab,
+    typoStylesMobile: textTypoMob
+  } = generateTypographyStyles({
+    prefixConstant: _constants_typoPrefixConstant__WEBPACK_IMPORTED_MODULE_3__.TEXT_TYPOGRAPHY,
+    attributes
+  });
+  const {
+    dimensionStylesDesktop: paddingDesktop,
+    dimensionStylesTab: paddingTab,
+    dimensionStylesMobile: paddingMob
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BUTTON_PADDING,
+    styleFor: 'padding',
+    attributes
+  });
+
+  // Spacing between icon and text
+  const {
+    desktopRangeStyle: gapDesktop,
+    tabRangeStyle: gapTablet,
+    mobRangeStyle: gapMobile
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.ICON_TEXT_SPACING,
+    property: 'gap',
+    attributes
+  });
+
+  // column count
+  const {
+    desktopRangeStyle: columnCountDeskstyle,
+    tabRangeStyle: columnCountTabStyle,
+    mobRangeStyle: columnCountMobStyle
+  } = generateResCounterStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.COLUMN_COUNT,
+    attributes,
+    noProperty: true,
+    defaults: {
+      deskRange: 5,
+      tabRange: 3,
+      mobRange: 2
+    }
+  });
+
+  // column gap
+  const {
+    gapStylesDesktop: colGapDeskstyle,
+    gapStylesTab: colGapTabStyle,
+    gapStylesMobile: colGapMobStyle
+  } = generateGapStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.COLUMNS_GAP,
+    attributes
+  });
+
+  // block margin
+  const {
+    dimensionStylesDesktop: blockDeskMargin,
+    dimensionStylesTab: blockTabMargin,
+    dimensionStylesMobile: blockMobMargin
+  } = generateDimensionStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BLOCK_MARGIN,
+    styleFor: 'margin',
+    attributes
+  });
+
+  // preset 3 icon
+  const {
+    desktopRangeStyle: ptIconWidth,
+    tabRangeStyle: ptIconWidthTab,
+    mobRangeStyle: ptIconWidthMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.PT_ICON_WIDTH,
+    property: 'width',
+    attributes
+  });
+  const {
+    desktopRangeStyle: ptIconHeight,
+    tabRangeStyle: ptIconHeightTab,
+    mobRangeStyle: ptIconHeightMob
+  } = generateResRangeStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.PT_ICON_HEIGHT,
+    property: 'height',
+    attributes
+  });
+
+  // alignment
+  const {
+    desktopAlignStyle: blockAlignmentDesktop,
+    tabAlignStyle: blockAlignmentTab,
+    mobAlignStyle: blockAlignmentMob
+  } = generateResAlignmentStyle({
+    controlName: _constants__WEBPACK_IMPORTED_MODULE_2__.BLOCK_ALIGNMENT,
+    property: 'justify-content',
+    attributes
+  });
+
+  /**
+   * All Style Combination
+   */
+  const desktopAllStyle = `
+		.${uniqueId}.wp-block-zolo-social-links.flex {
+    ${blockAlignmentDesktop}
+		}
+		.${uniqueId}.wp-block-zolo-social-links {
+			${blockDeskMargin}
+			${colGapDeskstyle}
+			grid-template-columns:repeat(${columnCountDeskstyle}, 1fr);
+		}
+		.${uniqueId}.wp-block-zolo-social-links .zolo-social-item {
+			${paddingDesktop}
+			${gapDesktop}
+			${btnRadiusDesk}
+            ${textTypoDesk}
+		}
+        ${preset !== 'preset-1' ? `.${uniqueId}.wp-block-zolo-social-links .zolo-social-item svg{
+           ${buttonSize}
+            ${buttonHSize}
+        }` : ' '}
+        ${preset === 'preset-1' && socialText === 'iconOnly' ? `.${uniqueId}.wp-block-zolo-social-links .zolo-social-item svg{
+           ${buttonSize}
+            ${buttonHSize}
+        }` : ' '}
+
+		${socialColor === 'custom' ? `.${uniqueId}.wp-block-zolo-social-links .zolo-social-item{
+					color:${socialTextColor};
+					background:${socialBgColor};
+                    ${borderStyles}
+                    ${normalShadow}
+				} .${uniqueId}.wp-block-zolo-social-links .zolo-social-item svg{
+                    fill:${socialTextColor};
+                }` : ' '}
+		${socialColor === 'custom' ? `.${uniqueId}.wp-block-zolo-social-links .zolo-social-item:hover{
+					color:${socialTextHoverColor};
+                    border-color:${borderHoverColor};
+                    background:${socialBgHoverColor};
+                    ${hoverShadow}
+				}
+                .${uniqueId}.wp-block-zolo-social-links .zolo-social-item:hover svg{
+					fill:${socialTextHoverColor};
+				}` : ' '}
+
+        ${socialColor === 'custom' ? `.${uniqueId}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{
+                    background:${iconBgColor};
+                }
+                .${uniqueId}.wp-block-zolo-social-links.preset-3 .zolo-social-item svg{
+                    fill:${iconColor};
+                }
+                .${uniqueId}.wp-block-zolo-social-links.preset-3 .zolo-social-item:hover .zolo-social-icon {
+                    background:${iconBgHoverColor};
+                }
+                .${uniqueId}.wp-block-zolo-social-links.preset-3 .zolo-social-item:hover svg{
+                    fill:${iconHoverColor};
+                }
+         ` : ' '}
+
+        ${preset === 'preset-3' ? `.${uniqueId}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{
+                    ${ptIconWidth}
+                    ${ptIconHeight}
+                }
+         ` : ' '}
+  	`;
+  const tabletAllStyle = `
+    		.${uniqueId}.wp-block-zolo-social-links.flex {
+    ${blockAlignmentTab}
+		}
+		.${uniqueId}.wp-block-zolo-social-links{
+			${blockTabMargin}
+			${colGapTabStyle}
+			grid-template-columns:repeat(${columnCountTabStyle}, 1fr);
+		}
+		.${uniqueId}.wp-block-zolo-social-links .zolo-social-item {
+			${borderStylesTab}
+			${paddingTab}
+			${gapTablet}
+			${btnRadiusTab}
+            ${textTypoTab}
+		}
+         ${preset !== 'preset-1' ? `.${uniqueId}.wp-block-zolo-social-links .zolo-social-item svg{
+           ${buttonSizeTab}
+            ${buttonHSizeTab}
+        }` : ' '}
+        ${preset === 'preset-3' ? `.${uniqueId}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{
+                ${ptIconWidthTab}
+                ${ptIconHeightTab}
+        }` : ' '}
+	`;
+  const mobileAllStyle = `
+    		.${uniqueId}.wp-block-zolo-social-links.flex {
+    ${blockAlignmentMob}
+		}
+		.${uniqueId}.wp-block-zolo-social-links{
+			${blockMobMargin}
+			${colGapMobStyle}
+			grid-template-columns:repeat(${columnCountMobStyle}, 1fr);
+		}
+		.${uniqueId}.wp-block-zolo-social-links .zolo-social-item {
+			${borderStylesMob}
+			${paddingMob}
+			${gapMobile}
+			${btnRadiusMob}
+            ${textTypoMob}
+		}
+         ${preset !== 'preset-1' ? `.${uniqueId}.wp-block-zolo-social-links .zolo-social-item svg{
+           ${buttonSizeMob}
+            ${buttonHSizeMob}
+        }` : ' '}
+        ${preset === 'preset-3' ? `.${uniqueId}.wp-block-zolo-social-links.preset-3 .zolo-social-icon{
+                ${ptIconWidthMob}
+                ${ptIconHeightMob}
+        }` : ' '}
+  	`;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(GlobalStyleHanlder, {
+      attributes: attributes,
+      setAttributes: setAttributes,
+      desktopAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.socialLinks.desktopAllStyle', desktopAllStyle, props),
+      tabAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.socialLinks.tabletAllStyle', tabletAllStyle, props),
+      mobileAllStyle: (0,_wordpress_hooks__WEBPACK_IMPORTED_MODULE_1__.applyFilters)('zolo.socialLinks.mobileAllStyle', mobileAllStyle, props)
+    })
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Style);
+
+/***/ }),
+
+/***/ "./src/global/constants.js":
+/*!*********************************!*\
+  !*** ./src/global/constants.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   ANIMATION_TYPES: () => (/* binding */ ANIMATION_TYPES),
+/* harmony export */   BACKGROUND_TYPES: () => (/* binding */ BACKGROUND_TYPES),
+/* harmony export */   BORDER_TYPES: () => (/* binding */ BORDER_TYPES),
+/* harmony export */   BOX_SHADOW_TYPES: () => (/* binding */ BOX_SHADOW_TYPES),
+/* harmony export */   CONTENT_POSITIONS: () => (/* binding */ CONTENT_POSITIONS),
+/* harmony export */   CONTENT_WIDTH: () => (/* binding */ CONTENT_WIDTH),
+/* harmony export */   CONTENT_WIDTH_TYPES: () => (/* binding */ CONTENT_WIDTH_TYPES),
+/* harmony export */   DEFAULT_ALIGNS: () => (/* binding */ DEFAULT_ALIGNS),
+/* harmony export */   DEFAULT_ALIGNS_VERTICAL: () => (/* binding */ DEFAULT_ALIGNS_VERTICAL),
+/* harmony export */   EASING_TYPES: () => (/* binding */ EASING_TYPES),
+/* harmony export */   EXCLUDE_BY: () => (/* binding */ EXCLUDE_BY),
+/* harmony export */   FLEX_ALIGNS: () => (/* binding */ FLEX_ALIGNS),
+/* harmony export */   FLEX_ALIGNS_ROW: () => (/* binding */ FLEX_ALIGNS_ROW),
+/* harmony export */   FLEX_ALIGN_OPTIONS: () => (/* binding */ FLEX_ALIGN_OPTIONS),
+/* harmony export */   FLEX_DIRECTIONS: () => (/* binding */ FLEX_DIRECTIONS),
+/* harmony export */   FLEX_HORIZONTAL_OPTIONS: () => (/* binding */ FLEX_HORIZONTAL_OPTIONS),
+/* harmony export */   FLEX_JUSTIFIES: () => (/* binding */ FLEX_JUSTIFIES),
+/* harmony export */   FLEX_JUSTIFIES_ROW: () => (/* binding */ FLEX_JUSTIFIES_ROW),
+/* harmony export */   FLEX_WRAPS: () => (/* binding */ FLEX_WRAPS),
+/* harmony export */   FLIP_ICON: () => (/* binding */ FLIP_ICON),
+/* harmony export */   HEADING: () => (/* binding */ HEADING),
+/* harmony export */   ICON_BOX_OPTIONS: () => (/* binding */ ICON_BOX_OPTIONS),
+/* harmony export */   ICON_HPOSITIONS: () => (/* binding */ ICON_HPOSITIONS),
+/* harmony export */   ICON_POSITIONS: () => (/* binding */ ICON_POSITIONS),
+/* harmony export */   ICON_STATUS: () => (/* binding */ ICON_STATUS),
+/* harmony export */   INCLUDE_BY: () => (/* binding */ INCLUDE_BY),
+/* harmony export */   MASK_POSITIONS: () => (/* binding */ MASK_POSITIONS),
+/* harmony export */   MASK_REPEATS: () => (/* binding */ MASK_REPEATS),
+/* harmony export */   MASK_SHAPES: () => (/* binding */ MASK_SHAPES),
+/* harmony export */   MASK_SIZES: () => (/* binding */ MASK_SIZES),
+/* harmony export */   NORMAL_HOVER: () => (/* binding */ NORMAL_HOVER),
+/* harmony export */   NORMAL_HTML_TAG: () => (/* binding */ NORMAL_HTML_TAG),
+/* harmony export */   OBJECT_FITS: () => (/* binding */ OBJECT_FITS),
+/* harmony export */   OPACITY_ICON: () => (/* binding */ OPACITY_ICON),
+/* harmony export */   ORDER_BY: () => (/* binding */ ORDER_BY),
+/* harmony export */   OVERFLOWS: () => (/* binding */ OVERFLOWS),
+/* harmony export */   PAGINARION_TYPE: () => (/* binding */ PAGINARION_TYPE),
+/* harmony export */   POSITIONS: () => (/* binding */ POSITIONS),
+/* harmony export */   PRINT_TAXONOMY: () => (/* binding */ PRINT_TAXONOMY),
+/* harmony export */   ROTATE_ICON: () => (/* binding */ ROTATE_ICON),
+/* harmony export */   SCALE_ICON: () => (/* binding */ SCALE_ICON),
+/* harmony export */   SEPERATOR_STYLES: () => (/* binding */ SEPERATOR_STYLES),
+/* harmony export */   SKEW_ICON: () => (/* binding */ SKEW_ICON),
+/* harmony export */   SORT_ORDER: () => (/* binding */ SORT_ORDER),
+/* harmony export */   TEXT_ALIGN_OPTIONS: () => (/* binding */ TEXT_ALIGN_OPTIONS),
+/* harmony export */   TEXT_GRADIENT_TYPES: () => (/* binding */ TEXT_GRADIENT_TYPES),
+/* harmony export */   THUMBNAIL_SIZE: () => (/* binding */ THUMBNAIL_SIZE),
+/* harmony export */   TRANSFORM_ORIGINS: () => (/* binding */ TRANSFORM_ORIGINS),
+/* harmony export */   TRANSLATE_ICON: () => (/* binding */ TRANSLATE_ICON),
+/* harmony export */   UNIT_TYPES: () => (/* binding */ UNIT_TYPES),
+/* harmony export */   VPOSITIONS: () => (/* binding */ VPOSITIONS),
+/* harmony export */   WIDTH_TYPES: () => (/* binding */ WIDTH_TYPES),
+/* harmony export */   prefix: () => (/* binding */ prefix)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+
+
+//Attribute Prefix
+
+const prefix = 'zolo_';
+const UNIT_TYPES = [{
+  label: 'px',
+  value: 'px'
+}, {
+  label: '%',
+  value: '%'
+}, {
+  label: 'em',
+  value: 'em'
+}];
+const NORMAL_HOVER = [{
+  label: 'Normal',
+  value: 'normal'
+}, {
+  label: 'Hover',
+  value: 'hover'
+}];
+const TEXT_ALIGN_OPTIONS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 8,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Justify',
+  value: 'justify',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 6,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const DEFAULT_ALIGNS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 8,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const DEFAULT_ALIGNS_VERTICAL = [{
+  label: 'Top',
+  value: 'top',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'bottom',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const FLEX_ALIGN_OPTIONS = [{
+  label: 'Top',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 12L16 12",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8 12L2 12",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 16,
+      y: 4,
+      width: 16,
+      height: 8,
+      rx: 1,
+      transform: "rotate(90 16 4)",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+const FLEX_HORIZONTAL_OPTIONS = [{
+  label: 'Left',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 8,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 2L12 8",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 16L12 22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 16,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// Flex Properties
+const FLEX_DIRECTIONS = [{
+  label: 'Row',
+  value: 'row',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.64246 7.53723H17.2781",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 7.53729L15.3485 5.28601",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 7.53723L15.3485 9.78851",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.64246 16.4172H17.2781",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 16.4173L15.3485 14.1774",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2781 16.4172L15.3485 18.6685",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2.85132 21.1473V2.85278",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21.1487 21.1473V2.85278",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Column',
+  value: 'column',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.391 6.72949L16.391 17.1923",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3909 17.1923L18.606 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.391 17.1923L14.176 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.65393 6.72949L7.65393 17.1923",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.65381 17.1923L9.85767 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.65393 17.1923L5.43889 15.2941",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Row Reverse',
+  value: 'row-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2705 16.391L6.80771 16.391",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 16.3909L8.70593 18.606",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 16.391L8.70593 14.176",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.2705 7.65393L6.80771 7.65393",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 7.65381L8.70593 9.85767",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M6.80767 7.65393L8.70593 5.43889",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Column Reverse',
+  value: 'column-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.60901 17.2705L7.60901 6.80771",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.60908 6.80767L5.39404 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.60901 6.80767L9.82405 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3461 17.2705L16.3461 6.80771",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3462 6.80767L14.1423 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.3461 6.80767L18.5611 8.70593",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_ALIGNS = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12.142 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.15051 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9.46875 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M14.4974 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M11.858 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.8495 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Stretch',
+  value: 'stretch',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.00001 15.27L16.39 15.27",
+      stroke: "#4D4D4D",
+      strokeWidth: 3,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.00001 9.27002L16.39 9.27002",
+      stroke: "#4D4D4D",
+      strokeWidth: 3,
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20.51 4.03003L3.97001 4.03003",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20.51 20.51L3.97001 20.51",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_ALIGNS_ROW = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 12.142L16.5189 12.142",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 7.15051L16.5189 7.15051",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 9.46875L7.42934 9.46875",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 14.4974L7.42934 14.4974",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 11.858L7.48088 11.858",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 16.8495L7.48088 16.8495",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Stretch',
+  value: 'stretch',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.72 16.64H8.91003",
+      stroke: "#4D4D4D",
+      strokeWidth: "7",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 20.48H20.54",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M4 4H20.54",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.72 7.83997H8.91003",
+      stroke: "#4D4D4D",
+      strokeWidth: "7",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_JUSTIFIES = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 12.142L16.5189 12.142",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.39385 7.15051L16.5189 7.15051",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 9.46875L7.42934 9.46875",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.5599 14.4974L7.42934 14.4974",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3L3 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21L3 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 11.858L7.48088 11.858",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 16.8495L7.48088 16.8495",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Between',
+  value: 'space-between',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 7.1615L7.48088 7.1615",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 16.8386L7.48088 16.8386",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Around',
+  value: 'space-around',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.6713 8.21777L7.54619 8.21777",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 15.8041L7.48088 15.8041",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Evenly',
+  value: 'space-evenly',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 8.73425L7.48088 8.73425",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.606 15.2767L7.48088 15.2767",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21L21 21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3L21 3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_JUSTIFIES_ROW = [{
+  label: 'Flex Start',
+  value: 'flex-start',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12.142 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.15051 16.6062V7.48108",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Center',
+  value: 'center',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9.46875 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M14.4974 7.44006V16.5707",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Flex End',
+  value: 'flex-end',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M11.858 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.8495 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Between',
+  value: 'space-between',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.1615 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M16.8386 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Around',
+  value: 'space-around',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.21777 7.32874V16.4538",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.8041 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Space Evenly',
+  value: 'space-evenly',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M8.73425 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15.2767 7.39404V16.5191",
+      stroke: "#4D4D4D",
+      strokeWidth: "3",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 21V3",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const FLEX_WRAPS = [{
+  label: 'Wrap',
+  value: 'wrap',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.37 15.2757H15.27C16.35 15.2757 17.23 14.318 17.23 13.1427V7.451C17.23 6.27567 16.35 5.31799 15.27 5.31799H7.53",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M10.07 11.8368L6.77002 15.2757L10.07 18.7255",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'No Wrap',
+  value: 'nowrap',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M17.51 12.0109H6.18005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M14.8101 8.5719L18.1101 12.0108L14.8101 15.4607",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}, {
+  label: 'Wrap Reverse',
+  value: 'wrap-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M21 3V21",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M7.35999 8.76794H15.26C16.34 8.76794 17.22 9.72562 17.22 10.901V16.5926C17.22 17.7679 16.34 18.7256 15.26 18.7256H7.51999",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M10.0699 12.2068L6.7699 8.76783L10.0699 5.30713",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    })]
+  })
+}];
+const HEADING = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H1', 'zoloblocks'),
+  value: 'h1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H2', 'zoloblocks'),
+  value: 'h2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H3', 'zoloblocks'),
+  value: 'h3'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H4', 'zoloblocks'),
+  value: 'h4'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H5', 'zoloblocks'),
+  value: 'h5'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('H6', 'zoloblocks'),
+  value: 'h6'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('P', 'zoloblocks'),
+  value: 'p'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Span', 'zoloblocks'),
+  value: 'span'
+}];
+const NORMAL_HTML_TAG = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('P', 'zoloblocks'),
+  value: 'p'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Span', 'zoloblocks'),
+  value: 'span'
+}];
+const BORDER_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('None', 'zoloblocks'),
+  value: 'none'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Solid', 'zoloblocks'),
+  value: 'solid'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'zoloblocks'),
+  value: 'custom'
+}];
+const SEPERATOR_STYLES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Dashed', 'zoloblocks'),
+  value: 'dashed'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Dotted', 'zoloblocks'),
+  value: 'dotted'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Double', 'zoloblocks'),
+  value: 'double'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Groove', 'zoloblocks'),
+  value: 'groove'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Outset', 'zoloblocks'),
+  value: 'outset'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ridge', 'zoloblocks'),
+  value: 'ridge'
+}];
+const BACKGROUND_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Classic', 'zoloblocks'),
+  value: 'classic',
+  icon: 'color-picker'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Gradient', 'zoloblocks'),
+  value: 'gradient',
+  icon: 'art'
+}];
+const TEXT_GRADIENT_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Color', 'zoloblocks'),
+  value: 'classic',
+  icon: 'Color'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Gradient', 'zoloblocks'),
+  value: 'gradient',
+  icon: 'Gradient'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Image', 'zoloblocks'),
+  value: 'image',
+  icon: 'Image'
+}];
+const BOX_SHADOW_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Outer', 'zoloblocks'),
+  value: 'outset'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Inner', 'zoloblocks'),
+  value: 'inset'
+}];
+
+// position
+const POSITIONS = [{
+  label: 'Left',
+  value: 'row-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: "7",
+      y: "8",
+      width: "12",
+      height: "8",
+      rx: "1",
+      fill: "none",
+      stroke: "#4D4D4D",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'row',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Top',
+  value: 'column-reverse',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'column',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// position
+const ICON_POSITIONS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 11,
+      y: 12,
+      width: 11,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 3,
+      y: 10,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 3,
+      y: 12,
+      width: 11,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 18,
+      y: 10,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Top',
+  value: 'top',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 6,
+      y: 16,
+      width: 12,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 10,
+      y: 8,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: 'Bottom',
+  value: 'bottom',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 6,
+      y: 8,
+      width: 12,
+      height: "0.01",
+      rx: "0.005",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 10,
+      y: 12,
+      width: 4,
+      height: 4,
+      rx: 2,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// horizontal position
+const ICON_HPOSITIONS = [{
+  label: 'Left',
+  value: 'left',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M2 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: "7",
+      y: "8",
+      width: "12",
+      height: "8",
+      rx: "1",
+      fill: "none",
+      stroke: "#4D4D4D",
+      strokeLinecap: "round",
+      strokeLinejoin: "round",
+      strokeWidth: "1"
+    })]
+  })
+}, {
+  label: 'Right',
+  value: 'right',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M20 2V22",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("rect", {
+      x: 4,
+      y: 8,
+      width: 12,
+      height: 8,
+      rx: 1,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+// horizontal position
+const VPOSITIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Top', 'zoloblocks'),
+  value: 'top',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 4L2 4",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 8C15.5523 8 16 8.44772 16 9V19C16 19.5523 15.5523 20 15 20H9C8.44772 20 8 19.5523 8 19L8 9C8 8.44771 8.44772 8 9 8L15 8Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Bottom', 'zoloblocks'),
+  value: 'bottom',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 24,
+    height: 24,
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M22 20L2 20",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round",
+      strokeLinejoin: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M15 4C15.5523 4 16 4.44772 16 5V15C16 15.5523 15.5523 16 15 16H9C8.44772 16 8 15.5523 8 15L8 5C8 4.44771 8.44772 4 9 4L15 4Z",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    })]
+  })
+}];
+
+// social icon text
+const ICON_STATUS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('No Icon', 'zoloblocks'),
+  value: 'none',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 18 18",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+      cx: 9,
+      cy: 9,
+      r: 8,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M3.13904 4.3877L14.3609 14.1124",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    })]
+  })
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Icon & Text', 'zoloblocks'),
+  value: 'iconText',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 35,
+    height: 24,
+    viewBox: "0 0 35 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 12V16",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M12 9.5V9",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M23 12H31M23 15H27.7059",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+      cx: 12,
+      cy: 12,
+      r: 8,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M23 9H33.5",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    })]
+  })
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Only Icon', 'zoloblocks'),
+  value: 'iconOnly',
+  icon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+    width: 18,
+    height: 18,
+    viewBox: "0 0 18 18",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("circle", {
+      cx: 9,
+      cy: 9,
+      r: 8,
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9 9V13",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+      d: "M9 6.5V6",
+      stroke: "#4D4D4D",
+      strokeWidth: "1.5",
+      strokeLinecap: "round"
+    })]
+  })
+}];
+const ORDER_BY = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Date', 'zoloblocks'),
+  value: 'date'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Author', 'zoloblocks'),
+  value: 'author'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Title', 'zoloblocks'),
+  value: 'title'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Last modified date', 'zoloblocks'),
+  value: 'modified'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Post parent ID', 'zoloblocks'),
+  value: 'parent'
+}];
+const SORT_ORDER = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('ASC', 'zoloblocks'),
+  value: 'asc'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('DESC', 'zoloblocks'),
+  value: 'desc'
+}];
+const PRINT_TAXONOMY = taxonomy => {
+  let allTax = [];
+  for (let tax in taxonomy) {
+    allTax.push({
+      value: tax,
+      label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)(taxonomy[tax], 'zoloblocks')
+    });
+  }
+  return allTax;
+};
+const THUMBNAIL_SIZE = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: ''
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Thumbnail', 'zoloblocks'),
+  value: 'thumbnail'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Medium', 'zoloblocks'),
+  value: 'medium'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Large', 'zoloblocks'),
+  value: 'large'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full', 'zoloblocks'),
+  value: 'full'
+}];
+
+// social icon text
+const ICON_BOX_OPTIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Image', 'zoloblocks'),
+  value: 'image'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Icon', 'zoloblocks'),
+  value: 'icon'
+}];
+
+// Width Types
+const WIDTH_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full', 'zoloblocks'),
+  value: 'alignfull'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Boxed', 'zoloblocks'),
+  value: 'alignwide'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'zoloblocks'),
+  value: 'custom_width'
+}];
+const CONTENT_WIDTH_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Boxed', 'zoloblocks'),
+  value: 'alignwide'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full Width', 'zoloblocks'),
+  value: 'alignfull'
+}];
+const OVERFLOWS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: 'visible'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Auto', 'zoloblocks'),
+  value: 'auto'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hidden', 'zoloblocks'),
+  value: 'hidden'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Scroll', 'zoloblocks'),
+  value: 'scroll'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Clip', 'zoloblocks'),
+  value: 'clip'
+}];
+const CONTENT_POSITIONS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: ''
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Relative', 'zoloblocks'),
+  value: 'relative'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Absolute', 'zoloblocks'),
+  value: 'absolute'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fixed', 'zoloblocks'),
+  value: 'fixed'
+}];
+const CONTENT_WIDTH = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default', 'zoloblocks'),
+  value: 'default'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Full Width', 'zoloblocks'),
+  value: 'full'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Inline (auto)', 'zoloblocks'),
+  value: 'inline'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'azoloblocks'),
+  value: 'custom'
+}];
+const OBJECT_FITS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('None', 'zoloblocks'),
+  value: 'none'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Fill', 'zoloblocks'),
+  value: 'fill'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Contain', 'zoloblocks'),
+  value: 'contain'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Cover', 'zoloblocks'),
+  value: 'cover'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Scale Down', 'zoloblocks'),
+  value: 'scale-down'
+}];
+
+// mask shapes
+const MASK_SHAPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('None', 'zoloblocks'),
+  value: ''
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Abstract', 'zoloblocks'),
+  value: 'abstract'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Abstract Brush 1', 'zoloblocks'),
+  value: 'abstract-brush-1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Abstract Brush 2', 'zoloblocks'),
+  value: 'abstract-brush-2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Aesthetic Blob', 'zoloblocks'),
+  value: 'aesthetic-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Amorphous Blob', 'zoloblocks'),
+  value: 'amorphous-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Brush', 'zoloblocks'),
+  value: 'brush'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Comment', 'zoloblocks'),
+  value: 'comment'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Container', 'zoloblocks'),
+  value: 'container'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hand Drawn Blob', 'zoloblocks'),
+  value: 'hand-drawn-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hexagon', 'zoloblocks'),
+  value: 'hexagon'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Hexagon Blob', 'zoloblocks'),
+  value: 'hexagon-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Irregular Blob', 'zoloblocks'),
+  value: 'irregular-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Minimal Round', 'zoloblocks'),
+  value: 'minimal-round'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Octagon', 'zoloblocks'),
+  value: 'octagon'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Organic Blob', 'zoloblocks'),
+  value: 'organic-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Oval Blob', 'zoloblocks'),
+  value: 'oval-blob'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Pattern', 'zoloblocks'),
+  value: 'pattern'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Popup 1', 'zoloblocks'),
+  value: 'popup-1'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Popup 2', 'zoloblocks'),
+  value: 'popup-2'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Popup 3', 'zoloblocks'),
+  value: 'popup-3'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Round Brush', 'zoloblocks'),
+  value: 'round-brush'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Round Design', 'zoloblocks'),
+  value: 'round-design'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Square Pattern', 'zoloblocks'),
+  value: 'squar-pattern'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Testimonial', 'zoloblocks'),
+  value: 'testimonial'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Triangle Blob', 'zoloblocks'),
+  value: 'triangle-blob'
+}];
+
+// mask position
+const MASK_POSITIONS = [{
+  value: 'center top',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center Top', 'zoloblocks')
+}, {
+  value: 'center center',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center Center', 'zoloblocks')
+}, {
+  value: 'center bottom',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center Bottom', 'zoloblocks')
+}, {
+  value: 'left top',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left Top', 'zoloblocks')
+}, {
+  value: 'left center',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left Center', 'zoloblocks')
+}, {
+  value: 'left bottom',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left Bottom', 'zoloblocks')
+}, {
+  value: 'right top',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right Top', 'zoloblocks')
+}, {
+  value: 'right center',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right Center', 'zoloblocks')
+}, {
+  value: 'right bottom',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right Bottom', 'zoloblocks')
+}];
+
+// mask repeat
+const MASK_REPEATS = [{
+  value: 'no-repeat',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('No Repeat', 'zoloblocks')
+}, {
+  value: 'repeat',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Repeat', 'zoloblocks')
+}, {
+  value: 'repeat-x',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Repeat X', 'zoloblocks')
+}, {
+  value: 'repeat-y',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Repeat Y', 'zoloblocks')
+}];
+
+// mask sizes
+const MASK_SIZES = [{
+  value: 'auto',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Auto', 'zoloblocks')
+}, {
+  value: 'cover',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Cover', 'zoloblocks')
+}, {
+  value: 'contain',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Contain', 'zoloblocks')
+}];
+const ANIMATION_TYPES = [{
+  label: 'Fade',
+  value: 'fade'
+},
+// { label: 'Slide', value: 'slide' },
+// { label: 'Scale', value: 'scale' },
+// { label: 'Rotate', value: 'rotate' },
+// { label: 'Flip', value: 'flip' },
+// { label: 'Zoom', value: 'zoom' },
+{
+  label: 'Scale Up',
+  value: 'scaleUp'
+}, {
+  label: 'Scale Down',
+  value: 'scaleDown'
+}, {
+  label: 'Top',
+  value: 'top'
+}, {
+  label: 'Right',
+  value: 'right'
+}, {
+  label: 'Bottom',
+  value: 'bottom'
+}, {
+  label: 'Left',
+  value: 'left'
+}, {
+  label: 'Top Small',
+  value: 'topSmall'
+}, {
+  label: 'Right Small',
+  value: 'rightSmall'
+}, {
+  label: 'Bottom Small',
+  value: 'bottomSmall'
+}, {
+  label: 'Left Small',
+  value: 'leftSmall'
+}, {
+  label: 'Top Medium',
+  value: 'topMedium'
+}, {
+  label: 'Right Medium',
+  value: 'rightMedium'
+}, {
+  label: 'Bottom Medium',
+  value: 'bottomMedium'
+}, {
+  label: 'Left Medium',
+  value: 'leftMedium'
+}, {
+  label: 'Custom (Pro)',
+  value: 'custom'
+}];
+const TRANSFORM_ORIGINS = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Top'),
+  value: 'top'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Right'),
+  value: 'right'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Bottom'),
+  value: 'bottom'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Left'),
+  value: 'left'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Center'),
+  value: 'center'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Initial'),
+  value: 'initial'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Inherit'),
+  value: 'inherit'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Revert'),
+  value: 'revert'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Unset'),
+  value: 'unset'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Revert Layer'),
+  value: 'revert-layer'
+}, {
+  label: 'Custom',
+  value: 'custom'
+}];
+const EASING_TYPES = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ease Out', 'zoloblocks'),
+  value: 'ease-out'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ease In Out', 'zoloblocks'),
+  value: 'ease-in-out'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Linear', 'zoloblocks'),
+  value: 'linear'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Custom', 'zoloblocks'),
+  value: 'custom'
+}];
+const TRANSLATE_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M18.5818 15.3211L22 11.9184L18.5818 8.58813",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M5.41818 15.3211L2 11.9184L5.41818 8.58813",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2.35461 11.9548H21.6455",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M15.3818 5.4027L11.9636 2L8.61816 5.4027",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M8.61816 18.5974L12.0363 22.0001L15.3818 18.5974",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 2.35278V21.2396",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const ROTATE_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M21.4401 8.67C19.7801 4.22 15.9301 2 12.0001 2C6.85006 2 2.61006 5.89 2.06006 10.89",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M21.9401 13.1201C21.3901 18.1201 17.1501 22.0001 12.0001 22.0001C8.08006 22.0001 4.22006 19.7801 2.56006 15.3301",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22.0001 2.21997V8.66997H15.5601",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2 21.7801V15.3301H8.44",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const SCALE_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M21.9999 8.16V2L15.8799 2.07",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M16.2598 13.8798H10.0798L10.1398 7.78979",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M10.4299 13.5898L21.7299 2.30981",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M20.62 13.88V19.97C20.62 21.09 19.71 22 18.58 22H4.04C2.91 22 2 21.09 2 19.97V5.47995C2 4.35995 2.91 3.44995 4.04 3.44995H9.64",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const SKEW_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    fillRule: "evenodd",
+    clipRule: "evenodd",
+    d: "M22 4H7.74545L2 20H16.2545L22 4Z",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })
+});
+const OPACITY_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M22 2L2 22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2 2L22 22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const FLIP_ICON = /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("svg", {
+  width: 24,
+  height: 24,
+  viewBox: "0 0 24 24",
+  fill: "none",
+  xmlns: "http://www.w3.org/2000/svg",
+  children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M2 12H22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("path", {
+    d: "M12 2L22 12L12 22",
+    stroke: "#4D4D4D",
+    strokeWidth: "1.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })]
+});
+const INCLUDE_BY = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Authors', 'zoloblocks'),
+  value: 'authors'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Terms', 'zoloblocks'),
+  value: 'terms'
+}];
+const EXCLUDE_BY = [{
+  value: 'authors',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Authors', 'zoloblocks')
+}, {
+  value: 'current_post',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Current Post', 'zoloblocks')
+}, {
+  value: 'manual_selection',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Manual Selection', 'zoloblocks')
+}, {
+  value: 'terms',
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Terms', 'zoloblocks')
+}];
+const PAGINARION_TYPE = [{
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Default Pagination', 'zoloblocks'),
+  value: 'normal'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Ajax Pagination', 'zoloblocks'),
+  value: 'number'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Load More-Click', 'zoloblocks'),
+  value: 'button'
+}, {
+  label: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__.__)('Load More-Scroll', 'zoloblocks'),
+  value: 'scroll'
+}];
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/style.scss":
+/*!********************************************!*\
+  !*** ./src/blocks/social-links/style.scss ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["ReactJSXRuntime"];
+
+/***/ }),
+
+/***/ "lodash":
+/*!*************************!*\
+  !*** external "lodash" ***!
+  \*************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["lodash"];
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/blocks":
+/*!********************************!*\
+  !*** external ["wp","blocks"] ***!
+  \********************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["blocks"];
+
+/***/ }),
+
+/***/ "@wordpress/components":
+/*!************************************!*\
+  !*** external ["wp","components"] ***!
+  \************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["components"];
+
+/***/ }),
+
+/***/ "@wordpress/hooks":
+/*!*******************************!*\
+  !*** external ["wp","hooks"] ***!
+  \*******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["hooks"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "./node_modules/classnames/index.js":
+/*!******************************************!*\
+  !*** ./node_modules/classnames/index.js ***!
+  \******************************************/
+/***/ ((module, exports) => {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/
+/* global define */
+
+(function () {
+	'use strict';
+
+	var hasOwn = {}.hasOwnProperty;
+
+	function classNames () {
+		var classes = '';
+
+		for (var i = 0; i < arguments.length; i++) {
+			var arg = arguments[i];
+			if (arg) {
+				classes = appendClass(classes, parseValue(arg));
+			}
+		}
+
+		return classes;
+	}
+
+	function parseValue (arg) {
+		if (typeof arg === 'string' || typeof arg === 'number') {
+			return arg;
+		}
+
+		if (typeof arg !== 'object') {
+			return '';
+		}
+
+		if (Array.isArray(arg)) {
+			return classNames.apply(null, arg);
+		}
+
+		if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes('[native code]')) {
+			return arg.toString();
+		}
+
+		var classes = '';
+
+		for (var key in arg) {
+			if (hasOwn.call(arg, key) && arg[key]) {
+				classes = appendClass(classes, key);
+			}
+		}
+
+		return classes;
+	}
+
+	function appendClass (value, newClass) {
+		if (!newClass) {
+			return value;
+		}
+	
+		if (value) {
+			return value + ' ' + newClass;
+		}
+	
+		return value + newClass;
+	}
+
+	if ( true && module.exports) {
+		classNames.default = classNames;
+		module.exports = classNames;
+	} else if (true) {
+		// register as 'classnames', consistent with npm package name
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function () {
+			return classNames;
+		}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else {}
+}());
+
+
+/***/ }),
+
+/***/ "./src/blocks/social-links/block.json":
+/*!********************************************!*\
+  !*** ./src/blocks/social-links/block.json ***!
+  \********************************************/
+/***/ ((module) => {
+
+"use strict";
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","title":"Social Links","name":"zolo/social-links","category":"zoloblocks","keywords":["icon","links","social","connect","share","follow","twitter","facebook","instagram","youtube"],"description":"Add social links to enhance connectivity with your audience.","apiVersion":3,"textdomain":"zoloblocks","example":{"attributes":{"preview":true},"viewportWidth":410},"supports":{"anchor":false,"customClassName":false,"align":["wide","full"]},"editorScript":"file:./index.js","style":"file:./style-index.css"}');
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"blocks/social-links/index": 0,
+/******/ 			"blocks/social-links/style-index": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkzoloblocks"] = globalThis["webpackChunkzoloblocks"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["blocks/social-links/style-index"], () => (__webpack_require__("./src/blocks/social-links/index.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=index.js.map

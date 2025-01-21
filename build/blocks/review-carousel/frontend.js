@@ -1,1 +1,41 @@
-document.addEventListener("DOMContentLoaded",(()=>{const e=document.querySelectorAll(".wp-block-zolo-review-carousel");e.length>0&&e.forEach((e=>{const t=e.querySelector(".swiper"),s=e.dataset?.swiperOptions||"{}",i=JSON.parse(s),n={pagination:{el:e.querySelector(".swiper-pagination"),clickable:!0,type:"bullets"},effect:"slide",breakpoints:{1024:{slidesPerView:3,spaceBetween:30},768:{slidesPerView:2,spaceBetween:30},640:{slidesPerView:1,spaceBetween:0}}};new Swiper(t,Object.keys(i).length>0?i:n)}))}));
+/******/ (() => { // webpackBootstrap
+/*!************************************************!*\
+  !*** ./src/blocks/review-carousel/frontend.js ***!
+  \************************************************/
+document.addEventListener('DOMContentLoaded', () => {
+  const zoloRevewCarousel = document.querySelectorAll('.wp-block-zolo-review-carousel');
+  if (zoloRevewCarousel.length > 0) {
+    zoloRevewCarousel.forEach(carousel => {
+      const carouselSelector = carousel.querySelector('.swiper');
+      const carouselOptions = carousel.dataset?.swiperOptions || '{}';
+      const carouselOptionsObj = JSON.parse(carouselOptions);
+      const pagination = carousel.querySelector('.swiper-pagination');
+      const defaultOptions = {
+        pagination: {
+          el: pagination,
+          clickable: true,
+          type: 'bullets'
+        },
+        effect: 'slide',
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 0
+          }
+        }
+      };
+      new Swiper(carouselSelector, Object.keys(carouselOptionsObj).length > 0 ? carouselOptionsObj : defaultOptions);
+    });
+  }
+});
+/******/ })()
+;
+//# sourceMappingURL=frontend.js.map

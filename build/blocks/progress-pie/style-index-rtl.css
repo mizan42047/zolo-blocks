@@ -1,1 +1,32 @@
-.wp-block-zolo-progress-pie{position:relative}.wp-block-zolo-progress-pie .progress-content{right:50%;position:absolute;text-align:center;top:50%;transform:translate(50%,-50%)}.wp-block-zolo-progress-pie .progress-pie-progress{transition:stroke-dasharray 1s cubic-bezier(.15,1.06,.58,1),stroke-dashoffset 1s cubic-bezier(.15,1.06,.58,1)}.wp-block-zolo-progress-pie .progress-pie-text{transform:translateY(.25em)}.wp-block-zolo-progress-pie .progress-pie-number{font-size:5em;font-weight:700;line-height:1;text-anchor:middle;margin-bottom:10px}.wp-block-zolo-progress-pie .progress-pie-label{font-size:1em;line-height:1;text-transform:uppercase;text-anchor:middle}
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/progress-pie/style.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-zolo-progress-pie {
+  position: relative;
+}
+.wp-block-zolo-progress-pie .progress-content {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  text-align: center;
+}
+.wp-block-zolo-progress-pie .progress-pie-progress {
+  transition: stroke-dasharray 1s cubic-bezier(0.15, 1.06, 0.58, 1), stroke-dashoffset 1s cubic-bezier(0.15, 1.06, 0.58, 1);
+}
+.wp-block-zolo-progress-pie .progress-pie-text {
+  transform: translateY(0.25em);
+}
+.wp-block-zolo-progress-pie .progress-pie-number {
+  font-size: 5em;
+  font-weight: 700;
+  line-height: 1;
+  text-anchor: middle;
+  margin-bottom: 10px;
+}
+.wp-block-zolo-progress-pie .progress-pie-label {
+  font-size: 1em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-anchor: middle;
+}
