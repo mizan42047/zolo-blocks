@@ -28,8 +28,8 @@ if (! class_exists('Templates')) {
             add_action('wp_ajax_nopriv_zolo_demo_import', [$this, 'demo_import']);
 
             // update transient for the api
-            // add_action('wp_ajax_zolo_demo_pull', [$this, 'update_transient']);
-            // add_action('wp_ajax_nopriv_zolo_demo_pull', [$this, 'update_transient']);
+            add_action('wp_ajax_zolo_demo_pull', [$this, 'update_transient']);
+            add_action('wp_ajax_nopriv_zolo_demo_pull', [$this, 'update_transient']);
 
             // update transient for the demos api
             add_action('wp_ajax_zolo_demo_template_pull', [$this, 'update_demos_transient']);
