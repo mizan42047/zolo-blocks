@@ -26,29 +26,11 @@ if (! class_exists('Assets')) {
          */
         public function __construct() {
             add_action('admin_enqueue_scripts', [$this, 'zolo_admin_enqueue_scripts']);
-            add_action('admin_head', [$this, 'zolo_block_editor_assets']);
 
             // blocks icons
             add_action('enqueue_block_editor_assets', [$this, 'zolo_blocks_icons'], 2);
             add_action('admin_enqueue_scripts', [$this, 'zolo_blocks_icons'], 2);
         }
-
-        /**
-         * Enqueue block editor assets
-         *
-         * @return void
-         */
-        public function zolo_block_editor_assets() {
-            $zoloEditorWidth = get_option('zolo_editor_width', 1200);
-?>
-            <style>
-                .editor-styles-wrapper .block-editor-block-list__layout.is-root-container> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-                    max-width: <?php echo esc_attr($zoloEditorWidth); ?>px !important;
-                }
-            </style>
-<?php
-        }
-
         /**
          * Enqueues scripts and styles for the Zoloblocks admin area.
          *
@@ -117,6 +99,7 @@ if (! class_exists('Assets')) {
                     'zolo_rest_url'  => esc_url_raw(rest_url('zolo/v1/settings')),
                     'site_url'       =>  esc_url_raw(site_url()),
                     'plugin_version' => ZOLO_VERSION,
+                    'pro_version'    => defined('ZOLO_PRO_VERSION') ? ZOLO_PRO_VERSION : '',
                     'has_pro'        => defined('ZOLO_PRO_VERSION'),
                     'logo'           => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/logo.svg',
                     'community'      => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/community.svg',
@@ -130,7 +113,7 @@ if (! class_exists('Assets')) {
                     'mailchimp'      => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/mailchimp.svg',
                     'webhook'        => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/webhook.svg',
                     'facebook'       => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/facebook.svg',
-                    'openai'         => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/openai.svg',
+                    'zoloai'         => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/zoloai.svg',
                     'instagram'      => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/instagram.svg',
                     'yelp'           => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/yelp.svg',
                     'google'         => trailingslashit(ZOLO_ADMIN_URL) . 'includes/Admin/images/google.svg',

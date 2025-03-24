@@ -14,7 +14,7 @@
     "mega"
   ],
   "description": "Build your own navigation menu.",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "textdomain": "zoloblocks",
   "parent": [
     "zolo/navigation"

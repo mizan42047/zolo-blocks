@@ -12,7 +12,7 @@
     "interaction"
   ],
   "description": "Customizable dynamic post comment form for your website single post comments form",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "textdomain": "zoloblocks",
   "usesContext": [
     "postId",

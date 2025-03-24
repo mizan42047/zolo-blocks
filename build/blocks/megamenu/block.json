@@ -13,7 +13,7 @@
     "subnav"
   ],
   "description": "Mega menu block for gutenberg.",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "textdomain": "zoloblocks",
   "parent": [
     "zolo/navigation-item"

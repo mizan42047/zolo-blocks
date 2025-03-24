@@ -14,7 +14,7 @@
   "description": "Customizable radio fields for forms or surveys.",
   "apiVersion": 3,
   "textdomain": "zoloblocks",
-  "parent": [
+  "ancestor": [
     "zolo/form"
   ],
   "example": {

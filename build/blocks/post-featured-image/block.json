@@ -14,7 +14,7 @@
     "archive"
   ],
   "description": "Customizable dynamic post featured image block for your website single page",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "textdomain": "zoloblocks",
   "usesContext": [
     "postId",

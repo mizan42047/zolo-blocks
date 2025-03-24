@@ -11,7 +11,7 @@
     "Content"
   ],
   "description": "Customize individual slides within the Slider block.",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "textdomain": "zoloblocks",
   "parent": [
     "zolo/slider"

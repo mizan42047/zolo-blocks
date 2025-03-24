@@ -13,7 +13,7 @@
   "description": "Email input field for newsletter sign-ups or contacts.",
   "apiVersion": 3,
   "textdomain": "zoloblocks",
-  "parent": [
+  "ancestor": [
     "zolo/form"
   ],
   "example": {

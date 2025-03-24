@@ -42,10 +42,11 @@ class ZoloHelpers {
         return $classes;
     }
     public function zoloblocks_frontend_body_class(array $classes) {
-        $new_class = 'zolo-frontend';
-        if ($new_class) {
-            $classes[] = $new_class;
-        }
+        $theme = wp_get_theme();
+        $theme_type = wp_is_block_theme() ? 'block-theme' : 'classic-theme';
+        $theme_name = $theme->get('TextDomain');
+        $new_classes = ['zolo-frontend', $theme_type, $theme_name];
+        $classes = array_merge($classes, $new_classes);
         return $classes;
     }
     /**
@@ -330,8 +331,7 @@ class ZoloHelpers {
      *
      * @return array
      */
-    public static function wp_kses_allowed_svg()
-    {
+    public static function wp_kses_allowed_svg() {
         $defaults = wp_kses_allowed_html('post');
         $svg_args = [
 
@@ -506,6 +506,9 @@ class ZoloHelpers {
                 'src'      => true,
                 'class'   => true,
                 'allow' => true,
+            ],
+            'style' => [
+                'type' => true,
             ],
         ];
 
@@ -843,7 +846,7 @@ class ZoloHelpers {
     }
 
     /**
-     * Get Zolo Blocks
+     * Get ZoloBlocks
      */
     public static function get_zolo_blocks() {
         $blocks_path = trailingslashit(ZOLO_DIR_PATH) . 'includes/Blocks/Blocks.php';
@@ -945,7 +948,7 @@ class ZoloHelpers {
     }
 
     /**
-     * Zolo Blocks and Extensions
+     * ZoloBlocks and Extensions
      */
     public static function zolo_blocks_extensions_count() {
         // Get blocks and extensions settings

@@ -11,7 +11,7 @@
     "Content"
   ],
   "description": "Create immersive image sliders directly in Gutenberg editor.",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "textdomain": "zoloblocks",
   "example": {
     "attributes": {
@@ -27,20 +27,14 @@
       "full"
     ]
   },
-  "editorScript": [
-    "file:./index.js",
-    "zolo-swiper-editor-script"
-  ],
-  "editorStyle": [
-    "file:./index.css",
-    "zolo-swiper-editor-style"
-  ],
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
   "style": [
-    "zolo-swiper-frontend-style",
+    "swiper",
     "file:./style-index.css"
   ],
-  "viewScript": [
-    "file:./frontend.js",
-    "zolo-swiper-frontend-script"
+  "viewScript": "file:./frontend.js",
+  "script": [
+    "swiper"
   ]
 }
